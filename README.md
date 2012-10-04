@@ -1,4 +1,4 @@
 gnome-shell-theme-viva
 ======================
 
-A Gnome Shell Theme
+A Gnome Shell 3.6 Theme based upon the original Adwaita theme
