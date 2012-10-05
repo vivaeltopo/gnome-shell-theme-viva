@@ -350,15 +350,24 @@ StScrollBar StButton#vhandle:active {
 /* Entries */
 
 #searchEntry,
-.notification StEntry,
-.login-dialog-prompt-entry,
-.prompt-dialog-password-entry {
+.notification StEntry {
     color: #2c2c2c;
     caret-color: rgb(128, 128, 128);
     font-size: 12pt;
     caret-size: 1px;
     selected-color: black;
     padding: 10px 8px;
+}
+
+.login-dialog-prompt-entry,
+.prompt-dialog-password-entry {
+    font-size: 12pt;
+    caret-size: 1px;
+    caret-color: rgba(90,90,90,0.7);
+    selected-color: black;
+    padding: 2px 8px;
+    color: rgba(90,90,90,0.7);
+    background: transparent;
 }
 
 #searchEntry,
@@ -374,9 +383,7 @@ StScrollBar StButton#vhandle:active {
 
 #searchEntry:focus,
 #searchEntry:hover,
-.notification StEntry:focus,
-.login-dialog-prompt-entry,
-.prompt-dialog-password-entry {
+.notification StEntry:focus {
     color: rgba(90,90,90,0.7);
     border: 1px solid rgba(255,255,255,0.8);
     background-gradient-direction: vertical;
@@ -385,9 +392,7 @@ StScrollBar StButton#vhandle:active {
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
-.notification StEntry:focus,
-.prompt-dialog-password-entry:focus,
-.login-dialog-prompt-entry:focus {
+.notification StEntry:focus {
     border: 2px solid #3465a4;
 }
 
@@ -403,9 +408,7 @@ StScrollBar StButton#vhandle:active {
     transition-duration: 0;
 }
 
-.notification StEntry,
-.prompt-dialog-password-entry,
-.login-dialog-prompt-entry {
+.notification StEntry {
     border-radius: 5px;
     padding: 24px 4px;
 }
@@ -2210,7 +2213,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .polkit-dialog-password-entry:focus {
-    border: 2px solid #f07746; /*change4*/
+    border: 2px solid #f07746;
 }
 
 .polkit-dialog-error-label {
