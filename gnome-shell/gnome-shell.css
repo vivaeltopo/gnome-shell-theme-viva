@@ -592,16 +592,15 @@ StScrollBar StButton#vhandle:active {
 }
 
 .status-chooser-user-icon {
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
     border-radius: 2px;
     width: 48pt;
     height: 48pt;
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);
     background-size: contain;
 }
 
 .status-chooser-user-icon:hover {
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.8);
     border-radius: 2px;
 }
 
@@ -906,7 +905,6 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: horizontal;
     background-gradient-start: rgba(238,147,110,0.6);
     background-gradient-end: rgba(240,119,70,0.4);
-    background-image: url("running-indicator.svg");
     background-size: contain;
     border: 2px solid rgba(0,0,0,0);
     border-radius: 5px;
@@ -1316,6 +1314,9 @@ StScrollBar StButton#vhandle:active {
     spacing-columns: 10px;
     min-height: 64px;
     padding: 10px 10px 18px 10px;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-bottom: 0;
 }
 
 .notification, #notification-container {
@@ -1327,6 +1328,7 @@ StScrollBar StButton#vhandle:active {
     padding-bottom: 8px;
     border-radius: 5px 5px 0px 0px;
     border: 1px solid rgba(255,255,255,0.6);
+    border-bottom: 0;
 }
 
 .notification-unexpanded {
@@ -2595,7 +2597,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 #lockDialogGroup {
-    background: #2e3436 url("noise-texture.png");
+    background: #222 url("noise-texture.png");
     background-repeat: repeat;
 }
 
