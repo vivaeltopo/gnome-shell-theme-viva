@@ -428,7 +428,7 @@ StScrollBar StButton#vhandle:active {
 /* Panel */
 
 #panel {
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -905,7 +905,6 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: horizontal;
     background-gradient-start: rgba(238,147,110,0.6);
     background-gradient-end: rgba(240,119,70,0.4);
-    background-size: contain;
     border: 2px solid rgba(0,0,0,0);
     border-radius: 5px;
 }
@@ -1522,15 +1521,18 @@ StScrollBar StButton#vhandle:active {
 }
 
 .chat-received {
-    padding: 5px;
+    padding: 5px 20px;
     text-align: left;
-    color: #f7f7f7;
+    color: rgba(255,255,255, 0.8);
     background-gradient-direction: horizontal;
     background-gradient-start: rgba(255,255,255,0);
     background-gradient-end: rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0);
-    border-radius: 5px;
 }
+
+.chat-received:first-child {
+    border-top: 1px solid rgba(255,255,255,0.9);
+}
+
 
 .chat-received:rtl {
     padding-left: 0px;
@@ -1540,7 +1542,7 @@ StScrollBar StButton#vhandle:active {
 .chat-sent {
     padding: 5px 20px;
     text-align: right;
-    color: #f7f7f7;
+    color: rgba(255,255,255, 0.6);
     background-gradient-direction: horizontal;
     background-gradient-start: rgba(255,255,255,0.1);
     background-gradient-end: rgba(255,255,255,0);
