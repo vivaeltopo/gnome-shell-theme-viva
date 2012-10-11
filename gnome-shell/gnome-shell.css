@@ -1878,8 +1878,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .run-dialog-error-label {
-    font-size: 9pt;
-    color: white;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
 }
 
 .run-dialog-error-box {
@@ -2142,9 +2143,10 @@ StScrollBar StButton#vhandle:active {
 }
 
 .prompt-dialog-error-label {
-    font-size: 10pt;
-    color: #ffff00;
-    padding-bottom: 8px;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 20px;
 }
 
 .prompt-dialog-info-label {
@@ -2232,9 +2234,10 @@ StScrollBar StButton#vhandle:active {
 }
 
 .polkit-dialog-error-label {
-    font-size: 9pt;
-    color: #ffff00;
-    padding-bottom: 8px;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 20px;
 }
 
 .polkit-dialog-info-label {
@@ -2303,7 +2306,7 @@ StScrollBar StButton#vhandle:active {
     font-size: 14pt;
     font-weight: bold;
     border-radius: 10px;
-    border: 2px solid #a0a0a0;
+    border: 1px solid #a0a0a0;
     color: white;
 }
 
@@ -2315,7 +2318,7 @@ StScrollBar StButton#vhandle:active {
 .keyboard-key:checked,
 .keyboard-key:hover {
     background: #303030;
-    border: 3px solid white;
+    border: 2px solid white;
 }
 
 .keyboard-key:active {
@@ -2327,7 +2330,7 @@ StScrollBar StButton#vhandle:active {
     padding: 5px;
     -arrow-border-radius: 10px;
     -arrow-background-color: #090909;
-    -arrow-border-width: 2px;
+    -arrow-border-width: 1px;
     -arrow-border-color: white;
     -arrow-base: 20px;
     -arrow-rise: 10px;
