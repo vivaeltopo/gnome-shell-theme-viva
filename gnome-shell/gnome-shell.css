@@ -2347,8 +2347,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .candidate-label:selected {
-    border-radius: 5px;
-    background-color: rgba(255,255,255,0.33);
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.1);
 }
 
 /* Login Dialog */
@@ -2370,13 +2370,8 @@ StScrollBar StButton#vhandle:active {
 
 .login-dialog {
     /* Reset border and background */
-
-    border-radius: 5px;
-    border: 1px solid rgba(255,255,255,0.6);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0.8);
-    background-gradient-end: rgba(0,0,0,0.8);
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+    border: 0;
+    background: rgba(0,0,0,0);
     min-height: 150px;
     max-height: 700px;
     min-width: 350px;
@@ -2587,7 +2582,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-message-warning {
-    color: orange;
+    color: red;
 }
 
 .unlock-dialog-user-name-container {
@@ -2602,8 +2597,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 #lockDialogGroup {
-    background: #222 url("noise-texture.png");
-    background-repeat: repeat;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgb(0,0,0);
+    background-gradient-end: rgb(33,33,33);
 }
 
 .screen-shield-arrows {
