@@ -876,10 +876,20 @@ StScrollBar StButton#vhandle:active {
 
 .app-filter:selected {
     color: white;
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
 }
 
 .app-filter:selected:rtl {
     color: white;
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255, 255, 255, 0.1);
+    background-gradient-end: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
 }
 
 .app-filter:focus {
@@ -902,21 +912,22 @@ StScrollBar StButton#vhandle:active {
 
 .app-well-app.running > .overview-icon {
     text-shadow: black 0px 2px 2px;
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(238,147,110,0.6);
-    background-gradient-end: rgba(240,119,70,0.4);
-    border: 2px solid rgba(0,0,0,0);
-    border-radius: 5px;
+    background-gradient-start: rgba(255, 255, 255, .05);
+    background-gradient-end: rgba(255, 255, 255, .15);
+    background-gradient-direction: vertical;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    padding: 4px;
 }
 
 .app-well-app:hover > .overview-icon,
 .show-apps:hover > .overview-icon,
 .search-result-content:hover > .overview-icon {
     background-gradient-start: rgba(255, 255, 255, .05);
-    background-gradient-end: rgba(255, 255, 255, .15);
+    background-gradient-end: rgba(255, 255, 255, .25);
     background-gradient-direction: vertical;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 2px;
     padding: 4px;
     transition-duration: 100;
 }
@@ -953,12 +964,13 @@ StScrollBar StButton#vhandle:active {
 .show-apps:focus > .overview-icon,
 .app-well-app:selected > .overview-icon,
 .search-result-content:selected > .overview-icon {
+    text-shadow: black 0px 2px 2px;
     background-gradient-start: rgba(255, 255, 255, .05);
-    background-gradient-end: rgba(255, 255, 255, .15);
+    background-gradient-end: rgba(255, 255, 255, .25);
     background-gradient-direction: vertical;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
-    padding: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 2px;
+    padding: 4px;
     transition-duration: 100;
 }
 
