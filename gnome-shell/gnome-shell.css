@@ -103,7 +103,7 @@ StScrollBar StButton#hhandle:hover,
 StScrollBar StButton#vhandle:hover {
     background-gradient-direction: horizontal;
     background-gradient-start: rgba(255,255,255,0.8);
-    background-gradient-end: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.9); 
 }
 
 StScrollBar StButton#hhandle:active,
@@ -715,11 +715,10 @@ StScrollBar StButton#vhandle:active {
 #dash {
     color: #5f5f5f;
     font-size: 9pt;
-    padding: 4px 0px;
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(0,0,0,0.80);
-    background-gradient-end: rgba(0,0,0,0.65);
-    border: 1px solid rgba(255,255,255,0.6);
+    padding: 8px 0px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 5px;
     border-left: 0px;
     border-radius: 0px 5px 5px 0px;
 }
@@ -1326,7 +1325,7 @@ StScrollBar StButton#vhandle:active {
     min-height: 64px;
     padding: 10px 10px 18px 10px;
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.4);
     border-bottom: 0;
 }
 
@@ -1338,7 +1337,7 @@ StScrollBar StButton#vhandle:active {
 .notification.multi-line-notification {
     padding-bottom: 8px;
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.4);
     border-bottom: 0;
 }
 
@@ -1355,7 +1354,7 @@ StScrollBar StButton#vhandle:active {
    height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
 .notification-with-image {
     border-radius: 5px 5px 0px 0px;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.4);
     background: rgba(0,0,0,0.8);
     border-bottom: 0;
     min-height: 159px;
@@ -1363,9 +1362,9 @@ StScrollBar StButton#vhandle:active {
 
 .summary-boxpointer {
     -arrow-border-radius: 5px;
-    -arrow-background-color: rgba(0,0,0,0.9);
+    -arrow-background-color: rgba(0,0,0,0.8);
     -arrow-border-width: 1px;
-    -arrow-border-color: rgba(255,255,255,0.6); 
+    -arrow-border-color: rgba(255,255,255,0.4); 
     -arrow-base: 20px;
     -arrow-rise: 10px;
     color: white;
@@ -1398,9 +1397,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .notification-scrollview {
-    max-height: 10em;
-    height: 5em;
-    -st-vfade-offset: 24px;
+    -st-vfade-offset: 16px;
 }
 
 .notification-scrollview:ltr > StScrollBar {
@@ -1483,16 +1480,12 @@ StScrollBar StButton#vhandle:active {
 
 .hotplug-resident-mount {
     spacing: 8px;
-    border-radius: 5px;
-
+    border-radius: 2px;
     color: #ccc;
 }
 
 .hotplug-resident-mount:hover {
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255, 255, 255, 0.2);
-    background-gradient-end: rgba(255, 255, 255, 0);
-
+    text-shadow: white 0px 0px 1px;
     color: #fff;
 }
 
@@ -1503,25 +1496,25 @@ StScrollBar StButton#vhandle:active {
 
 .hotplug-resident-mount-icon {
     icon-size: 24px;
-    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .hotplug-resident-eject-icon {
-    icon-size: 16px;
+    icon-size:16px;
 }
 
 .hotplug-resident-eject-button {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.4);
+    background-gradient-start: rgba(255,255,255,0.05);
+    background-gradient-end: rgba(255,255,255,0.25);
     padding: 10px;
-    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
     color: #ccc;
 }
 .hotplug-resident-eject-button:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.5);
-    background-gradient-end: rgba(255,255,255,0.65);
+    border: 1px solid rgba(255,255,255,0.5);
+    transition-duration: 100;
 }
 
 .chat-log-message {
@@ -1621,10 +1614,10 @@ StScrollBar StButton#vhandle:active {
 
 .summary-source-button:hover {
     background-gradient-start: rgba(255, 255, 255, .05);
-    background-gradient-end: rgba(255, 255, 255, .15);
+    background-gradient-end: rgba(255, 255, 255, .25);
     background-gradient-direction: vertical;
     border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 0;
     transition-duration: 200;
 }
@@ -1635,7 +1628,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-end: rgba(255, 255, 255, .15);
     background-gradient-direction: vertical;
     border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 0;
     transition-duration: 200;
 }
