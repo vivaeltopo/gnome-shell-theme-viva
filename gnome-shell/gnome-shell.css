@@ -668,9 +668,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .workspace-thumbnail-indicator {
-    outline: 1px solid rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.8);
-    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.05);
+    background-gradient-end: rgba(255,255,255,.15);
+    border-radius: 2px;
     padding: 2px;
 }
 
@@ -2375,8 +2378,9 @@ StScrollBar StButton#vhandle:active {
 
 .login-dialog {
     /* Reset border and background */
-    border: 0;
-    background: rgba(0,0,0,0);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
     min-height: 150px;
     max-height: 700px;
     min-width: 350px;
@@ -2421,13 +2425,13 @@ StScrollBar StButton#vhandle:active {
     text-shadow: black 0px 2px 2px;
 }
 
-.login-dialog-user-list-item:hover {
-    background-color: rgba(255,255,255,0.1);
-}
+/*.login-dialog-user-list-item:hover {
+    background-color: rgba(255,255,0,0.1);
+}*/
 
-.login-dialog-user-list:expanded .login-dialog-user-list-item:focus {
-    background-color: rgba(255,255,255,0.33);
-}
+/*.login-dialog-user-list:expanded .login-dialog-user-list-item:focus {
+    color: white;
+}*/
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
     background-image: url("logged-in-indicator.svg");
@@ -2602,9 +2606,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 #lockDialogGroup {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgb(0,0,0);
-    background-gradient-end: rgb(33,33,33);
+    background-color: black;
+    background-image: url("noise-texture.png");
+    background-repeat: repeat;
 }
 
 .screen-shield-arrows {
@@ -2622,7 +2626,7 @@ StScrollBar StButton#vhandle:active {
 .screen-shield-clock {
     font-family: Raleway;
     color: white;
-    text-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+    text-shadow: 1px 2px 2px rgba(0,0,0,1.0);
     text-align: center;
     padding-bottom: 1.5em;
 }
@@ -2630,7 +2634,7 @@ StScrollBar StButton#vhandle:active {
 .screen-shield-clock-time {
     font-size: 140px;
     line-height: 180px;
-    text-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+    text-shadow: 1px 2px 4px rgba(0,0,0,1.0);
 }
 
 .screen-shield-clock-date {
