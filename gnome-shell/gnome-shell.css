@@ -392,9 +392,22 @@ StScrollBar StButton#vhandle:active {
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
-.notification StEntry:focus {
-    border: 1px solid #f07746;
-}
+/*.notification StEntry:focus {
+    spacing: 10px;
+    font-size: 12pt;
+    font-weight: normal;
+    width: 18em;
+    selection-background-color: white;
+    selected-color: #2c2c2c;
+    border-radius: 2px;
+    padding: 4px;
+    color: #2c2c2c;
+    border: 1px solid rgba(255,255,255,0.8);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+}*/
 
 #searchEntry {
     color: rgb(128, 128, 128);
@@ -416,7 +429,7 @@ StScrollBar StButton#vhandle:active {
 .prompt-dialog-password-entry .capslock-warning,
 .login-dialog-prompt-entry .capslock-warning {
     icon-size: 16px;
-    warning-color: #999;
+    warning-color: red;
     padding: 0 4px;
 }
 
@@ -1515,6 +1528,7 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     color: #ccc;
 }
+
 .hotplug-resident-eject-button:hover {
     border: 1px solid rgba(255,255,255,0.5);
     transition-duration: 100;
@@ -1532,15 +1546,7 @@ StScrollBar StButton#vhandle:active {
     padding: 5px 20px;
     text-align: left;
     color: rgba(255,255,255, 0.8);
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,0.1);
 }
-
-.chat-received:first-child {
-    border-top: 1px solid rgba(255,255,255,0.9);
-}
-
 
 .chat-received:rtl {
     padding-left: 0px;
@@ -1550,10 +1556,7 @@ StScrollBar StButton#vhandle:active {
 .chat-sent {
     padding: 5px 20px;
     text-align: right;
-    color: rgba(255,255,255, 0.6);
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255,255,255,0.1);
-    background-gradient-end: rgba(255,255,255,0);
+    color: rgba(255,255,255, 0.4);
 }
 
 .chat-sent:rtl {
@@ -1563,8 +1566,9 @@ StScrollBar StButton#vhandle:active {
 
 .chat-meta-message {
     padding-left: 4px;
+    padding-right: 4px;
     border-radius: 5px;
-    font-size: 9pt;
+    font-size: 8pt;
     color: #bbbbbb;
 }
 
@@ -1578,29 +1582,37 @@ StScrollBar StButton#vhandle:active {
 }
 
 .notification StEntry {
+    spacing: 10px;
+    font-size: 12pt;
+    font-weight: normal;
+    width: 18em;
+    selection-background-color: white;
+    selected-color: #2c2c2c;
+    border-radius: 2px;
     padding: 4px;
-    selected-color: black;
-    color: white;
-    border: 1px solid rgba(0,0,0,0.6);
+    color: #2c2c2c;
+    border: 1px solid rgba(255,255,255,0.8);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(60,60,60,0.4);
-    background-gradient-end: rgba(90,90,90,0.6);
-    box-shadow: inset 0px -1px 1px 0px rgba(255,255,255,0.2);
-    border-radius: 5px;
-    caret-color: #a8a8a8;
-    caret-size: 1px;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
 }
 
-#notification StEntry:focus {
-    color: white;
-    border: 1px solid rgba(0,0,0,0.6);
+.notification StEntry:focus {
+    spacing: 10px;
+    font-size: 12pt;
+    font-weight: normal;
+    width: 18em;
+    selection-background-color: white;
+    selected-color: #2c2c2c;
+    border-radius: 2px;
+    padding: 4px;
+    color: #2c2c2c;
+    border: 1px solid rgba(255,255,255,0.8);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(60,60,60,0.4);
-    background-gradient-end: rgba(90,90,90,0.6);
-    box-shadow: inset 0px -1px 1px 0px rgba(255,255,255,0.2);
-
-    caret-color: #545454;
-    selection-background-color: #808080;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
 }
 
 #summary-mode {
