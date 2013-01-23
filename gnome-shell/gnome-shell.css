@@ -1107,13 +1107,13 @@ StScrollBar StButton#vhandle:active {
 
 #calendarEventsArea {
     /* this is the width of the second column of the popup */
-    min-width: 200px;
+    min-width: 300px;
 }
 
 .calendar-vertical-separator {
     -stipple-width: 1px;
     -stipple-color: rgba(255,255,255,0.3);
-    width: 0.3em;
+    width: 0.5em;
 }
 
 #calendarPopup .calendar {
@@ -1121,13 +1121,13 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar {
-    padding: .4em 1.75em .8em 1.75em;
+    padding: 1em 2em .5em 2em;
     spacing-rows: 0px;
     spacing-columns: 0px;
 }
 
 .calendar-month-label {
-    color: #e2e2e2;
+    color: white;
     font-size: 12pt;
     padding-bottom: 12px;
     padding-top: 12px;
@@ -1137,7 +1137,6 @@ StScrollBar StButton#vhandle:active {
     width: 18px;
     height: 12px;
     background-image: url("calendar-arrow-left.svg");
-    border-radius: 5px;
 }
 
 .calendar-change-month-back:rtl {
@@ -1145,17 +1144,16 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-change-month-back:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-image: url("calendar-arrow-left-hover.svg");
 }
 .calendar-change-month-back:active {
-    background-color: rgba(255,255,255,0.3);
+    background-image: url("calendar-arrow-left-hover.svg");
 }
 
 .calendar-change-month-forward {
     width: 18px;
     height: 12px;
     background-image: url("calendar-arrow-right.svg");
-    border-radius: 5px;
 }
 
 .calendar-change-month-forward:rtl {
@@ -1163,51 +1161,52 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-change-month-forward:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-image: url("calendar-arrow-right-hover.svg");
 }
 .calendar-change-month-forward:active {
-    background-color: rgba(255,255,255,0.3);
+    background-image: url("calendar-arrow-right-hover.svg");
 }
 
 .datemenu-date-label {
     padding: .4em 1.75em;
     font-size: 16pt;
-    color: #e2e2e2;
-}
-
-.calendar-day-base {
-    font-size: 9pt;
+    font-weight: bold;
     text-align: center;
-    width: 2.4em;
-    height: 2.4em;
-}
-
-.calendar-day-base:hover {
-    background-color: rgba(255,255,255,0.2);
-}
-
-.calendar-day-base:active {
-    font-size: 9pt;
+    font-family: "Open Sans";
     color: white;
 }
 
+.calendar-day-base {
+    font-size: 10pt;
+    text-align: center;
+    width: 3.5em;
+    height: 2.5em;
+    color: white;
+    border-radius: 2px;
+}
+
+.calendar-day-base:hover {
+    background-color: rgba(221,72,20,0.6);
+}
+
+.calendar-day-base:active {
+    background-color: rgba(221,72,20,0.6);
+}
+
 .calendar-day-heading {
-    color: #888a85;
+    color: rgb(174,167,159);
     padding-top: .2em;
     height: 1.7em;
 }
 
 .calendar-week-number {
-    color: #babdb6;
-    font-weight: bold;
+    color: rgb(174,167,159);
+    padding-top: 1em;
 }
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-    border: 1px solid #505050;
-    color: #babdb6;
-    border-top-width: 0;
-    border-left-width: 0;
+    border: 1px solid #000;
 }
 
 .calendar-day-top {
@@ -1219,20 +1218,19 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-work-day {
-}
-
-.calendar-nonwork-day {
     background-color: rgba(255,255,255,0.1);
 }
 
+.calendar-nonwork-day {
+    background-color: rgba(255,255,255,0.2);
+}
+
 .calendar-today {
-    background-image: url("calendar-today.png");
-    text-shadow: black 0px 2px 2px;
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .calendar-other-month-day {
-    color: #333333;
+    color: rgba(174,167,159,0.6);
 }
 
 .calendar-other-month-day:hover {
