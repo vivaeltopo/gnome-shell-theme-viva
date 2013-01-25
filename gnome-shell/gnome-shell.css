@@ -870,39 +870,22 @@ StScrollBar StButton#vhandle:active {
 .app-filter {
     font-weight: bold;
     height: 2.85em;
-    color: #aaa;
+    color: rgb(174,167,159);
     width: 200px;
     padding: 0 0 0 5px;
 }
 
 .app-filter:hover {
-    color: black;
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(221,72,20,1.0);
-    background-gradient-end: rgba(221,72,20,0.8);
-    border-radius: 5px;
+    border-image: url("status-chooser.svg") 0 0 2 2;
 }
 
-.app-filter:selected {
+.app-filter:selected, .app-filter:selected:rtl {
     color: white;
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255, 255, 255, 0.3);
-    background-gradient-end: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
-}
-
-.app-filter:selected:rtl {
-    color: white;
-    background-gradient-direction: horizontal;
-    background-gradient-start: rgba(255, 255, 255, 0.1);
-    background-gradient-end: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border-image: url("status-chooser.svg") 0 0 2 2;
 }
 
 .app-filter:focus {
-    outline: 1px solid #aaa;
+    border-image: url("status-chooser.svg") 0 0 2 2;
 }
 
 .dash-item-container > StButton {
@@ -2363,8 +2346,9 @@ StScrollBar StButton#vhandle:active {
 
 .login-dialog {
     /* Reset border and background */
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 5px;
+/*    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 5px;*/
+    border-image: url("status-chooser.svg") 0 0 2 2;
     background-color: rgba(0,0,0,0.5);
     min-height: 150px;
     max-height: 700px;
