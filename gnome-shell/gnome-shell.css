@@ -195,7 +195,10 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item:active {
-    border-image: url("popup-hover.svg") 0 0 12 2;
+    border-image: url("status-chooser.svg") 0 0 2 2;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(221,72,20,0.2);
+    background-gradient-end: rgba(221,72,20,0.2);
     color: white;
 }
 
@@ -1186,15 +1189,12 @@ StScrollBar StButton#vhandle:active {
     font-weight: bold;
     padding-right: .5em;
     padding-top: .7em;
-    border: 1px dotted rgba(51,51,51,0.7);
-    border-top: 0;
-    border-left: 0;
-    border-bottom: 0;
 }
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
     font-size: 8pt;
     padding: .5em;
+    text-align: center;
 }
 .calendar-today {
     border: 1px solid rgba(221,72,20,0.7);
@@ -1206,7 +1206,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-day-with-events {
-    color: rgba(221,72,20,0.9);
+    /*color: rgba(221,72,20,0.9);*/
+    font-weight: bold;
 }
 
 .events-header-vbox, .events-header-vbox:rtl {
