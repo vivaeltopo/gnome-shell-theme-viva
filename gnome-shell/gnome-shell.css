@@ -783,11 +783,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .search-section-header {
-    padding: 4px 12px;
+    padding: 20px 12px 4px 12px;
     spacing: 4px;
     color: white;
-    font-size: 10pt;
+    font-size: 12pt;
     font-weight: bold;
+    border-image: url("seperator.svg") 0 0 2 2;
 }
 
 .search-statustext {
