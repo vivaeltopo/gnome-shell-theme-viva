@@ -189,11 +189,11 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item:active {
-    border-image: url("status-chooser.svg") 0 0 2 2;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(221,72,20,0.2);
-    background-gradient-end: rgba(221,72,20,0.2);
+    background-gradient-start: rgba(221,72,20,0.7);
+    background-gradient-end: rgba(221,72,20,0.9);
     color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .popup-menu-item:active > .popup-slider-menu-item {
@@ -1688,6 +1688,7 @@ StScrollBar StButton#vhandle:active {
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 5px;
     color: rgba(255,255,255,1.0);
+    text-shadow: 1px 1px 2px black;
 }
 
 .switcher-list .thumbnail-box {
@@ -1722,7 +1723,6 @@ StScrollBar StButton#vhandle:active {
 
 /* Workspace Switcher */
 .workspace-switcher-group {
-    padding: 12px;
 }
 
 .workspace-switcher-container {
@@ -1742,24 +1742,24 @@ StScrollBar StButton#vhandle:active {
 }
 
 .ws-switcher-active-up {
-    height: 100px;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 10px;
+    height: 72px;
+    border: 1px solid rgba(174,167,159,0.5);
+    border-radius: 5px;
     background: rgba(255,255,255,0.4) url("ws-switch-arrow-up.svg");
 }
 
 .ws-switcher-active-down {
-    height: 100px;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 10px;
+    height: 72px;
+    border: 1px solid rgba(174,167,159,0.5);
+    border-radius: 5px;
     background: rgba(255,255,255,0.4) url("ws-switch-arrow-down.svg");
 }
 
 .ws-switcher-box {
-    height: 96px;
-    border: 1px solid rgba(85,85,85,0.5);
+    height: 72px;
+    border: 1px solid rgba(174,167,159,0.5);
+    border-radius: 5px;
     background: transparent;
-    border-radius: 10px;
 }
 
 /* Modal Dialogs */
