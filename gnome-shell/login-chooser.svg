@@ -81,15 +81,15 @@
        id="linearGradient2999-0-3">
       <stop
          id="stop3001-9-0"
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#dd4814;stop-opacity:0"
          offset="0" />
       <stop
          id="stop3003-4-0"
-         style="stop-color:#ffffff;stop-opacity:0.49803922;"
+         style="stop-color:#dd4814;stop-opacity:1"
          offset="0.5" />
       <stop
          id="stop3005-0-9"
-         style="stop-color:#ffffff;stop-opacity:0;"
+         style="stop-color:#dd4814;stop-opacity:0"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -125,6 +125,13 @@
   <g
      transform="translate(-0.9999999,-27)"
      id="layer1">
+    <rect
+       width="20"
+       height="18"
+       x="0.99999988"
+       y="28"
+       id="rect2991"
+       style="opacity:0.5;fill:url(#linearGradient3770);fill-opacity:1" />
     <path
        d="m 0.9999999,27 0,1 L 11,28 21,28 21,27 11,27 0.9999999,27 z"
        id="rect2992-0-2"

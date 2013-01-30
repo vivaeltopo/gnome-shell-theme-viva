@@ -35,7 +35,7 @@
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2985" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2987">
     <linearGradient
@@ -81,15 +81,15 @@
        id="linearGradient2999-0-3">
       <stop
          id="stop3001-9-0"
-         style="stop-color:#dd4814;stop-opacity:0"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="0" />
       <stop
          id="stop3003-4-0"
-         style="stop-color:#dd4814;stop-opacity:1"
+         style="stop-color:#ffffff;stop-opacity:0.49803922;"
          offset="0.5" />
       <stop
          id="stop3005-0-9"
-         style="stop-color:#dd4814;stop-opacity:0"
+         style="stop-color:#ffffff;stop-opacity:0;"
          offset="1" />
     </linearGradient>
     <linearGradient
@@ -107,7 +107,7 @@
        x2="21"
        y2="37"
        id="linearGradient3770"
-       xlink:href="#linearGradient3764"
+       xlink:href="#linearGradient2999-0-3"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <metadata
@@ -125,13 +125,6 @@
   <g
      transform="translate(-0.9999999,-27)"
      id="layer1">
-    <rect
-       width="20"
-       height="18"
-       x="0.99999988"
-       y="28"
-       id="rect2991"
-       style="opacity:0.5;fill:url(#linearGradient3770);fill-opacity:1" />
     <path
        d="m 0.9999999,46 0,1 L 11,47 21,47 21,46 11,46 0.9999999,46 z"
        id="rect2992-0-2-5"
