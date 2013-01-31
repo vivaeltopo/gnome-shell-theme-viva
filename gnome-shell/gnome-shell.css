@@ -190,7 +190,7 @@ StScrollBar StButton#vhandle:active {
 
 .popup-menu-item:active {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(221,72,20,0.7);
+    background-gradient-start: rgba(221,72,20,0.6);
     background-gradient-end: rgba(221,72,20,0.9);
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -2108,19 +2108,9 @@ StScrollBar StButton#vhandle:active {
 
 .prompt-dialog-password-box {
     spacing: 10px;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: normal;
     width: 23em;
-    selection-background-color: white;
-    selected-color: rgb(51,51,51);
-    border-radius: 2px;
-    padding: 4px;
-    color: rgb(51,51,51);
-    border: 1px solid rgba(255,255,255,0.8);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.7);
-    background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
 }
 
 .prompt-dialog-error-label {
