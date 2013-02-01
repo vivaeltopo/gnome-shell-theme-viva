@@ -1623,7 +1623,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-start: rgba(0,0,0,0.8);
     background-gradient-end: rgba(0,0,0,0.65);
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 20px;
     font-size: 9pt;
     font-weight: bold;
@@ -1664,7 +1664,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-start: rgba(221,72,20,1.0);
     background-gradient-end: rgba(221,72,20,0.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border-radius: 2px;
     color: white;
     padding: 6px;
 }
@@ -1674,7 +1674,7 @@ StScrollBar StButton#vhandle:active {
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 5px;
+    border-radius: 2px;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -1792,7 +1792,7 @@ StScrollBar StButton#vhandle:active {
 
 .modal-dialog-button {
     border-radius: 2px;
-    font-size: 9pt;
+    font-size: 10pt;
     color: rgb(51,51,51);
     margin-left: 10px;
     margin-right: 10px;
@@ -1800,52 +1800,35 @@ StScrollBar StButton#vhandle:active {
     border: 0px solid rgba(255,255,255,0.0);
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(232,232,232,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.7);
 }
 
 .modal-dialog-button:insensitive {
     color: rgb(60, 60, 60);
 }
 
-
-.modal-dialog-button:active,
-.modal-dialog-button:pressed {
-    border: 0px solid rgba(255,255,255,0.0);
-    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(180,180,180,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
+.modal-dialog-button:disabled {
+    color: rgb(60, 60, 60);
 }
-
-.modal-dialog-button:active:hover,
-.modal-dialog-button:pressed:hover {
-    border: 0px solid rgba(255,255,255,0.0);
-    box-shadow: inset 0px 0px 1px 2px rgba(0,0,0,0.2);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(180,180,180,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
-}
-
 .modal-dialog-button:hover {
     border: 0px solid rgba(255,255,255,0.0);
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(245,245,245,1.0);
-    background-gradient-end: rgba(232,232,232,1.0);
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.6);
 }
-
-.modal-dialog-button:disabled {
-    color: rgb(60, 60, 60);
-}
-
+.modal-dialog-button:active:hover,
+.modal-dialog-button:pressed:hover,
+.modal-dialog-button:active,
+.modal-dialog-button:pressed,
 .modal-dialog-button:focus {
     border: 0px solid rgba(255,255,255,0.0);
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(245,245,245,1.0);
-    background-gradient-end: rgba(232,232,232,1.0);
-    padding: 3px 31px 4px;
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.6);
+    padding: 5px 32px 4px;
 }
 
 /* Run Dialog */
@@ -2345,9 +2328,6 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog {
-    /* Reset border and background */
-/*    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 5px;*/
     border-image: url("login-chooser.svg") 0 0 2 2;
     background-color: rgba(0,0,0,0.5);
     min-height: 150px;
@@ -2524,38 +2504,49 @@ StScrollBar StButton#vhandle:active {
 
 
 .login-dialog .modal-dialog-button {
-    border: 0px solid rgba(255,255,255,0.0);
     border-radius: 2px;
-    font-size: 9pt;
+    font-size: 10pt;
     color: rgb(51,51,51);
     margin-left: 10px;
     margin-right: 10px;
     padding: 4px 32px 5px;
+    border: 0px solid rgba(255,255,255,0.0);
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.7);
 }
 
 .login-dialog .modal-dialog-button:default {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(232,232,232,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
+    border-radius: 2px;
+    font-size: 10pt;
+    color: rgb(51,51,51);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px 32px 5px;
     border: 0px solid rgba(255,255,255,0.0);
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.7);
 }
 
-.login-dialog .modal-dialog-button:default:hover {
+.login-dialog .modal-dialog-button:hover {
     border: 0px solid rgba(255,255,255,0.0);
-    box-shadow: inset 0px 0px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(180,180,180,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.6);
 }
 
-.login-dialog .modal-dialog-button:default:active,
-.login-dialog .modal-dialog-button:default:pressed {
+.login-dialog .modal-dialog-button:active,
+.login-dialog .modal-dialog-button:pressed {
     border: 0px solid rgba(255,255,255,0.0);
-    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(180,180,180,1.0);
-    background-gradient-end: rgba(212,212,212,1.0);
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.6);
+    padding: 5px 32px 4px;
 }
 
 .login-dialog-message-warning {
