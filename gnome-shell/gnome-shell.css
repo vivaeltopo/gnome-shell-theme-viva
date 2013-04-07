@@ -128,7 +128,7 @@ StScrollBar StButton#vhandle:active {
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-    -arrow-border-radius: 5px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(174,167,159,0.4); 
@@ -174,7 +174,7 @@ StScrollBar StButton#vhandle:active {
     background-color: rgba(0,0,0,0.9);
     padding: 1em 0em;
     border: 1px solid rgba(174,167,159,0.6);
-    border-radius: 5px;
+    border-radius: 2px;
     color: white;
     font-size: 10pt;
 }
@@ -402,7 +402,7 @@ StScrollBar StButton#vhandle:active {
 #searchEntry,
 .notification StEntry {
     border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 5px;
+    border-radius: 2px;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.65);
     background-gradient-end: rgba(255,255,255,0.8);
@@ -446,7 +446,7 @@ StScrollBar StButton#vhandle:active {
 
 .notification StEntry,
 .modal-dialog StEntry {
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 4px 4px;
 }
 
@@ -492,7 +492,9 @@ StScrollBar StButton#vhandle:active {
 
 #panel.unlock-screen,
 #panel.login-screen {
-    background-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(0,0,0,0.9);
+    background-gradient-end: rgba(0,0,0,0.7);
 }
 
 #panelLeft, #panelCenter {
@@ -673,7 +675,6 @@ StScrollBar StButton#vhandle:active {
 
 .status-chooser-combo {
     border-radius: 2px;
-    background-color: rgba(0,0,0,0.9);
     border: 1px solid rgba(174,167,159,0.0);
 }
 
@@ -741,18 +742,20 @@ StScrollBar StButton#vhandle:active {
 }
 
 .window-caption:hover {
-    border: 0px solid rgba(255, 255, 255, 0);
 }
 
 .window-close, .notification-close {
-    background-image: url("close-window.svg");
-    background-size: 32px;
-    height: 34px;
-    width: 34px;
+    background: rgba(0,0,0,0.8);
+    background-image: url("close.png");
+    background-size: 16px;
+    border: 1px solid rgba(174,167,159,0.6);
+    border-radius: 2px;
+    height: 24px;
+    width: 24px;
 }
 
 .window-close {
-    -shell-close-overlap: 20px;
+    -shell-close-overlap: 16px;
 }
 
 .window-clone-border {
@@ -833,7 +836,7 @@ StScrollBar StButton#vhandle:active {
 #dash:rtl {
     border-left: 1px;
     border-right: 0px;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 2px 0px 0px 2px;
 }
 
 #dash:empty {
@@ -986,7 +989,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .app-folder-popup {
-    -arrow-border-radius: 5px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(174,167,159,0.4);
@@ -1051,7 +1054,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .app-well-app.app-folder > .overview-icon {
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgba(0,0,0,0.9);
     border-width: 1px;
     border-color: rgba(174,167,159,0.4);
@@ -1211,7 +1214,8 @@ StScrollBar StButton#vhandle:active {
 
 #calendarEventsArea {
     /* this is the width of the second column of the popup */
-    min-width: 300px;
+    min-width: 250px;
+    max-width: 350px;
 }
 
 .calendar-vertical-separator {
@@ -1434,6 +1438,10 @@ StScrollBar StButton#vhandle:active {
     background-gradient-direction: vertical;
     background-gradient-start: rgb(0,0,0);
     background-gradient-end: rgb(22,22,22);
+    border: 1px solid rgba(174,167,159,0.4);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     height: 64px;
     padding: 4px 0;
 }
@@ -1449,12 +1457,12 @@ StScrollBar StButton#vhandle:active {
 }
 
 .notification {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     spacing-rows: 10px;
     spacing-columns: 10px;
     min-height: 64px;
     padding: 10px 10px 18px 10px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
     border: 1px solid rgba(174,167,159,0.4);
     border-bottom: 0;
 }
@@ -1467,7 +1475,7 @@ StScrollBar StButton#vhandle:active {
 
 .notification.multi-line-notification {
     padding-bottom: 8px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
     border: 1px solid rgba(174,167,159,0.4);
     border-bottom: 0;
 }
@@ -1484,15 +1492,15 @@ StScrollBar StButton#vhandle:active {
    of the content in the other rows. To avoid showing a stretched image, we set the minimum
    height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
 .notification-with-image {
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
     border: 1px solid rgba(174,167,159,0.4);
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     border-bottom: 0;
     min-height: 159px;
 }
 
 .summary-boxpointer {
-    -arrow-border-radius: 5px;
+    -arrow-border-radius: 2px;
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(255,255,255,0.3); 
@@ -1675,6 +1683,7 @@ StScrollBar StButton#vhandle:active {
     padding: 5px 20px;
     text-align: left;
     color: rgba(255,255,255, 0.8);
+    font-size: 12pt;
 }
 
 .chat-received:rtl {
@@ -1685,7 +1694,18 @@ StScrollBar StButton#vhandle:active {
 .chat-sent {
     padding: 5px 20px;
     text-align: right;
-    color: rgba(255,255,255, 0.4);
+    color: rgba(174,167,159,0.8);
+    font-size: 12pt;
+}
+
+.chat-sent:last-child, 
+.chat-received:last-child {
+    padding-bottom: 20px;
+    border: 1px solid rgba(174,167,159,0.4);
+    border-image: url("seperator.svg") 0 0 2 2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .chat-sent:rtl {
@@ -1696,7 +1716,6 @@ StScrollBar StButton#vhandle:active {
 .chat-meta-message {
     padding-left: 4px;
     padding-right: 4px;
-    border-radius: 5px;
     font-size: 8pt;
     color: #bbbbbb;
 }
@@ -1890,7 +1909,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .workspace-switcher-container {
-    border: 1px solid rgba(255,255,255,0.8);
+    border: 1px solid rgba(174,167,159,0.4);
     background: rgba(0,0,0,0.8);
     border-radius: 2px;
     box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.4);
@@ -1949,7 +1968,7 @@ StScrollBar StButton#vhandle:active {
 
 .modal-dialog {
     font-size: 9pt;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid rgba(255,255,255,0.6);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0,0,0,0.8);
@@ -2038,7 +2057,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .run-dialog {
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
     padding: 15px 21px;
@@ -2073,7 +2092,7 @@ StScrollBar StButton#vhandle:active {
 /* End Session Dialog */
 .end-session-dialog {
     spacing: 42px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
 }
@@ -2249,7 +2268,7 @@ StScrollBar StButton#vhandle:active {
 .prompt-dialog {
     /* this is the width of the entire modal popup */
     width: 500px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
 }
@@ -2372,7 +2391,7 @@ StScrollBar StButton#vhandle:active {
 /* On-screen Keyboard */
 
 #keyboard {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
 }
 
 .keyboard-layout {
@@ -2496,8 +2515,8 @@ StScrollBar StButton#vhandle:active {
     max-height: 700px;
     min-width: 350px;
     background-color: rgba(0,0,0,0.9);
-    border: 1px solid rgba(174,167,159,0.4);
-    border-radius: 5px;
+    border: 1px solid rgba(174,167,159,0.6);
+    border-radius: 2px;
     color: white;
     font-size: 10pt;
 }
@@ -2734,6 +2753,7 @@ StScrollBar StButton#vhandle:active {
 #lockDialogGroup {
     background-color: black;
     background-image: url("background.png");
+    background-origin: center;
     background-repeat: no-repeat;
 }
 
@@ -2773,9 +2793,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 #screenShieldNotifications {
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgba(0.0, 0.0, 0.0, 0.9);
-    border: 1px solid #868686;
+    border: 1px solid rgba(174,167,159,0.4);
     max-height: 500px;
     padding: 12px 0;
 }
