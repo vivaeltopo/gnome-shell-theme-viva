@@ -1,7 +1,7 @@
 Gnome-Shell Theme: viva
 ======================
 
-A Gnome Shell 3.6 Theme based upon the original Adwaita theme
+A Gnome Shell 3.8 Theme based upon the original Adwaita theme
 
 ![Preview of the theme](https://github.com/vivaeltopo/gnome-shell-theme-viva/blob/master/Preview.png)
 
