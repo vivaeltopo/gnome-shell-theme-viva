@@ -744,41 +744,34 @@ StScrollBar StButton#vhandle:active {
 .window-caption:hover {
 }
 
-.window-close, .notification-close {
-    background: rgba(0,0,0,0.8);
+.window-close {
+    background: rgba(0,0,0,0.9);
     background-image: url("close.png");
-    background-size: 16px;
+    background-size: 18px;
     border: 1px solid rgba(174,167,159,0.6);
     border-radius: 2px;
     height: 24px;
     width: 24px;
-}
-
-.window-close {
-    -shell-close-overlap: 16px;
+    -shell-close-overlap: 18px;
 }
 
 .window-clone-border {
 }
 
 .notification-close {
-    /* we start out in the top right of the
-     * notification, inset.
-     *
-     * center is 32px/2 = 16px
-     *
-     * adjust left 2px
-     * adjust down 8px */
-
-    -shell-close-overlap-x: 15px;
-    -shell-close-overlap-y: -12px;
+    background-image: url("close.png");
+    background-size: 16px;
+    height: 24px;
+    width: 24px;
+    -shell-close-overlap-x: 0px;
+    -shell-close-overlap-y: 0px;
 }
 
 .notification-close:rtl {
     /* as above, but starting out in the top left of the
      * notification. */
 
-    -shell-close-overlap-x: -14px;
+    /*-shell-close-overlap-x: -14px;*/
 }
 
 .window-close:rtl {
