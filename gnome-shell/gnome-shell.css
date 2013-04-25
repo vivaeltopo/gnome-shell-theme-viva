@@ -1502,7 +1502,7 @@ StScrollBar StButton#vhandle:active {
     -arrow-border-radius: 2px;
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
-    border: 1px solid rgba(174,167,159,0.6);
+    -arrow-border-color: rgba(174,167,159,0.4);
     -arrow-base: 20px;
     -arrow-rise: 10px;
     color: white;
