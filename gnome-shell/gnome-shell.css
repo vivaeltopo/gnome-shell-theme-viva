@@ -1466,6 +1466,8 @@ StScrollBar StButton#vhandle:active {
     border-bottom: 0;
     font-family: 'Open Sans', cantarell, sans-serif;
     color: white;
+    spacing-rows: 4px;
+    spacing-columns: 10px;
 }
 
 .notification,
