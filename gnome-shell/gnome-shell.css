@@ -410,6 +410,7 @@ StScrollBar StButton#vhandle:active {
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
+#searchEntry,
 #searchEntry:focus,
 #searchEntry:hover,
 .notification StEntry:focus,
@@ -653,15 +654,21 @@ StScrollBar StButton#vhandle:active {
     padding: .4em;
 }
 
-.status-chooser-user-icon,
+.status-chooser-user-icon
+{
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    width: 64px;
+    height: 64px;
+}
+
 .end-session-dialog-logout-icon,
 .polkit-dialog-user-icon,
 .login-dialog-user-list-item-icon {
     border: 1px solid rgba(174,167,159,0.4);
     border-radius: 2px;
-    width: 64pt;
-    height: 64pt;
-    background-size: contain;
+    width: 64px;
+    height: 64px;
 }
 
 .status-chooser-user-icon:hover {
@@ -672,7 +679,7 @@ StScrollBar StButton#vhandle:active {
 .status-chooser-user-name {
     font-weight: bold;
     font-size: 14pt;
-    min-width: 120pt;
+    min-width: 120px;
 }
 
 .status-chooser-combo {
@@ -992,8 +999,8 @@ StScrollBar StButton#vhandle:active {
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
     -arrow-border-color: rgba(174,167,159,0.6);
-    -arrow-base: 20px;
-    -arrow-rise: 10px;
+    /*-arrow-base: 20px;
+    -arrow-rise: 10px;*/
 }
 
 .app-folder-popup-bin {
