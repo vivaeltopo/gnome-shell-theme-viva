@@ -138,7 +138,7 @@ StScrollBar StButton#vhandle:active {
     -arrow-border-radius: 2px;
     -arrow-background-color: rgba(0,0,0,0.9);
     -arrow-border-width: 1px;
-    -arrow-border-color: rgba(174,167,159,0.6); 
+    -arrow-border-color: rgba(174,167,159,0.4); 
     -arrow-base: 2em;
     -arrow-rise: 1em;
 }
@@ -153,8 +153,8 @@ StScrollBar StButton#vhandle:active {
 
 .popup-submenu-menu-item:open {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.2);
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
     border-top: 1px solid rgba(255,255,255,0.3);
     border-bottom: 1px solid rgba(255,255,255,0.3);
     color: white;
@@ -533,7 +533,7 @@ StScrollBar StButton#vhandle:active {
     height: 2em;
     font-size: 10pt;
     font-weight: bold;
-    box-shadow: inset 0 -1px rgba(174,167,159,0.6);
+    box-shadow: inset 0 -1px rgba(174,167,159,0.4);
 }
 
 #panelLeft, #panelCenter {
@@ -746,9 +746,8 @@ StScrollBar StButton#vhandle:active {
 .window-caption {
     font-size: 12pt;
     font-weight: bold;
-    text-shadow: 1px 1px 2px 2px black;
-    padding: 4px 8px;
-    -shell-caption-spacing: 4px;
+    padding: .5em 1em;
+    -shell-caption-spacing: .5em;
 }
 
 .window-caption:hover {
@@ -831,7 +830,7 @@ StScrollBar StButton#vhandle:active {
 #dash {
     color: #5f5f5f;
     font-size: 9pt;
-    padding: 8px 0px;
+    padding: 1em 0;
     background-color: rgba(0,0,0,0.5);
     border: 1px solid rgba(174,167,159,0.4);
     border-left: 0px;
