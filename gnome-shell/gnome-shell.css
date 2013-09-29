@@ -1319,7 +1319,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .datemenu-date-label {
-    border-image: url("seperator.svg") 0 0 2 2;
+    border-image: url("separator.svg") 0 0 2 2;
     font-weight: bold;
     font-size: 14pt;
     padding: .6em 2em .6em 2em;
@@ -1437,7 +1437,7 @@ StScrollBar StButton#vhandle:active {
     padding: .1em .5em;
     padding-top: 1em;
     font-size: 14pt;
-    border-image: url("seperator.svg") 0 0 2 2;
+    border-image: url("separator.svg") 0 0 2 2;
     text-align: center;
     color: white;
 }
@@ -1732,7 +1732,7 @@ StScrollBar StButton#vhandle:active {
 .chat-received:last-child {
     padding-bottom: 20px;
     border: 1px solid rgba(174,167,159,0.4);
-    border-image: url("seperator.svg") 0 0 2 2;
+    border-image: url("separator.svg") 0 0 2 2;
     border-top: 0;
     border-left: 0;
     border-right: 0;
