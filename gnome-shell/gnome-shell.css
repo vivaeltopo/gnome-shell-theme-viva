@@ -1625,6 +1625,8 @@ StScrollBar StButton#vhandle:active {
     background-gradient-end: rgba(255,255,255,0.15);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
     border: 0;
+    border-radius: 2px;
+    border: 0px solid transparent;
 }
 
 .hotplug-notification-item:focus,
@@ -1961,8 +1963,6 @@ StScrollBar StButton#vhandle:active {
     border: 1px solid transparent;
 }
 
-/* Modal Dialogs */
-
 /* Dialog Subject Text Style */
 .show-processes-dialog-subject,
 .mount-question-dialog-subject,
@@ -1991,14 +1991,14 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
-    padding: 15px 21px;
-    spacing: 10px;
+    padding: 2em;
+    spacing: 1em;
 }
 
 .run-dialog-label {
     font-size: 10pt;
     color: white;
-    padding-bottom: 10px;
+    padding-bottom: 1em;
 }
 
 .run-dialog-error-label {
@@ -2008,13 +2008,14 @@ StScrollBar StButton#vhandle:active {
 }
 
 .run-dialog-error-box {
-    padding-top: 15px;
-    spacing: 5px;
+    padding-top: 1.5em;
+    spacing: .5em;
 }
 
+.modal-dialog .prompt-dialog-password-entry,
 .modal-dialog .run-dialog-entry {
     width: 20em;
-    padding: 4px 8px;
+    padding: .25em .5em;
     font-size: 12pt;
     font-weight: bold;
     color: rgb(51,51,51);
@@ -2240,23 +2241,6 @@ StScrollBar StButton#vhandle:active {
     font-size: 10pt;
     padding-bottom: 8px;
 }
-
-.modal-dialog .prompt-dialog-password-entry {
-    color: black;
-    font-size: 12pt;
-    font-weight: bold;
-    width: 20em;
-    selection-background-color: white;
-    selected-color: rgb(51,51,51);
-    border-radius: 2px;
-    padding: 4px 8px;
-    border: 1px solid rgba(51,51,51,0.8);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,0.2);
-}
-
 
 .prompt-dialog-password-box {
 }
@@ -2666,7 +2650,6 @@ StScrollBar StButton#vhandle:active {
 /* Screen shield */
 
 .screen-shield-background {
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.9);
 }
 
 #lockDialogGroup {
@@ -2715,16 +2698,16 @@ StScrollBar StButton#vhandle:active {
     background-color: rgba(0,0,0, 0.9);
     border: 1px solid rgba(174,167,159,0.4);
     max-height: 500px;
-    padding: 12px 0;
+    padding: 1em 0;
 }
 
 .screen-shield-notifications-box {
-    spacing: 18px;
+    spacing: 1em;
 }
 
 .screen-shield-notification-source {
-    padding: 0 24px;
-    spacing: 5px;
+    padding: 0 2em;
+    spacing: .5em;
 }
 
 .screen-shield-notification-label {
@@ -2754,7 +2737,7 @@ StScrollBar StButton#vhandle:active {
 
 #screenShieldNotifications .notification-button,
 #screenShieldNotifications .notification-icon-button {
-    border: 1px rgba(255,255,255,0.5);
+    border-radius: 2px;
 }
 
 #screenShieldNotifications StScrollBar StBin#trough {
