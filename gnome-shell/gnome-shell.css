@@ -2415,7 +2415,7 @@ StScrollBar StButton#vhandle:active {
 /* Login Dialog */
 
 .framed-user-icon {
-    border: 1px solid #8b8b8b;
+    border: 1px solid transparent;
     border-radius: 2px;
     background-size: contain;
 }
@@ -2440,9 +2440,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog {
-    min-height: 150px;
-    max-height: 700px;
-    min-width: 350px;
+    min-height: 15em;
+    max-height: 70em;
+    min-width: 35em;
     background-color: rgba(0,0,0,0.9);
     border: 1px solid rgba(174,167,159,0.6);
     border-radius: 2px;
@@ -2451,7 +2451,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-button-box {
-    spacing: 5px;
+    spacing: .5em;
 }
 
 .login-dialog-user-list-view {
@@ -2459,13 +2459,13 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-user-list {
-    spacing: 12px;
+    spacing: 1em;
     padding: .2em;
 }
 
 .login-dialog-user-list-item {
     color: #666666;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: .2em;
 }
 
@@ -2508,7 +2508,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-user-list-item-text-box {
-    padding: 0 0.5em;
+    padding: 0 .5em;
 }
 
 .login-dialog-user-list-item .login-dialog-timed-login-indicator {
@@ -2524,9 +2524,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-not-listed-label {
-    font-size: 10.5pt;
+    font-size: 9pt;
     font-weight: bold;
-    color: #666666;
+    color: white;
     padding-top: 1em;
 }
 
@@ -2547,16 +2547,13 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-prompt-layout {
-    padding-right: 42px;
-    padding-left: 42px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    spacing: 8px;
+    padding: 4em 3em;
+    spacing: 1em;
 }
 
 .login-dialog-prompt-label {
     color: #eeeeee;
-    font-size: 14px;
+    font-size: 10pt;
 }
 
 
@@ -2568,7 +2565,7 @@ StScrollBar StButton#vhandle:active {
     selection-background-color: white;
     selected-color: rgb(51,51,51);
     border-radius: 2px;
-    padding: 4px 8px;
+    padding: .25em .5em;
     border: 1px solid rgba(51,51,51,0.8);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.6);
