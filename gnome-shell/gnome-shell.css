@@ -22,7 +22,7 @@
 /* default text style */
 stage {
     font-family: Open Sans, cantarell, sans-serif;
-    font-size: 10pt;
+    font-size: 9pt;
     color: white;
 }
 
@@ -119,7 +119,7 @@ StScrollBar StButton#vhandle:active {
     height: 1em;
     min-width: 5em;
     -slider-height: .3em;
-    -slider-background-color: rgb(174,167,159);
+    -slider-background-color: rgba(255,255,255,0.8);
     -slider-border-color: rgba(44,0,30,.4);
     -slider-border-width: 1px;
     -slider-handle-radius: .4em;
@@ -154,8 +154,11 @@ StScrollBar StButton#vhandle:active {
 
 .popup-submenu-menu-item:open {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(174,167,159,0.3);
-    background-gradient-end: rgba(174,167,159,0.3);
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: white;
 }
 
 .popup-sub-menu {
@@ -165,7 +168,7 @@ StScrollBar StButton#vhandle:active {
     box-shadow: inset 0px -1px 1px 0px rgba(174,167,159,0.3);
     color: white;
     text-shadow: 2px 2px solid black;
-    padding: .3em 0;
+    padding: .5em 0;
 }
 
 .popup-sub-menu:scrolled .popup-menu-item:ltr {
@@ -202,11 +205,11 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item:ltr {
-    padding: .4em 1.75em .4em 0em;
+    padding: .6em 2em .6em 0em;
 }
 
 .popup-menu-item:rtl {
-    padding: .4em 0em .4em 1.75em;
+    padding: .6em 0em .6em 2em;
 }
 
 .popup-menu-item:active {
@@ -217,6 +220,10 @@ StScrollBar StButton#vhandle:active {
     text-shadow: 1px 1px 2px black;
 }
 
+.popup-submenu-menu-item:open:active {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
 .popup-menu-item:insensitive {
     color: rgb(174,167,159);
 }
@@ -225,10 +232,10 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-separator-menu-item {
+    height: 1px;
     -gradient-height: 1px;
     -gradient-start: rgba(255,255,255,0.0);
     -gradient-end: rgba(255,255,255,0.5);
-    height: 1px;
 }
 
 .popup-alternating-menu-item:alternate {
@@ -245,7 +252,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-icon {
-    icon-size: 1.2em;
+    icon-size: 1.3em;
 }
 
 /* Switches */
@@ -528,41 +535,21 @@ StScrollBar StButton#vhandle:active {
 
 /* Panel */
 
-#panel {
-    border: 1px solid rgba(174,167,159,0.4);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+#panel,
+#panel.lock-screen,
+#panel.unlock-screen,
+#panel.login-screen {
+    border: 0px solid rgba(174,167,159,0.4);
     color: rgba(0,0,0,0.0);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0.9);
-    background-gradient-end: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     height: 2em;
     font-size: 10pt;
     font-weight: bold;
-}
-
-#panel.lock-screen {
-    border: 1px solid rgba(174,167,159,0.5);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    color: rgba(0,0,0,0.0);
-    background: black;
-    height: 24px;
-    font-size: 10pt;
-    font-weight: bold;
-}
-
-#panel.unlock-screen,
-#panel.login-screen {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,0,0.9);
-    background-gradient-end: rgba(0,0,0,0.7);
+    box-shadow: inset 0 -1px rgba(174,167,159,0.6);
 }
 
 #panelLeft, #panelCenter {
-    spacing: 4px;
+    spacing: 1em;
 }
 
 #panelLeft:ltr {
@@ -581,17 +568,10 @@ StScrollBar StButton#vhandle:active {
     padding-right: 4px;
 }
 
-.panel-corner {
-    -panel-corner-radius: 0px;
-    -panel-corner-border-color: transparent;
-}
-
+.panel-corner,
 .panel-corner:active,
 .panel-corner:overview,
-.panel-corner:focus {
-    -panel-corner-border-color: transparent;
-}
-
+.panel-corner:focus,
 .panel-corner.lock-screen,
 .panel-corner.unlock-screen,
 .panel-corner.login-screen {
@@ -601,22 +581,19 @@ StScrollBar StButton#vhandle:active {
 
 #appMenu {
     spinner-image: url("process-working.svg");
-    spacing: 0.1em;
+    spacing: .5em;
 }
 
 /* used for the app menu header only */
 .label-shadow {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.3);
 }
 
-.panel-button #appMenuIcon {
-    app-icon-bottom-clip: 1px;
-}
-
+.panel-button #appMenuIcon,
 .panel-button:active #appMenuIcon,
 .panel-button:checked #appMenuIcon,
 .panel-button:focus #appMenuIcon {
-    app-icon-bottom-clip: 2px;
+    app-icon-bottom-clip: 1px;
 }
 
 .app-menu-icon {
@@ -624,18 +601,15 @@ StScrollBar StButton#vhandle:active {
     height: 24px;
 }
 
-.panel-button {
-    -natural-hpadding: 12px;
-    -minimum-hpadding: 6px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.9);
-    transition-duration: 100ms;
-}
-
+.panel-button,
 #panel.unlock-screen .panel-button,
 #panel.lock-screen .panel-button,
 #panel.login-screen .panel-button {
-    color: #e6e6e6;
+    -natural-hpadding: 1em;
+    -minimum-hpadding: 1em;
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+    font-size: 9pt;
 }
 
 #panel.unlock-screen .panel-button:hover,
@@ -653,18 +627,18 @@ StScrollBar StButton#vhandle:active {
 .panel-button:hover {
     color: white;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
 }
 
 .panel-button:active,
 .panel-button:overview,
 .panel-button:focus {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.3);
-    background-gradient-end: rgba(255,255,255,0.18);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
     color: white;
 }
 
@@ -684,31 +658,29 @@ StScrollBar StButton#vhandle:active {
 }
 
 .panel-menu {
-    -boxpointer-gap: 4px;
+    -boxpointer-gap: 1px;
 }
 
 .panel-status-indicators-box,
 .panel-status-menu-box {
-    spacing: 2px;
+    spacing: 1em;
 }
 
 .system-status-icon {
-    icon-size: 1.2em;
-    padding: 0 5px;
+    icon-size: 1.3em;
+    padding: 0;
 }
 
 .aggregate-menu {
     width: 25em;
 }
 
-.aggregate-menu .popup-menu-icon {
-    padding: 0px 4px;
-}
-
+.aggregate-menu .popup-menu-icon,
 .system-switch-user-submenu-icon {
-    icon-size: 2em;
-    border: 1px solid rgba(174,167,159,0.4);
-    border-radius: 2px;
+    icon-size: 1.3em;
+    padding: 0;
+    padding-right: 1em;
+    border: 0;
 }
 
 .system-menu-action {
@@ -930,7 +902,7 @@ StScrollBar StButton#vhandle:active {
 
 .search-section-content {
     /* This is the space between the provider icon and the results container */
-    spacing: 32px;
+    spacing: 2em;
 }
 
 .search-statustext {
