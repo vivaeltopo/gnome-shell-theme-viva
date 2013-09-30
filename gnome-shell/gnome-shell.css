@@ -1419,7 +1419,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .events-table {
-    width: 25em;
+    width: 20em;
     spacing-columns: 6pt;
     padding: 0 1.4em;
 }
