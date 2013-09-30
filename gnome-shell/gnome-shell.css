@@ -341,13 +341,13 @@ StScrollBar StButton#vhandle:active {
     font-size: 10pt;
     font-weight: bold;
     color: rgba(0,0,0,0.6);
-    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 2px;
-    padding: .3em 1em;
-    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.0);
+    padding: .5em 1.2em;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.9);
-    background-gradient-end: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.6);
 }
 
 .candidate-page-button:hover,
@@ -357,7 +357,7 @@ StScrollBar StButton#vhandle:active {
 .login-dialog .modal-dialog-button:hover,
 .login-dialog .modal-dialog-button:focus {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-start: rgba(255,255,255,0.6);
     background-gradient-end: rgba(255,255,255,0.9);
 }
 
@@ -380,10 +380,10 @@ StScrollBar StButton#vhandle:active {
 .login-dialog .modal-dialog-button:active,
 .login-dialog .modal-dialog-button:pressed {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-start: rgba(255,255,255,0.6);
     background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0px 0px 1px 1px black;
+    border: 1px solid black;
     color: rgba(0,0,0,0.8);
 }
 
@@ -396,7 +396,7 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.9);
-    background-gradient-end: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.6);
 }
 
 .modal-dialog-button-box {
@@ -477,21 +477,20 @@ StScrollBar StButton#vhandle:active {
 }
 
 #searchEntry {
+    color: rgba(255,255,255,0.6);
+    font-weight: bold;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.05);
-    background-gradient-end: rgba(255,255,255,.25);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
     border-radius: 2px;
-    color: rgba(255,255,255,0.4);
-    text-shadow: 1px 1px 2px black;
-    padding: .5em 1em;
-    font-size: 14pt;
     min-width: 20em;
 }
 
 #searchEntry:hover,
 #searchEntry:focus {
-    color: rgba(255,255,255,0.85);
+    color: white;
     caret-color: white;
 }
 
