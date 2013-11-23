@@ -223,6 +223,7 @@ StScrollBar StButton#vhandle:active {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
 }
+
 .popup-menu-item:insensitive {
     color: rgb(174,167,159);
 }
@@ -243,7 +244,7 @@ StScrollBar StButton#vhandle:active {
 
 .popup-status-menu-item {
     font-weight: normal;
-    color: rgb(174,167,159);
+    color: rgba(255,255,255,0.8);
 }
 
 .popup-inactive-menu-item, .popup-inactive-menu-item:insensitive {
