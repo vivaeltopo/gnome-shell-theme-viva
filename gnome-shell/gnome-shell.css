@@ -147,8 +147,14 @@ StScrollBar StButton#vhandle:active {
     min-width: 10em;
 }
 
-.popup-submenu-menu-item-triangle {
-    font-size: 12pt;
+.popup-menu-arrow {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.popup-submenu-menu-item {
+    border-top: 1px solid rgba(255,255,255,0.0);
+    border-bottom: 1px solid rgba(255,255,255,0.0);
 }
 
 .popup-submenu-menu-item:open {
@@ -158,6 +164,11 @@ StScrollBar StButton#vhandle:active {
     border-top: 1px solid rgba(255,255,255,0.3);
     border-bottom: 1px solid rgba(255,255,255,0.3);
     color: white;
+}
+
+.popup-submenu-menu-item:open:active {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .popup-sub-menu {
@@ -199,12 +210,11 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item {
-    padding: .4em 1.75em;
     spacing: 1em;
 }
 
 .popup-menu-item:ltr {
-    padding: .6em 2em .6em 0em;
+    padding: .5em 1.5em .5em 0em;
 }
 
 .popup-menu-item:rtl {
@@ -217,11 +227,6 @@ StScrollBar StButton#vhandle:active {
     background-gradient-end: rgba(243,115,32,.8);
     color: white;
     text-shadow: 1px 1px 2px black;
-}
-
-.popup-submenu-menu-item:open:active {
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
 }
 
 .popup-menu-item:insensitive {
@@ -247,7 +252,8 @@ StScrollBar StButton#vhandle:active {
     color: rgba(255,255,255,0.8);
 }
 
-.popup-inactive-menu-item, .popup-inactive-menu-item:insensitive {
+.popup-inactive-menu-item,
+.popup-inactive-menu-item:insensitive {
     color: white;
 }
 
@@ -261,19 +267,13 @@ StScrollBar StButton#vhandle:active {
     height: 22px;
 }
 
-.toggle-switch-us {
-    background-image: url("off.svg");
-    background-size: contain;
-}
-.toggle-switch-us:checked {
-    background-image: url("on.svg");
-    background-size: contain;
-}
-
+.toggle-switch-us,
 .toggle-switch-intl {
     background-image: url("off.svg");
     background-size: contain;
 }
+
+.toggle-switch-us:checked,
 .toggle-switch-intl:checked {
     background-image: url("on.svg");
     background-size: contain;
@@ -283,7 +283,7 @@ StScrollBar StButton#vhandle:active {
 
 .nm-dialog {
     max-height: 40em;
-    min-height: 10em;
+    min-height: 20em;
     min-width: 40em;
 }
 
@@ -345,10 +345,9 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     border: 1px solid rgba(255,255,255,0.0);
     padding: .5em 1.2em;
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5);
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.9);
-    background-gradient-end: rgba(255,255,255,0.6);
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.5);
 }
 
 .candidate-page-button:hover,
@@ -358,8 +357,8 @@ StScrollBar StButton#vhandle:active {
 .login-dialog .modal-dialog-button:hover,
 .login-dialog .modal-dialog-button:focus {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.9);
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
 }
 
 .app-view-control:first-child:ltr:focus,
@@ -381,8 +380,8 @@ StScrollBar StButton#vhandle:active {
 .login-dialog .modal-dialog-button:active,
 .login-dialog .modal-dialog-button:pressed {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.9);
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
     box-shadow: inset 0px 0px 1px 1px black;
     border: 1px solid black;
     color: rgba(0,0,0,0.8);
@@ -435,7 +434,6 @@ StScrollBar StButton#vhandle:active {
 
 /* Entries */
 
-.login-dialog StEntry,
 .notification StEntry,
 .modal-dialog StEntry {
     color: rgb(51,51,51);
@@ -446,7 +444,6 @@ StScrollBar StButton#vhandle:active {
     padding: .25em .5em;
 }
 
-.login-dialog StEntry,
 .run-dialog-entry,
 .notification StEntry {
     border: 1px solid rgba(255,255,255,0.6);
@@ -458,7 +455,25 @@ StScrollBar StButton#vhandle:active {
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
+.login-dialog StEntry {
+    color: rgba(255,255,255,0.8);
+    caret-color: rgba(255,255,255,0.8);
+    font-weight: bold;
+    font-size: 14pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
+}
+
 .login-dialog StEntry:focus,
+.login-dialog StEntry:insensitive {
+}
+
 .notification StEntry:focus,
 .modal-dialog StEntry {
     font-size: 12pt;
@@ -517,7 +532,6 @@ StScrollBar StButton#vhandle:active {
     padding: 0 4px;
 }
 
-.login-dialog StEntry:insensitive,
 .modal-dialog StEntry:insensitive {
     color: rgba(0,0,0,0.7);
     border: 1px solid rgba(255,255,255,0.6);
@@ -538,22 +552,17 @@ StScrollBar StButton#vhandle:active {
     box-shadow: inset 0 -1px rgba(174,167,159,0.4);
 }
 
-#panelLeft, #panelCenter {
+#panelLeft,
+#panelCenter {
     spacing: 1em;
 }
 
-#panelLeft:ltr {
-    padding-right: 4px;
-}
-
-#panelLeft:rtl {
-    padding-left: 4px;
-}
-
+#panelLeft:rtl,
 #panelRight:ltr {
     padding-left: 4px;
 }
 
+#panelLeft:ltr,
 #panelRight:rtl {
     padding-right: 4px;
 }
@@ -676,12 +685,10 @@ StScrollBar StButton#vhandle:active {
 
 .system-menu-action {
     background: transparent;
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.0);
-    border-radius: 2px;
     color: white;
-    text-shadow: 1px 1px 2px black;
-    border-color: transparent;
+    border: 0;
     padding: 1em;
+    transition-duration: 200ms;
 }
 
 .system-menu-action:hover,
@@ -694,6 +701,7 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px 2px black;
+    transition-duration: 200ms;
 }
 
 .system-menu-action > StIcon {
@@ -717,23 +725,21 @@ StScrollBar StButton#vhandle:active {
     padding-bottom: 32px;
 }
 
-.workspace-thumbnails-background {
-    background-color: rgba(0,0,0,0.9);
+.workspace-thumbnails {
+    spacing: 11px;
+    visible-width: 2em; /* Amount visible before hovering */
     border: 1px solid rgba(174,167,159,0.4);
     border-right: 0px;
-    border-radius: 2px;
+    border-radius: 2px 0px 0px 2px;
+    background-color: rgba(0,0,0,0.9);
     padding: 8px;
 }
 
-.workspace-thumbnails-background:rtl {
+.workspace-thumbnails:rtl {
     border-right: 1px;
     border-left: 0px;
-    border-radius: 0px 9px 9px 0px;
-    padding: 11px 11px 11px 7px;
-}
-
-.workspace-thumbnails {
-    spacing: 12px;
+    border-radius: 0px 2px 2px 0px;
+    padding: 8px;
 }
 
 .workspace-thumbnail-indicator {
@@ -833,7 +839,7 @@ StScrollBar StButton#vhandle:active {
     color: #5f5f5f;
     font-size: 9pt;
     padding: 1em 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.9);
     border: 1px solid rgba(174,167,159,0.4);
     border-left: 0px;
     border-radius: 0px 2px 2px 0px;
@@ -1054,7 +1060,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .app-folder-popup-bin {
-    padding: 1em;
+    padding: 0em;
 }
 
 .app-well-app.app-folder > .overview-icon {
@@ -1262,7 +1268,7 @@ StScrollBar StButton#vhandle:active {
 
 #calendarEventsArea {
     /* this is the width of the second column of the popup */
-    min-width: 50em;
+    min-width: 70em;
     max-width: 70em;
 }
 
@@ -1994,7 +2000,6 @@ StScrollBar StButton#vhandle:active {
 }
 
 /* Run Dialog */
-
 .run-dialog {
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
@@ -2022,19 +2027,19 @@ StScrollBar StButton#vhandle:active {
 
 .modal-dialog .prompt-dialog-password-entry,
 .modal-dialog .run-dialog-entry {
-    width: 20em;
-    padding: .25em .5em;
-    font-size: 12pt;
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
     font-weight: bold;
-    color: rgb(51,51,51);
-    selection-background-color: rgb(51,51,51);
-    selected-color: white;
-    border: 1px solid rgba(51,51,51,0.8);
-    border-radius: 2px;
+    font-size: 14pt;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.3);
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
+
 }
 
 .lightbox {
@@ -2200,30 +2205,31 @@ StScrollBar StButton#vhandle:active {
 
 /* Password or Authentication Dialog */
 .prompt-dialog {
-    width: 500px;
+    min-width: 45em;
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
 }
 
 .prompt-dialog-main-layout {
-    spacing: 0px;
-    padding: 10px;
+    spacing: 1em;
+    padding: 1em;
 }
 
 .prompt-dialog-message-layout {
-    spacing: 16px;
-    padding-left: 20px;
+    spacing: 1.5em;
+    padding-left: 1em;
 }
 
 .prompt-dialog-headline {
-    font-size: 14pt;
+    font-size: 20pt;
+    font-family: Raleway;
     font-weight: bold;
     color: white;
 }
 
 .prompt-dialog-password-box {
-    spacing: 10px;
+    spacing: 1em;
     font-size: 10pt;
     font-weight: normal;
     width: 23em;
@@ -2238,7 +2244,7 @@ StScrollBar StButton#vhandle:active {
 
 .prompt-dialog-info-label {
     font-size: 10pt;
-    padding-bottom: 8px;
+    padding-bottom: 80px;
 }
 
 .hidden {
@@ -2256,8 +2262,10 @@ StScrollBar StButton#vhandle:active {
 /* Polkit Dialog */
 
 .polkit-dialog-user-layout {
-    spacing: 32px;
-    font-size: 12pt;
+    spacing: 1em;
+    color: white;
+    font-family: Raleway;
+    font-size: 16pt;
 }
 
 .polkit-dialog-user-layout:rtl {
@@ -2329,15 +2337,18 @@ StScrollBar StButton#vhandle:active {
 .keyboard-key {
     min-height: 32px;
     min-width: 32px;
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 14pt;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.05);
-    background-gradient-end: rgba(255,255,255,.25);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
     border-radius: 2px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+    min-width: 20em;
+    padding: .25em .5em;
 }
 
 .keyboard-key:grayed {
@@ -2445,7 +2456,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog {
-    background: black;
+    background: url("/usr/share/themes/Adwaita/backgrounds/good-night-310.jpg");;
+    background-size: contain;
     border: 1px solid transparent;
     color: white;
     font-size: 10pt;
@@ -2465,8 +2477,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-user-list-item {
-    color: #666666;
-    padding: .2em;
+    color: white;
+    padding: .5em;
 }
 
 .login-dialog-user-list-item:ltr {
@@ -2483,11 +2495,10 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item {
-    color: #666666;
+    color: rgba(255,255,255,0.8);
 }
 
 .login-dialog-user-list-item,
-.login-dialog-user-list-item:hover .login-dialog-user-list-item-name,
 .login-dialog-user-list:expanded .login-dialog-user-list-item:focus .login-dialog-user-list-item-name,
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
     color: white;
@@ -2512,13 +2523,19 @@ StScrollBar StButton#vhandle:active {
     background-color: #8b8b8b;
 }
 
+.login-dialog-user-list:expanded .login-dialog-user-list-item:hover,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:focus,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:active {
+	color: white;
+}
+
 .login-dialog-user-list-item-icon {
 }
 
 .login-dialog-not-listed-label {
-    font-size: 9pt;
+    font-size: 11pt;
     font-weight: bold;
-    color: white;
+    color: rgba(255,255,255,0.8);
     padding-top: 1em;
 }
 
@@ -2528,48 +2545,39 @@ StScrollBar StButton#vhandle:active {
 
 .login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
 .login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
-    color: #E8E8E8;
+    color: white;
 }
 
+.user-widget-label,
 .login-dialog-username {
-    font-size: 22pt;
+    font-family: Raleway;
+    font-size: 30pt;
     text-shadow: 1px 2px 2px black;
     text-align: left;
     padding-left: 1em;
 }
 
 .login-dialog-prompt-layout {
-    padding: 2em;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 2px;
     transition-duration: 600;
+    border-radius: 2px;
+    border: 1px solid rgba(174,167,159,0.4);
+    background-color: rgba(0,0,0,0.9);
+    padding: 2em;
+    spacing: 1em;
+    min-width: 35em;
 }
 
 .login-dialog-prompt-label {
     color: white;
-    padding: 1em 0;
-    font-size: 10pt;
-}
-
-.login-dialog-prompt-box {
-    color: white;
-    font-size: 12pt;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 16pt;
     font-weight: bold;
-    width: 20em;
-    selection-background-color: white;
-    selected-color: rgb(51,51,51);
-    border-radius: 5px;
-    padding: .25em .5em;
-    border: 1px solid rgba(51,51,51,0.8);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,0.2);
 }
 
 .login-dialog-prompt-entry,
 .prompt-dialog-password-entry {
-    width: 23em;
+    width: 20em;
 }
 
 .login-dialog-session-list-button StIcon {
@@ -2577,7 +2585,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-session-list-button {
-    color: #8b8b8b;
+    color: rgba(255,255,255,0.8);
 }
 
 .login-dialog-session-list-button:hover,
@@ -2616,9 +2624,8 @@ StScrollBar StButton#vhandle:active {
 }
 
 .login-dialog-message {
-    padding-top: 4px;
-    padding-bottom: 16px;
-    min-height: 2em;
+    padding: .5em 1em;
+    transition-duration: 500ms;
 }
 
 .login-dialog-message-warning {
@@ -2628,14 +2635,6 @@ StScrollBar StButton#vhandle:active {
 .login-dialog-message-hint {
     padding-top: 0px;
     padding-bottom: 20px;
-}
-
-.user-widget-label {
-    font-size: 16pt;
-    font-weight: bold;
-    text-align: left;
-    padding-left: 15px;
-    text-shadow: black 0px 4px 3px 0px;
 }
 
 /* Screen shield */
