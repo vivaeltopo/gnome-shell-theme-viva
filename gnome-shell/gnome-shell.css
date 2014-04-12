@@ -1670,7 +1670,7 @@ StScrollBar StButton#vhandle:active {
 .hotplug-resident-mount-icon,
 .notification-icon-button > StIcon {
     icon-size: 1.3em;
-    padding: 0;
+    padding: 1em;
 }
 
 .hotplug-transient-box {
