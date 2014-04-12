@@ -1533,7 +1533,8 @@ StScrollBar StButton#vhandle:active {
     color: white;
 }
 
-.notification, #notification-container {
+.notification,
+#notification-container {
     font-size: 11pt;
     width: 40em;
 }
@@ -1614,8 +1615,6 @@ StScrollBar StButton#vhandle:active {
     spacing: 1em;
 }
 
-.hotplug-notification-item,
-.hotplug-resident-eject-button,
 .notification-button,
 .notification-icon-button {
     color: white;
@@ -1681,6 +1680,7 @@ StScrollBar StButton#vhandle:active {
 
 .hotplug-resident-box {
     spacing: 1em;
+    border: 1px solid red;
 }
 
 .hotplug-resident-mount {
@@ -1697,6 +1697,27 @@ StScrollBar StButton#vhandle:active {
 .hotplug-resident-mount-label {
     color: inherit;
     padding-left: 6px;
+}
+
+.hotplug-notification-item,
+.hotplug-resident-eject-button {
+    width: 2em;
+    height: 2em;
+}
+
+.hotplug-resident-mount-icon {
+    icon-size: 3em;
+    padding: 0 .5em;
+}
+
+.hotplug-resident-eject-icon {
+    icon-size: 1.3em;
+}
+
+.hotplug-resident-eject-button {
+    padding: 1em;
+    border-radius: 2px;
+    color: #ccc;
 }
 
 .chat-log-message {
