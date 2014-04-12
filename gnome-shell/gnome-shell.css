@@ -434,7 +434,6 @@ StScrollBar StButton#vhandle:active {
 
 /* Entries */
 
-.notification StEntry,
 .modal-dialog StEntry {
     color: rgb(51,51,51);
     caret-color: rgba(51,51,51,0.7);
@@ -442,17 +441,6 @@ StScrollBar StButton#vhandle:active {
     caret-size: 1px;
     selected-color: black;
     padding: .25em .5em;
-}
-
-.run-dialog-entry,
-.notification StEntry {
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 2px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.65);
-    background-gradient-end: rgba(255,255,255,0.8);
-    transition-duration: 300;
-    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
 .login-dialog StEntry {
@@ -474,7 +462,6 @@ StScrollBar StButton#vhandle:active {
 .login-dialog StEntry:insensitive {
 }
 
-.notification StEntry:focus,
 .modal-dialog StEntry {
     font-size: 12pt;
     font-weight: bold;
@@ -487,7 +474,6 @@ StScrollBar StButton#vhandle:active {
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
-.notification StEntry:focus,
 .modal-dialog StEntry:focus {
     border: 1px solid #3465a4;
 }
@@ -519,7 +505,6 @@ StScrollBar StButton#vhandle:active {
     color: rgb(200,200,200);
 }
 
-.notification StEntry,
 .modal-dialog StEntry {
     border-radius: 2px;
     padding: 4px 4px;
@@ -1503,6 +1488,7 @@ StScrollBar StButton#vhandle:active {
     height: 5em;
     font-size: 10pt;
     font-weight: bold;
+    padding: .5em;
     box-shadow: inset 0 1px rgba(174,167,159,0.6);
 }
 
@@ -1513,7 +1499,7 @@ StScrollBar StButton#vhandle:active {
 .message-tray-menu-button StIcon {
     padding: 1em;
     color: white;
-    icon-size: 1.3em;
+    icon-size: 2.5em;
 }
 
 .message-tray-menu-button:hover StIcon,
@@ -1549,7 +1535,7 @@ StScrollBar StButton#vhandle:active {
 
 .notification, #notification-container {
     font-size: 11pt;
-    width: 50em;
+    width: 40em;
 }
 
 .notification.multi-line-notification {
@@ -1588,7 +1574,6 @@ StScrollBar StButton#vhandle:active {
     border: 0;
     background: transparent;
     padding: 1em;
-    padding-right: 0;
 }
 
 .summary-boxpointer #summary-right-click-menu {
@@ -1686,7 +1671,7 @@ StScrollBar StButton#vhandle:active {
 .hotplug-resident-mount-icon,
 .notification-icon-button > StIcon {
     icon-size: 1.3em;
-    padding: .5em 1em;
+    padding: 0;
 }
 
 .hotplug-transient-box {
@@ -1737,13 +1722,13 @@ StScrollBar StButton#vhandle:active {
 .chat-sent {
     padding: 5px 20px;
     text-align: right;
-    color: rgba(174,167,159,0.8);
+    color: rgba(255,255,255,0.7);
     font-size: 11pt;
 }
 
 .chat-sent:last-child,
 .chat-received:last-child {
-    padding-bottom: 20px;
+    padding-bottom: 1em;
     border: 1px solid rgba(174,167,159,0.4);
     border-image: url("separator.svg") 0 0 2 2;
     border-top: 0;
@@ -1757,9 +1742,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .chat-meta-message {
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 8pt;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: 9pt;
     color: #bbbbbb;
 }
 
@@ -1777,20 +1762,18 @@ StScrollBar StButton#vhandle:active {
 }
 
 .notification StEntry {
-    spacing: 10px;
-    font-size: 12pt;
-    font-weight: normal;
-    width: 18em;
-    selection-background-color: white;
-    selected-color: rgb(51,51,51);
-    border-radius: 2px;
-    padding: 4px;
-    color: rgb(51,51,51);
-    border: 1px solid rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
+    font-weight: bold;
+    font-size: 14pt;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.7);
-    background-gradient-end: rgba(255,255,255,0.9);
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
 }
 
 .summary-source-button {
@@ -1800,32 +1783,27 @@ StScrollBar StButton#vhandle:active {
 }
 
 .summary-source-button:last-child:ltr {
-    padding-right: 6px;
+    padding-right: 1em;
 }
 
 .summary-source-button:last-child:rtl {
-    padding-left: 6px;
+    padding-left: 1em;
 }
 
 .summary-source-button:focus .summary-source,
-.summary-source-button:hover .summary-source {
+.summary-source-button:hover .summary-source,
+.summary-source-button:selected .summary-source {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.05);
-    background-gradient-end: rgba(255,255,255,.25);
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
-    color: white;
     text-shadow: 1px 1px 2px black;
-    transition-duration: 100;
-}
-
-.summary-source-button:selected .summary-source {
+    transition-duration: 300;
 }
 
 .summary-source {
-    border-radius: 2px;
-    padding: 0 6px 0 6px;
-    transition-duration: 100ms;
+    padding: 0 .5em;
 }
 
 .summary-source-counter {
@@ -2039,7 +2017,6 @@ StScrollBar StButton#vhandle:active {
     border-radius: 2px;
     min-width: 20em;
     padding: .25em .5em;
-
 }
 
 .lightbox {
@@ -2053,18 +2030,20 @@ StScrollBar StButton#vhandle:active {
 
 /* End Session Dialog */
 .end-session-dialog {
-    spacing: 2em;
+    spacing: 1em;
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
+    padding: 2em;
 }
 
 .end-session-dialog-list {
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 .end-session-dialog-subject {
-    font-size: 12pt;
+    font-size: 22pt;
+    font-family: Raleway;
     font-weight: bold;
     color: #fff;
 }
@@ -2087,8 +2066,9 @@ StScrollBar StButton#vhandle:active {
 }
 
 .end-session-dialog-shutdown-icon {
-    width: 32px;
-    height: 32px;
+    width: 5em;
+    height: 5em;
+    spacing: 1em;
 }
 
 .end-session-dialog-inhibitor-layout {
@@ -2098,11 +2078,13 @@ StScrollBar StButton#vhandle:active {
 
 .end-session-dialog-list-header {
     font-weight: bold;
+    font-size: 12pt;
 }
 
 .end-session-dialog-app-list-item,
 .end-session-dialog-session-list-item {
     spacing: 1em;
+    padding: 2em;
 }
 
 .end-session-dialog-app-list-item-name,
@@ -2205,15 +2187,18 @@ StScrollBar StButton#vhandle:active {
 
 /* Password or Authentication Dialog */
 .prompt-dialog {
-    min-width: 45em;
+    min-width: 25em;
+    max-width: 60em;
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.4);
     background-color: rgba(0,0,0,0.9);
+    padding: 2em;
 }
 
 .prompt-dialog-main-layout {
     spacing: 1em;
-    padding: 1em;
+    padding: 0;
+    width: 45em;
 }
 
 .prompt-dialog-message-layout {
@@ -2222,7 +2207,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .prompt-dialog-headline {
-    font-size: 20pt;
+    font-size: 22pt;
     font-family: Raleway;
     font-weight: bold;
     color: white;
@@ -2232,7 +2217,7 @@ StScrollBar StButton#vhandle:active {
     spacing: 1em;
     font-size: 10pt;
     font-weight: normal;
-    width: 23em;
+    width: 20em;
 }
 
 .prompt-dialog-error-label {
@@ -2253,7 +2238,7 @@ StScrollBar StButton#vhandle:active {
 
 .prompt-dialog-null-label {
     font-size: 10pt;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
 }
 
 .prompt-dialog-password-box {
