@@ -217,7 +217,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .popup-menu-item:rtl {
-    padding: .6em 0em .6em 2em;
+    padding: .5em 0em .5em 1.5em;
 }
 
 .popup-menu-item:active {
@@ -290,18 +290,18 @@ StScrollBar StButton#vhandle:active {
     spacing: 2em;
 }
 
-.nm-dialog-header-hbox {
-    spacing: 1em;
-}
-
+.nm-dialog-header-hbox,
 .nm-dialog-airplane-box {
     spacing: 1em;
 }
 
+.nm-dialog-header,
 .nm-dialog-airplane-headline {
-    font-size: 22pt;
+    font-family: Raleway;
+    font-size: 20pt;
     font-weight: bold;
     text-align: center;
+    padding: .25em 0;
 }
 
 .nm-dialog-airplane-text {
@@ -309,22 +309,20 @@ StScrollBar StButton#vhandle:active {
 }
 
 .nm-dialog-header-icon {
-    icon-size: 3em;
+    icon-size: 5em;
+    padding-right: .5em;
 }
 
 .nm-dialog-scroll-view {
     border: 1px solid transparent;
-}
-
-.nm-dialog-header {
-    font-size: 12pt;
-    font-weight: bold;
+    padding-bottom: 1em;
 }
 
 .nm-dialog-item {
     font-size: 10pt;
     padding: .5em;
     color: rgb(174,167,159);
+    border: 0;
 }
 
 .nm-dialog-item:hover,
@@ -2005,31 +2003,23 @@ StScrollBar StButton#vhandle:active {
     color: #999999;
 }
 
+.nm-dialog,
+.run-dialog,
+.end-session-dialog,
 .modal-dialog {
     font-size: 9pt;
     border-radius: 2px;
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid rgba(174,167,159,0.5);
     background: rgba(0,0,0,0.8);
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
     color: #fff;
-    padding-right: 42px;
-    padding-left: 42px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding: 2em 3em;
 }
 
 /* Run Dialog */
 
-.run-dialog {
-    border-radius: 2px;
-    border: 1px solid rgba(174,167,159,0.4);
-    background-color: rgba(0,0,0,0.9);
-    padding: 2em;
-    spacing: 1em;
-}
-
 .run-dialog-label {
-    font-size: 10pt;
+    font-size: 11pt;
     color: white;
     padding-bottom: 1em;
 }
@@ -2071,23 +2061,18 @@ StScrollBar StButton#vhandle:active {
 }
 
 /* End Session Dialog */
-.end-session-dialog {
-    spacing: 1em;
-    border-radius: 2px;
-    border: 1px solid rgba(174,167,159,0.4);
-    background-color: rgba(0,0,0,0.9);
-    padding: 2em;
-}
 
 .end-session-dialog-list {
     padding-top: 0;
 }
 
 .end-session-dialog-subject {
-    font-size: 20pt;
     font-family: Raleway;
+    font-size: 20pt;
     font-weight: bold;
-    color: #fff;
+    text-align: center;
+    padding: .25em 0;
+    color: white;
 }
 
 .end-session-dialog-subject:rtl {
@@ -2099,7 +2084,7 @@ StScrollBar StButton#vhandle:active {
 .end-session-dialog-description:rtl {
     font-size: 10pt;
     color: white;
-    padding-top: 1em;
+    padding: 0em;
 }
 
 .end-session-dialog-warning {
@@ -2115,13 +2100,14 @@ StScrollBar StButton#vhandle:active {
     text-align: right;
 }
 
-.end-session-dialog-logout-icon,
-.end-session-dialog-shutdown-icon {
-    width: 5em;
-    height: 5em;
-    spacing: 1em;
+.end-session-dialog-logout-icon {
     border: 0;
-    border-radius: 0;
+    padding: 0;
+}
+
+.end-session-dialog-shutdown-icon {
+    border: 0;
+    padding: 1em;
 }
 
 .end-session-dialog-inhibitor-layout {
