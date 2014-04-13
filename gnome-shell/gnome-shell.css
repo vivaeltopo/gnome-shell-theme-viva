@@ -268,13 +268,13 @@ StScrollBar StButton#vhandle:active {
 
 .toggle-switch-us,
 .toggle-switch-intl {
-    background-image: url("off.svg");
+    background-image: url("off.png");
     background-size: contain;
 }
 
 .toggle-switch-us:checked,
 .toggle-switch-intl:checked {
-    background-image: url("on.svg");
+    background-image: url("on.png");
     background-size: contain;
 }
 
@@ -418,6 +418,7 @@ StScrollBar StButton#vhandle:active {
 
 .modal-dialog-button-box {
     spacing: 1em;
+    padding-top: 1em;
 }
 
 .app-view-control {
@@ -1998,8 +1999,7 @@ StScrollBar StButton#vhandle:active {
 
 /* Dialog Subject Text Style */
 .show-processes-dialog-subject,
-.mount-question-dialog-subject,
-.end-session-dialog-subject {
+.mount-question-dialog-subject {
     font-size: 14pt;
     font-weight: bold;
     color: #999999;
@@ -2080,11 +2080,11 @@ StScrollBar StButton#vhandle:active {
 }
 
 .end-session-dialog-list {
-    padding-top: 1em;
+    padding-top: 0;
 }
 
 .end-session-dialog-subject {
-    font-size: 22pt;
+    font-size: 20pt;
     font-family: Raleway;
     font-weight: bold;
     color: #fff;
@@ -2095,27 +2095,41 @@ StScrollBar StButton#vhandle:active {
     padding-right: 17px;
 }
 
-.end-session-dialog-description {
+.end-session-dialog-description,
+.end-session-dialog-description:rtl {
     font-size: 10pt;
     color: white;
+    padding-top: 1em;
 }
 
-.end-session-dialog-description:rtl {
-    padding-right: 17px;
+.end-session-dialog-warning {
+    width: 28em;
+    color: #f57900;
+    padding-top: 6px;
 }
 
-.end-session-dialog-logout-icon {
+.end-session-dialog-warning:rtl {
+    width: 28em;
+    color: #f57900;
+    padding-top: 6px;
+    text-align: right;
 }
 
+.end-session-dialog-logout-icon,
 .end-session-dialog-shutdown-icon {
     width: 5em;
     height: 5em;
     spacing: 1em;
+    border: 0;
+    border-radius: 0;
 }
 
 .end-session-dialog-inhibitor-layout {
     font-size: 10pt;
-    max-height: 20em;
+    max-height: 40em;
+    spacing: 1em;
+    padding-right: 5em;
+    padding-left: 5em;
 }
 
 .end-session-dialog-list-header {
@@ -2123,15 +2137,21 @@ StScrollBar StButton#vhandle:active {
     font-size: 12pt;
 }
 
+.end-session-dialog-session-list,
+.end-session-dialog-app-list {
+    spacing: 1em;
+}
+
 .end-session-dialog-app-list-item,
 .end-session-dialog-session-list-item {
     spacing: 1em;
-    padding: 2em;
+    padding: .2em;
 }
 
 .end-session-dialog-app-list-item-name,
 .end-session-dialog-session-list-item-name {
     font-weight: bold;
+    font-size: 12pt;
 }
 
 .end-session-dialog-app-list-item-description {
