@@ -25,11 +25,6 @@
     box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
-.modal-dialog StEntry {
-    border-radius: 2px;
-    padding: 4px 4px;
-}
-
 .modal-dialog StEntry:focus {
     border: 1px solid #3465a4;
 }
@@ -41,16 +36,16 @@
 
 .modal-dialog-button-box {
     spacing: 1em;
-    padding-top: 1em;
+    padding-top: .5em;
 }
 
 .modal-dialog-button {
-    font-size: 10pt;
-    font-weight: bold;
+    font-size: 12pt;
+    font-weight: normal;
     color: rgba(0,0,0,0.8);
     border-radius: 2px;
-    border: 1px solid rgba(255,255,255,0.0);
-    padding: .5em 1.2em;
+    border: 1px solid transparent;
+    padding: .5em 1em;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.8);
     background-gradient-end: rgba(255,255,255,0.5);
@@ -58,6 +53,12 @@
 
 .modal-dialog-button:hover,
 .modal-dialog-button:focus {
+    font-size: 12pt;
+    font-weight: normal;
+    color: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    border: 1px solid transparent;
+    padding: .5em 1em;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.5);
     background-gradient-end: rgba(255,255,255,0.8);
@@ -74,11 +75,28 @@
 }
 
 .modal-dialog-button:insensitive {
-    font-size: 10pt;
+    font-size: 12pt;
     color: rgba(0,0,0,0.8);
-    border: 0;
+    border: 1px solid transparent;
     border-radius: 2px;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.9);
     background-gradient-end: rgba(255,255,255,0.6);
+}
+
+.modal-dialog .prompt-dialog-password-entry {
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
+    caret-size: 1px;
+    selected-color: white;
+    font-weight: normal;
+    font-size: 18pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
 }
