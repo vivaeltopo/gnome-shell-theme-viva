@@ -1,0 +1,318 @@
+
+/* Panel */
+
+#panel,
+#panel.lock-screen,
+#panel.unlock-screen,
+#panel.login-screen {
+    border: 0px solid rgba(174,167,159,0.4);
+    color: rgba(0,0,0,0.0);
+    background-color: rgba(0,0,0,0.8);
+    height: 2em;
+    font-size: 12pt;
+    font-weight: bold;
+    box-shadow: inset 0 -1px rgba(174,167,159,0.4);
+}
+
+#panelLeft,
+#panelCenter {
+    spacing: 1em;
+}
+
+#panelLeft:rtl,
+#panelRight:ltr {
+    padding-left: 4px;
+}
+
+#panelLeft:ltr,
+#panelRight:rtl {
+    padding-right: 4px;
+}
+
+.panel-corner,
+.panel-corner:active,
+.panel-corner:overview,
+.panel-corner:focus,
+.panel-corner.lock-screen,
+.panel-corner.unlock-screen,
+.panel-corner.login-screen {
+    -panel-corner-background-color: transparent;
+    -panel-corner-border-color: transparent;
+}
+
+#appMenu {
+    spinner-image: url("../images/process-working.svg");
+    spacing: 0;
+    padding: 0 1em;
+}
+
+/* used for the app menu header only */
+.label-shadow {
+    color: rgba(0,0,0,0.3);
+}
+
+.panel-button #appMenuIcon,
+.panel-button:active #appMenuIcon,
+.panel-button:checked #appMenuIcon,
+.panel-button:focus #appMenuIcon {
+    app-icon-bottom-clip: 1px;
+}
+
+.app-menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.panel-button,
+#panel.unlock-screen .panel-button,
+#panel.lock-screen .panel-button,
+#panel.login-screen .panel-button {
+    -natural-hpadding: 1em;
+    -minimum-hpadding: 1em;
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+    font-size: 9pt;
+}
+
+#panel.unlock-screen .panel-button:hover,
+#panel.lock-screen .panel-button:hover,
+#panel.login-screen .panel-button:hover,
+#panel.unlock-screen .panel-button:active,
+#panel.lock-screen .panel-button:active,
+#panel.login-screen .panel-button:active,
+#panel.unlock-screen .panel-button:focus,
+#panel.lock-screen .panel-button:focus,
+#panel.login-screen .panel-button:focus {
+    color: white;
+}
+
+.panel-button:hover,
+.panel-status-button:active,
+.panel-status-button:checked,
+.panel-status-button:focus {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+}
+
+.panel-button:active,
+.panel-button:overview,
+.panel-button:focus {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    color: white;
+}
+
+.panel-button:active > .system-status-icon,
+.panel-button:checked > .system-status-icon,
+.panel-button:focus > .system-status-icon {
+    icon-shadow: black 0px 0px 3px;
+}
+
+.panel-menu {
+    -boxpointer-gap: 1px;
+}
+
+.panel-status-indicators-box,
+.panel-status-menu-box {
+    spacing: 1em;
+}
+
+.system-status-icon {
+    icon-size: 1.3em;
+    padding: 0;
+}
+
+.aggregate-menu {
+    width: 25em;
+}
+
+.aggregate-menu .popup-menu-icon,
+.system-switch-user-submenu-icon {
+    icon-size: 1.3em;
+    padding: 0;
+    padding-right: 1em;
+    border: 0;
+}
+
+.system-menu-action {
+    background: transparent;
+    color: white;
+    border: 0;
+    padding: 1em;
+    transition-duration: 200ms;
+}
+
+.system-menu-action:hover,
+.system-menu-action:focus,
+.system-menu-action:active {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 200ms;
+}
+
+.system-menu-action > StIcon {
+    icon-size: 1.5em;
+}
+
+.screencast-indicator {
+    color: red;
+}
+
+/* PopupMenu */
+
+.popup-menu-ornament {
+    text-align: right;
+    width: 1em;
+}
+
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+    -arrow-border-radius: 2px;
+    -arrow-background-color: rgba(0,0,0,0.9);
+    -arrow-border-width: 1px;
+    -arrow-border-color: rgba(174,167,159,0.4);
+    -arrow-base: 2em;
+    -arrow-rise: 1em;
+}
+
+.popup-menu {
+    min-width: 10em;
+}
+
+.popup-menu-arrow {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.popup-submenu-menu-item {
+    border-top: 1px solid rgba(255,255,255,0.0);
+    border-bottom: 1px solid rgba(255,255,255,0.0);
+}
+
+.popup-submenu-menu-item:open {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: white;
+}
+
+.popup-submenu-menu-item:open:active {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.popup-sub-menu {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(174,167,159,0.1);
+    background-gradient-end: rgba(174,167,159,0.1);
+    box-shadow: inset 0px -1px 1px 0px rgba(174,167,159,0.3);
+    color: white;
+    text-shadow: 2px 2px solid black;
+    padding: .5em 0;
+}
+
+.popup-sub-menu:scrolled .popup-menu-item:ltr {
+    padding-right: 0em;
+}
+
+.popup-sub-menu:scrolled .popup-menu-item:rtl {
+    padding-left: 0em;
+}
+
+.popup-sub-menu StScrollBar {
+    padding: 2px;
+}
+
+.popup-sub-menu StScrollBar StBin#trough {
+    border-width: 0px;
+}
+
+.popup-sub-menu StScrollBar StBin#vhandle {
+    background-color: rgb(51,51,51);
+    border-width: 0px;
+}
+
+/* The remaining popup-menu sizing is all done in ems, so that if you
+ * override .popup-menu.font-size, everything else will scale with it.
+ */
+.popup-menu-content {
+    padding: 1em 0em;
+}
+
+.popup-menu-item {
+    spacing: 1em;
+}
+
+.popup-menu-item:ltr {
+    padding: .5em 1.5em .5em 0em;
+}
+
+.popup-menu-item:rtl {
+    padding: .5em 0em .5em 1.5em;
+}
+
+.popup-menu-item:active {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(221,72,20,.8);
+    background-gradient-end: rgba(243,115,32,.8);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.popup-menu-item:insensitive {
+    color: rgb(174,167,159);
+}
+
+.popup-image-menu-item {
+}
+
+.popup-separator-menu-item {
+    height: 1px;
+    -gradient-height: 1px;
+    -gradient-start: rgba(255,255,255,0.0);
+    -gradient-end: rgba(255,255,255,0.5);
+}
+
+.popup-alternating-menu-item:alternate {
+    font-weight: bold;
+}
+
+.popup-status-menu-item {
+    font-weight: normal;
+    color: rgba(255,255,255,0.8);
+}
+
+.popup-inactive-menu-item,
+.popup-inactive-menu-item:insensitive {
+    color: white;
+}
+
+.popup-menu-icon {
+    icon-size: 1.3em;
+}
+
+
+/* Slider */
+
+.slider {
+    height: 1em;
+    min-width: 5em;
+    -slider-height: .3em;
+    -slider-background-color: rgba(255,255,255,0.8);
+    -slider-border-color: rgba(44,0,30,.4);
+    -slider-border-width: 1px;
+    -slider-handle-radius: .4em;
+    -slider-active-background-color: rgb(221,72,20);
+    -slider-active-border-color: rgba(44,0,30,.4);
+}

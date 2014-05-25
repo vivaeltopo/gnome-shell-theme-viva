@@ -1,0 +1,125 @@
+
+/* LookingGlass */
+
+#LookingGlassDialog {
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(0,0,0,0.9);
+    background-gradient-end: rgba(0,0,0,0.7);
+    height: 24px;
+    font-size: 10pt;
+    font-weight: bold;
+    spacing: 4px;
+    padding: 4px 8px;
+}
+
+#LookingGlassDialog > #Toolbar {
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+#LookingGlassDialog .labels {
+    spacing: 4px;
+}
+
+#LookingGlassDialog .notebook-tab {
+    -natural-hpadding: 12px;
+    -minimum-hpadding: 6px;
+    font-weight: bold;
+    color: #ccc;
+    transition-duration: 100ms;
+    padding-left: .3em;
+    padding-right: .3em;
+}
+
+#LookingGlassDialog .notebook-tab:hover {
+    color: white;
+    text-shadow: black 0px 2px 2px;
+}
+
+#LookingGlassDialog .notebook-tab:selected {
+    color: white;
+    text-shadow: black 0px 2px 2px;
+}
+
+#LookingGlassDialog .lg-inspector-title {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.lg-dialog StEntry {
+    selection-background-color: red;
+    selected-color: #333333;
+}
+
+.lg-completions-text {
+    font-size: .9em;
+    font-style: italic;
+}
+
+.lg-obj-inspector-title {
+    spacing: 4px;
+}
+
+.lg-obj-inspector-button {
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.lg-obj-inspector-button:hover {
+    border: 1px solid #ffffff;
+}
+
+.lg-dialog .shell-link {
+    color: #999999;
+}
+
+.lg-dialog .shell-link:hover {
+    color: #dddddd;
+}
+
+#LookingGlassDialog StBoxLayout#EvalBox {
+    padding: 4px;
+    spacing: 4px;
+}
+
+#LookingGlassDialog StBoxLayout#ResultsArea {
+    spacing: 4px;
+}
+
+#lookingGlassExtensions {
+    padding: 4px;
+}
+
+.lg-extensions-list {
+    padding: 4px;
+    spacing: 6px;
+}
+
+.lg-extension {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    padding: 4px 8px;
+    spacing: 4px 8px;
+}
+
+.lg-extension-name {
+    font-weight: bold;
+}
+
+.lg-extension-meta {
+    spacing: 6px;
+}
+
+#LookingGlassPropertyInspector {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    padding: 6px;
+    spacing: 4px 8px;
+}

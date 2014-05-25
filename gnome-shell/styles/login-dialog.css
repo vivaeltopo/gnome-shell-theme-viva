@@ -1,0 +1,249 @@
+
+/* Login Dialog */
+
+.login-dialog StEntry {
+    color: rgba(255,255,255,0.8);
+    caret-color: rgba(255,255,255,0.8);
+    font-weight: bold;
+    font-size: 14pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
+}
+
+.login-dialog StEntry:focus,
+.login-dialog StEntry:insensitive {
+}
+
+.login-dialog-prompt-entry .capslock-warning {
+    icon-size: 1.3em;
+    warning-color: red;
+    padding: 0 4px;
+}
+
+.framed-user-icon {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-size: contain;
+}
+
+.framed-user-icon:hover {
+}
+
+.login-dialog-banner {
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.login-dialog-title {
+    font-size: 22pt;
+    font-weight: bold;
+    color: white;
+}
+
+.login-dialog {
+    background: url("../images/login-bg.jpg");;
+    background-size: contain;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 10pt;
+}
+
+.login-dialog-button-box {
+    spacing: .5em;
+}
+
+.login-dialog-user-list-view {
+    -st-vfade-offset: 0;
+}
+
+.login-dialog-user-list {
+    spacing: 1em;
+    padding: .2em;
+}
+
+.login-dialog-user-list-item {
+    color: white;
+    padding: .5em;
+}
+
+.login-dialog-user-list-item:ltr {
+    padding-right: 1em;
+}
+
+.login-dialog-user-list-item:rtl {
+    padding-left: 1em;
+}
+
+.login-dialog-user-list-item .login-dialog-user-list-item-name {
+    font-size: 20pt;
+    padding-left: 1em;
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item {
+    color: rgba(255,255,255,0.8);
+}
+
+.login-dialog-user-list-item,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:focus .login-dialog-user-list-item-name,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
+    color: white;
+    text-shadow: black 0px 2px 2px;
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
+    background-image: url("../images/logged-in-indicator.svg");
+    background-size: contain;
+}
+
+.login-dialog-user-list-item-text-box {
+    padding: 0 .5em;
+}
+
+.login-dialog-user-list-item .login-dialog-timed-login-indicator {
+    background-color: rgba(0,0,0,0.0);
+    height: 2px;
+}
+
+.login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
+    background-color: #8b8b8b;
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item:hover,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:focus,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:active {
+	color: white;
+}
+
+.login-dialog-user-list-item-icon {
+}
+
+.login-dialog-not-listed-label {
+    font-size: 11pt;
+    font-weight: bold;
+    color: rgba(255,255,255,0.8);
+    padding-top: 1em;
+}
+
+.login-dialog-user-selection-box .login-dialog-not-listed-label {
+    padding-left: 2px;
+}
+
+.login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
+.login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
+    color: white;
+}
+
+.user-widget-label,
+.login-dialog-username {
+    font-family: Raleway;
+    font-size: 30pt;
+    text-shadow: 1px 2px 2px black;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.login-dialog-prompt-layout {
+    transition-duration: 600;
+    border-radius: 2px;
+    border: 1px solid rgba(174,167,159,0.4);
+    background-color: rgba(0,0,0,0.9);
+    padding: 2em;
+    spacing: 1em;
+    min-width: 35em;
+}
+
+.login-dialog-prompt-label {
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.login-dialog-prompt-entry,
+.prompt-dialog-password-entry {
+    width: 20em;
+}
+
+.login-dialog-session-list-button StIcon {
+    icon-size: 1.5em;
+}
+
+.login-dialog-session-list-button {
+    color: rgba(255,255,255,0.8);
+}
+
+.login-dialog-session-list-button:hover,
+.login-dialog-session-list-button:active {
+    color: white;
+}
+
+.login-dialog-logo-bin {
+    padding: 24px 0px;
+}
+
+.login-dialog .modal-dialog-button-box {
+    spacing: 3px;
+}
+
+
+.login-dialog .modal-dialog-button {
+    font-size: 10pt;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.0);
+    padding: .5em 1.2em;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.5);
+}
+
+.login-dialog .modal-dialog-button:hover,
+.login-dialog .modal-dialog-button:focus {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
+}
+
+.login-dialog .modal-dialog-button:active,
+.login-dialog .modal-dialog-button:pressed {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
+    box-shadow: inset 0px 0px 1px 1px black;
+    border: 1px solid black;
+    color: rgba(0,0,0,0.9);
+}
+
+.login-dialog .modal-dialog-button:insensitive {
+    font-size: 10pt;
+    color: rgba(0,0,0,0.8);
+    border: 0;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.6);
+}
+
+.login-dialog-message {
+    padding: .5em 1em;
+    transition-duration: 500ms;
+}
+
+.login-dialog-message-warning {
+    color: red;
+}
+
+.login-dialog-message-hint {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}

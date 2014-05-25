@@ -1,0 +1,75 @@
+
+/* Network */
+
+.nm-dialog {
+    font-size: 9pt;
+    border-radius: 2px;
+    border: 1px solid rgba(174,167,159,0.5);
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 2em 3em;
+    max-height: 40em;
+    min-height: 20em;
+    min-width: 40em;
+}
+
+.nm-dialog-content {
+    spacing: 2em;
+}
+
+.nm-dialog-header-hbox,
+.nm-dialog-airplane-box {
+    spacing: 1em;
+}
+
+.nm-dialog-header,
+.nm-dialog-airplane-headline {
+    font-family: Raleway;
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    padding: .25em 0;
+}
+
+.nm-dialog-airplane-text {
+    color: #999999;
+}
+
+.nm-dialog-header-icon {
+    icon-size: 5em;
+    padding-right: .5em;
+}
+
+.nm-dialog-scroll-view {
+    border: 1px solid transparent;
+    padding-bottom: 1em;
+}
+
+.nm-dialog-item {
+    font-size: 10pt;
+    padding: .5em;
+    color: rgb(174,167,159);
+    border: 0;
+}
+
+.nm-dialog-item:hover,
+.nm-dialog-item:focus,
+.nm-dialog-item:active,
+.nm-dialog-item:selected {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    color: white;
+}
+
+.nm-dialog-item-box,
+.nm-dialog-icons {
+    spacing: 0;
+}
+
+.nm-dialog-icon {
+    icon-size: 1.3em;
+    color: white;
+}

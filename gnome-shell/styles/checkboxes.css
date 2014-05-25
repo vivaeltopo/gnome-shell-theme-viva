@@ -1,0 +1,24 @@
+
+/* Check Boxes */
+
+.check-box StBoxLayout {
+    spacing: .8em;
+}
+
+.check-box StBin {
+    width: 24px;
+    height: 22px;
+    background-image: url("../images/checkbox-off.svg");
+}
+
+.check-box:focus StBin {
+    background-image: url("../images/checkbox-off-focused.svg");
+}
+
+.check-box:checked StBin {
+    background-image: url("../images/checkbox.svg");
+}
+
+.check-box:focus:checked StBin {
+    background-image: url("../images/checkbox-focused.svg");
+}

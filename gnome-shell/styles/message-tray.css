@@ -1,0 +1,374 @@
+
+/* Message Tray */
+#message-tray {
+    border: 0px solid rgba(174,167,159,0.4);
+    color: rgba(0,0,0,0.0);
+    background-gradient-direction: vertical;
+    background-gradient-start: black;
+    background-gradient-end: black;
+    height: 5em;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: .5em;
+    box-shadow: inset 0 1px rgba(174,167,159,0.6);
+}
+
+.message-tray-summary {
+    height: 5em;
+}
+
+.message-tray-menu-button StIcon {
+    padding: 1em;
+    color: white;
+    icon-size: 2.5em;
+}
+
+.message-tray-menu-button:hover StIcon,
+.message-tray-menu-button:active StIcon,
+.message-tray-menu-button:focus StIcon {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.no-messages-label,
+.no-networks-label {
+    font-family: Open Sans, cantarell, sans-serif;
+    font-size: 12pt;
+    color: #999999;
+}
+
+.notification-close,
+.notification-close:rtl {
+    background-image: url("../images/close.png");
+    background-size: 16px;
+    height: 24px;
+    width: 24px;
+    -shell-close-overlap-x: 0px;
+    -shell-close-overlap-y: 0px;
+}
+
+.notification {
+    background: rgba(0,0,0,0.9);
+    spacing-rows: .5em;
+    spacing-columns: 1em;
+    min-height: 6em;
+    padding: 1em 1em 2em 1em;
+    border-radius: 2px 2px 0px 0px;
+    border: 1px solid rgba(174,167,159,0.4);
+    border-bottom: 0;
+    font-family: Open Sans, cantarell, sans-serif;
+    color: white;
+}
+
+.notification,
+#notification-container {
+    font-size: 11pt;
+    width: 40em;
+}
+
+.notification.multi-line-notification {
+    padding-bottom: 1em;
+    border-radius: 2px 2px 0px 0px;
+    border: 1px solid rgba(174,167,159,0.4);
+    border-bottom: 0;
+}
+
+.notification-unexpanded {
+    /* We want to force the actor at a specific size, irrespective
+       of its minimum and preferred size, so we override both */
+    min-height: 6em;
+    height: 6em;
+}
+
+.notification-with-image {
+    border-radius: 2px 2px 0px 0px;
+    border: 1px solid rgba(174,167,159,0.4);
+    background: rgba(0,0,0,0.9);
+    border-bottom: 0;
+    min-height: 15em;
+}
+
+.notification StEntry {
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
+    font-weight: bold;
+    font-size: 14pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
+}
+
+.summary-boxpointer {
+    -arrow-border-radius: 2px;
+    -arrow-background-color: rgba(0,0,0,0.9);
+    -arrow-border-width: 1px;
+    -arrow-border-color: rgba(174,167,159,0.4);
+    -arrow-base: 20px;
+    -arrow-rise: 10px;
+    color: white;
+}
+
+.summary-boxpointer .notification {
+    border: 0;
+    background: transparent;
+    padding: 1em;
+}
+
+.summary-boxpointer #summary-right-click-menu {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.summary-notification-stack-scrollview {
+    max-height: 25em;
+}
+
+.summary-notification-stack-scrollview:ltr {
+    padding-right: 1em;
+}
+
+.summary-notification-stack-scrollview:rtl {
+    padding-left: 1em;
+}
+
+.notification-scrollview {
+    max-height: 15em;
+    -st-vfade-offset: 1em;
+}
+
+.notification-scrollview:ltr > StScrollBar {
+    padding-left: .5em;
+}
+
+.notification-scrollview:rtl > StScrollBar {
+    padding-right: .5em;
+}
+
+.notification-body {
+    spacing: 0;
+}
+
+.notification-actions {
+    spacing: 1em;
+}
+
+.notification-button,
+.notification-icon-button {
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 0;
+    border-radius: 2px;
+    border: 0px solid transparent;
+}
+
+.hotplug-notification-item:focus,
+.hotplug-notification-item:hover,
+.hotplug-resident-eject-button:focus,
+.hotplug-resident-eject-button:hover,
+.notification-button:focus,
+.notification-button:hover,
+.notification-icon-button:focus,
+.notification-icon-button:hover {
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border: 0;
+}
+
+.notification-button:insensitive,
+.notification-icon-button:insensitive {
+    color: grey;
+}
+
+.hotplug-notification-item:active,
+.hotplug-notification-item:pressed,
+.hotplug-resident-eject-button:active,
+.hotplug-resident-eject-button:pressed,
+.notification-button:active,
+.notification-button:pressed,
+.notification-icon-button:active,
+.notification-icon-button:pressed {
+    color: black;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
+    border: 0;
+}
+
+.secondary-icon,
+.hotplug-notification-item-icon,
+.hotplug-resident-eject-icon,
+.hotplug-resident-mount-icon,
+.notification-icon-button > StIcon {
+    icon-size: 1.3em;
+    padding: 1em;
+}
+
+.hotplug-transient-box {
+    spacing: .5em;
+    padding: .5em 5em;
+}
+
+.hotplug-resident-box {
+    spacing: 1em;
+    border: 1px solid red;
+}
+
+.hotplug-resident-mount {
+    spacing: 1em;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+.hotplug-resident-mount:hover {
+    text-shadow: white 0px 0px 1px;
+    color: #fff;
+}
+
+.hotplug-resident-mount-label {
+    color: inherit;
+    padding-left: 6px;
+}
+
+.hotplug-notification-item,
+.hotplug-resident-eject-button {
+    width: 2em;
+    height: 2em;
+}
+
+.hotplug-resident-mount-icon {
+    icon-size: 3em;
+    padding: 0 .5em;
+}
+
+.hotplug-resident-eject-icon {
+    icon-size: 1.3em;
+}
+
+.hotplug-resident-eject-button {
+    padding: 1em;
+    border-radius: 2px;
+    color: #ccc;
+}
+
+.chat-log-message {
+    color: #888888;
+}
+
+.chat-group-sent,
+.chat-group-meta {
+    padding: 8px 0;
+}
+
+.chat-received,
+.chat-received:rtl {
+    padding: 5px 20px;
+    text-align: left;
+    color: rgba(255,255,255, 0.8);
+    font-size: 11pt;
+}
+
+.chat-sent {
+    padding: 5px 20px;
+    text-align: right;
+    color: rgba(255,255,255,0.7);
+    font-size: 11pt;
+}
+
+.chat-sent:last-child,
+.chat-received:last-child {
+    padding-bottom: 1em;
+    border: 1px solid rgba(174,167,159,0.4);
+    border-image: url("../images/separator.svg") 0 0 2 2;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.chat-sent:rtl {
+    padding-left: 0px;
+    padding-right: 18pt;
+}
+
+.chat-meta-message {
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: 9pt;
+    color: #bbbbbb;
+}
+
+.chat-meta-message:rtl {
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
+.chat-notification-scrollview{
+    max-height: 22em;
+}
+
+.subscription-message {
+    font-style: italic;
+}
+
+.summary-source-button {
+    border-radius: 2px;
+    transition-duration: 100;
+    padding: 1px;
+}
+
+.summary-source-button:last-child:ltr {
+    padding-right: 1em;
+}
+
+.summary-source-button:last-child:rtl {
+    padding-left: 1em;
+}
+
+.summary-source-button:focus .summary-source,
+.summary-source-button:hover .summary-source,
+.summary-source-button:selected .summary-source {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 300;
+}
+
+.summary-source {
+    padding: 0 .5em;
+}
+
+.summary-source-counter {
+    background-image: url("../images/summary-counter.svg");
+    background-size: 2.4em;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 2.4em;
+    width: 2.4em;
+    -shell-counter-overlap-x: 13px;
+    -shell-counter-overlap-y: 13px;
+}
+
+.lightbox {
+}
+
+.flashspot {
+    background-color: white;
+}

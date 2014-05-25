@@ -1,0 +1,89 @@
+
+/* IBus Candidate Popup */
+
+.candidate-page-button {
+    font-size: 10pt;
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.0);
+    padding: .5em 1.2em;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(255,255,255,0.5);
+}
+
+.candidate-page-button:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
+}
+
+
+.candidate-page-button:active,
+.candidate-page-button:pressed {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.5);
+    background-gradient-end: rgba(255,255,255,0.8);
+    box-shadow: inset 0px 0px 1px 1px black;
+    border: 1px solid black;
+    color: rgba(0,0,0,0.9);
+}
+
+.candidate-page-button:insensitive {
+    font-size: 10pt;
+    color: rgba(0,0,0,0.8);
+    border: 0;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,0.6);
+}
+
+.candidate-popup-content {
+    padding: 0.5em;
+    spacing: 0.3em;
+}
+
+.candidate-index {
+    padding: 0 0.5em 0 0;
+    color: #cccccc;
+}
+
+.candidate-box {
+    padding: 0.3em 0.5em 0.3em 0.5em;
+}
+
+.candidate-box:selected {
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.candidate-box:hover {
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.1);
+}
+.candidate-page-button-box {
+    height: 2em;
+    width: 80px;
+}
+
+.vertical .candidate-page-button-box {
+    padding-top: 0.5em;
+}
+
+.horizontal .candidate-page-button-box {
+    padding-left: 0.5em;
+}
+
+.candidate-page-button-previous {
+    border-radius: 2px 0px 0px 2px;
+}
+
+.candidate-page-button-next {
+    border-radius: 0px 2px 2px 0px;
+}
+
+.candidate-page-button-icon {
+    icon-size: 1em;
+}

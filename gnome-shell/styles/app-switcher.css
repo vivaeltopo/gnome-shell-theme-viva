@@ -1,0 +1,82 @@
+
+/* OSD */
+.osd-window {
+    spacing: 1em;
+    text-align: center;
+}
+
+.osd-window .level {
+    height: .5em;
+    border-radius: 2px;
+    color: rgba(221,72,20,.9);
+}
+
+/* App Switcher */
+.switcher-popup {
+    padding: 1em;
+    spacing: .5em;
+}
+
+.osd-window,
+.switcher-list {
+    border: 1px solid rgba(174,167,159,0.4);
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 2px;
+    padding: 1em;
+    font-size: 10pt;
+    font-weight: bold;
+    color: white;
+}
+
+.switcher-list-item-container {
+    spacing: 1em;
+}
+
+.thumbnail-scroll-gradient-left,
+.thumbnail-scroll-gradient-right {
+}
+
+.switcher-list .item-box {
+    padding: 1em;
+}
+
+.switcher-list .item-box:selected,
+.switcher-list .item-box:outlined {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.switcher-list .thumbnail-box {
+    padding: 0;
+    spacing: 0;
+}
+
+.switcher-list .thumbnail {
+    padding: 0;
+    spacing: 0;
+    width: 20em;
+}
+
+.switcher-list .separator {
+    width: 1px;
+    background: rgba(255,255,255,0.33);
+}
+
+.ripple-box,
+.ripple-box:rtl {
+}
+
+.switcher-arrow {
+    border-color: rgba(0,0,0,0);
+    color: #808080;
+}
+
+.switcher-arrow:highlighted {
+    border-color: rgba(0,0,0,0);
+    color: white;
+}

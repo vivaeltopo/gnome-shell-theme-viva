@@ -1,0 +1,91 @@
+
+/* End Session Dialog */
+
+.end-session-dialog {
+    font-size: 9pt;
+    border-radius: 2px;
+    border: 1px solid rgba(174,167,159,0.5);
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 2em 3em;
+}
+
+.end-session-dialog-list {
+    padding-top: 0;
+}
+
+.end-session-dialog-subject,
+.end-session-dialog-subject:rtl {
+    font-family: Raleway;
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    padding: .25em 0;
+    color: white;
+}
+
+.end-session-dialog-description,
+.end-session-dialog-description:rtl {
+    font-size: 10pt;
+    color: white;
+    padding: 0em;
+}
+
+.end-session-dialog-warning {
+    width: 28em;
+    color: #f57900;
+    padding-top: 6px;
+}
+
+.end-session-dialog-warning:rtl {
+    width: 28em;
+    color: #f57900;
+    padding-top: 6px;
+    text-align: right;
+}
+
+.end-session-dialog-logout-icon {
+    border: 0;
+    padding: 0;
+}
+
+.end-session-dialog-shutdown-icon {
+    border: 0;
+    padding: 1em;
+}
+
+.end-session-dialog-inhibitor-layout {
+    font-size: 10pt;
+    max-height: 40em;
+    spacing: 1em;
+    padding-right: 5em;
+    padding-left: 5em;
+}
+
+.end-session-dialog-list-header {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.end-session-dialog-session-list,
+.end-session-dialog-app-list {
+    spacing: 1em;
+}
+
+.end-session-dialog-app-list-item,
+.end-session-dialog-session-list-item {
+    spacing: 1em;
+    padding: .2em;
+}
+
+.end-session-dialog-app-list-item-name,
+.end-session-dialog-session-list-item-name {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.end-session-dialog-app-list-item-description {
+    color: #cccccc;
+    font-size: 10pt;
+}

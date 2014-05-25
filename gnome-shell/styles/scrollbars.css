@@ -1,0 +1,34 @@
+
+/* Scroll Bars */
+
+StScrollBar {
+    padding: 1em;
+}
+
+StScrollView.vfade,
+StScrollView.hfade {
+}
+
+StScrollView StScrollBar {
+    min-width: 1em;
+    min-height: 2.5em;
+}
+
+StScrollBar StBin#trough {
+    background-color: transparent;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+    background-color: rgb(174,167,159);
+    border: 1px solid rgba(44,0,30,.4);
+    border-radius: 2px;
+}
+
+StScrollBar StButton#hhandle:hover,
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:active,
+StScrollBar StButton#vhandle:active {
+    background-color: rgb(221,72,20);
+    border: 1px solid rgba(44,0,30,.4);
+}
