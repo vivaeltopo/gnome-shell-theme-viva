@@ -52,6 +52,11 @@
     color: white;
 }
 
+.ripple-box,
+.ripple-box:rtl {
+    background-image: none;
+}
+
 .workspace-thumbnails {
     spacing: 1em;
     visible-width: 2em; /* Amount visible before hovering */
