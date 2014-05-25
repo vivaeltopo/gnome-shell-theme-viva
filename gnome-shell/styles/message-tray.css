@@ -55,18 +55,20 @@
     background: rgba(0,0,0,0.9);
     spacing-rows: .5em;
     spacing-columns: 1em;
-    min-height: 6em;
+    min-height: 4em;
     padding: 1em 1em 2em 1em;
     border-radius: 2px 2px 0px 0px;
     border: 1px solid rgba(174,167,159,0.4);
     border-bottom: 0;
-    font-family: Open Sans, cantarell, sans-serif;
-    color: white;
+    transition-duration: 500ms;
 }
 
 .notification,
 #notification-container {
-    font-size: 11pt;
+    font-family: Open Sans, cantarell, sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    color: white;
     width: 40em;
 }
 
@@ -80,8 +82,8 @@
 .notification-unexpanded {
     /* We want to force the actor at a specific size, irrespective
        of its minimum and preferred size, so we override both */
-    min-height: 6em;
-    height: 6em;
+    min-height: 4em;
+    height: 4em;
 }
 
 .notification-with-image {
@@ -95,8 +97,8 @@
 .notification StEntry {
     color: rgba(255,255,255,0.6);
     caret-color: rgba(255,255,255,0.6);
-    font-weight: bold;
-    font-size: 14pt;
+    font-weight: normal;
+    font-size: 12pt;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.15);
     background-gradient-end: rgba(255,255,255,0.3);
@@ -115,6 +117,8 @@
     -arrow-base: 20px;
     -arrow-rise: 10px;
     color: white;
+    font-size: 12pt;
+    font-weight: normal;
 }
 
 .summary-boxpointer .notification {
@@ -154,39 +158,42 @@
 }
 
 .notification-body {
-    spacing: 0;
+    spacing: 0em;
 }
 
 .notification-actions {
     spacing: 1em;
+    padding: 0;
 }
 
 .notification-button,
-.notification-icon-button {
+.notification-icon-button,
+.hotplug-resident-eject-button {
     color: white;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.3);
     background-gradient-end: rgba(255,255,255,0.15);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
-    border: 0;
     border-radius: 2px;
     border: 0px solid transparent;
+    transition-duration: 200ms;
 }
 
-.hotplug-notification-item:focus,
-.hotplug-notification-item:hover,
-.hotplug-resident-eject-button:focus,
-.hotplug-resident-eject-button:hover,
 .notification-button:focus,
 .notification-button:hover,
 .notification-icon-button:focus,
-.notification-icon-button:hover {
+.notification-icon-button:hover,
+.hotplug-notification-item:focus,
+.hotplug-notification-item:hover,
+.hotplug-resident-eject-button:focus,
+.hotplug-resident-eject-button:hover {
     color: white;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.4);
     background-gradient-end: rgba(255,255,255,0.2);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
     border: 0;
+    transition-duration: 200ms;
 }
 
 .notification-button:insensitive,
@@ -194,110 +201,99 @@
     color: grey;
 }
 
-.hotplug-notification-item:active,
-.hotplug-notification-item:pressed,
-.hotplug-resident-eject-button:active,
-.hotplug-resident-eject-button:pressed,
 .notification-button:active,
 .notification-button:pressed,
 .notification-icon-button:active,
-.notification-icon-button:pressed {
-    color: black;
+.notification-icon-button:pressed,
+.hotplug-notification-item:active,
+.hotplug-notification-item:pressed,
+.hotplug-resident-eject-button:active,
+.hotplug-resident-eject-button:pressed {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.2);
-    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.1);
-    border: 0;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 200ms;
 }
 
 .secondary-icon,
-.hotplug-notification-item-icon,
-.hotplug-resident-eject-icon,
-.hotplug-resident-mount-icon,
 .notification-icon-button > StIcon {
     icon-size: 1.3em;
-    padding: 1em;
+    padding: .5em 1em;
+    spacing: 1em;
 }
 
 .hotplug-transient-box {
-    spacing: .5em;
-    padding: .5em 5em;
+    spacing: 0;
+    padding: 0;
 }
 
 .hotplug-resident-box {
     spacing: 1em;
-    border: 1px solid red;
 }
 
 .hotplug-resident-mount {
-    spacing: 1em;
+    spacing: 0;
+    padding: 0;
     border-radius: 2px;
-    color: #ccc;
 }
 
 .hotplug-resident-mount:hover {
-    text-shadow: white 0px 0px 1px;
+    text-shadow: white 0px 0px 0px;
     color: #fff;
+    background-gradient-direction: horizontal;
+    background-gradient-start: transparent;
+    background-gradient-end: transparent;
 }
 
 .hotplug-resident-mount-label {
-    color: inherit;
-    padding-left: 6px;
+    color: white;
+    font-size: 12pt;
+    font-weight: normal;
+    padding-left: .5em;
 }
 
 .hotplug-notification-item,
 .hotplug-resident-eject-button {
-    width: 2em;
-    height: 2em;
+    font-size: 12pt;
+    width: 1em;
+    height: 1em;
 }
 
-.hotplug-resident-mount-icon {
-    icon-size: 3em;
-    padding: 0 .5em;
-}
-
+.hotplug-resident-mount-icon,
 .hotplug-resident-eject-icon {
-    icon-size: 1.3em;
+    icon-size: 3em;
+    color: white;
 }
 
 .hotplug-resident-eject-button {
     padding: 1em;
-    border-radius: 2px;
-    color: #ccc;
 }
 
 .chat-log-message {
     color: #888888;
 }
 
-.chat-group-sent,
-.chat-group-meta {
-    padding: 8px 0;
+.chat-empty-line {
+    font-size: 4px;
 }
 
-.chat-received,
+.chat-received {
+    padding-left: 4px;
+}
+
 .chat-received:rtl {
-    padding: 5px 20px;
-    text-align: left;
-    color: rgba(255,255,255, 0.8);
-    font-size: 11pt;
+    padding-left: 0px;
+    padding-right: 4px;
 }
 
 .chat-sent {
-    padding: 5px 20px;
+    padding-left: 18pt;
+    color: #959595;
     text-align: right;
-    color: rgba(255,255,255,0.7);
-    font-size: 11pt;
-}
-
-.chat-sent:last-child,
-.chat-received:last-child {
-    padding-bottom: 1em;
-    border: 1px solid rgba(174,167,159,0.4);
-    border-image: url("../images/separator.svg") 0 0 2 2;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
 }
 
 .chat-sent:rtl {
@@ -306,9 +302,9 @@
 }
 
 .chat-meta-message {
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: 4px;
     font-size: 9pt;
+    font-weight: bold;
     color: #bbbbbb;
 }
 
@@ -317,7 +313,7 @@
     padding-right: 4px;
 }
 
-.chat-notification-scrollview{
+.chat-notification-scrollview {
     max-height: 22em;
 }
 
