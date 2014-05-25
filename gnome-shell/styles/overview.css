@@ -111,7 +111,6 @@
     border: 0;
 }
 
-
 .window-close:rtl {
     -st-background-image-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
@@ -165,8 +164,8 @@
 }
 
 .app-display {
-    padding: 16px;
-    spacing: 8px;
+    padding: 1em;
+    spacing: 1em;
 }
 
 .app-view-controls {
@@ -203,7 +202,6 @@
 .app-view-control:focus {
     padding: 0;
     border: 1px solid rgba(255,255,255,0.0);
-    text-decoration: underline;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,.2);
     background-gradient-end: rgba(255,255,255,.4);
@@ -271,8 +269,8 @@
 }
 
 .list-search-result-content {
-    spacing: 8px;
-    padding: 8px;
+    spacing: 1em;
+    padding: 1em;
 }
 
 .list-search-result-title {
@@ -285,7 +283,7 @@
 .list-search-result-description {
     color: rgba(255,255,255,0.8);
     font-weight: normal;
-    font-size:12pt;
+    font-size: 12pt;
 }
 
 .search-provider-icon-more {
@@ -297,7 +295,7 @@
 .grid-search-result .overview-icon.overview-icon-with-label {
     /* since the label controls its own spacing, it is visually more
     consistent to use different padding values for top and bottom */
-    padding: 10px 8px 5px 8px;
+    padding: 1em 1em .5em 1em;
     spacing: 4px;
 }
 
@@ -306,11 +304,13 @@
 .search-provider-icon,
 .list-search-result,
 .grid-search-result .overview-icon {
+    font-weight: normal;
+    font-size:12pt;
     border-radius: 2px;
 }
 
 .search-provider-icon {
-    padding: 15px;
+    padding: 1em;
 }
 
 .app-folder-popup {
@@ -345,7 +345,7 @@
 }
 
 .show-apps {
-    padding: 4px 0;
+    padding: .5em 0;
 }
 
 .show-apps-icon {
@@ -370,12 +370,13 @@
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px 2px black;
+    transition-duration: 250ms;
 }
 
 .show-apps:checked .show-apps-icon,
 .show-apps:focus .show-apps-icon {
     color: white;
-    transition-duration: 100ms;
+    transition-duration: 250ms;
 }
 
 .app-well-app:hover > .overview-icon,
@@ -399,5 +400,5 @@
     border-radius: 2px;
     color: white;
     text-shadow: 1px 1px 2px black;
-    transition-duration: 300;
+    transition-duration: 250ms;
 }
