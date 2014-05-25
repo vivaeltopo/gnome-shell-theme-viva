@@ -10,7 +10,7 @@
     background-color: rgba(0,0,0,0.8);
     height: 2em;
     font-size: 12pt;
-    font-weight: bold;
+    font-weight: normal;
     box-shadow: inset 0 -1px rgba(174,167,159,0.4);
 }
 
@@ -69,9 +69,9 @@
 #panel.login-screen .panel-button {
     -natural-hpadding: 1em;
     -minimum-hpadding: 1em;
-    font-weight: bold;
     color: rgba(255,255,255,0.8);
     font-size: 9pt;
+    font-weight: bold;
 }
 
 #panel.unlock-screen .panel-button:hover,
@@ -155,6 +155,7 @@
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     color: white;
+    padding: 1em;
     text-shadow: 1px 1px 2px black;
     transition-duration: 200ms;
 }
@@ -301,7 +302,6 @@
 .popup-menu-icon {
     icon-size: 1.3em;
 }
-
 
 /* Slider */
 
