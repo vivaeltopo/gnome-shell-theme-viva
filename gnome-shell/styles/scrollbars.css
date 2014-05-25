@@ -5,8 +5,12 @@ StScrollBar {
     padding: 1em;
 }
 
-StScrollView.vfade,
+StScrollView.vfade {
+    -st-vfade-offset: 8em;
+}
+
 StScrollView.hfade {
+    -st-hfade-offset: 8em;
 }
 
 StScrollView StScrollBar {
@@ -18,17 +22,42 @@ StScrollBar StBin#trough {
     background-color: transparent;
 }
 
-StScrollBar StButton#vhandle,
+StScrollBar StButton#vhandle {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#vhandle:active {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
 StScrollBar StButton#hhandle {
-    background-color: rgb(174,167,159);
-    border: 1px solid rgba(44,0,30,.4);
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid transparent;
     border-radius: 2px;
 }
 
 StScrollBar StButton#hhandle:hover,
-StScrollBar StButton#vhandle:hover,
-StScrollBar StButton#hhandle:active,
-StScrollBar StButton#vhandle:active {
-    background-color: rgb(221,72,20);
-    border: 1px solid rgba(44,0,30,.4);
+StScrollBar StButton#hhandle:active {
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 2px;
 }
