@@ -52,6 +52,51 @@
     color: white;
 }
 
+
+/* Search Results */
+
+#searchResults {
+    padding: 2em 1em 0px 1em;
+    spacing: 2em;
+}
+
+#searchResultsBin {
+    max-width: 100em;
+}
+
+#searchResultsContent {
+    padding-right: 2em;
+    spacing: 2em;
+}
+
+.search-section {
+    /* This should be equal to #searchResultsContent spacing */
+    spacing: 2em;
+}
+
+.search-section-separator {
+    -gradient-height: 1px;
+    -gradient-start: rgba(255,255,255,0);
+    -gradient-end: rgba(255,255,255,0.5);
+    -margin-horizontal: 1.5em;
+    height: 1px;
+}
+
+.search-section-content {
+    /* This is the space between the provider icon and the results container */
+    spacing: 2em;
+}
+
+.search-statustext {
+    color: #efefef;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.list-search-results {
+    spacing: 3px;
+}
+
 .ripple-box,
 .ripple-box:rtl {
     background-image: none;
