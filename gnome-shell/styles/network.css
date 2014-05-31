@@ -32,8 +32,13 @@
     padding: .25em 0;
 }
 
+.nm-dialog-airplane-headline {
+    font-weight: normal;
+}
+
 .nm-dialog-airplane-text {
-    color: #999999;
+    color: white;
+    font-size: 12pt;
 }
 
 .nm-dialog-header-icon {
@@ -43,12 +48,14 @@
 
 .nm-dialog-scroll-view {
     border: 1px solid transparent;
+    border-radius: 2px;
     padding-bottom: 1em;
 }
 
 .nm-dialog-item {
-    font-size: 10pt;
+    font-size: 9pt;
     padding: .5em;
+    spacing: 0;
     color: rgb(174,167,159);
     border: 0;
 }
@@ -70,6 +77,8 @@
 }
 
 .nm-dialog-icon {
+    font-size: 11pt;
     icon-size: 1.3em;
     color: white;
+    padding-left: .5em;
 }
