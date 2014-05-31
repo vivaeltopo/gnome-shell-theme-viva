@@ -20,21 +20,21 @@
 @import url("./gnome-shell-original.css");
 
 @import url("./styles/modal-dialog.css");
-@import url("./styles/scrollbars.css"); /*done*/
+@import url("./styles/scrollbars.css");
 @import url("./styles/checkboxes.css");
 @import url("./styles/toggles.css");
 @import url("./styles/network.css");
-@import url("./styles/panel.css"); /*done*/
-@import url("./styles/overview.css"); /*done*/
-@import url("./styles/dash.css"); /*done*/
+@import url("./styles/panel.css");
+@import url("./styles/overview.css");
+@import url("./styles/dash.css");
 @import url("./styles/lookingglass.css");
 @import url("./styles/calendar.css");
 @import url("./styles/message-tray.css");
-@import url("./styles/app-switcher.css"); /*done*/
-@import url("./styles/ws-switcher.css"); /*done*/
+@import url("./styles/app-switcher.css");
+@import url("./styles/ws-switcher.css");
 @import url("./styles/end-session-dialog.css");
 @import url("./styles/mount-dialog.css");
-@import url("./styles/run-dialog.css"); /*done*/
+@import url("./styles/run-dialog.css");
 @import url("./styles/password-dialog.css");
 @import url("./styles/polkit-dialog.css");
 @import url("./styles/network-dialog.css");

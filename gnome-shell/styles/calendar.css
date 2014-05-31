@@ -20,13 +20,14 @@
 .calendar-month-label {
     padding-bottom: 1em;
     padding-top: 1em;
-    font-weight: bold;
-    font-size: 12pt;
+    font-family: Raleway;
+    font-size: 18pt;
+    font-weight: normal;
     color: white;
 }
 
 .calendar-month-label:focus {
-    background-color: #999999;
+    background-color: transparent;
 }
 
 .calendar-change-month-back {
@@ -65,9 +66,10 @@
 
 .datemenu-date-label {
     border-image: url("../images/separator.svg") 0 0 2 2;
-    font-weight: bold;
-    font-size: 14pt;
-    padding: .6em 2em .6em 2em;
+    font-family: Raleway;
+    font-weight: normal;
+    font-size: 22pt;
+    padding: .5em 2em .5em 2em;
     text-align: center;
 }
 
@@ -79,7 +81,7 @@
 .calendar-day-base {
     font-size: 10pt;
     text-align: center;
-    width: 3em;
+    width: 2.5em;
     height: 2em;
     border: 1px solid rgba(174,167,159,0.15);
     border-bottom: 0;
@@ -110,22 +112,22 @@
     text-shadow: 1px 1px 2px black;
 }
 
-.calendar-day-heading {
-    font-weight: bold;
+.calendar-day-heading,
+.calendar-week-number {
     font-size: 10pt;
+    font-weight: bold;
+    border: 1px solid rgba(174,167,159,0.15);
     padding: 0;
     padding-top: .5em;
-    border: 1px solid rgba(174,167,159,0.15);
+}
+
+.calendar-day-heading {
+    padding: 0 .6em;
     border-top: 0;
     border-right: 0;
 }
 
 .calendar-week-number {
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 0;
-    padding-top: .5em;
-    border: 1px solid rgba(174,167,159,0.15);
     border-left: 0;
     border-bottom: 0;
 }
@@ -175,10 +177,11 @@
 }
 
 .events-day-header {
-    font-weight: bold;
+    font-family: Raleway;
+    font-weight: normal;
+    font-size: 22pt;
     padding: .5em 0;
-    padding-top: 1.5em;
-    font-size: 14pt;
+    padding-top: 1em;
     border-image: url("../images/separator.svg") 0 0 2 2;
     text-align: center;
     color: white;
