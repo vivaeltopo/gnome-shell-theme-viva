@@ -2,57 +2,68 @@
 /* On-screen Keyboard */
 
 #keyboard {
-    background-gradient-start: rgba(0,0,0,0.9);
-    background-gradient-end: rgba(0,0,0,0.7);
+    background-gradient-start: transparent;
+    background-gradient-end: transparent;
     background-gradient-direction: vertical;
-    border: 1px solid rgba(174,167,159,0.6);
+    border: 1px solid transparent;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
 }
 
 .keyboard-layout {
-    spacing: 10px;
-    padding: 10px;
+    spacing: 1em;
+    padding: 2em;
+    background-gradient-start: rgba(0,0,0,0.9);
+    background-gradient-end: rgba(0,0,0,0.7);
+    background-gradient-direction: vertical;
+    border: 1px solid rgba(174,167,159,0.6);
+    border-radius: 2px;
 }
 
 .keyboard-row {
-    spacing: 5px;
+    spacing: 2px;
 }
 
 .keyboard-key {
-    min-height: 32px;
-    min-width: 32px;
-    color: rgba(255,255,255,0.6);
+    height: 2em;
+    width: 3em;
+    padding: .25em .5em;
+    color: rgba(255,255,255,0.8);
     caret-color: rgba(255,255,255,0.6);
     font-weight: bold;
     font-size: 14pt;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.15);
-    background-gradient-end: rgba(255,255,255,0.3);
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.15);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0);
     border-radius: 2px;
-    min-width: 20em;
-    padding: .25em .5em;
 }
 
 .keyboard-key:grayed {
+    color: black;
 }
 
 .keyboard-key:checked,
 .keyboard-key:hover {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border: 1px solid rgba(0,0,0,0);
     border-radius: 2px;
     color: white;
-    text-shadow: 1px 1px 2px black;
 }
 
 .keyboard-key:active {
-    font-size: 14pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.4);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 2px;
+    color: white;
 }
 
 .keyboard-subkeys {
