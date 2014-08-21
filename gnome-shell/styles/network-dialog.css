@@ -4,7 +4,6 @@
 .network-dialog-secret-table {
     spacing-rows: 15px;
     spacing-columns: 1em;
-    border: 1px solid red;
 }
 
 .keyring-dialog-control-table {
