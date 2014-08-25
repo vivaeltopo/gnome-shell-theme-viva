@@ -340,7 +340,7 @@
 .grid-search-result .overview-icon.overview-icon-with-label {
     /* since the label controls its own spacing, it is visually more
     consistent to use different padding values for top and bottom */
-    padding: 1em 1em .5em 1em;
+    padding: .75em .5em .25em .5em;
     spacing: 4px;
 }
 
