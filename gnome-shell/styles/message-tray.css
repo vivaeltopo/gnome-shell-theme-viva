@@ -123,7 +123,7 @@
 
 .summary-boxpointer .notification {
     border: 0;
-    background: transparent;
+    background: transparent !important;
     padding: 1em;
 }
 
@@ -264,7 +264,8 @@
 }
 
 .hotplug-resident-mount-icon,
-.hotplug-resident-eject-icon {
+.hotplug-resident-eject-icon,
+.hotplug-notification-item-icon {
     icon-size: 3em;
     color: white;
 }

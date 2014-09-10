@@ -46,3 +46,8 @@
     min-width: 20em;
     padding: .25em .5em;
 }
+
+/* Restart message */
+.restart-message {
+    font-size: 11pt;
+}

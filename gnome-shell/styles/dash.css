@@ -17,10 +17,11 @@
     border-radius: 2px 0px 0px 2px;
 }
 
+/* no longer active
 #dash:empty {
     height: 100px;
     width: 60px;
-}
+}*/
 
 .placeholder {
     background-image: url("../images/dash-placeholder.svg");

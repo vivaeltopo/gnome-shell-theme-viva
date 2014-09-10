@@ -74,7 +74,8 @@
 }
 
 .datemenu-date-label:focus,
-.datemenu-date-label:hover {
+.datemenu-date-label:hover,
+.datemenu-date-label:active {
     background-color: #999999;
 }
 
