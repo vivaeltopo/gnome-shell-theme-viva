@@ -1,14 +1,11 @@
 
 /* Network Agent Dialog */
 
-.network-dialog-secret-table {
-    spacing-rows: 15px;
-    spacing-columns: 1em;
-}
-
+.network-dialog-secret-table,
 .keyring-dialog-control-table {
     spacing-rows: 15px;
     spacing-columns: 1em;
+    font-size: 12pt;
 }
 
 /*no longer active?!*/

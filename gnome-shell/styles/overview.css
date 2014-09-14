@@ -205,7 +205,7 @@
 }
 
 .icon-grid .overview-icon {
-    icon-size: 84px;
+    icon-size: 64px;
 }
 
 .app-display {
@@ -309,13 +309,9 @@
     color: #999999;
 }
 
-.app-folder-icon {
-    padding: 5px;
-}
-
-/*new*/
+.app-folder-icon,
 .dash-item-container > StButton {
-    padding: 4px 8px;
+    padding: 2px;
 }
 
 .list-search-result-content {
@@ -337,8 +333,8 @@
 }
 
 .search-provider-icon-more {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
@@ -357,6 +353,8 @@
     font-weight: normal;
     font-size:12pt;
     border-radius: 2px;
+    text-align: center;
+    padding: 2px;
 }
 
 .search-provider-icon {
@@ -399,7 +397,7 @@
 }
 
 .show-apps-icon {
-    color: white;
+    color: rgba(255,255,255,0.8);
 }
 
 .show-apps:hover .show-apps-icon {

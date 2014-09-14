@@ -7,14 +7,11 @@
     width: 0.3em;
 }
 
-#calendarPopup .calendar {
-    padding: 0;
-}
-
 .calendar {
-    padding: 0.5em 2em;
-    spacing-rows: 0px;
-    spacing-columns: 0px;
+    padding: 0 5.5em;
+    spacing-rows: 0em;
+    spacing-columns: 0em;
+    spacing: 0;
 }
 
 .calendar-month-label {
@@ -69,7 +66,7 @@
     font-family: Raleway;
     font-weight: normal;
     font-size: 22pt;
-    padding: .5em 2em .5em 2em;
+    padding: .5em 1em .5em 1em;
     text-align: center;
 }
 

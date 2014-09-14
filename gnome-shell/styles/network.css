@@ -16,6 +16,7 @@
 
 .nm-dialog-content {
     spacing: 2em;
+    padding-left: 2em;
 }
 
 .nm-dialog-header-hbox,
@@ -43,7 +44,6 @@
 
 .nm-dialog-header-icon {
     icon-size: 5em;
-    padding-right: .5em;
 }
 
 .nm-dialog-scroll-view {

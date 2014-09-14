@@ -2,23 +2,36 @@
 /* Check Boxes */
 
 .check-box StBoxLayout {
-    spacing: .8em;
+    spacing: 1.5em;
 }
 
 .check-box StBin {
-    width: 24px;
-    height: 22px;
-    background-image: url("../images/checkbox-off.svg");
+    width: 2em;
+    height: 2em;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.05);
+    background-gradient-end: rgba(255,255,255,.25);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
-.check-box:focus StBin {
-    background-image: url("../images/checkbox-off-focused.svg");
+.check-box:focus StBin,
+.check-box:hover StBin {
+    background-gradient-start: rgba(255,255,255,.25);
+    background-gradient-end: rgba(255,255,255,.45);
 }
 
-.check-box:checked StBin {
-    background-image: url("../images/checkbox.svg");
-}
-
+.check-box:checked StBin,
 .check-box:focus:checked StBin {
-    background-image: url("../images/checkbox-focused.svg");
+    width: 2em;
+    height: 2em;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }

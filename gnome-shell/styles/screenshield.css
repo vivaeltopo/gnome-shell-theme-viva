@@ -2,6 +2,8 @@
 /* Screen shield */
 
 .screen-shield-background {
+    background: black;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.9);
 }
 
 #lockDialogGroup {
@@ -110,4 +112,10 @@
 #screenShieldNotifications StScrollBar StButton#vhandle:active,
 #screenShieldNotifications StScrollBar StButton#hhandle {
     background-color: rgba(0,0,0,0.8);
+}
+
+.input-source-switcher-symbol {
+   font-size: 34pt;
+   width: 96px;
+   height: 96px;
 }
