@@ -8,9 +8,9 @@
 }
 
 .calendar {
-    padding: 0 5.5em;
-    spacing-rows: 0em;
-    spacing-columns: 0em;
+    padding: 0 1.5em;
+    spacing-rows: 0;
+    spacing-columns: 0;
     spacing: 0;
 }
 
@@ -18,7 +18,7 @@
     padding-bottom: 1em;
     padding-top: 1em;
     font-family: Raleway;
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: normal;
     color: white;
 }
@@ -65,7 +65,7 @@
     border-image: url("../images/separator.svg") 0 0 2 2;
     font-family: Raleway;
     font-weight: normal;
-    font-size: 22pt;
+    font-size: 20pt;
     padding: .5em 1em .5em 1em;
     text-align: center;
 }
@@ -169,15 +169,15 @@
 }
 
 .events-table {
-    width: 25em;
+    width: 20em;
     spacing-columns: 6pt;
-    padding: 0 1em;
+    padding: 0 1.5em;
 }
 
 .events-day-header {
     font-family: Raleway;
     font-weight: normal;
-    font-size: 22pt;
+    font-size: 20pt;
     padding: .5em 0;
     padding-top: 1em;
     border-image: url("../images/separator.svg") 0 0 2 2;
