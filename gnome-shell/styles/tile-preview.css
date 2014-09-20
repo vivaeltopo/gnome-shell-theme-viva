@@ -3,8 +3,8 @@
 .tile-preview,
 .tile-preview-left.tile-preview-right.on-primary {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.3);
-    background-gradient-end: rgba(221,72,20,.3);
+    background-gradient-start: rgba(53,177,239,.3);
+    background-gradient-end: rgba(23,147,209,.3);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     border-color: transparent;
@@ -15,8 +15,8 @@
 .tile-preview-left.on-primary {
     border: 1px solid rgba(255,255,255,0.0);
     background-gradient-direction: horizontal;
-    background-gradient-end: rgba(243,115,32,.3);
-    background-gradient-start: rgba(221,72,20,.3);
+    background-gradient-end: rgba(53,177,239,.3);
+    background-gradient-start: rgba(23,147,209,.3);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     border-width: 0;
@@ -25,8 +25,8 @@
 .tile-preview-right.on-primary {
     border: 1px solid rgba(255,255,255,0.0);
     background-gradient-direction: horizontal;
-    background-gradient-start: rgba(243,115,32,.3);
-    background-gradient-end: rgba(221,72,20,.3);
+    background-gradient-start: rgba(53,177,239,.3);
+    background-gradient-end: rgba(23,147,209,.3);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     border-width: 0;

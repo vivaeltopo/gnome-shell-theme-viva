@@ -146,7 +146,7 @@
     text-shadow: 1px 1px 2px black;
     background-image: url("../images/close.png");
     background-size: 16px;
-    background-color: rgba(221,72,20,.9);
+    background-color: rgba(23,147,209,.9);
     height: 32px;
     width: 32px;
     -shell-close-overlap: 16px;
@@ -257,8 +257,8 @@
     color: white;
     text-shadow: 1px 1px 2px black;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     border-color: transparent;
@@ -296,8 +296,8 @@
     width: 2em;
     height: 2em;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     color: white;
@@ -412,8 +412,8 @@
 .search-provider-icon:active,
 .list-search-result:active {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     color: white;

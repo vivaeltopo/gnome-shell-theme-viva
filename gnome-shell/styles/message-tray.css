@@ -27,8 +27,8 @@
 .message-tray-menu-button:active StIcon,
 .message-tray-menu-button:focus StIcon {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     text-shadow: 1px 1px 2px black;
@@ -210,8 +210,8 @@
 .hotplug-resident-eject-button:active,
 .hotplug-resident-eject-button:pressed {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     color: white;
@@ -340,8 +340,8 @@
 .summary-source-button:hover .summary-source,
 .summary-source-button:selected .summary-source {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     text-shadow: 1px 1px 2px black;

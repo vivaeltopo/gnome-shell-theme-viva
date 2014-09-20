@@ -102,8 +102,8 @@
 
 .calendar-day-base:active {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+    background-gradient-start: rgba(53,177,239,.8);
+    background-gradient-end: rgba(23,147,209,.8);
     border-radius: 2px;
     border-color: transparent;
     color: white;
@@ -153,7 +153,7 @@
 }
 
 .calendar-today {
-    border: 1px solid rgba(221,72,20,0.7);
+    border: 1px solid rgba(23,147,209,0.7);
     border-radius: 2px;
     text-shadow: 0;
     background-image: none;
@@ -220,5 +220,5 @@
 }
 
 .url-highlighter {
-    link-color: rgba(221,72,20,0.9);
+    link-color: rgba(23,147,209,0.9);
 }
