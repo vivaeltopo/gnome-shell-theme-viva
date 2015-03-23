@@ -12,25 +12,8 @@
     padding: 2em;
 }
 
-.run-dialog-label {
-    font-size: 12pt;
-    font-weight: normal;
-    color: white;
-    padding-bottom: .5em;
-}
-
-.run-dialog-error-label {
-    font-size: 11pt;
-    font-weight: bold;
-    color: red;
-}
-
-.run-dialog-error-box {
-    padding-top: 1.5em;
-    spacing: .5em;
-}
-
-.modal-dialog .run-dialog-entry {
+.modal-dialog .run-dialog-entry
+{
     color: rgba(255,255,255,0.6);
     caret-color: rgba(255,255,255,0.6);
     caret-size: 1px;
@@ -45,9 +28,32 @@
     border-radius: 2px;
     min-width: 20em;
     padding: .25em .5em;
+    margin-bottom: 0;
 }
 
-/* Restart message */
-.restart-message {
-    font-size: 11pt;
+.modal-dialog .run-dialog-button-box
+{
+    padding-top: 1em;
 }
+
+.modal-dialog .run-dialog-label
+{
+    font-size: 12pt;
+    font-weight: normal;
+    color: white;
+    padding-bottom: .5em;
+}
+
+.modal-dialog .run-dialog-error-box
+{
+    padding-top: 1.5em;
+    spacing: .5em;
+    color: red;
+}
+
+.modal-dialog .run-dialog-error-label {
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+}
+

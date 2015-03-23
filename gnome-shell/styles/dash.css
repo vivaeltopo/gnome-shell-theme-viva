@@ -17,19 +17,13 @@
     border-radius: 2px 0px 0px 2px;
 }
 
-/* no longer active
-#dash:empty {
-    height: 100px;
-    width: 60px;
-}*/
-
-.placeholder {
+#dash .placeholder {
     background-image: url("../images/dash-placeholder.svg");
     background-size: contain;
     height: 24px;
 }
 
-.empty-dash-drop-target {
+#dash .empty-dash-drop-target {
     width: 24px;
     height: 24px;
 }
@@ -45,5 +39,5 @@
 }
 
 .dash-item-container > StButton {
-    padding: .1em .5em;
+    padding: .1em;
 }

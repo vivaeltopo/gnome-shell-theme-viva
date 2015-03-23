@@ -16,6 +16,7 @@
     border: 0;
     border-radius: 0px;
     padding: 0px;
+    box-shadow: inset 0px 0px 1px 1px transparent;
     spacing: 1em;
 }
 
@@ -39,4 +40,5 @@
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     border-radius: 2px;
     border: 1px solid transparent;
+    text-shadow: 1px 1px 2px black;
 }

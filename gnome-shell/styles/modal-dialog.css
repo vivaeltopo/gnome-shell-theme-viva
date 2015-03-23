@@ -1,4 +1,21 @@
 
+.headline
+{
+  font-size: 110%;
+}
+
+
+.lightbox
+{
+  background-color: black;
+}
+
+
+.flashspot
+{
+  background-color: white;
+}
+
 .modal-dialog {
     font-size: 9pt;
     border-radius: 2px;

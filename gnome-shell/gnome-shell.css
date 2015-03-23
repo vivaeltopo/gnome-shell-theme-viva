@@ -18,16 +18,20 @@
  */
 
 @import url("./styles/app-switcher.css");
+@import url("./styles/buttons.css");
 @import url("./styles/calendar.css");
+@import url("./styles/chat.css");
 @import url("./styles/checkboxes.css");
 @import url("./styles/dash.css");
 @import url("./styles/end-session-dialog.css");
+@import url("./styles/hotplug.css");
 @import url("./styles/ibus-candidate.css");
 @import url("./styles/keyboard.css");
+@import url("./styles/legacy-tray.css");
 @import url("./styles/login-dialog.css");
 @import url("./styles/lookingglass.css");
 @import url("./styles/magnifier.css");
-@import url("./styles/message-tray.css");
+@import url("./styles/notifications.css");
 @import url("./styles/modal-dialog.css");
 @import url("./styles/mount-dialog.css");
 @import url("./styles/network-dialog.css");
@@ -42,6 +46,9 @@
 @import url("./styles/tile-preview.css");
 @import url("./styles/toggles.css");
 @import url("./styles/ws-switcher.css");
+
+/* extensions */
+@import url("./styles/open-weather.css");
 
 /* Text Styles */
 
@@ -62,14 +69,53 @@ stage {
     color: #0000e0;
 }
 
-/* small */
-.app-well-menu {
-    font-size: 9pt;
+.resize-popup
+{
+  color: #eeeeec;
+  background-color: #2e3436;
+  border: 1px solid rgba(238, 238, 236, 0.2);
+  border-radius: 12px;
+  padding: 12px;
 }
+
+/* Entries */
+/*StEntry
+{
+  border-radius: 3px;
+  padding: 4px;
+  border-width: 1px;
+  color: #eeeeec;
+  background-color: #292929;
+  border-color: #1c1f1f;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  selection-background-color: #215d9c;
+  selected-color: #ffffff;
+}
+
+ StEntry:focus
+{
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-color: rgba(154, 154, 142, 0.5);
+}
+
+ StEntry:insensitive
+{
+    color: #939695;
+    border-color: #323636;
+    box-shadow: none;
+}
+
+ StEntry StIcon.capslock-warning
+{
+    icon-size: 16px;
+    warning-color: #f57900;
+    padding: 0 4px;
+}*/
 
 /* Background menu */
 
 .background-menu {
     -boxpointer-gap: 0px;
+  -arrow-rise: 0px;
 }
 

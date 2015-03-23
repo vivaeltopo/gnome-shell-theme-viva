@@ -1,16 +1,4 @@
 
-/* OSD */
-.osd-window {
-    spacing: 1em;
-    text-align: center;
-}
-
-.osd-window .level {
-    height: .5em;
-    border-radius: 2px;
-    color: rgba(221,72,20,.9);
-}
-
 /* App Switcher */
 .switcher-popup {
     padding: 1em;
@@ -29,30 +17,8 @@
 }
 
 .switcher-list-item-container {
-    spacing: 1em;
+    spacing: .5em;
 }
-
-/* no longer used
-.thumbnail-scroll-gradient-left {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(51, 255, 51, 0);
-    background-gradient-end: rgba(51, 255, 51, 0.0);
-    border-radius: 2px;
-    border-radius-topleft: 0px;
-    border-radius-bottomleft: 0px;
-    width: 60px;
-}
-
-.thumbnail-scroll-gradient-right {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(51, 255, 51, 0);
-    background-gradient-end: rgba(51, 255, 51, 0.0);
-    border-radius: 2px;
-    border-radius-topleft: 0px;
-    border-radius-bottomleft: 0px;
-    width: 60px;
-}
-*/
 
 .switcher-list .item-box {
     font-weight: normal;
@@ -84,17 +50,44 @@
 
 .switcher-list .thumbnail {
     padding: 0;
-    spacing: 0;
+    spacing: .5em;
     width: 256px;
 }
 
 .switcher-list .separator {
     width: 1px;
     background: rgba(255,255,255,0.33);
+    border:1px solid red;
 }
 
 .switcher-arrow,
 .switcher-arrow:highlighted {
-    border-color: rgba(0,0,0,0);
-    color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+/* fallback menu
+- odd thing for styling App menu when apparently not running under shell. Light Adwaita styled
+  app menu inside the main app window itself rather than the top bar
+*/
+
+/* OSD */
+.osd-window {
+    spacing: 1em;
+    text-align: center;
+/*font-weight: bold;
+  margin: 32px;
+  min-width: 64px;
+  min-height: 64px;*/
+}
+
+.osd-window .level {
+    height: .5em;
+    border-radius: 2px;
+    color: rgba(221,72,20,.9);
+/*  background-color: rgba(11, 12, 13, 0.5);*/
+}
+.osd-window .osd-monitor-label
+{
+    font-size: 3em;
 }

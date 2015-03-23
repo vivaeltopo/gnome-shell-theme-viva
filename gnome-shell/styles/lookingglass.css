@@ -45,6 +45,17 @@
     text-shadow: black 0px 2px 2px;
 }
 
+#LookingGlassDialog StBoxLayout#EvalBox
+{
+    padding: 4px;
+    spacing: 4px;
+}
+
+#LookingGlassDialog StBoxLayout#ResultsArea
+{
+    spacing: 4px;
+}
+
 #LookingGlassDialog .lg-inspector-title {
     font-weight: bold;
     padding-bottom: 8px;
@@ -80,6 +91,31 @@
 
 .lg-dialog .shell-link:hover {
     color: #dddddd;
+}
+
+.lg-completions-text
+{
+  font-size: .9em;
+  font-style: italic;
+}
+
+
+.lg-obj-inspector-title
+{
+  spacing: 4px;
+}
+
+
+.lg-obj-inspector-button
+{
+  border: 1px solid gray;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+  .lg-obj-inspector-button:hover
+{
+    border: 1px solid #ffffff;
 }
 
 #LookingGlassDialog StBoxLayout#EvalBox {

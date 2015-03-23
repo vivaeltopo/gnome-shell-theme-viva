@@ -34,13 +34,13 @@
     padding-right: 4px;
 }
 
-.panel-corner,
-.panel-corner:active,
-.panel-corner:overview,
-.panel-corner:focus,
-.panel-corner.lock-screen,
-.panel-corner.unlock-screen,
-.panel-corner.login-screen {
+#panel .panel-corner,
+#panel .panel-corner:active,
+#panel .panel-corner:overview,
+#panel .panel-corner:focus,
+#panel .panel-corner.lock-screen,
+#panel .panel-corner.unlock-screen,
+#panel .panel-corner.login-screen {
     -panel-corner-background-color: transparent;
     -panel-corner-border-color: transparent;
 }
@@ -52,26 +52,33 @@
 }
 
 /* used for the app menu header only */
-.label-shadow {
+#appMenu  .label-shadow {
     color: rgba(0,0,0,0.3);
 }
 
-.panel-button #appMenuIcon,
-.panel-button:active #appMenuIcon,
-.panel-button:checked #appMenuIcon,
-.panel-button:focus #appMenuIcon {
+#panel .panel-button #appMenuIcon,
+#panel .panel-button:active #appMenuIcon,
+#panel .panel-button:checked #appMenuIcon,
+#panel .panel-button:focus #appMenuIcon {
     app-icon-bottom-clip: 1px;
 }
 
-.app-menu-icon {
+#panel .app-menu-icon {
     width: 24px;
     height: 24px;
 }
 
-.panel-button,
-#panel.unlock-screen .panel-button,
-#panel.lock-screen .panel-button,
-#panel.login-screen .panel-button {
+#panel .panel-button .app-menu-icon
+{
+      -st-icon-style: symbolic;
+      margin-left: 4px;
+      margin-right: 4px;
+}
+
+#panel .panel-button,
+.unlock-screen #panel .panel-button,
+.login-screen #panel .panel-button,
+.lock-screen #panel .panel-button {
     -natural-hpadding: 1em;
     -minimum-hpadding: 1em;
     color: rgba(255,255,255,0.8);
@@ -79,31 +86,33 @@
     font-weight: bold;
 }
 
-#panel.unlock-screen .panel-button:hover,
-#panel.lock-screen .panel-button:hover,
-#panel.login-screen .panel-button:hover,
-#panel.unlock-screen .panel-button:active,
-#panel.lock-screen .panel-button:active,
-#panel.login-screen .panel-button:active,
-#panel.unlock-screen .panel-button:focus,
-#panel.lock-screen .panel-button:focus,
-#panel.login-screen .panel-button:focus {
+.unlock-screen #panel .panel-button:focus,
+.unlock-screen #panel .panel-button:hover,
+.unlock-screen #panel .panel-button:active,
+.login-screen #panel .panel-button:focus,
+.login-screen #panel .panel-button:hover,
+.login-screen #panel .panel-button:active,
+.lock-screen #panel .panel-button:focus,
+.lock-screen #panel .panel-button:hover,
+.lock-screen #panel .panel-button:active
+{
     color: white;
 }
 
-.panel-button:hover,
-.panel-status-button:active,
-.panel-status-button:checked,
-.panel-status-button:focus {
+#panel .panel-button:hover,
+#panel .panel-status-button:active,
+#panel .panel-status-button:checked,
+#panel .panel-status-button:focus {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.3);
     background-gradient-end: rgba(255,255,255,0.15);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
 }
 
-.panel-button:active,
-.panel-button:overview,
-.panel-button:focus {
+#panel .panel-button:active,
+#panel .panel-button:overview,
+#panel .panel-button:focus,
+#panel .panel-button:checked {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.4);
     background-gradient-end: rgba(255,255,255,0.2);
@@ -111,19 +120,33 @@
     color: white;
 }
 
-.panel-button:active > .system-status-icon,
-.panel-button:checked > .system-status-icon,
-.panel-button:focus > .system-status-icon {
+#panel .panel-button .system-status-icon
+{
+      icon-size: 1.09em;
+      padding: 0 5px;
+}
+
+#panel .panel-button:active > .system-status-icon,
+#panel .panel-button:overview > .system-status-icon,
+#panel .panel-button:focus > .system-status-icon,
+#panel .panel-button:checked > .system-status-icon
+{
     icon-shadow: black 0px 0px 3px;
 }
 
-.panel-menu {
+.popup-menu.panel-menu {
     -boxpointer-gap: 1px;
 }
 
-.panel-status-indicators-box,
-.panel-status-menu-box {
+#panel .panel-status-indicators-box,
+#panel .panel-status-menu-box
+{
     spacing: 1em;
+}
+
+#panel .screencast-indicator
+{
+    color: #f57900;
 }
 
 .system-status-icon {
@@ -188,22 +211,7 @@
     -arrow-border-color: rgba(174,167,159,0.4);
     -arrow-base: 2em;
     -arrow-rise: 1em;
-}
-
-/*new*/
-.popup-menu-boxpointer.fallback-app-menu {
-    -arrow-border-radius: 4px;
-    -arrow-background-color: #ededed;
-    -arrow-border-width: 1px;
-    -arrow-border-color: #a6a6a6;
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
-}
-
-/*new*/
-.popup-menu-boxpointer.fallback-app-menu.dark {
-    -arrow-background-color: #3f4747;
-    -arrow-border-color: #282b2b;
+  /*-arrow-box-shadow: 0 1px 3px black;*/
 }
 
 .popup-menu {
@@ -215,37 +223,8 @@
     height: 1.5em;
 }
 
-.popup-submenu-menu-item {
-    border-top: 1px solid rgba(255,255,255,0.0);
-    border-bottom: 1px solid rgba(255,255,255,0.0);
-}
-
-.popup-submenu-menu-item:open {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.3);
-    background-gradient-end: rgba(255,255,255,0.15);
-    border-top: 1px solid rgba(255,255,255,0.3);
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    color: white;
-}
-
-.popup-submenu-menu-item:open:active {
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-}
-
-/*new*/
-.fallback-app-menu .popup-submenu-menu-item:open {
-    background-color: #888888;
-    color: white;
-}
-
-/*new*/
-.fallback-app-menu.dark .popup-submenu-menu-item:open {
-    background-color: #333333;
-}
-
-.popup-sub-menu {
+.popup-menu .popup-sub-menu
+{
     background-gradient-direction: vertical;
     background-gradient-start: rgba(174,167,159,0.1);
     background-gradient-end: rgba(174,167,159,0.1);
@@ -255,140 +234,79 @@
     padding: .5em 0;
 }
 
-/*new*/
-.fallback-app-menu .popup-sub-menu {
-    background-gradient-start: #dddddd;
-    background-gradient-end: #dfdfdf;
-    background-gradient-direction: vertical;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4);
-}
-
-/*new*/
-.fallback-app-menu.dark .popup-sub-menu {
-    background-gradient-start: #474747;
-    background-gradient-end: #4b4b4b;
-    background-gradient-direction: vertical;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.9);
-}
-
-.popup-sub-menu:scrolled .popup-menu-item:ltr {
-    padding-right: 0em;
-}
-
-.popup-sub-menu:scrolled .popup-menu-item:rtl {
-    padding-left: 0em;
-}
-
-.popup-sub-menu StScrollBar {
-    padding: 2px;
-}
-
-.popup-sub-menu StScrollBar StBin#trough {
-    border-width: 0px;
-}
-
-.popup-sub-menu StScrollBar StBin#vhandle {
-    background-color: rgb(51,51,51);
-    border-width: 0px;
-}
-
 /* The remaining popup-menu sizing is all done in ems, so that if you
  * override .popup-menu.font-size, everything else will scale with it.
  */
-.popup-menu-content {
+.popup-menu .popup-menu-content {
     padding: 1em 0em;
 }
 
-.popup-menu-item {
+.popup-menu .popup-menu-item {
     spacing: 1em;
 }
 
-.popup-menu-item:ltr {
+.popup-menu .popup-menu-item:ltr {
     padding: .5em 1.5em .5em 0em;
 }
 
-.popup-menu-item:rtl {
+.popup-menu .popup-menu-item:rtl {
     padding: .5em 0em .5em 1.5em;
 }
 
-.popup-menu-item:active {
+.popup-menu .popup-menu-item:checked,
+.popup-menu .popup-menu-item:active
+{
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(221,72,20,.8);
-    background-gradient-end: rgba(243,115,32,.8);
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
     color: white;
     text-shadow: 1px 1px 2px black;
+    font-weight: normal;
 }
 
-.popup-menu-item:insensitive {
-    color: rgb(174,167,159);
-}
-
-/*new*/
-.fallback-app-menu .popup-menu-item {
-    color: #43484a;
-}
-
-/*new*/
-.fallback-app-menu .popup-menu-item:active {
+.popup-menu .popup-menu-item:focus,
+.popup-menu .popup-menu-item:hover
+{
     color: white;
-    background-color: #4689cd;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    font-weight: normal;
 }
 
-/*new*/
-.fallback-app-menu .popup-menu-item:insensitive {
-    color: gray;
+.popup-menu .popup-menu-item:insensitive {
+    color: blue;
 }
 
-/*new*/
-.fallback-app-menu.dark .popup-menu-item {
-    color: white;
+.popup-menu .popup-inactive-menu-item
+{
+    color: #eeeeec;
 }
 
-/*new*/
-.fallback-app-menu.dark .popup-menu-item:active {
-    background-color: #445f7d;
+.popup-menu .popup-inactive-menu-item:insensitive
+{
+      color: rgba(238, 238, 236, 0.5);
 }
-
-/*new*/
-.fallback-app-menu.dark .popup-menu-item:insensitive {
-    color: #9f9f9f;
-}
-
-.popup-image-menu-item {
+.popup-menu .active
+{
+    background-color: transparent;
 }
 
 .popup-separator-menu-item {
     height: 1px;
-    -gradient-height: 1px;
-    -gradient-start: rgba(255,255,255,0.0);
-    -gradient-end: rgba(255,255,255,0.5);
+    margin: 0;
+    border-bottom: 1px solid white;
 }
 
 .popup-alternating-menu-item:alternate {
     font-weight: bold;
 }
 
-/*new*/
-.fallback-app-menu .popup-separator-menu-item {
-    -gradient-start: #a0a2a3;
-    -gradient-end: #a0a2a3;
-    -margin-horizontal: 0;
-}
-
-/*new*/
-.fallback-app-menu.dark .popup-separator-menu-item {
-    -gradient-start: #818584;
-    -gradient-end: #818584;
-}
-
 .popup-status-menu-item {
     font-weight: normal;
     color: rgba(255,255,255,0.8);
-}
-
-.popup-inactive-menu-item,
-.popup-inactive-menu-item:insensitive {
-    color: white;
 }
 
 .popup-menu-icon {
@@ -404,7 +322,7 @@
     -slider-background-color: rgba(255,255,255,0.8);
     -slider-border-color: rgba(44,0,30,.4);
     -slider-border-width: 1px;
-    -slider-handle-radius: .4em;
+    -slider-handle-radius: .5em;
     -slider-active-background-color: rgb(221,72,20);
     -slider-active-border-color: rgba(44,0,30,.4);
 }

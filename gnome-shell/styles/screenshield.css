@@ -47,14 +47,72 @@
     line-height: 110px;
 }
 
-#screenShieldNotifications {
+/*#screenShieldNotifications {
     border-radius: 2px;
     background-color: rgba(0,0,0, 0.9);
     border: 1px solid rgba(174,167,159,0.4);
     max-height: 500px;
     padding: 1em 0;
+}*/
+
+#screenShieldNotifications StButton#vhandle,
+#screenShieldNotifications StButton#hhandle
+{
+    background-color: rgba(0,0,0,0.3);
+    border: none;
 }
 
+#screenShieldNotifications StButton#vhandle:hover,
+#screenShieldNotifications StButton#vhandle:focus,
+#screenShieldNotifications StButton#hhandle:hover,
+#screenShieldNotifications StButton#hhandle:focus
+{
+    background-color: rgba(0,0,0,0.6);
+}
+
+#screenShieldNotifications StButton#vhandle:active,
+#screenShieldNotifications StButton#hhandle:active
+{
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.screen-shield-notifications-container
+{
+  spacing: 6px;
+  width: 30em;
+  background-color: transparent;
+  max-height: 500px;
+}
+
+.screen-shield-notifications-container .summary-notification-stack-scrollview
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.screen-shield-notifications-container .notification,
+.screen-shield-notifications-container .screen-shield-notification-source
+{
+    padding: 12px 6px;
+    border: 1px solid rgba(238, 238, 236, 0.2);
+    background-color: rgba(46, 52, 54, 0.5);
+    color: #eeeeec;
+    border-radius: 4px;
+}
+
+.screen-shield-notifications-container .notification
+{
+    margin-right: 15px;
+}
+
+.input-source-switcher-symbol {
+   font-size: 34pt;
+   width: 96px;
+   height: 96px;
+}
+
+/*
 .screen-shield-notifications-box {
     spacing: 1em;
 }
@@ -73,17 +131,11 @@
     padding: 0px 18px;
 }
 
-/* Remove background from notifications, otherwise
-   opacity is doubled and they look darker
-*/
 .screen-shield-notifications-box .notification {
     background-color: transparent;
     border: 0px solid transparent;
 }
 
-/* Override padding on resident notifications, since
-   the notifications box has its own spacing
-*/
 .screen-shield-notifications-box .summary-notification-stack-scrollview {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -92,30 +144,4 @@
 #screenShieldNotifications .notification-button,
 #screenShieldNotifications .notification-icon-button {
     border-radius: 2px;
-}
-
-#screenShieldNotifications StScrollBar StBin#trough {
-    background-color: rgba(0,0,0,0.2);
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.3);
-    border: none;
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle:hover,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.6);
-}
-
-#screenShieldNotifications StScrollBar StButton#vhandle:active,
-#screenShieldNotifications StScrollBar StButton#hhandle {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.input-source-switcher-symbol {
-   font-size: 34pt;
-   width: 96px;
-   height: 96px;
-}
+}*/

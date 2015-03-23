@@ -1,4 +1,9 @@
 
+.end-session-dialog-subject
+{
+  font-size: 14pt;
+}
+
 /* End Session Dialog */
 
 .end-session-dialog {
@@ -16,24 +21,12 @@
     padding: 0;
 }
 
-/*new*/
 .end-session-dialog-layout {
     padding: 0;
 }
 
-/*new*/
 .end-session-dialog-layout:rtl {
     padding: 0;
-}
-
-.end-session-dialog-subject,
-.end-session-dialog-subject:rtl {
-    font-family: Raleway;
-    font-size: 20pt;
-    font-weight: bold;
-    text-align: center;
-    padding: .25em 0;
-    color: white;
 }
 
 .end-session-dialog-description,

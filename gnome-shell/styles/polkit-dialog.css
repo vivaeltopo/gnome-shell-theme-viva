@@ -13,7 +13,11 @@
 }
 
 .polkit-dialog-user-icon {
+/*	border-radius: 5px;
+  background-size: contain;
+  width: 48px;
+  height: 48px;*/
 }
 
-.polkit-dialog-password-entry {
-}
+/*.polkit-dialog-password-entry {
+}*/

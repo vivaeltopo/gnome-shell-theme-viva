@@ -1,0 +1,67 @@
+
+.url-highlighter
+{
+  link-color: #215d9c;
+}
+
+.secondary-icon
+{
+  icon-size: 1.09em;
+}
+
+.chat-log-message
+{
+  color: #d6d6d1;
+}
+
+.chat-empty-line
+{
+  font-size: 4px;
+}
+
+.chat-received
+{
+  padding-left: 4px;
+}
+
+  .chat-received:rtl
+{
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
+.chat-sent
+{
+  padding-left: 18pt;
+  color: #cacac4;
+}
+
+  .chat-sent:rtl
+{
+    padding-left: 0;
+    padding-right: 18pt;
+}
+
+.chat-meta-message
+{
+  padding-left: 4px;
+  font-size: 9pt;
+  font-weight: bold;
+  color: #bebeb6;
+}
+
+  .chat-meta-message:rtl
+{
+    padding-left: 0;
+    padding-right: 4px;
+}
+
+.chat-notification-scrollview
+{
+  max-height: 22em;
+}
+
+.subscription-message
+{
+  font-style: italic;
+}

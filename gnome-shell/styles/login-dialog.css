@@ -33,6 +33,7 @@
 }
 
 .framed-user-icon:hover {
+    border: 1px solid transparent;
 }
 
 .login-dialog-banner {
@@ -42,10 +43,10 @@
     color: white;
 }
 
-.login-dialog-title {
-    font-size: 22pt;
-    font-weight: bold;
-    color: white;
+.login-dialog-banner-view
+{
+  padding-top: 24px;
+  max-width: 23em;
 }
 
 .login-dialog {
@@ -74,6 +75,7 @@
 .login-dialog-user-list {
     spacing: 1em;
     padding: .2em;
+  width: 23em;
 }
 
 .login-dialog-user-list-item {
@@ -87,6 +89,12 @@
 
 .login-dialog-user-list-item:rtl {
     padding-left: 1em;
+}
+
+  .login-dialog-user-list-item:hover
+{
+    background-color: #215d9c;
+    color: #ffffff;
 }
 
 .login-dialog-user-list-item .login-dialog-user-list-item-name {
@@ -139,8 +147,18 @@
     padding-top: 1em;
 }
 
+.login-dialog-user-selection-box
+{
+  padding: 100px 0px;
+}
+
 .login-dialog-user-selection-box .login-dialog-not-listed-label {
     padding-left: 2px;
+}
+
+.login-dialog-not-listed-button:focus .login-dialog-user-selection-box .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-user-selection-box .login-dialog-not-listed-label
+{
+      color: #eeeeec;
 }
 
 .login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
@@ -212,11 +230,32 @@
     background-gradient-end: rgba(255,255,255,0.5);
 }
 
+    .login-dialog .modal-dialog-button:default
+{
+      color: #eeeeec;
+      background-color: rgba(33, 93, 156, 0.5);
+      border-color: rgba(0, 0, 0, 0.7);
+      box-shadow: inset 0 1px #454f52;
+      text-shadow: 0 1px black;
+      icon-shadow: 0 1px black;
+}
+
 .login-dialog .modal-dialog-button:hover,
 .login-dialog .modal-dialog-button:focus {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.5);
     background-gradient-end: rgba(255,255,255,0.8);
+}
+
+      .login-dialog .modal-dialog-button:default:hover,
+      .login-dialog .modal-dialog-button:default:focus
+{
+        color: white;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(33, 93, 156, 0.7);
+        box-shadow: inset 0 1px #5d696d;
+        text-shadow: 0 1px black;
+        icon-shadow: 0 1px black;
 }
 
 .login-dialog .modal-dialog-button:active,
@@ -229,6 +268,16 @@
     color: rgba(0,0,0,0.9);
 }
 
+      .login-dialog .modal-dialog-button:default:active
+{
+        color: white;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: #1c5187;
+        box-shadow: none;
+        text-shadow: none;
+        icon-shadow: none;
+}
+
 .login-dialog .modal-dialog-button:insensitive {
     font-size: 10pt;
     color: rgba(0,0,0,0.8);
@@ -237,6 +286,16 @@
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,0.9);
     background-gradient-end: rgba(255,255,255,0.6);
+}
+
+      .login-dialog .modal-dialog-button:default:insensitive
+{
+        color: #939695;
+        border-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(66, 71, 73, 0.7);
+        box-shadow: none;
+        text-shadow: none;
+        icon-shadow: none;
 }
 
 .login-dialog-message {

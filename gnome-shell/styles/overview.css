@@ -26,7 +26,7 @@
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 2px;
     min-width: 20em;
-    padding: .5em 1em;
+    padding: .5em;
 }
 
 .search-entry:hover,
@@ -41,9 +41,11 @@
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 2px;
+    min-width: 20em;
+    padding: .5em;
 }
 
-.search-entry-icon {
+.search-entry  .search-entry-icon {
     icon-size: 1.5em;
     color: rgba(255,255,255,0.8);
 }
@@ -55,13 +57,9 @@
 
 /* Search Results */
 
-#searchResults {
-    padding: 2em 1em 0px 1em;
-    spacing: 2em;
-}
-
 #searchResultsBin {
-    max-width: 100em;
+    max-width: 150em;
+    margin: 0 5em 0 5em;
 }
 
 #searchResultsContent {
@@ -82,11 +80,6 @@
     height: 1px;
 }
 
-.search-section-content {
-    /* This is the space between the provider icon and the results container */
-    spacing: 2em;
-}
-
 .search-statustext {
     color: #efefef;
     font-size: 12pt;
@@ -94,7 +87,7 @@
 }
 
 .list-search-results {
-    spacing: 3px;
+    spacing: .25em;
 }
 
 .ripple-box,
@@ -132,11 +125,21 @@
     font-weight: normal;
     padding: .5em 1em;
     -shell-caption-spacing: .5em;
-    background: transparent;
+    background-color: rgba(0,0,0,0.9);
+    border: 1px solid rgba(174,167,159,0.4);
+    border-radius: 2px;
+    transition-duration: 100ms;
 }
 
 .window-caption:hover {
-    border: 2px solid transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.3);
+    background-gradient-end: rgba(255,255,255,.1);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 100ms;
 }
 
 .window-close {
@@ -154,6 +157,7 @@
 
 .window-clone-border {
     border: 0;
+  box-shadow: inset 0px 0px 0px 1px transparent;
 }
 
 .window-close:rtl {
@@ -172,34 +176,10 @@
     padding: 32px;
 }
 
-.messages-indicator {
-    color: white;
-    height: 32px;
-    font-size: 12pt;
-    font-weight: bold;
-}
-
-.messages-indicator-contents {
-    spacing: 12px;
-    padding-bottom: 12px;
-}
-
-.messages-indicator-contents:hover {
-    color: white;
-    text-shadow: black 0px 2px 2px;
-}
-
-.messages-indicator-highlight {
-    background-gradient-direction: vertical;
-    background-gradient-start: transparent;
-    background-gradient-end: rgba(255,255,255,0.2);
-    height: 32px;
-}
-
 /* Application Launchers, Grid and List results */
 
 .icon-grid {
-    spacing: 8px;
+    spacing: 1em;
     -shell-grid-horizontal-item-size: 128px;
     -shell-grid-vertical-item-size: 128px;
 }
@@ -220,7 +200,7 @@
 }
 
 .app-view-control {
-    font-weight: bold;
+    font-weight: normal;
     color: white;
     text-shadow: 1px 1px 2px black;
     background-gradient-direction: vertical;
@@ -230,6 +210,7 @@
     border-radius: 2px;
     border-color: transparent;
     padding: .5em 1em;
+    margin: .5em;
 }
 
 .app-view-control:first-child:ltr,
@@ -244,16 +225,14 @@
     border-left-width: 0px;
 }
 
+.app-view-control:hover,
 .app-view-control:focus {
-    padding: 0;
-    border: 1px solid rgba(255,255,255,0.0);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.2);
-    background-gradient-end: rgba(255,255,255,.4);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    font-weight: bold;
 }
 
+.app-view-control:active,
 .app-view-control:checked {
+    font-weight: bold;
     color: white;
     text-shadow: 1px 1px 2px black;
     background-gradient-direction: vertical;
@@ -309,25 +288,27 @@
     color: #999999;
 }
 
-.app-folder-icon,
-.dash-item-container > StButton {
-    padding: 2px;
+.app-folder-icon
+{
+  padding: 5px;
+  spacing-rows: 5px;
+  spacing-columns: 5px;
 }
 
 .list-search-result-content {
-    spacing: 1em;
-    padding: 1em;
+    spacing: .5em;
+    padding: .5em;
 }
 
 .list-search-result-title {
     font-family: Raleway;
     font-weight: normal;
-    font-size: 18pt;
     color: white;
+    padding-bottom: .25em;
 }
 
 .list-search-result-description {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.75);
     font-weight: normal;
     font-size: 12pt;
 }
@@ -335,6 +316,38 @@
 .search-provider-icon-more {
     width: 0;
     height: 0;
+}
+
+.search-provider-icon:focus,
+.search-provider-icon:selected,
+.search-provider-icon:hover,
+.list-search-result:focus,
+.list-search-result:selected,
+.list-search-result:hover
+{
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.3);
+    background-gradient-end: rgba(255,255,255,.1);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 200ms;
+}
+
+.search-provider-icon:active,
+.search-provider-icon:checked,
+.list-search-result:active,
+.list-search-result:checked
+{
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 100ms;
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
@@ -404,13 +417,15 @@
     color: white;
 }
 
-.app-well-app.running > .overview-icon,
-.app-well-app:checked > .overview-icon,
-.app-well-app:active > .overview-icon,
-.show-apps:checked > .overview-icon,
-.show-apps:active > .overview-icon,
-.search-provider-icon:active,
-.list-search-result:active {
+.app-well-app:active .overview-icon,
+.app-well-app:checked .overview-icon,
+.app-well-app.app-folder:active .overview-icon,
+.app-well-app.app-folder:checked .overview-icon,
+.show-apps:active .overview-icon,
+.show-apps:checked .overview-icon,
+.grid-search-result:active .overview-icon,
+.grid-search-result:checked .overview-icon
+{
     background-gradient-direction: vertical;
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);
@@ -421,26 +436,19 @@
     transition-duration: 250ms;
 }
 
-.show-apps:checked .show-apps-icon,
-.show-apps:focus .show-apps-icon {
-    color: white;
-    transition-duration: 250ms;
-}
-
-.app-well-app:hover > .overview-icon,
-.show-apps:hover > .overview-icon,
-.search-provider-icon:hover,
-.list-search-result:hover,
+.app-well-app:hover .overview-icon,
+.app-well-app:focus .overview-icon,
+.app-well-app:selected .overview-icon,
+.app-well-app.app-folder:hover .overview-icon,
+.app-well-app.app-folder:focus .overview-icon,
+.app-well-app.app-folder:selected .overview-icon,
+.show-apps:hover .overview-icon,
+.show-apps:focus .overview-icon,
+.show-apps:selected .overview-icon,
 .grid-search-result:hover .overview-icon,
-.app-well-app:focus > .overview-icon,
 .grid-search-result:focus .overview-icon,
-.show-apps:focus > .overview-icon,
-.search-provider-icon:focus,
-.list-search-result:focus,
-.app-well-app:selected > .overview-icon,
-.grid-search-result:selected .overview-icon,
-.search-provider-icon:selected,
-.list-search-result:selected {
+.grid-search-result:selected .overview-icon
+{
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,.3);
     background-gradient-end: rgba(255,255,255,.1);
@@ -450,3 +458,36 @@
     text-shadow: 1px 1px 2px black;
     transition-duration: 250ms;
 }
+
+.app-well-app-running-dot
+{
+  width: 1.5em;
+  height: .25em;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
+  color: white;
+  transition-duration: 100ms;
+}
+
+.search-provider-icon,
+.list-search-result,
+.app-well-app .overview-icon,
+.app-well-app.app-folder .overview-icon,
+.show-apps .overview-icon,
+.grid-search-result .overview-icon
+{
+  color: white;
+  border-radius: 2px;
+  padding: .5em;
+  border: 1px solid transparent;
+  transition-duration: 100ms;
+  text-align: center;
+}
+
+.show-apps:checked .show-apps-icon,
+.show-apps:focus .show-apps-icon {
+    color: white;
+    transition-duration: 250ms;
+}
+

@@ -8,11 +8,8 @@
     font-size: 12pt;
 }
 
-/*no longer active?!*/
-.network-dialog-show-password-checkbox {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 9pt;
-    color: white;
-    spacing: 10px;
+.no-networks-label {
+    font-family: Open Sans, cantarell, sans-serif;
+    font-size: 12pt;
+    color: #999999;
 }

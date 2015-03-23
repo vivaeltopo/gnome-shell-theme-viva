@@ -8,6 +8,7 @@
 .check-box StBin {
     width: 2em;
     height: 2em;
+    background-image: none;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,255,255,.05);
     background-gradient-end: rgba(255,255,255,.25);
@@ -19,6 +20,7 @@
 
 .check-box:focus StBin,
 .check-box:hover StBin {
+    background-image: none;
     background-gradient-start: rgba(255,255,255,.25);
     background-gradient-end: rgba(255,255,255,.45);
 }
@@ -27,6 +29,7 @@
 .check-box:focus:checked StBin {
     width: 2em;
     height: 2em;
+    background-image: none;
     background-gradient-direction: vertical;
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);

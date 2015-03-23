@@ -1,0 +1,48 @@
+
+.button
+{
+  border-radius: 2px;
+  border-width: 1px;
+  padding: 4px 32px;
+  color: #ff00ff;
+  background-color: #ff00ff;
+  border-color: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 1px #454f52;
+  text-shadow: 0 1px black;
+  icon-shadow: 0 1px black;
+}
+
+  .button:focus
+{
+    color: #eeeeec;
+    border-color: #215d9c;
+    box-shadow: inset 0 1px #454f52;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+}
+
+  .button:insensitive
+{
+    color: #939695;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(66, 71, 73, 0.7);
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+  .button:active
+{
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: #222728;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.button-dialog-button-box
+{
+  spacing: 18px;
+  padding-top: 48px;
+}

@@ -71,6 +71,11 @@
     color: white;
 }
 
+.nm-dialog-header
+{
+  font-weight: bold;
+}
+
 .nm-dialog-item-box,
 .nm-dialog-icons {
     spacing: 0;
