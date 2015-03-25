@@ -272,13 +272,47 @@ background-color: #292f30;
   padding: .5em;
   background-color: rgba(0,0,0,0.9);
   border: 1px solid rgba(174,167,159,0.4);
-  border-radius: 2px 2px 2px 2px;
+  border-radius: 0px 0px 2px 2px;
+  border-top: 0;
+	transition-duration: 200ms;
+	margin-top: 0;
 }
 
 .message:hover,
 .message:focus
 {
   background-color: rgba(0,0,0,1.0);
+	transition-duration: 200ms;
+}
+
+/* messages in the calendar popup */
+.message-list .message
+{
+	color: white;
+	background-gradient-direction: vertical;
+	background-gradient-start: rgba(255,255,255,0.4);
+	background-gradient-end: rgba(255,255,255,0.2);
+	box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+	border: 0;
+	border-radius: 2px;
+	text-shadow: 1px 1px 2px black;
+	padding: 0em;
+	margin-right: .5em;
+	transition-duration: 200ms;
+}
+
+.message-list .message:hover,
+.message-list .message:focus,
+.message-list .message:active
+{
+	background-gradient-direction: vertical;
+	background-gradient-start: rgba(243,115,32,.8);
+	background-gradient-end: rgba(221,72,20,.8);
+	box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+	border-radius: 2px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	transition-duration: 200ms;
 }
 
 .message-icon-bin,

@@ -39,5 +39,28 @@
 }
 
 .dash-item-container > StButton {
-    padding: .1em;
+    padding: 0;
+}
+
+.dash-item-container .app-well-app
+{
+    /*border: 1px solid red;*/
+}
+
+.show-apps {
+    padding: .25em 0;
+}
+
+.show-apps-icon {
+    color: rgba(255,255,255,0.8);
+}
+
+.show-apps:hover .show-apps-icon {
+    color: white;
+}
+
+#dash .app-well-app
+{
+    padding: 0;
+    spacing:0;
 }
