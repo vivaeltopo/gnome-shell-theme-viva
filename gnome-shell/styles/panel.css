@@ -279,7 +279,7 @@
 }
 
 .popup-menu .popup-menu-item:insensitive {
-    color: blue;
+    color: grey;
 }
 
 .popup-menu .popup-inactive-menu-item

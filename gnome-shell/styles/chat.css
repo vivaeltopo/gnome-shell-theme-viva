@@ -17,29 +17,31 @@
 .chat-empty-line
 {
   font-size: 4px;
+  border: 1px solid red;
 }
 
 .chat-received
 {
-  padding-left: 4px;
+  padding-left: 5px;
+  color: rgba(255,255,255,0.9);
 }
 
   .chat-received:rtl
 {
     padding-left: 0px;
-    padding-right: 4px;
+    padding-right: 5px;
 }
 
 .chat-sent
 {
-  padding-left: 18pt;
-  color: #cacac4;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.6);
 }
 
   .chat-sent:rtl
 {
     padding-left: 0;
-    padding-right: 18pt;
+    padding-right: 20px;
 }
 
 .chat-meta-message
@@ -58,7 +60,43 @@
 
 .chat-notification-scrollview
 {
-  max-height: 22em;
+  font-size: 12pt;
+  font-weight: normal;
+  border-radius: 2px;
+  border: 1px solid rgba(174,167,159,0.5);
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 1em;
+  max-height: 30em;
+}
+
+.chat-response,
+.chat-response > StEntry
+{
+  color: rgba(255,255,255,0.8);
+  caret-color: rgba(255,255,255,0.6);
+  caret-size: 1px;
+  selected-color: white;
+  font-weight: normal;
+  font-size: 18pt;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,0.15);
+  background-gradient-end: rgba(255,255,255,0.3);
+  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 2px;
+  min-width: 20em;
+  padding: .25em .5em;
+  margin-bottom: 0;
+}
+
+.chat-body
+{
+}
+
+.chat-new-group
+{
 }
 
 .subscription-message
