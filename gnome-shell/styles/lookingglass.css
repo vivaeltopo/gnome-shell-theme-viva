@@ -12,17 +12,17 @@
     font-size: 10pt;
     font-weight: bold;
     spacing: 4px;
-    padding: 4px 8px;
+    padding: .5em;
 }
 
 #LookingGlassDialog > #Toolbar {
     border: 1px solid rgba(174,167,159,0.4);
     border-radius: 2px;
-    padding: 4px;
+    padding: .5em;
 }
 
 #LookingGlassDialog .labels {
-    spacing: 4px;
+    spacing: 1em;
 }
 
 #LookingGlassDialog .notebook-tab {
@@ -47,13 +47,13 @@
 
 #LookingGlassDialog StBoxLayout#EvalBox
 {
-    padding: 4px;
-    spacing: 4px;
+    padding: .5em;
+    spacing: .5em;
 }
 
 #LookingGlassDialog StBoxLayout#ResultsArea
 {
-    spacing: 4px;
+    spacing: .5em;
 }
 
 #LookingGlassDialog .lg-inspector-title {
@@ -62,8 +62,21 @@
 }
 
 .lg-dialog StEntry {
-    selection-background-color: red;
-    selected-color: #333333;
+    color: rgba(255,255,255,0.6);
+    caret-color: rgba(255,255,255,0.6);
+    caret-size: 1px;
+    selected-color: white;
+    font-weight: normal;
+    font-size: 18pt;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.15);
+    background-gradient-end: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 2px;
+    min-width: 20em;
+    padding: .25em .5em;
+    margin-bottom: 0;
 }
 
 .lg-completions-text {
@@ -72,7 +85,7 @@
 }
 
 .lg-obj-inspector-title {
-    spacing: 4px;
+    spacing: .5em;
 }
 
 .lg-obj-inspector-button {
@@ -86,62 +99,47 @@
 }
 
 .lg-dialog .shell-link {
-    color: #999999;
+    color: rgba(243,115,32,.8);
 }
 
 .lg-dialog .shell-link:hover {
     color: #dddddd;
 }
 
-.lg-completions-text
-{
-  font-size: .9em;
-  font-style: italic;
-}
-
-
-.lg-obj-inspector-title
-{
-  spacing: 4px;
-}
-
-
-.lg-obj-inspector-button
-{
-  border: 1px solid gray;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-  .lg-obj-inspector-button:hover
-{
-    border: 1px solid #ffffff;
-}
-
-#LookingGlassDialog StBoxLayout#EvalBox {
-    padding: 4px;
-    spacing: 4px;
-}
-
-#LookingGlassDialog StBoxLayout#ResultsArea {
-    spacing: 4px;
-}
-
 #lookingGlassExtensions {
-    padding: 4px;
+    padding: .5em;
 }
 
 .lg-extensions-list {
-    padding: 4px;
-    spacing: 6px;
+    padding: .5em;
+    spacing: .5em;
 }
 
 .lg-extension {
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(174,167,159,0.4);
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    border: 0;
     border-radius: 2px;
-    padding: 4px 8px;
-    spacing: 4px 8px;
+    text-shadow: 1px 1px 2px black;
+    padding: 1em;
+    margin-right: .5em;
+    transition-duration: 200ms;
+}
+
+.lg-extension:hover,
+.lg-extension:focus
+{
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transition-duration: 200ms;
 }
 
 .lg-extension-name {
@@ -149,13 +147,13 @@
 }
 
 .lg-extension-meta {
-    spacing: 6px;
+    spacing: 1em;
 }
 
 #LookingGlassPropertyInspector {
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(174,167,159,0.4);
     border-radius: 2px;
-    padding: 6px;
+    padding: 1em;
     spacing: 4px 8px;
 }
