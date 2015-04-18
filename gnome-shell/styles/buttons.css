@@ -1,44 +1,40 @@
 
 .button
 {
+  font-size: 12pt;
+  font-weight: normal;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid transparent;
   border-radius: 2px;
-  border-width: 1px;
-  padding: 4px 32px;
-  color: #ff00ff;
-  background-color: #ff00ff;
-  border-color: rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 1px #454f52;
-  text-shadow: 0 1px black;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,0.2);
+  background-gradient-end: rgba(255,255,255,0.1);
+  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+  padding: .5em 2em;
   icon-shadow: 0 1px black;
 }
 
-  .button:focus
+.button:focus,
+.button:hover,
+.button:insensitive
 {
-    color: #eeeeec;
-    border-color: #215d9c;
-    box-shadow: inset 0 1px #454f52;
-    text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
+  color: white;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,0.4);
+  background-gradient-end: rgba(255,255,255,0.2);
+  border: 1px solid transparent;
+  icon-shadow: 0 1px black;
 }
 
-  .button:insensitive
+.button:active
 {
-    color: #939695;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(66, 71, 73, 0.7);
-    box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
-}
-
-  .button:active
-{
-    color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: #222728;
-    box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
+  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-weight: normal;
 }
 
 .button-dialog-button-box

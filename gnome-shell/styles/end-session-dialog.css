@@ -1,20 +1,21 @@
 
 .end-session-dialog-subject
 {
-  font-size: 14pt;
+  font-size: 22pt;
 }
 
 /* End Session Dialog */
 
 .end-session-dialog {
-    font-size: 9pt;
+    font-size: 12pt;
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.5);
     background: rgba(0,0,0,0.8);
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
     color: #fff;
-    padding: 2em 3em;
+    padding: 2em;
     spacing: 2em;
+    width: 50em;
 }
 
 .end-session-dialog-list {
@@ -31,9 +32,11 @@
 
 .end-session-dialog-description,
 .end-session-dialog-description:rtl {
-    font-size: 10pt;
+    font-size: 12pt;
     color: white;
-    padding: 0em;
+    padding: .25em 0;
+    margin: 0;
+    width: 30em;
 }
 
 .end-session-dialog-warning {
@@ -60,7 +63,7 @@
 }
 
 .end-session-dialog-inhibitor-layout {
-    font-size: 10pt;
+    font-size: 12pt;
     max-height: 40em;
     spacing: 1em;
     padding-left: 2em;

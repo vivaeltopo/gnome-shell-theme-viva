@@ -198,12 +198,6 @@
 
 /* PopupMenu */
 
-.popup-menu-ornament {
-    text-align: right;
-    width: 1em;
-    margin-left: .5em;
-}
-
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
     -arrow-border-radius: 2px;
@@ -219,6 +213,12 @@
     min-width: 5em;
 }
 
+.popup-menu-ornament {
+    text-align: right;
+    width: 0;
+    margin-left: 0;
+}
+
 .popup-menu-arrow {
     width: 1.5em;
     height: 1.5em;
@@ -232,7 +232,8 @@
     box-shadow: inset 0px -1px 1px 0px rgba(174,167,159,0.3);
     color: white;
     text-shadow: 2px 2px solid black;
-    padding: .5em 0;
+    padding: 0;
+    padding-bottom: .5em;
     margin-bottom: .5em;
 }
 
@@ -248,11 +249,22 @@
 }
 
 .popup-menu .popup-menu-item:ltr {
-    padding: .5em 1.5em .5em 0em;
+    padding: .5em 2em .5em 1em;
 }
 
 .popup-menu .popup-menu-item:rtl {
-    padding: .5em 0em .5em 1.5em;
+    padding: .5em 1em .5em 2em;
+}
+
+.popup-menu .popup-menu-item:focus,
+.popup-menu .popup-menu-item:hover
+{
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.4);
+    background-gradient-end: rgba(255,255,255,0.2);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+    font-weight: normal;
 }
 
 .popup-menu .popup-menu-item:checked,
@@ -267,29 +279,18 @@
     font-weight: normal;
 }
 
-.popup-menu .popup-menu-item:focus,
-.popup-menu .popup-menu-item:hover
-{
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.2);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
-    font-weight: normal;
-}
-
 .popup-menu .popup-menu-item:insensitive {
     color: grey;
 }
 
 .popup-menu .popup-inactive-menu-item
 {
-    color: #eeeeec;
+    color: white;
 }
 
 .popup-menu .popup-inactive-menu-item:insensitive
 {
-      color: rgba(238, 238, 236, 0.5);
+    color: rgba(238, 238, 236, 0.5);
 }
 .popup-menu .active
 {
@@ -308,7 +309,7 @@
 
 .popup-status-menu-item {
     font-weight: normal;
-    color: rgba(255,255,255,0.8);
+    color: white;
 }
 
 .popup-menu-icon {

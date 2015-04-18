@@ -6,6 +6,7 @@
     color: white;
     font-family: Raleway;
     font-size: 16pt;
+    border: 1px solid red;
 }
 
 .polkit-dialog-user-root-label {
@@ -13,6 +14,7 @@
 }
 
 .polkit-dialog-user-icon {
+	border: 1px solid red;
 /*	border-radius: 5px;
   background-size: contain;
   width: 48px;
