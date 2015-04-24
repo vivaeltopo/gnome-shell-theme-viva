@@ -15,8 +15,8 @@
 }
 
 .nm-dialog-content {
-    spacing: 2em;
-    padding-left: 2em;
+    spacing: 0;
+    padding: 0;
 }
 
 .nm-dialog-header-hbox,
@@ -48,15 +48,14 @@
 
 .nm-dialog-scroll-view {
     border: 1px solid transparent;
-    border-radius: 2px;
-    padding-bottom: 1em;
+    padding: .5em 0;
 }
 
 .nm-dialog-item {
-    font-size: 9pt;
+    font-size: 10pt;
     padding: .5em;
     spacing: 0;
-    color: rgb(174,167,159);
+    color: white;
     border: 0;
 }
 
@@ -69,11 +68,6 @@
     background-gradient-end: rgba(255,255,255,0.2);
     box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
     color: white;
-}
-
-.nm-dialog-header
-{
-  font-weight: bold;
 }
 
 .nm-dialog-item-box,
@@ -89,9 +83,9 @@
 }
 
 .no-networks-label {
-    color: #999999;
+    color: white;
 }
 
 .no-networks-box {
-    spacing: 12px;
+    spacing: 1em;
 }

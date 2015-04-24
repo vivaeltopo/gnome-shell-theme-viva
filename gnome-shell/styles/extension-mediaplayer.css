@@ -1,0 +1,24 @@
+.controls > StButton {
+    width: 3em;
+    height: 2em;
+    margin: .25em;
+}
+
+.track-infos {
+    font-size: 12pt;
+    color: white;
+}
+
+.track-title {
+    color: white;
+    font-family: Raleway, Open Sans;
+}
+
+.slider-item
+{
+    font-size: 10pt;
+}
+
+.slider-item StLabel {
+    padding-left: .5em;
+}

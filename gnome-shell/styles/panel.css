@@ -220,8 +220,12 @@
 }
 
 .popup-menu-arrow {
-    width: 1.5em;
-    height: 1.5em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    spacing: 0;
+    color: transparent;
 }
 
 .popup-menu .popup-sub-menu
