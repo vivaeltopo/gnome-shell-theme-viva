@@ -57,7 +57,6 @@
 .switcher-list .separator {
     width: 1px;
     background: rgba(255,255,255,0.33);
-    border:1px solid red;
 }
 
 .switcher-arrow,
