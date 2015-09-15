@@ -1,17 +1,17 @@
 
 .notification-close
 {
-    background-image: url("../images/close.png");
-    background-size: 16px;
-    height: 24px;
-    width: 24px;
-    -shell-close-overlap-x: 0px;
-    -shell-close-overlap-y: 0px;
+	background-image: url("../images/close.png");
+	background-size: 16px;
+	height: 24px;
+	width: 24px;
+	-shell-close-overlap-x: 0px;
+	-shell-close-overlap-y: 0px;
 }
 
 .notification-close:rtl
 {
--shell-close-overlap-x: -14px;
+	-shell-close-overlap-x: -14px;
 }
 
 .notification,
