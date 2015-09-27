@@ -1,10 +1,9 @@
 Gnome-Shell Theme: viva
 ======================
 
-A Gnome Shell 3.16 Theme
+A Gnome Shell 3.18 Theme
 
 ![Preview of the theme](https://github.com/vivaeltopo/gnome-shell-theme-viva/blob/master/Preview.png)
 
-## Activating screen shield and Login Dialog ##
----
-Just copy this theme to __/usr/share/gnome-shell/theme__
+--INSTALL--
+Just copy this theme to __~/.local/share/themes/__ or __/usr/share/gnome-shell/theme__
