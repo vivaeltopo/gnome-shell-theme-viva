@@ -4,33 +4,40 @@
 #panel,
 #panel.lock-screen,
 #panel.unlock-screen,
-#panel.login-screen {
-    border: 0px solid rgba(174,167,159,0.4);
-    color: rgba(0,0,0,0.0);
-    background-color: rgba(0,0,0,0.8);
-    height: 2em;
-    font-size: 12pt;
+#panel.login-screen
+{
+    font-size: 11pt;
     font-weight: normal;
-    box-shadow: inset 0 -1px rgba(174,167,159,0.4);
+
+    height: 2.5em;
+
+    color: rgba(0,0,0,.0);
+    border: 0 solid rgba(174,167,159,.4);
+    background-color: rgba(0,0,0,.9);
+    box-shadow: inset 0 -1px rgba(174, 167, 159, .5);
 }
 
 #panel.unlock-screen,
-#panel.login-screen {
+#panel.login-screen
+{
     background-color: transparent;
 }
 
 #panelLeft,
-#panelCenter {
+#panelCenter
+{
     spacing: 1em;
 }
 
 #panelLeft:rtl,
-#panelRight:ltr {
+#panelRight:ltr
+{
     padding-left: 4px;
 }
 
 #panelLeft:ltr,
-#panelRight:rtl {
+#panelRight:rtl
+{
     padding-right: 4px;
 }
 
@@ -40,50 +47,60 @@
 #panel .panel-corner:focus,
 #panel .panel-corner.lock-screen,
 #panel .panel-corner.unlock-screen,
-#panel .panel-corner.login-screen {
+#panel .panel-corner.login-screen
+{
     -panel-corner-background-color: transparent;
     -panel-corner-border-color: transparent;
 }
 
-#appMenu {
-    spinner-image: url("../images/process-working.svg");
-    spacing: 0;
+#appMenu
+{
     padding: 0 1em;
+
+    spinner-image: url('../images/process-working.svg');
+    spacing: 0;
 }
 
 /* used for the app menu header only */
-#appMenu  .label-shadow {
-    color: rgba(0,0,0,0.3);
+#appMenu  .label-shadow
+{
+    color: rgba(0,0,0,.3);
 }
 
 #panel .panel-button #appMenuIcon,
 #panel .panel-button:active #appMenuIcon,
 #panel .panel-button:checked #appMenuIcon,
-#panel .panel-button:focus #appMenuIcon {
+#panel .panel-button:focus #appMenuIcon
+{
     app-icon-bottom-clip: 1px;
 }
 
-#panel .app-menu-icon {
+#panel .app-menu-icon
+{
     width: 24px;
     height: 24px;
 }
 
 #panel .panel-button .app-menu-icon
 {
-      -st-icon-style: symbolic;
-      margin-left: 4px;
-      margin-right: 4px;
+    margin-right: 0;
+    margin-left: 0;
+
+    -st-icon-style: symbolic;
 }
 
 #panel .panel-button,
 .unlock-screen #panel .panel-button,
 .login-screen #panel .panel-button,
-.lock-screen #panel .panel-button {
-    -natural-hpadding: 1em;
-    -minimum-hpadding: 1em;
-    color: rgba(255,255,255,0.8);
-    font-size: 9pt;
+.lock-screen #panel .panel-button
+{
+    font-size: 11pt;
     font-weight: bold;
+
+    color: rgba(255,255,255,.7);
+
+    -natural-hpadding: 1.5em;
+    -minimum-hpadding: 1.5em;
 }
 
 .unlock-screen #panel .panel-button:focus,
@@ -102,28 +119,36 @@
 #panel .panel-button:hover,
 #panel .panel-status-button:active,
 #panel .panel-status-button:checked,
-#panel .panel-status-button:focus {
+#panel .panel-status-button:focus
+{
+    color: white;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.3);
-    background-gradient-end: rgba(255,255,255,0.15);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
+    background-gradient-start: rgba(255,255,255,.3);
+    background-gradient-end: rgba(255,255,255,.15);
 }
 
 #panel .panel-button:active,
 #panel .panel-button:overview,
 #panel .panel-button:focus,
-#panel .panel-button:checked {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.2);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
+#panel .panel-button:checked
+{
     color: white;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(243,115,32,.8);
+    background-gradient-end: rgba(221,72,20,.8);
 }
 
 #panel .panel-button .system-status-icon
 {
-      icon-size: 1.09em;
-      padding: 0 5px;
+    padding: 0;
+
+    icon-size: 1.09em;
 }
 
 #panel .panel-button:active > .system-status-icon,
@@ -131,10 +156,11 @@
 #panel .panel-button:focus > .system-status-icon,
 #panel .panel-button:checked > .system-status-icon
 {
-    icon-shadow: black 0px 0px 3px;
+    icon-shadow: black 0 0 3px;
 }
 
-.popup-menu.panel-menu {
+.popup-menu.panel-menu
+{
     -boxpointer-gap: 1px;
 }
 
@@ -148,142 +174,189 @@
 {
     color: #f57900;
 }
-
+/*
 .system-status-icon {
     icon-size: 1.5em;
     padding: 0;
-}
+}*/
 
-.aggregate-menu {
+.aggregate-menu
+{
     width: 25em;
 }
 
 .aggregate-menu .popup-menu-icon,
-.system-switch-user-submenu-icon {
-    icon-size: 1.5em;
+.system-switch-user-submenu-icon
+{
     padding: 0;
     padding-right: 1em;
+
     border: 0;
+
+    icon-size: 1.5em;
 }
 
-.system-menu-action {
-    background: transparent;
+.system-switch-user-submenu-icon.user-icon
+{
+    padding: 0 2px;
+    border: 1px solid red;
+
+    icon-size: 20px;
+}
+.system-switch-user-submenu-icon.default-icon
+{
+    padding: 0;
+    padding-right: 1.25em;
+
+    icon-size: 16px;
+}
+
+.system-menu-action
+{
+    padding: 1em;
+
+    transition-duration: 200ms;
+
     color: white;
     border: 0;
-    padding: 1em;
-    transition-duration: 200ms;
+    background: transparent;
 }
 
 .system-menu-action:hover,
 .system-menu-action:focus,
-.system-menu-action:active {
+.system-menu-action:active
+{
+    padding: 1em;
+
+    transition-duration: 200ms;
+
+    color: white;
+    border-radius: 0;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+    border-radius: 1px;
+
     background-gradient-direction: vertical;
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 2px;
-    color: white;
-    padding: 1em;
-    text-shadow: 1px 1px 2px black;
-    transition-duration: 200ms;
 }
 
-.system-menu-action > StIcon {
+.system-menu-action > StIcon
+{
     icon-size: 1.5em;
 }
 
-.screencast-indicator {
+.screencast-indicator
+{
     color: red;
 }
 
 /* PopupMenu */
 
 .popup-menu-boxpointer,
-.candidate-popup-boxpointer {
-    -arrow-border-radius: 2px;
-    -arrow-background-color: rgba(0,0,0,0.9);
+.candidate-popup-boxpointer
+{
+    -arrow-border-radius: 0;
+    -arrow-background-color: rgba(0,0,0,.9);
     -arrow-border-width: 1px;
-    -arrow-border-color: rgba(174,167,159,0.4);
+    -arrow-border-color: rgba(174,167,159,.4);
     -arrow-base: 2em;
     -arrow-rise: 1em;
-  /*-arrow-box-shadow: 0 1px 3px black;*/
 }
 
-.popup-menu {
-    min-width: 5em;
+.popup-menu
+{
+    font-size: 9pt;
+    min-width: 3em;
 }
 
-.popup-menu-ornament {
-    text-align: right;
+.popup-menu-ornament
+{
     width: 0;
     margin-left: 0;
+
+    text-align: right;
 }
 
-.popup-menu-arrow {
+.popup-menu-arrow
+{
     width: 0;
     height: 0;
-    padding: 0;
     margin: 0;
-    spacing: 0;
+    padding: 0;
+
     color: transparent;
+
+    spacing: 0;
 }
 
 .popup-menu .popup-sub-menu
 {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(174,167,159,0.1);
-    background-gradient-end: rgba(174,167,159,0.1);
-    box-shadow: inset 0px -1px 1px 0px rgba(174,167,159,0.3);
-    color: white;
-    text-shadow: 2px 2px solid black;
+    margin: 0;
     padding: 0;
-    padding-bottom: .5em;
-    margin-bottom: .5em;
+
+    color: white;
+    box-shadow: inset 0 -1px 1px 0 rgba(174,167,159,.3);
+    text-shadow: 1px 1px solid black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(174,167,159,.1);
+    background-gradient-end: rgba(174,167,159,.1);
 }
 
 /* The remaining popup-menu sizing is all done in ems, so that if you
  * override .popup-menu.font-size, everything else will scale with it.
  */
-.popup-menu .popup-menu-content {
-    padding: 1em 0em;
+.popup-menu .popup-menu-content
+{
+    padding: .5em 0;
 }
 
-.popup-menu .popup-menu-item {
+.popup-menu .popup-menu-item
+{
     spacing: 1em;
 }
 
-.popup-menu .popup-menu-item:ltr {
-    padding: .5em 2em .5em 1em;
+.popup-menu .popup-menu-item:ltr
+{
+    padding: .6em 2em .6em 1em;
 }
 
-.popup-menu .popup-menu-item:rtl {
+.popup-menu .popup-menu-item:rtl
+{
     padding: .5em 1em .5em 2em;
 }
 
 .popup-menu .popup-menu-item:focus,
 .popup-menu .popup-menu-item:hover
 {
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.4);
-    background-gradient-end: rgba(255,255,255,0.2);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
     font-weight: normal;
+
+    color: white;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.3);
+    background-gradient-end: rgba(255,255,255,.15);
 }
 
 .popup-menu .popup-menu-item:checked,
 .popup-menu .popup-menu-item:active
 {
+    font-weight: normal;
+
+    color: white;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
     background-gradient-direction: vertical;
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    font-weight: normal;
 }
 
-.popup-menu .popup-menu-item:insensitive {
+.popup-menu .popup-menu-item:insensitive
+{
     color: grey;
 }
 
@@ -294,44 +367,48 @@
 
 .popup-menu .popup-inactive-menu-item:insensitive
 {
-    color: rgba(238, 238, 236, 0.5);
+    color: rgba(238, 238, 236, .5);
 }
 .popup-menu .active
 {
     background-color: transparent;
 }
 
-.popup-menu .popup-separator-menu-item {
-    border-bottom: 1px solid white;
+.popup-menu .popup-separator-menu-item
+{
     height: 1px;
     margin: 1px 0;
+
+    border-bottom: 1px solid white;
 }
 
-.popup-alternating-menu-item:alternate {
+.popup-alternating-menu-item:alternate
+{
     font-weight: bold;
 }
 
-.popup-status-menu-item {
+.popup-status-menu-item
+{
     font-weight: normal;
+
     color: white;
 }
 
-.popup-menu-icon {
+.popup-menu-icon
+{
     icon-size: 1.3em;
 }
 
-.popup-menu-item-expander
-{
-}
-
 /* Slider */
-
-.slider {
-    height: 1em;
+.slider
+{
     min-width: 5em;
+    height: 1em;
+
     color: white;
+
     -slider-height: .3em;
-    -slider-background-color: rgba(255,255,255,0.6);
+    -slider-background-color: rgba(255,255,255,.6);
     -slider-border-color: rgba(44,0,30,.4);
     -slider-border-width: 1px;
     -slider-handle-radius: .5em;

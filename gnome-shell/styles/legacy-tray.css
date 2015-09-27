@@ -24,6 +24,9 @@
   icon-size: 32px;
 }
 
+.legacy-tray-icon {
+  padding: 6px; }
+
 .legacy-tray-icon-box
 {
   padding: .5em;

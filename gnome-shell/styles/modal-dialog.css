@@ -14,92 +14,217 @@
   background-color: white;
 }
 
-.modal-dialog {
-  font-size: 9pt;
-  border-radius: 2px;
-  border: 1px solid rgba(174,167,159,0.5);
-  background: rgba(0,0,0,0.8);
-  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
-  color: #fff;
-  padding: 2em;
-}
-
-.modal-dialog StEntry {
-  caret-color: rgba(51,51,51,0.7);
-  font-size: 12pt;
-  caret-size: 1px;
-  selected-color: black;
-  padding: .25em .5em;
-  font-weight: bold;
-  color: rgb(51,51,51);
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 2px;
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,0.65);
-  background-gradient-end: rgba(255,255,255,0.8);
-  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
-}
-
-.modal-dialog StEntry:focus {
-  border: 1px solid #3465a4;
-}
-
-.modal-dialog StEntry:insensitive {
-  color: rgba(0,0,0,0.7);
-  border: 1px solid rgba(255,255,255,0.6);
-}
-
-.modal-dialog-button-box {
-  spacing: 1em;
-  padding-top: .5em;
-}
-
-.modal-dialog-button {
+.modal-dialog
+{
   font-size: 12pt;
   font-weight: normal;
-  color: rgba(255,255,255,0.8);
+
+  padding: 0;
+
+  color: #fff;
+  border: 1px solid rgba(174, 167, 159, .5);
+  border-radius: 2px;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.7);
+}
+
+.modal-dialog .modal-dialog-content-box
+{
+  padding: 1em;
+}
+
+.modal-dialog-linked-button
+{
+  padding: .5em 1em;
+
+  color: rgba(255,255,255,.7);
+  border: 0;
+  border-top: 1px solid rgba(174, 167, 159, .5);
+  border-right: 1px solid rgba(174, 167, 159, .5);
+  background-color: transparent;
+  box-shadow: inset 0 0 transparent;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.2);
+  background-gradient-end: rgba(255,255,255,.1);
+  icon-shadow: 0 1px black;
+}
+
+.modal-dialog-linked-button:insensitive
+{
+  padding: .5em 1em;
+
+  color: rgba(255,255,255,.5);
+  border: 0;
+  border-top: 1px solid rgba(174, 167, 159, .5);
+  border-right: 1px solid rgba(174, 167, 159, .5);
+  background-color: transparent;
+  box-shadow: inset 0 0 transparent;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.2);
+  background-gradient-end: rgba(255,255,255,.1);
+  icon-shadow: 0 1px black;
+}
+
+.modal-dialog-linked-button:hover,
+.modal-dialog-linked-button:focus
+{
+  padding: .5em 1em;
+
+  color: white;
+  border: 0;
+  border-top: 1px solid rgba(174, 167, 159, .5);
+  border-right: 1px solid rgba(174, 167, 159, .5);
+  background-color: transparent;
+  box-shadow: inset 0 0 transparent;
+  text-shadow: 0 1px white;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.15);
+  icon-shadow: 0 1px black;
+}
+
+.modal-dialog-linked-button:clicked,
+.modal-dialog-linked-button:active
+{
+  padding: .5em 1em;
+
+  color: white;
+  border: 0;
+  border-top: 1px solid rgba(243,115,32,.8);
+  border-right: 1px solid rgba(174, 167, 159, .5);
+  background-color: transparent;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
+  icon-shadow: 0 1px black;
+}
+
+.modal-dialog-linked-button:first-child
+{
+  border-radius: 0;
+}
+
+.modal-dialog-linked-button:last-child
+{
+  border-right-width: 0;
+  border-radius: 0;
+}
+
+.modal-dialog-linked-button:first-child:last-child
+{
+  border-right-width: 0;
+  border-radius: 0;
+}
+
+.modal-dialog StEntry
+{
+  font-size: 14pt;
+  font-weight: normal;
+
+  width: 20em;
+  margin-bottom: 0;
+  padding: .25em .5em;
+
+  color: rgba(255,255,255,.7);
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+
+  caret-color: rgba(255,255,255,.7);
+  caret-size: 1px;
+  selected-color: white;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.15);
+  background-gradient-end: rgba(255,255,255,.3);
+}
+
+.modal-dialog StEntry:focus
+{
+  border: 1px solid #3465a4;
+  border: 1px solid red;
+}
+
+.modal-dialog StEntry:insensitive
+{
+  color: rgba(0, 0, 0, .7);
+  border: 1px solid rgba(255, 255, 255, .6);
+}
+
+.modal-dialog-button-box
+{
+  padding-top: .5em;
+
+  spacing: 1em;
+}
+
+.modal-dialog-button
+{
+  font-size: 12pt;
+  font-weight: normal;
+
+  padding: .5em 2em;
+
+  color: rgba(255, 255, 255, .8);
   border: 1px solid transparent;
   border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, .15);
+
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,0.2);
-  background-gradient-end: rgba(255,255,255,0.1);
-  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
-  padding: .5em 2em;
+  background-gradient-start: rgba(255, 255, 255, .2);
+  background-gradient-end: rgba(255, 255, 255, .1);
 }
 
 .modal-dialog-button:hover,
 .modal-dialog-button:focus,
-.modal-dialog-button:insensitive {
+.modal-dialog-button:insensitive
+{
   color: white;
+
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,0.4);
-  background-gradient-end: rgba(255,255,255,0.2);
+  background-gradient-start: rgba(255, 255, 255, .4);
+  background-gradient-end: rgba(255, 255, 255, .2);
 }
 
 .modal-dialog-button:active,
-.modal-dialog-button:pressed {
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
-  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-  color: white;
-  text-shadow: 1px 1px 2px black;
+.modal-dialog-button:pressed
+{
   font-weight: normal;
+
+  color: white;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, .3);
+  text-shadow: 1px 1px 2px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243, 115, 32, .8);
+  background-gradient-end: rgba(221, 72, 20, .8);
 }
 
-.modal-dialog .prompt-dialog-password-entry {
-  color: rgba(255,255,255,0.6);
-  caret-color: rgba(255,255,255,0.6);
+.modal-dialog .prompt-dialog-password-entry
+{
+  font-size: 14pt;
+  font-weight: normal;
+
+  width: 20em;
+  margin-bottom: 0;
+  padding: .25em .5em;
+
+  color: rgba(255,255,255,.7);
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+
+  caret-color: rgba(255,255,255,.7);
   caret-size: 1px;
   selected-color: white;
-  font-weight: normal;
-  font-size: 16pt;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,0.15);
-  background-gradient-end: rgba(255,255,255,0.3);
-  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.1);
-  border: 1px solid rgba(0,0,0,0.5);
-  border-radius: 2px;
-  min-width: 20em;
-  padding: .25em .5em;
+  background-gradient-start: rgba(255,255,255,.15);
+  background-gradient-end: rgba(255,255,255,.3);
 }

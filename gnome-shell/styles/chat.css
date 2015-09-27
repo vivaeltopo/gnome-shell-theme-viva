@@ -46,7 +46,7 @@
 .chat-meta-message
 {
   padding-left: 4px;
-  font-size: 9pt;
+  font-size: 10pt;
   font-weight: bold;
   color: #bebeb6;
 }
@@ -92,10 +92,12 @@
 
 .chat-body
 {
+  spacing: 5px;
 }
 
 .chat-new-group
 {
+  padding-top: 1em;
 }
 
 .subscription-message

@@ -1,4 +1,8 @@
 
+.hotplug-transient-box {
+  spacing: 6px;
+  padding: 2px 72px 2px 12px; }
+
 .hotplug-notification-item-icon
 {
     icon-size: 2.5em;
@@ -35,3 +39,29 @@
 .hotplug-notification-item .button
 {
 }
+
+
+.hotplug-resident-box {
+  spacing: 8px; }
+
+.hotplug-resident-mount {
+  spacing: 8px;
+  border-radius: 4px; }
+  .hotplug-resident-mount:hover {
+    background-color: rgba(57, 63, 63, 0.3); }
+
+.hotplug-resident-mount-label {
+  color: inherit;
+  padding-left: 6px; }
+
+.hotplug-resident-mount-icon {
+  icon-size: 24px;
+  padding-left: 6px; }
+
+.hotplug-resident-eject-icon {
+  icon-size: 16px; }
+
+.hotplug-resident-eject-button {
+  padding: 7px;
+  border-radius: 5px;
+  color: pink; }

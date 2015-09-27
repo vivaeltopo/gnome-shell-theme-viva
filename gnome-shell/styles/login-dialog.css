@@ -63,7 +63,7 @@
 
 .login-dialog-user-list-view {
     -st-vfade-offset: 0;
-    font-size: 9pt;
+    font-size: 10pt;
     border-radius: 2px;
     border: 1px solid rgba(174,167,159,0.5);
     background: rgba(0,0,0,0.8);

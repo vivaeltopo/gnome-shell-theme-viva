@@ -1,97 +1,127 @@
 
 .end-session-dialog-subject
 {
-  font-size: 22pt;
+    font-size: 22pt;
 }
 
 /* End Session Dialog */
 
-.end-session-dialog {
+.end-session-dialog
+{
     font-size: 12pt;
-    border-radius: 2px;
-    border: 1px solid rgba(174,167,159,0.5);
-    background: rgba(0,0,0,0.8);
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
-    color: #fff;
+
+    width: 40em;
     padding: 2em;
-    spacing: 2em;
-    width: 50em;
+
+    color: #fff;
+    border: 1px solid rgba(174, 167, 159, .5);
+    border-radius: 2px;
+    background: rgba(0,0,0,.9);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+
+    spacing: 1em;
 }
 
-.end-session-dialog-list {
+
+.end-session-dialog-list
+{
     padding: 0;
 }
 
-.end-session-dialog-layout {
+.end-session-dialog-layout
+{
     padding: 0;
 }
 
-.end-session-dialog-layout:rtl {
+.end-session-dialog-layout:rtl
+{
     padding: 0;
 }
 
 .end-session-dialog-description,
-.end-session-dialog-description:rtl {
-    font-size: 12pt;
-    color: white;
-    padding: .25em 0;
-    margin: 0;
+.end-session-dialog-description:rtl
+{
+    font-size: 9pt;
+
     width: 30em;
+    margin: 0;
+    padding: .25em 0;
+
+    color: white;
 }
 
-.end-session-dialog-warning {
+.end-session-dialog-warning
+{
     width: 28em;
-    color: #f57900;
     padding-top: 6px;
+
+    color: #f57900;
 }
 
-.end-session-dialog-warning:rtl {
+.end-session-dialog-warning:rtl
+{
     width: 28em;
-    color: #f57900;
     padding-top: 6px;
+
     text-align: right;
+
+    color: #f57900;
 }
 
-.end-session-dialog-logout-icon {
-    border: 0;
+.end-session-dialog-logout-icon
+{
     padding: 0;
-}
 
-.end-session-dialog-shutdown-icon {
     border: 0;
+}
+
+.end-session-dialog-shutdown-icon
+{
     padding: 1em;
+
+    border: 0;
 }
 
-.end-session-dialog-inhibitor-layout {
+.end-session-dialog-inhibitor-layout
+{
     font-size: 12pt;
+
     max-height: 40em;
-    spacing: 1em;
     padding-left: 2em;
+
+    spacing: 1em;
 }
 
-.end-session-dialog-list-header {
-    font-weight: bold;
-    font-size: 12pt;
+.end-session-dialog-list-header
+{
+    font-size: 9pt;
+    font-weight: normal;
 }
 
 .end-session-dialog-session-list,
-.end-session-dialog-app-list {
+.end-session-dialog-app-list
+{
     spacing: 1em;
 }
 
 .end-session-dialog-app-list-item,
-.end-session-dialog-session-list-item {
-    spacing: 1em;
+.end-session-dialog-session-list-item
+{
     padding: .2em;
+
+    spacing: 1em;
 }
 
 .end-session-dialog-app-list-item-name,
-.end-session-dialog-session-list-item-name {
-    font-weight: bold;
+.end-session-dialog-session-list-item-name
+{
     font-size: 12pt;
+    font-weight: bold;
 }
 
-.end-session-dialog-app-list-item-description {
-    color: #cccccc;
-    font-size: 10pt;
+.end-session-dialog-app-list-item-description
+{
+    font-size: 9pt;
+
+    color: rgba(255,255,255,.8);
 }

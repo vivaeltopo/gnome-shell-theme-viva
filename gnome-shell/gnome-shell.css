@@ -1,88 +1,118 @@
-/* Copyright 2009, Red Hat, Inc.
- *
- * Portions adapted from Mx's data/style/default.css
- *   Copyright 2009 Intel Corporation
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms and conditions of the GNU Lesser General Public License,
- * version 2.1, as published by the Free Software Foundation.
- *
- * This program is distributed in the hope it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
- * more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
- */
 
-@import url("./styles/app-switcher.css");
-@import url("./styles/buttons.css");
-@import url("./styles/calendar.css");
-@import url("./styles/chat.css");
-@import url("./styles/checkboxes.css");
-@import url("./styles/dash.css");
-@import url("./styles/end-session-dialog.css");
-@import url("./styles/hotplug.css");
-@import url("./styles/ibus-candidate.css");
-@import url("./styles/keyboard.css");
-@import url("./styles/legacy-tray.css");
-@import url("./styles/login-dialog.css");
-@import url("./styles/lookingglass.css");
-@import url("./styles/magnifier.css");
-@import url("./styles/notifications.css");
-@import url("./styles/modal-dialog.css");
+@import url('gnome-shell-original.css');
+
+@import url('./styles/app-switcher.css');
+@import url('./styles/buttons.css');
+@import url('./styles/calendar.css');
+@import url('./styles/checkboxes.css');
+@import url('./styles/dash.css');
+@import url('./styles/end-session-dialog.css');
+@import url('./styles/hotplug.css');
+@import url('./styles/ibus-candidate.css');
+@import url('./styles/keyboard.css');
+@import url('./styles/legacy-tray.css');
+@import url('./styles/lookingglass.css');
+@import url('./styles/magnifier.css');
+@import url('./styles/modal-dialog.css');
+@import url('./styles/panel.css');
+@import url('./styles/ws-switcher.css');
+@import url('./styles/tile-preview.css');
+@import url('./styles/toggles.css');
+@import url('./styles/run-dialog.css');
+@import url('./styles/overview.css');
+@import url('./styles/scrollbars.css');
+@import url('./styles/notifications.css');
 @import url("./styles/mount-dialog.css");
-@import url("./styles/network-dialog.css");
-@import url("./styles/network.css");
-@import url("./styles/overview.css");
-@import url("./styles/panel.css");
 @import url("./styles/password-dialog.css");
 @import url("./styles/polkit-dialog.css");
-@import url("./styles/run-dialog.css");
+@import url("./styles/network-dialog.css");
+@import url("./styles/network.css");
+@import url("./styles/chat.css");
 @import url("./styles/screenshield.css");
-@import url("./styles/scrollbars.css");
-@import url("./styles/tile-preview.css");
-@import url("./styles/toggles.css");
-@import url("./styles/ws-switcher.css");
 
 /* extensions */
-@import url("./styles/open-weather.css");
-@import url("./styles/extension-mediaplayer.css");
+@import url('./styles/open-weather.css');
+@import url('./styles/extension-mediaplayer.css');
 
 /* Text Styles */
 
 /* default text style */
-stage {
-    font-family: Open Sans, cantarell, sans-serif;
-    font-size: 9pt;
-    color: white;
+stage
+{
+	font-family: Open Sans, cantarell, sans-serif;
+	font-size: 11pt;
+
+	color: white;
 }
 
 /* links */
-.shell-link {
-    color: #0000ff;
-    text-decoration: underline;
+.shell-link
+{
+	text-decoration: underline;
+
+	color: #00f;
 }
 
-.shell-link:hover {
-    color: #0000e0;
+.shell-link:hover
+{
+	color: #0000e0;
 }
 
 .resize-popup
 {
-  color: #eeeeec;
-  background-color: #2e3436;
-  border: 1px solid rgba(238, 238, 236, 0.2);
-  border-radius: 12px;
-  padding: 12px;
+	padding: 12px;
+
+	color: #eeeeec;
+	border: 1px solid rgba(238, 238, 236, .2);
+	border-radius: 12px;
+	background-color: #2e3436;
+}
+
+StEntry
+{
+  font-size: 14pt;
+  font-weight: normal;
+
+  width: 20em;
+  margin-bottom: 0;
+  padding: .25em .5em;
+
+  color: rgba(255,255,255,.7);
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+
+  caret-color: rgba(255,255,255,.7);
+  caret-size: 1px;
+  selected-color: white;
+	selection-background-color: blue;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.15);
+  background-gradient-end: rgba(255,255,255,.3);
+}
+StEntry:focus
+{
+  border: 1px solid rgba(0,0,0,.5);
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+}
+StEntry:insensitive
+{
+	color: grey;
+	border-color: grey;
+	box-shadow: none;
+}
+StEntry StIcon.capslock-warning
+{
+	padding: 0 4px;
+
+	icon-size: 16px;
+	warning-color: red;
 }
 
 /* Background menu */
 
-.background-menu {
-  -boxpointer-gap: 0px;
-  -arrow-rise: 0px;
+.background-menu
+{
+	-boxpointer-gap: 1px;
+	-arrow-rise: 1em;
 }
-

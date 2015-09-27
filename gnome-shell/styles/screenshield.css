@@ -106,6 +106,14 @@
     margin-right: 15px;
 }
 
+.screen-shield-notification-label {
+  font-weight: bold;
+  padding: 0px 0px 0px 12px; }
+
+.screen-shield-notification-count-text {
+  padding: 0px 0px 0px 12px; }
+
+
 .input-source-switcher-symbol {
    font-size: 34pt;
    width: 96px;

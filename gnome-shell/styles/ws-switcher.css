@@ -1,44 +1,57 @@
 
 /* Workspace Switcher */
-.workspace-switcher-group {
+.workspace-switcher-group
+{
+    padding: 0;
 }
 
-.workspace-switcher-container {
-    border: 1px solid rgba(174,167,159,0.4);
-    background: rgba(0,0,0,0.8);
-    border-radius: 2px;
-    box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.4);
-    padding: 1.5em;
+.workspace-switcher-container
+{
+    padding: 1em;
+
+  border: 1px solid rgba(174, 167, 159, .5);
+  border-radius: 2px;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
 }
 
-.workspace-switcher {
-    background: transparent;
+.workspace-switcher
+{
+    padding: 0;
+
     border: 0;
-    border-radius: 0px;
-    padding: 0px;
-    box-shadow: inset 0px 0px 1px 1px transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: inset 0 0 1px 1px transparent;
+
     spacing: 1em;
 }
 
 .ws-switcher-active-up,
-.ws-switcher-active-down {
-    height: 4em;
+.ws-switcher-active-down
+{
+    height: 3em;
+
+    color: white;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
     background-gradient-direction: vertical;
     background-gradient-start: rgba(243,115,32,.8);
     background-gradient-end: rgba(221,72,20,.8);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 2px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
 }
 
-.ws-switcher-box {
-    height: 4em;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.05);
-    background-gradient-end: rgba(255,255,255,.15);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-    border-radius: 2px;
+.ws-switcher-box
+{
+    height: 3em;
+
     border: 1px solid transparent;
-    text-shadow: 1px 1px 2px black;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+    text-shadow: 0 1px black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,.15);
+    background-gradient-end: rgba(255,255,255,.3);
 }
