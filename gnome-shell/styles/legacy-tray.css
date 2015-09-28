@@ -1,22 +1,21 @@
 
-/* Eeeky things */
 .legacy-tray
 {
-  background-color: rgba(0,0,0,0.1);
-  border: 1px solid rgba(174,167,159,0.4);
+  border: 1px solid rgba(174,167,159,.4);
   border-bottom-width: 0;
+  background-color: rgba(0,0,0,.1);
 }
 
 .legacy-tray:ltr
 {
-    border-radius: 0 2px 2px 0;
-    border-left-width: 0;
+  border-left-width: 0;
+  border-radius: 0 2px 2px 0;
 }
 
 .legacy-tray:rtl
 {
-    border-radius: 2px 0 0 2px;
-    border-right-width: 0;
+  border-right-width: 0;
+  border-radius: 2px 0 0 2px;
 }
 
 .legacy-tray-handle StIcon
@@ -24,12 +23,15 @@
   icon-size: 32px;
 }
 
-.legacy-tray-icon {
-  padding: 6px; }
+.legacy-tray-icon
+{
+  padding: 6px;
+}
 
 .legacy-tray-icon-box
 {
   padding: .5em;
+
   spacing: 1em;
 }
 
@@ -42,12 +44,14 @@
 .legacy-tray-icon-box StButton:focus,
 .legacy-tray-icon-box StButton:hover
 {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.3);
-    background-gradient-end: rgba(255,255,255,.1);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
-    border-radius: 2px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    transition-duration: 250ms;
+  transition-duration: 250ms;
+
+  color: white;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.15);
+  text-shadow: 1px 1px 2px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.1);
 }

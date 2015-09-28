@@ -1,89 +1,110 @@
 
-/* IBus Candidate Popup */
-
-.candidate-page-button-box {
-    height: 2em;
-    width: 80px;
+.candidate-page-button-box
+{
+  width: 80px;
+  height: 2em;
 }
 
-.vertical .candidate-page-button-box {
-    padding-top: 0.5em;
+.vertical .candidate-page-button-box
+{
+  padding-top: .5em;
 }
 
-.horizontal .candidate-page-button-box {
-    padding-left: 0.5em;
+.horizontal .candidate-page-button-box
+{
+  padding-left: .5em;
 }
 
-.candidate-page-button {
-    font-size: 10pt;
-    font-weight: bold;
-    color: rgba(0,0,0,0.8);
-    border-radius: 2px;
-    border: 1px solid rgba(255,255,255,0.0);
-    padding: .5em 1.2em;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.8);
-    background-gradient-end: rgba(255,255,255,0.5);
+.candidate-page-button
+{
+  font-size: 10pt;
+  font-weight: bold;
+
+  padding: .5em 1.2em;
+
+  color: rgba(0,0,0,.8);
+  border: 1px solid rgba(255,255,255,.0);
+  border-radius: 2px;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.8);
+  background-gradient-end: rgba(255,255,255,.5);
 }
 
-.candidate-page-button:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.5);
-    background-gradient-end: rgba(255,255,255,0.8);
+.candidate-page-button:hover
+{
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.5);
+  background-gradient-end: rgba(255,255,255,.8);
 }
 
 .candidate-page-button:active,
-.candidate-page-button:pressed {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.5);
-    background-gradient-end: rgba(255,255,255,0.8);
-    box-shadow: inset 0px 0px 1px 1px black;
-    border: 1px solid black;
-    color: rgba(0,0,0,0.9);
+.candidate-page-button:pressed
+{
+  color: rgba(0,0,0,.9);
+  border: 1px solid black;
+  box-shadow: inset 0 0 1px 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.5);
+  background-gradient-end: rgba(255,255,255,.8);
 }
 
-.candidate-page-button:insensitive {
-    font-size: 10pt;
-    color: rgba(0,0,0,0.8);
-    border: 0;
-    border-radius: 2px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.9);
-    background-gradient-end: rgba(255,255,255,0.6);
+.candidate-page-button:insensitive
+{
+  font-size: 10pt;
+
+  color: rgba(0,0,0,.8);
+  border: 0;
+  border-radius: 2px;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.9);
+  background-gradient-end: rgba(255,255,255,.6);
 }
 
-.candidate-page-button-previous {
-    border-radius: 2px 0px 0px 2px;
+.candidate-page-button-previous
+{
+  border-radius: 2px 0 0 2px;
 }
 
-.candidate-page-button-next {
-    border-radius: 0px 2px 2px 0px;
+.candidate-page-button-next
+{
+  border-radius: 0 2px 2px 0;
 }
 
-.candidate-page-button-icon {
-    icon-size: 1em;
+.candidate-page-button-icon
+{
+  icon-size: 1em;
 }
 
-.candidate-popup-content {
-    padding: 0.5em;
-    spacing: 0.3em;
+.candidate-popup-content
+{
+  padding: .5em;
+
+  spacing: .3em;
 }
 
-.candidate-index {
-    padding: 0 0.5em 0 0;
-    color: #cccccc;
+.candidate-index
+{
+  padding: 0 .5em 0 0;
+
+  color: #ccc;
 }
 
-.candidate-box {
-    padding: 0.3em 0.5em 0.3em 0.5em;
+.candidate-box
+{
+  padding: .3em .5em .3em .5em;
 }
 
-.candidate-box:selected {
-    border-radius: 2px;
-    background-color: rgba(255,255,255,0.2);
+.candidate-box:selected
+{
+  border-radius: 2px;
+  background-color: rgba(255,255,255,.2);
 }
 
-.candidate-box:hover {
-    border-radius: 2px;
-    background-color: rgba(255,255,255,0.1);
+.candidate-box:hover
+{
+  border-radius: 2px;
+  background-color: rgba(255,255,255,.1);
 }

@@ -1,127 +1,125 @@
 
 .end-session-dialog-subject
 {
-    font-size: 22pt;
+  font-size: 22pt;
 }
-
-/* End Session Dialog */
 
 .end-session-dialog
 {
-    font-size: 12pt;
+  font-size: 12pt;
 
-    width: 40em;
-    padding: 2em;
+  width: 40em;
+  padding: 2em;
 
-    color: #fff;
-    border: 1px solid rgba(174, 167, 159, .5);
-    border-radius: 2px;
-    background: rgba(0,0,0,.9);
-    box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+  color: #fff;
+  border: 1px solid rgba(174, 167, 159, .5);
+  border-radius: 2px;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
 
-    spacing: 1em;
+  spacing: 1em;
 }
 
 
 .end-session-dialog-list
 {
-    padding: 0;
+  padding: 0;
 }
 
 .end-session-dialog-layout
 {
-    padding: 0;
+  padding: 0;
 }
 
 .end-session-dialog-layout:rtl
 {
-    padding: 0;
+  padding: 0;
 }
 
 .end-session-dialog-description,
 .end-session-dialog-description:rtl
 {
-    font-size: 9pt;
+  font-size: 9pt;
 
-    width: 30em;
-    margin: 0;
-    padding: .25em 0;
+  width: 30em;
+  margin: 0;
+  padding: .25em 0;
 
-    color: white;
+  color: white;
 }
 
 .end-session-dialog-warning
 {
-    width: 28em;
-    padding-top: 6px;
+  width: 28em;
+  padding-top: 6px;
 
-    color: #f57900;
+  color: #f57900;
 }
 
 .end-session-dialog-warning:rtl
 {
-    width: 28em;
-    padding-top: 6px;
+  width: 28em;
+  padding-top: 6px;
 
-    text-align: right;
+  text-align: right;
 
-    color: #f57900;
+  color: #f57900;
 }
 
 .end-session-dialog-logout-icon
 {
-    padding: 0;
+  padding: 0;
 
-    border: 0;
+  border: 0;
 }
 
 .end-session-dialog-shutdown-icon
 {
-    padding: 1em;
+  padding: 1em;
 
-    border: 0;
+  border: 0;
 }
 
 .end-session-dialog-inhibitor-layout
 {
-    font-size: 12pt;
+  font-size: 12pt;
 
-    max-height: 40em;
-    padding-left: 2em;
+  max-height: 40em;
+  padding-left: 2em;
 
-    spacing: 1em;
+  spacing: 1em;
 }
 
 .end-session-dialog-list-header
 {
-    font-size: 9pt;
-    font-weight: normal;
+  font-size: 9pt;
+  font-weight: normal;
 }
 
 .end-session-dialog-session-list,
 .end-session-dialog-app-list
 {
-    spacing: 1em;
+  spacing: 1em;
 }
 
 .end-session-dialog-app-list-item,
 .end-session-dialog-session-list-item
 {
-    padding: .2em;
+  padding: .2em;
 
-    spacing: 1em;
+  spacing: 1em;
 }
 
 .end-session-dialog-app-list-item-name,
 .end-session-dialog-session-list-item-name
 {
-    font-size: 12pt;
-    font-weight: bold;
+  font-size: 12pt;
+  font-weight: bold;
 }
 
 .end-session-dialog-app-list-item-description
 {
-    font-size: 9pt;
+  font-size: 9pt;
 
-    color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.8);
 }

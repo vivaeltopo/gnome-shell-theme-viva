@@ -1,15 +1,17 @@
 
-/* Network Agent Dialog */
-
 .network-dialog-secret-table,
-.keyring-dialog-control-table {
-    spacing-rows: 15px;
-    spacing-columns: 1em;
-    font-size: 12pt;
+.keyring-dialog-control-table
+{
+	font-size: 12pt;
+
+	spacing-rows: 15px;
+	spacing-columns: 1em;
 }
 
-.no-networks-label {
-    font-family: Alte Haas Grotesk, Open Sans, cantarell, sans-serif;
-    font-size: 12pt;
-    color: #999999;
+.no-networks-label
+{
+	font-family: Open Sans, cantarell, sans-serif;
+	font-size: 12pt;
+
+	color: #999;
 }

@@ -3,134 +3,134 @@
 .show-processes-dialog-subject,
 .mount-question-dialog-subject
 {
-    font-size: 14pt;
-    font-weight: bold;
+  font-size: 14pt;
+  font-weight: bold;
 
-    padding-top: 10px;
-    padding-bottom: 6px;
-    padding-left: 17px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 17px;
 
-    color: #999;
+  color: #999;
 }
 
 /* ShellMountOperation Dialogs */
 .shell-mount-operation-icon
 {
-    icon-size: 3em;
+  icon-size: 3em;
 }
 
 .mount-password-reask
 {
-    color: red;
+  color: red;
 }
 
 .show-processes-dialog,
 .mount-question-dialog
 {
-    min-width: 40em;
-    min-height: 20em;
-    max-height: 40em;
-    font-size: 12pt;
-    font-weight: normal;
+  font-size: 12pt;
+  font-weight: normal;
 
-    padding: 0;
+  min-width: 40em;
+  min-height: 20em;
+  max-height: 40em;
+  padding: 0;
 
-    color: #fff;
-    border: 1px solid rgba(174, 167, 159, .5);
-    border-radius: 0;
-    background: rgba(0,0,0,.9);
-    box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+  color: #fff;
+  border: 1px solid rgba(174,167,159,.5);
+  border-radius: 0;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
 }
 
 .show-processes-dialog-subject,
 .mount-question-dialog-subject
 {
-    font-size: 10pt;
-    font-weight: bold;
+  font-size: 10pt;
+  font-weight: bold;
 
-    padding-top: 10px;
-    padding-bottom: 6px;
-    padding-left: 17px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  padding-left: 17px;
 
-    color: #666;
+  color: #666;
 }
 
 .mount-question-dialog-subject
 {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .show-processes-dialog-subject:rtl,
 .mount-question-dialog-subject:rtl
 {
-    padding-right: 17px;
-    padding-left: 0;
+  padding-right: 17px;
+  padding-left: 0;
 }
 
 .show-processes-dialog-description,
 .mount-question-dialog-description
 {
-    font-size: 10pt;
+  font-size: 10pt;
 
-    width: 28em;
-    padding-left: 17px;
+  width: 28em;
+  padding-left: 17px;
 
-    color: white;
+  color: white;
 }
 
 .show-processes-dialog-description:rtl,
 .mount-question-dialog-description:rtl
 {
-    padding-right: 17px;
+  padding-right: 17px;
 }
 
 .show-processes-dialog-app-list
 {
-    font-size: 10pt;
+  font-size: 10pt;
 
-    max-height: 200px;
-    padding-top: 24px;
-    padding-right: 32px;
-    padding-left: 49px;
+  max-height: 200px;
+  padding-top: 24px;
+  padding-right: 32px;
+  padding-left: 49px;
 }
 
 .show-processes-dialog-app-list:rtl
 {
-    padding-right: 49px;
-    padding-left: 32px;
+  padding-right: 49px;
+  padding-left: 32px;
 }
 
 .show-processes-dialog-app-list-item
 {
-    color: #ccc;
+  color: #ccc;
 }
 
 .show-processes-dialog-app-list-item:hover
 {
-    color: white;
+  color: white;
 }
 
 .show-processes-dialog-app-list-item:ltr
 {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 .show-processes-dialog-app-list-item:rtl
 {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 .show-processes-dialog-app-list-item-icon:ltr
 {
-    padding-right: 17px;
+  padding-right: 17px;
 }
 
 .show-processes-dialog-app-list-item-icon:rtl
 {
-    padding-left: 17px;
+  padding-left: 17px;
 }
 
 .show-processes-dialog-app-list-item-name
 {
-    font-size: 10pt;
+  font-size: 10pt;
 }

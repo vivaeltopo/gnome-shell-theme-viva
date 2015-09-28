@@ -3,213 +3,214 @@
 
 #LookingGlassDialog
 {
-    font-size: 12pt;
-    font-weight: normal;
+  font-size: 12pt;
+  font-weight: normal;
 
-    padding: .5em;
+  padding: .5em;
 
-    color: #fff;
-    border: 1px solid rgba(174, 167, 159, .5);
-    border-top: 0;
-    border-radius: 2px;
-    background: rgba(0,0,0,.9);
-    box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+  color: #fff;
+  border: 1px solid rgba(174,167,159,.5);
+  border-top: 0;
+  border-radius: 2px;
+  background: rgba(0,0,0,.9);
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
 }
 
 #LookingGlassDialog > #Toolbar
 {
-    font-size: 12pt;
-    font-weight: normal;
+  font-size: 12pt;
+  font-weight: normal;
 
-    height: 2.5em;
+  height: 2.5em;
 
-    color: rgba(0,0,0,.0);
-    border: 0 solid rgba(174,167,159,.4);
-    background-color: rgba(0,0,0,.9);
-    box-shadow: inset 0 -1px rgba(174, 167, 159, .5);
+  color: rgba(0,0,0,.0);
+  border: 0 solid rgba(174,167,159,.4);
+  background-color: rgba(0,0,0,.9);
+  box-shadow: inset 0 -1px rgba(174,167,159,.5);
 }
 
 #LookingGlassDialog .labels
 {
-    spacing: 0;
+  spacing: 0;
 }
 
 #LookingGlassDialog .notebook-tab
 {
-    padding-right: .5em;
-    padding-left: .5em;
+  font-size: 12pt;
+  font-weight: normal;
 
-    transition-duration: 100ms;
+  padding-right: .5em;
+  padding-left: .5em;
 
-    color: grey;
-    font-size: 12pt;
-    font-weight: normal;
+  transition-duration: 100ms;
 
-    -natural-hpadding: 12px;
-    -minimum-hpadding: 6px;
+  color: grey;
+
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 6px;
 }
 
 #LookingGlassDialog .notebook-tab:hover
 {
-    color: white;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.3);
-    background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.15);
 }
 
 #LookingGlassDialog .notebook-tab:selected
 {
-    color: white;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border: 0;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
-    border: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
 }
 
 #LookingGlassDialog StBoxLayout#EvalBox
 {
-    padding: .5em;
+  padding: .5em;
 
-    spacing: .5em;
+  spacing: .5em;
 }
 
 #LookingGlassDialog StBoxLayout#ResultsArea
 {
-    spacing: .5em;
+  spacing: .5em;
 }
 
 #LookingGlassDialog .lg-inspector-title
 {
-    font-weight: bold;
+  font-weight: bold;
 
-    padding-bottom: 8px;
+  padding-bottom: 8px;
 }
 
 .lg-dialog StEntry
 {
-    font-size: 18pt;
-    font-weight: normal;
+  font-size: 18pt;
+  font-weight: normal;
 
-    min-width: 20em;
-    margin-bottom: 0;
-    padding: .25em .5em;
+  min-width: 20em;
+  margin-bottom: 0;
+  padding: .25em .5em;
 
-    color: rgba(255,255,255,.6);
-    border: 1px solid rgba(0,0,0,.5);
-    border-radius: 2px;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: rgba(255,255,255,.6);
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
 
-    caret-color: rgba(255,255,255,.6);
-    caret-size: 1px;
-    selected-color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.15);
-    background-gradient-end: rgba(255,255,255,.3);
+  caret-color: rgba(255,255,255,.6);
+  caret-size: 1px;
+  selected-color: white;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.15);
+  background-gradient-end: rgba(255,255,255,.3);
 }
 
 .lg-completions-text
 {
-    font-size: 10pt;
-    font-style: italic;
+  font-size: 10pt;
+  font-style: italic;
 }
 
 .lg-obj-inspector-title
 {
-    spacing: .5em;
+  spacing: .5em;
 }
 
 .lg-obj-inspector-button
 {
-    padding: 4px;
+  padding: 4px;
 
-    border: 1px solid gray;
-    border-radius: 2px;
+  border: 1px solid gray;
+  border-radius: 2px;
 }
 
 .lg-obj-inspector-button:hover
 {
-    border: 1px solid #fff;
+  border: 1px solid #fff;
 }
 
 .lg-dialog .shell-link
 {
-    color: rgba(243,115,32,.8);
+  color: rgba(243,115,32,.8);
 }
 
 .lg-dialog .shell-link:hover
 {
-    color: #ddd;
+  color: #ddd;
 }
 
 #lookingGlassExtensions
 {
-    padding: .5em;
+  padding: .5em;
 }
 
 .lg-extensions-list
 {
-    padding: .5em;
+  padding: .5em;
 
-    spacing: .5em;
+  spacing: .5em;
 }
 
 .lg-extension
 {
-    margin-right: .5em;
-    padding: 1em;
+  margin-right: .5em;
+  padding: 1em;
 
-    transition-duration: 200ms;
+  transition-duration: 200ms;
 
-    color: white;
-    border: 0;
-    border-radius: 2px;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.3);
-    background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.15);
 }
 
 .lg-extension:hover,
 .lg-extension:focus
 {
-    transition-duration: 200ms;
+  transition-duration: 200ms;
 
-    color: white;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
 }
 
 .lg-extension-name
 {
-    font-family: Raleway;
-    font-weight: normal;
-    font-size: 14pt;
+  font-family: Raleway;
+  font-size: 14pt;
+  font-weight: normal;
 }
 
 .lg-extension-meta
 {
-    spacing: 1em;
+  spacing: 1em;
 }
 
 #LookingGlassPropertyInspector
 {
-    padding: 1em;
+  padding: 1em;
 
-    border: 1px solid rgba(174,167,159,.4);
-    border-radius: 2px;
-    background: rgba(0, 0, 0, .8);
+  border: 1px solid rgba(174,167,159,.4);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, .8);
 
-    spacing: 4px 8px;
+  spacing: 4px 8px;
 }

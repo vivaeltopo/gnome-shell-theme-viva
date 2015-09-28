@@ -1,65 +1,71 @@
 
 /* Screen shield */
 
-.screen-shield-background {
-    background: black;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.9);
+.screen-shield-background
+{
+  background: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,.9);
 }
 
-#lockDialogGroup {
-    background: black;
+#lockDialogGroup
+{
+  background: black;
 }
 
-.screen-shield-arrows {
-    padding-bottom: 3em;
+.screen-shield-arrows
+{
+  padding-bottom: 3em;
 }
 
-.screen-shield-arrows Gjs_Arrow {
-    color: white;
-    width: 8em;
-    height: 4em;
-    -arrow-thickness: 1em;
-    -arrow-shadow: 1px 2px 1px rgba(0,0,0,0.8);
+.screen-shield-arrows Gjs_Arrow
+{
+  width: 8em;
+  height: 4em;
+
+  color: white;
+
+  -arrow-thickness: 1em;
+  -arrow-shadow: 1px 2px 1px rgba(0,0,0,.8);
 }
 
-.screen-shield-contents-box {
-    spacing: 4em;
+.screen-shield-contents-box
+{
+  spacing: 4em;
 }
 
-.screen-shield-clock {
-    font-family: Raleway;
-    color: white;
-    text-shadow: 1px 2px 2px black;
-    text-align: center;
-    padding-bottom: 1.5em;
+.screen-shield-clock
+{
+  font-family: Raleway;
+
+  padding-bottom: 1.5em;
+
+  text-align: center;
+
+  color: white;
+  text-shadow: 1px 2px 2px black;
 }
 
-.screen-shield-clock-time {
-    font-family: Raleway;
-    font-size: 140px;
-    line-height: 180px;
-    text-shadow: 1px 2px 4px rgba(0,0,0,1.0);
+.screen-shield-clock-time
+{
+  font-family: Raleway;
+  font-size: 140px;
+  line-height: 180px;
+
+  text-shadow: 1px 2px 4px rgba(0,0,0,1.0);
 }
 
-.screen-shield-clock-date {
-    font-family: Raleway;
-    font-size: 72px;
-    line-height: 110px;
+.screen-shield-clock-date
+{
+  font-family: Raleway;
+  font-size: 72px;
+  line-height: 110px;
 }
-
-/*#screenShieldNotifications {
-    border-radius: 2px;
-    background-color: rgba(0,0,0, 0.9);
-    border: 1px solid rgba(174,167,159,0.4);
-    max-height: 500px;
-    padding: 1em 0;
-}*/
 
 #screenShieldNotifications StButton#vhandle,
 #screenShieldNotifications StButton#hhandle
 {
-    background-color: rgba(0,0,0,0.3);
-    border: none;
+  border: none;
+  background-color: rgba(0,0,0,.3);
 }
 
 #screenShieldNotifications StButton#vhandle:hover,
@@ -67,89 +73,65 @@
 #screenShieldNotifications StButton#hhandle:hover,
 #screenShieldNotifications StButton#hhandle:focus
 {
-    background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,.6);
 }
 
 #screenShieldNotifications StButton#vhandle:active,
 #screenShieldNotifications StButton#hhandle:active
 {
-    background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,.8);
 }
 
 
 .screen-shield-notifications-container
 {
-  spacing: 6px;
   width: 30em;
-  background-color: transparent;
   max-height: 500px;
+
+  background-color: transparent;
+
+  spacing: 6px;
 }
 
 .screen-shield-notifications-container .summary-notification-stack-scrollview
 {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .screen-shield-notifications-container .notification,
 .screen-shield-notifications-container .screen-shield-notification-source
 {
-    padding: 12px 6px;
-    border: 1px solid rgba(238, 238, 236, 0.2);
-    background-color: rgba(46, 52, 54, 0.5);
-    color: #eeeeec;
-    border-radius: 4px;
+  padding: 12px 6px;
+
+  color: #eeeeec;
+  border: 1px solid rgba(238, 238, 236, .2);
+  border-radius: 4px;
+  background-color: rgba(46, 52, 54, .5);
 }
 
 .screen-shield-notifications-container .notification
 {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
-.screen-shield-notification-label {
+.screen-shield-notification-label
+{
   font-weight: bold;
-  padding: 0px 0px 0px 12px; }
 
-.screen-shield-notification-count-text {
-  padding: 0px 0px 0px 12px; }
-
-
-.input-source-switcher-symbol {
-   font-size: 34pt;
-   width: 96px;
-   height: 96px;
+  padding: 0 0 0 12px;
 }
 
-/*
-.screen-shield-notifications-box {
-    spacing: 1em;
+.screen-shield-notification-count-text
+{
+  padding: 0 0 0 12px;
 }
 
-.screen-shield-notification-source {
-    padding: 0 2em;
-    spacing: .5em;
-}
 
-.screen-shield-notification-label {
-    font-size: 1.2em;
-    font-weight: bold;
-}
+.input-source-switcher-symbol
+{
+  font-size: 34pt;
 
-.screen-shield-notification-count-text {
-    padding: 0px 18px;
+  width: 96px;
+  height: 96px;
 }
-
-.screen-shield-notifications-box .notification {
-    background-color: transparent;
-    border: 0px solid transparent;
-}
-
-.screen-shield-notifications-box .summary-notification-stack-scrollview {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-#screenShieldNotifications .notification-button,
-#screenShieldNotifications .notification-icon-button {
-    border-radius: 2px;
-}*/

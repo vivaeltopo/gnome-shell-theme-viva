@@ -4,221 +4,221 @@
 
 #calendarArea
 {
-    padding: 1em 2em;
-    padding-left: 0em;
+  padding: 1em 2em;
+  padding-left: 0;
 }
 
 .calendar
 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    spacing-rows: 0;
-    spacing-columns: 0;
-    spacing: 0;
+  spacing-rows: 0;
+  spacing-columns: 0;
+  spacing: 0;
 }
 
 .calendar-month-label
 {
-    font-family: Raleway;
-    font-size: 12pt;
-    font-weight: normal;
+  font-family: Raleway;
+  font-size: 12pt;
+  font-weight: normal;
 
-    margin: .25em 0;
+  margin: .25em 0;
 
-    color: white;
+  color: white;
 }
 
 .calendar-month-label:focus
 {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .calendar-change-month-back
 {
-    width: 18px;
-    height: 12px;
+  width: 18px;
+  height: 12px;
 
-    background-color: transparent;
-    background-image: url('../images/calendar-arrow-left.svg');
+  background-color: transparent;
+  background-image: url('../images/calendar-arrow-left.svg');
 }
 
 .calendar-change-month-back:rtl
 {
-    background-image: url('../images/calendar-arrow-right.svg');
+  background-image: url('../images/calendar-arrow-right.svg');
 }
 
 .calendar-change-month-back:hover,
 .calendar-change-month-back:focus,
 .calendar-change-month-back:active
 {
-    background-color: transparent;
-    background-image: url('../images/calendar-arrow-left-hover.svg');
+  background-color: transparent;
+  background-image: url('../images/calendar-arrow-left-hover.svg');
 }
 
 .calendar-change-month-forward
 {
-    width: 18px;
-    height: 12px;
+  width: 18px;
+  height: 12px;
 
-    background-color: transparent;
-    background-image: url('../images/calendar-arrow-right.svg');
+  background-color: transparent;
+  background-image: url('../images/calendar-arrow-right.svg');
 }
 
 .calendar-change-month-forward:rtl
 {
-    background-image: url('../images/calendar-arrow-left.svg');
+  background-image: url('../images/calendar-arrow-left.svg');
 }
 
 .calendar-change-month-forward:hover,
 .calendar-change-month-forward:focus,
 .calendar-change-month-forward:active
 {
-    background-color: transparent;
-    background-image: url('../images/calendar-arrow-right-hover.svg');
+  background-color: transparent;
+  background-image: url('../images/calendar-arrow-right-hover.svg');
 }
 
 .calendar-day-base
 {
-    font-size: 9pt;
+  font-size: 9pt;
 
-    width: 2.5em;
-    height: 1.5em;
-    margin: 0;
-    padding: 0;
+  width: 2.5em;
+  height: 1.5em;
+  margin: 0;
+  padding: 0;
 
-    transition-duration: 200ms;
-    text-align: center;
+  transition-duration: 200ms;
+  text-align: center;
 
-    border: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-radius: 0;
+  border: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 0;
 }
 
 .calendar-day-base:hover,
 .calendar-day-base:focus
 {
-    transition-duration: 200ms;
+  transition-duration: 200ms;
 
-    color: white;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.3);
-    background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.15);
 }
 
 .calendar-day-base:active
 {
-    color: white;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
 }
 
 .calendar-day
 {
-    font-size: 9pt;
-    padding: 0;
+  font-size: 9pt;
 
-    text-align: center;
+  padding: 0;
+
+  text-align: center;
 }
 
 .calendar-day-top
 {
-    border-top-width: 0;
+  border-top-width: 0;
 }
 
 .calendar-day-left
 {
-    border-left-width: 0;
+  border-left-width: 0;
 }
 
 .calendar-nonwork-day
 {
-    color: rgba(255, 255, 255, .5);
-    background-color: rgba(255, 255, 255, .1);
+  color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.1);
 }
 
 .calendar-today
 {
-    color: white;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  background-image: none;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
+  text-shadow: 0;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.4);
-    background-gradient-end: rgba(221,72,20,.4);
-    border-radius: 0;
-    border: 0;
-    background-image: none;
-    text-shadow: 0;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.4);
+  background-gradient-end: rgba(221,72,20,.4);
 }
 
 .calendar-day-with-events
 {
-    font-weight: bold;
-    color: white;
-    background-image: none;
+  font-weight: bold;
+
+  color: white;
+  background-image: none;
 }
 
 .calendar-other-month-day
 {
-    color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .5);
 }
 
 .calendar-day-base.calendar-day-heading,
 .calendar-week-number
 {
+  font-size: 9pt;
+  font-weight: normal;
 
-    font-size: 9pt;
-    font-weight: normal;
+  margin: 0;
+  padding: .5em;
 
-    color: rgba(255,255,255,0.2);
-
-    margin: 0;
-    padding: .5em;
-
-    border: 0;
+  color: rgba(255,255,255,.2);
+  border: 0;
 }
 
 .datemenu-today-button,
 .datemenu-displays-box,
 {
-    margin: 0 1em;
+  margin: 0 1em;
 }
 
 .datemenu-calendar-column
 {
-    spacing: .25em;
+  spacing: .25em;
 }
 
 .datemenu-displays-section
 {
-    padding-bottom: .25em;
+  padding-bottom: .25em;
 }
 
 .datemenu-today-button,
 .world-clocks-button
 {
-    padding: .25em .5em;
+  padding: .25em .5em;
 
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .world-clocks-button
 {
-    height: 0;
-    padding: 0;
+  height: 0;
+  padding: 0;
 }
 
 .datemenu-today-button:hover,
@@ -226,69 +226,67 @@
 .world-clocks-button:hover,
 .world-clocks-button:focus
 {
-    color: white;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,.3);
-    background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255,255,255,.3);
+  background-gradient-end: rgba(255,255,255,.15);
 }
 
 .datemenu-today-button:active,
 .world-clocks-button:active
 {
-    color: white;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-    text-shadow: 0 1px black;
+  color: white;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  text-shadow: 0 1px black;
 
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(243,115,32,.8);
-    background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(243,115,32,.8);
+  background-gradient-end: rgba(221,72,20,.8);
 }
 
 .datemenu-today-button .date-label,
 .world-clocks-header
 {
-    font-family: Raleway;
-    font-size: 18pt;
-    font-weight: normal;
+  font-family: Raleway;
+  font-size: 18pt;
+  font-weight: normal;
 
-    color: white;
+  color: white;
 
-    spacing: .25em;
+  spacing: .25em;
 }
 
 .world-clocks-grid
 {
-    spacing-rows: .25em;
-    font-family: Open Sans;
-    font-size: 9pt;
-    font-weight: normal;
-    color: rgba(255,255,255,0.8);
+  font-family: Open Sans;
+  font-size: 9pt;
+  font-weight: normal;
+
+  color: rgba(255,255,255,.8);
+
+  spacing-rows: .25em;
 }
 
 .pager-button
 {
-    width: 18px;
-    height: 12px;
+  width: 18px;
+  height: 12px;
 
-    color: white;
-    border-radius: 0;
-    background-color: transparent;
+  color: white;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .pager-button:hover,
-.pager-button:focus
-{
-    background-color: transparent;
-}
-
+.pager-button:focus,
 .pager-button:active
 {
-    background-color: transparent;
+  background-color: transparent;
 }

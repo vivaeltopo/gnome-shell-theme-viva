@@ -1,14 +1,18 @@
-/* Polkit Dialog */
 
 .polkit-dialog-user-layout,
-.polkit-dialog-user-layout:rtl {
-    spacing: 1em;
-    color: white;
-    font-family: Raleway;
-    font-size: 16pt;
-    padding: 0;
+.polkit-dialog-user-layout:rtl
+{
+	font-family: Raleway;
+	font-size: 16pt;
+
+	padding: 0;
+
+	color: white;
+
+	spacing: 1em;
 }
 
-.polkit-dialog-user-root-label {
-    color: #ff0000;
-}s
+.polkit-dialog-user-root-label
+{
+	color: #f00;
+}
