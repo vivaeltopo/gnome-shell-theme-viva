@@ -149,7 +149,6 @@
 .modal-dialog StEntry:focus
 {
   border: 1px solid #3465a4;
-  border: 1px solid red;
 }
 
 .modal-dialog StEntry:insensitive
