@@ -1,16 +1,16 @@
 
 .button
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
-  color: rgba(255,255,255,0.8);
+  color: $fg_color;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: $border-radius;
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,0.2);
   background-gradient-end: rgba(255,255,255,0.1);
-  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.15);
-  padding: .5em 2em;
+  box-shadow: $viva-box-shadow;
+  padding: $spacing-small $spacing-large;
   icon-shadow: 0 1px black;
 }
 
@@ -18,10 +18,10 @@
 .button:hover,
 .button:insensitive
 {
-  color: white;
+  color: $selected_fg_color;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,0.4);
-  background-gradient-end: rgba(255,255,255,0.2);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
   border: 1px solid transparent;
   icon-shadow: 0 1px black;
 }
@@ -29,10 +29,10 @@
 .button:active
 {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
-  box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.3);
-  color: white;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+  box-shadow: $viva-box-shadow;
+  color: $selected_fg_color;
   text-shadow: 1px 1px 2px black;
   font-weight: normal;
 }

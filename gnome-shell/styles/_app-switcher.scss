@@ -2,25 +2,24 @@
 /* App Switcher */
 .switcher-popup
 {
-	padding: .5em;
+	padding: $spacing-small;
 
-	spacing: .5em;
+	spacing: $spacing-small;
 }
 
 .osd-window,
 .resize-popup,
 .switcher-list
 {
-	font-size: 12pt;
+	font-size: $font-size-normal;
 	font-weight: normal;
 
-	padding: .5em;
+	padding: $spacing-small;
 
-	color: white;
-	border: 1px solid rgba(174,167,159,.5);
-	border-radius: 2px;
-	background: rgba(0,0,0,.9);
-	box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+	color: $fg_color;
+	border: 1px solid $viva-border-color;
+	border-radius: $border-radius;
+	background: $bg_color;
 }
 
 .switcher-list-item-container
@@ -30,33 +29,33 @@
 
 .switcher-list .item-box
 {
-	font-size: 12pt;
+	font-size: $font-size-normal;
 	font-weight: normal;
 
-	padding: .5em;
+	padding: $spacing-small;
 
-	transition-duration: 100ms;
+	transition-duration: $transition-fast;
 
 	border: 1px solid transparent;
-	border-radius: 2px;
+	border-radius: $border-radius;
 }
 
 .switcher-list .item-box:selected,
 .switcher-list .item-box:outlined
 {
-	padding: .5em;
+	padding: 0;
 
-	transition-duration: 100ms;
+	transition-duration: $transition-fast;
 
 	color: white;
 	border: 1px solid transparent;
-	border-radius: 2px;
-	box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+	border-radius: $border-radius;
+	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
 	background-gradient-direction: vertical;
-	background-gradient-start: rgba(243,115,32,.8);
-	background-gradient-end: rgba(221,72,20,.8);
+	background-gradient-start: $viva-color1;
+	background-gradient-end: $viva-color2;
 }
 
 .switcher-list .thumbnail-box
@@ -71,20 +70,20 @@
 	width: 256px;
 	padding: 0;
 
-	spacing: .5em;
+	spacing: $spacing-small;
 }
 
 .switcher-list .separator
 {
 	width: 1px;
 
-	background: rgba(255,255,255,.33);
+	background: $viva-gradient-end;
 }
 
 .switcher-arrow,
 .switcher-arrow:highlighted
 {
-	color: white;
+	color: transparent;
 	border-color: transparent;
 }
 
@@ -98,15 +97,15 @@
 {
 	text-align: center;
 
-	spacing: .5em;
+	spacing: $spacing-small;
 }
 
 .osd-window .level
 {
-	height: .25em;
+	height: $spacing-tiny;
 
-	color: rgba(221,72,20,.9);
-	border-radius: 2px;
+	color: $viva-color2;
+	border-radius: $border-radius;
 }
 .osd-window .osd-monitor-label
 {

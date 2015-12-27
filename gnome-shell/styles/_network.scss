@@ -1,0 +1,125 @@
+
+.nm-dialog
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  min-width: 40em;
+  min-height: 20em;
+  max-height: 40em;
+  padding: $spacing-none;
+
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+.nm-dialog-content
+{
+  padding: $spacing-large;
+
+  spacing: $spacing-none;
+}
+
+.nm-dialog-header-hbox,
+.nm-dialog-airplane-box
+{
+  padding-bottom: $spacing-large;
+
+  spacing: $spacing-normal;
+}
+
+.nm-dialog-header,
+.nm-dialog-airplane-headline
+{
+  font-family: $font-family-fancy;
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  padding: $spacing-tiny $spacing-none;
+
+  text-align: center;
+}
+
+.nm-dialog-airplane-headline
+{
+  font-weight: normal;
+}
+
+.nm-dialog-airplane-text
+{
+  font-size: $font-size-normal;
+
+  color: $fg_color;
+}
+
+.nm-dialog-header-icon
+{
+  icon-size: 5em;
+}
+
+.nm-dialog-scroll-view
+{
+  padding: $spacing-large $spacing-none;
+
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+.nm-dialog-item
+{
+  font-size: $font-size-small;
+
+  margin-left: $spacing-huge;
+  padding: $spacing-small;
+
+  color: $fg_color;
+  border: $spacing-none;
+
+  spacing: $spacing-tiny;
+}
+
+.nm-dialog-item:hover,
+.nm-dialog-item:focus,
+.nm-dialog-item:active,
+.nm-dialog-item:selected
+{
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+.nm-dialog-item-box,
+.nm-dialog-icons
+{
+  spacing: $spacing-none;
+}
+
+.nm-dialog-icon
+{
+  font-size: $font-size-small;
+
+  padding-left: $spacing-small;
+
+  color: $fg_color;
+
+  icon-size: 1.3em;
+}
+
+.no-networks-label
+{
+  color: $fg_color;
+}
+
+.no-networks-box
+{
+  spacing: $spacing-normal;
+}

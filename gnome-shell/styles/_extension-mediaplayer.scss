@@ -1,0 +1,29 @@
+.controls > StButton
+{
+	width: $spacing-huge;
+	height: $spacing-large;
+}
+
+.track-infos
+{
+	font-size: $font-size-small;
+
+	color: $fg_color;
+}
+
+.track-title
+{
+	font-family: $font-family-fancy;
+
+	color: $fg_color;
+}
+
+.slider-item
+{
+	font-size: $font-size-small;
+}
+
+.slider-item StLabel
+{
+	padding-left: $spacing-small;
+}

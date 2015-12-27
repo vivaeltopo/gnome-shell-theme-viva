@@ -1,0 +1,57 @@
+
+.legacy-tray
+{
+  border: 1px solid $viva-border-color;
+  border-bottom-width: 0;
+  background-color: $insensitive_bg_color;
+}
+
+.legacy-tray:ltr
+{
+  border-left-width: 0;
+  border-radius: 0 $border-radius $border-radius 0;
+}
+
+.legacy-tray:rtl
+{
+  border-right-width: 0;
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.legacy-tray-handle StIcon
+{
+  icon-size: 32px;
+}
+
+.legacy-tray-icon
+{
+  padding: $spacing-tiny;
+}
+
+.legacy-tray-icon-box
+{
+  padding: $spacing-tiny;
+
+  spacing: $spacing-small;
+}
+
+.legacy-tray-icon-box StButton
+{
+  width: 32px;
+  height: 32px;
+}
+
+.legacy-tray-icon-box StButton:focus,
+.legacy-tray-icon-box StButton:hover
+{
+  transition-duration: $transition-fast;
+
+  color: white;
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 1px 1px 2px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}

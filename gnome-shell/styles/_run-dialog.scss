@@ -1,0 +1,75 @@
+
+/* Run Dialog */
+
+.run-dialog
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding: 0;
+
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+.modal-dialog .run-dialog-entry
+{
+  font-size: $font-size-large;
+  font-weight: normal;
+
+  width: 20em;
+  margin-bottom: 0;
+  padding: $spacing-tiny $spacing-small;
+
+  color: $fg_color;
+  border: 1px solid $insensitive_bg_color;
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
+
+  caret-color: $fg_color;
+  caret-size: 1px;
+  selected-color: $fg_color;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-start;
+  background-gradient-end: $viva-gradient-end;
+}
+
+.modal-dialog .run-dialog-entry:focus
+{
+  border: 1px solid $insensitive_bg_color;
+}
+
+.modal-dialog .run-dialog-button-box
+{
+  padding-top: $spacing-normal;
+}
+
+.modal-dialog .run-dialog-label
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding-bottom: $spacing-tiny;
+
+  color: $fg_color;
+}
+
+.modal-dialog .run-dialog-error-box
+{
+  padding: $spacing-tiny;
+
+  color: $error-color;
+
+  spacing: $spacing-tiny;
+}
+
+.modal-dialog .run-dialog-error-label
+{
+  font-size: $font-size-normal;
+  font-weight: bold;
+
+  color: $error-color;
+}

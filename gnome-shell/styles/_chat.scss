@@ -1,0 +1,106 @@
+
+.url-highlighter
+{
+  link-color: $viva-color1;
+}
+
+.secondary-icon
+{
+  icon-size: 1.09em;
+}
+
+.chat-log-message
+{
+  color: $insensitive_fg_color;
+}
+
+.chat-empty-line
+{
+  font-size: $font-size-small;
+}
+
+.chat-received
+{
+  padding-left: $spacing-tiny;
+  color: $fg_color;
+}
+
+  .chat-received:rtl
+{
+    padding-left: $spacing-none;
+    padding-right: $spacing-tiny;
+}
+
+.chat-sent
+{
+  padding-left: $spacing-normal;
+  color: $insensitive_fg_color;
+}
+
+  .chat-sent:rtl
+{
+    padding-left: $spacing-none;
+    padding-right: $spacing-normal;
+}
+
+.chat-meta-message
+{
+  padding-left: $spacing-tiny;
+  font-size: $font-size-small;
+  font-weight: bold;
+  color: $insensitive_fg_color;
+}
+
+  .chat-meta-message:rtl
+{
+    padding-left: $spacing-none;
+    padding-right: $spacing-tiny;
+}
+
+.chat-notification-scrollview
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+  border-radius: $border-radius;
+  border: 1px solid $viva-border-color;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+  color: $fg_color;
+  padding: $spacing-normal;
+  max-height: 30em;
+}
+
+.chat-response,
+.chat-response > StEntry
+{
+  color: $fg_color;
+  caret-color: $fg_color;
+  caret-size: 1px;
+  selected-color: $fg_color;
+  font-weight: normal;
+  font-size: $font-size-large;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-start;
+  background-gradient-end: $viva-gradient-end;
+  box-shadow: $viva-box-shadow;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  min-width: 20em;
+  padding: $spacing-tiny $spacing-small;
+  margin-bottom: $spacing-none;
+}
+
+.chat-body
+{
+  spacing: $spacing-tiny;
+}
+
+.chat-new-group
+{
+  padding-top: $spacing-normal;
+}
+
+.subscription-message
+{
+  font-style: italic;
+}

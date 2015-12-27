@@ -1,0 +1,79 @@
+
+/* Dash */
+
+#dash
+{
+  font-size: $font-size-normal;
+
+  padding: $spacing-small;
+
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  border-left: 0;
+  border-radius: 0;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+#dash:rtl
+{
+  border: 1px solid $viva-border-color;
+  border-right: 0;
+  border-radius: 0;
+}
+
+#dash .placeholder
+{
+  height: 24px;
+
+  background-image: url('./images/dash-placeholder.svg');
+  background-size: contain;
+}
+
+#dash .empty-dash-drop-target
+{
+  width: 24px;
+  height: 24px;
+}
+
+.dash-label
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding: $spacing-small $spacing-normal;
+
+  border: 1px solid $viva-border-color;
+  border-radius: 0;
+  background: $bg_color;
+
+  -x-offset: 1em;
+}
+
+.dash-item-container > StButton
+{
+  padding: $spacing-none;
+}
+
+.show-apps
+{
+  padding: $spacing-none;
+}
+
+.show-apps-icon
+{
+  color: $fg_color;
+}
+
+.show-apps:hover .show-apps-icon
+{
+  color: $fg_color;
+}
+
+#dash .app-well-app
+{
+  padding: $spacing-none;
+
+  spacing: $spacing-none;
+}

@@ -4,15 +4,15 @@
 #panel.unlock-screen,
 #panel.login-screen
 {
-  font-size: 11pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
-  height: 2.5em;
+  height: $spacing-huge;
 
-  color: rgba(0,0,0,.0);
-  border: 0 solid rgba(174,167,159,.4);
-  background-color: rgba(0,0,0,.9);
-  box-shadow: inset 0 -1px rgba(174, 167, 159, .5);
+  color: transparent;
+  border: $spacing-none;
+  background-color: $bg_color;
+  box-shadow: inset 0 -1px $viva-border-color;
 }
 
 #panel.unlock-screen,
@@ -24,19 +24,19 @@
 #panelLeft,
 #panelCenter
 {
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 #panelLeft:rtl,
 #panelRight:ltr
 {
-  padding-left: 4px;
+  padding-left: $spacing-tiny;
 }
 
 #panelLeft:ltr,
 #panelRight:rtl
 {
-  padding-right: 4px;
+  padding-right: $spacing-tiny;
 }
 
 #panel .panel-corner,
@@ -53,16 +53,16 @@
 
 #appMenu
 {
-  padding: 0 1em;
+  padding: $spacing-none $spacing-normal;
 
-  spinner-image: url('../images/process-working.svg');
-  spacing: 0;
+  spinner-image: url('./images/process-working.svg');
+  spacing: $spacing-none;
 }
 
 /* used for the app menu header only */
 #appMenu  .label-shadow
 {
-  color: rgba(0,0,0,.3);
+  color: $insensitive_bg_color;
 }
 
 #panel .panel-button #appMenuIcon,
@@ -81,8 +81,8 @@
 
 #panel .panel-button .app-menu-icon
 {
-  margin-right: 0;
-  margin-left: 0;
+  margin-right: $spacing-none;
+  margin-left: $spacing-none;
 
   -st-icon-style: symbolic;
 }
@@ -92,13 +92,13 @@
 .login-screen #panel .panel-button,
 .lock-screen #panel .panel-button
 {
-  font-size: 11pt;
+  font-size: $font-size-normal;
   font-weight: bold;
 
   color: rgba(255,255,255,.7);
 
-  -natural-hpadding: 1.5em;
-  -minimum-hpadding: 1.5em;
+  -natural-hpadding: $spacing-normal;
+  -minimum-hpadding: $spacing-normal;
 }
 
 .unlock-screen #panel .panel-button:focus,
@@ -111,7 +111,7 @@
 .lock-screen #panel .panel-button:hover,
 .lock-screen #panel .panel-button:active
 {
-  color: white;
+  color: $fg_color;
 }
 
 #panel .panel-button:hover,
@@ -119,13 +119,13 @@
 #panel .panel-status-button:checked,
 #panel .panel-status-button:focus
 {
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 #panel .panel-button:active,
@@ -133,18 +133,18 @@
 #panel .panel-button:focus,
 #panel .panel-button:checked
 {
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 #panel .panel-button .system-status-icon
 {
-  padding: 0;
+  padding: $spacing-none;
 
   icon-size: 1.09em;
 }
@@ -165,12 +165,12 @@
 #panel .panel-status-indicators-box,
 #panel .panel-status-menu-box
 {
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 #panel .screencast-indicator
 {
-  color: #f57900;
+  color: $warning-color;
 }
 
 .aggregate-menu
@@ -181,38 +181,36 @@
 .aggregate-menu .popup-menu-icon,
 .system-switch-user-submenu-icon
 {
-  padding: 0;
-  padding-right: 1em;
+  padding: $spacing-none;
+  padding-right: $spacing-normal;
 
-  border: 0;
+  border: $spacing-none;
 
   icon-size: 1.5em;
 }
 
 .system-switch-user-submenu-icon.user-icon
 {
-  padding: 0 2px;
-
-  border: 1px solid red;
+  padding: $spacing-none $spacing-tiny;
 
   icon-size: 20px;
 }
 .system-switch-user-submenu-icon.default-icon
 {
   padding: 0;
-  padding-right: 1.25em;
+  padding-right: $spacing-normal;
 
   icon-size: 16px;
 }
 
 .system-menu-action
 {
-  padding: 1em;
+  padding: $spacing-normal;
 
-  transition-duration: 200ms;
+  transition-duration: $transition-fast;
 
-  color: white;
-  border: 0;
+  color: $fg_color;
+  border: $spacing-none;
   background: transparent;
 }
 
@@ -220,19 +218,19 @@
 .system-menu-action:focus,
 .system-menu-action:active
 {
-  padding: 1em;
+  padding: $spacing-normal;
 
-  transition-duration: 200ms;
+  transition-duration: $transition-fast;
 
-  color: white;
-  border-radius: 0;
+  color: $fg_color;
+  border-radius: $spacing-none;
   border-radius: 1px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .system-menu-action > StIcon
@@ -250,53 +248,53 @@
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer
 {
-  -arrow-border-radius: 0;
-  -arrow-background-color: rgba(0,0,0,.9);
+  -arrow-border-radius: $spacing-none;
+  -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(174,167,159,.4);
-  -arrow-base: 2em;
-  -arrow-rise: 1em;
+  -arrow-border-color: $viva-border-color;
+  -arrow-base: $spacing-large;
+  -arrow-rise: $spacing-normal;
 }
 
 .popup-menu
 {
-  font-size: 9pt;
+  font-size: $font-size-small;
 
   min-width: 3em;
 }
 
 .popup-menu-ornament
 {
-  width: 0;
-  margin-left: 0;
+  width: $spacing-none;
+  margin-left: $spacing-none;
 
   text-align: right;
 }
 
 .popup-menu-arrow
 {
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
+  width: $spacing-none;
+  height: $spacing-none;
+  margin: $spacing-none;
+  padding: $spacing-none;
 
   color: transparent;
 
-  spacing: 0;
+  spacing: $spacing-none;
 }
 
 .popup-menu .popup-sub-menu
 {
-  margin: 0;
-  padding: 0;
+  margin: $spacing-none;
+  padding: $spacing-none;
 
-  color: white;
-  box-shadow: inset 0 -1px 1px 0 rgba(174,167,159,.3);
+  color: $fg_color;
+  box-shadow: inset 0 -1px 1px 0 $viva-border-color;
   text-shadow: 1px 1px solid black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(174,167,159,.1);
-  background-gradient-end: rgba(174,167,159,.1);
+  background-gradient-start: $viva-gradient-start;
+  background-gradient-end: $viva-gradient-start;
 }
 
 /* The remaining popup-menu sizing is all done in ems, so that if you
@@ -304,22 +302,22 @@
  */
 .popup-menu .popup-menu-content
 {
-  padding: .5em 0;
+  padding: $spacing-small $spacing-none;
 }
 
 .popup-menu .popup-menu-item
 {
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 .popup-menu .popup-menu-item:ltr
 {
-  padding: .6em 2em .6em 1em;
+  padding: $spacing-small $spacing-large $spacing-small $spacing-normal;
 }
 
 .popup-menu .popup-menu-item:rtl
 {
-  padding: .5em 1em .5em 2em;
+  padding: $spacing-small $spacing-normal $spacing-small $spacing-large;
 }
 
 .popup-menu .popup-menu-item:focus,
@@ -327,13 +325,13 @@
 {
   font-weight: normal;
 
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .popup-menu .popup-menu-item:checked,
@@ -341,13 +339,13 @@
 {
   font-weight: normal;
 
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .popup-menu .popup-menu-item:insensitive
@@ -357,12 +355,12 @@
 
 .popup-menu .popup-inactive-menu-item
 {
-  color: white;
+  color: $fg_color;
 }
 
 .popup-menu .popup-inactive-menu-item:insensitive
 {
-  color: rgba(238, 238, 236, .5);
+  color: $insensitive_fg_color;
 }
 .popup-menu .active
 {
@@ -374,7 +372,7 @@
   height: 1px;
   margin: 1px 0;
 
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $fg_color;
 }
 
 .popup-alternating-menu-item:alternate
@@ -386,7 +384,7 @@
 {
   font-weight: normal;
 
-  color: white;
+  color: $fg_color;
 }
 
 .popup-menu-icon
@@ -397,16 +395,16 @@
 /* Slider */
 .slider
 {
-  min-width: 5em;
-  height: 1em;
+  min-width: 5 * $spacing-normal;
+  height: $spacing-normal;
 
-  color: white;
+  color: $fg_color;
 
-  -slider-height: .3em;
-  -slider-background-color: rgba(255,255,255,.6);
-  -slider-border-color: rgba(44,0,30,.4);
+  -slider-height: $spacing-tiny;
+  -slider-background-color: $insensitive_fg_color;
+  -slider-border-color: $insensitive_bg_color;
   -slider-border-width: 1px;
-  -slider-handle-radius: .5em;
-  -slider-active-background-color: rgb(221,72,20);
-  -slider-active-border-color: rgba(44,0,30,.4);
+  -slider-handle-radius: $spacing-small;
+  -slider-active-background-color: $viva-color2;
+  -slider-active-border-color: $insensitive_bg_color;
 }

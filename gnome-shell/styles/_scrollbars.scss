@@ -3,23 +3,23 @@
 
 StScrollBar
 {
-  padding: 1em;
+  padding: $spacing-normal;
 }
 
 StScrollView.vfade
 {
-  -st-vfade-offset: 8em;
+  -st-vfade-offset: 8*$spacing-normal;
 }
 
 StScrollView.hfade
 {
-  -st-hfade-offset: 8em;
+  -st-hfade-offset: $spacing-normal;
 }
 
 StScrollView StScrollBar
 {
-  min-width: 1em;
-  min-height: 2.5em;
+  min-width: $spacing-normal;
+  min-height: $spacing-huge;
 }
 
 StScrollBar StBin#trough
@@ -30,13 +30,13 @@ StScrollBar StBin#trough
 StScrollBar StButton#vhandle
 {
   border: 1px solid transparent;
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 StScrollBar StButton#vhandle:focus,
@@ -45,50 +45,50 @@ StScrollBar StButton#vhandle:active
 {
   color: white;
   border: 1px solid transparent;
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: rgba(255,255,255,.3);
+  background-gradient-end: $viva-gradient-end;
 }
 
 StScrollBar StButton#vhandle:active
 {
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start:$viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 StScrollBar StButton#hhandle
 {
   border: 1px solid transparent;
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: horizontal;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 StScrollBar StButton#hhandle:focus,
 StScrollBar StButton#hhandle:hover,
 StScrollBar StButton#hhandle:active
 {
-  color: white;
+  color: $fg_color;
   border: 1px solid transparent;
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: horizontal;
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: rgba(255,255,255,.3);
+  background-gradient-end: $viva-gradient-end;
 }
 
 StScrollBar StButton#hhandle:active
 {
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }

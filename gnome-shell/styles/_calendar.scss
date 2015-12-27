@@ -1,0 +1,291 @@
+
+/* Calendar popup */
+
+
+#calendarArea
+{
+  padding: $spacing-normal $spacing-large;
+  padding-left: $spacing-none;
+}
+
+.calendar
+{
+  margin: $spacing-none;
+  padding: $spacing-none;
+
+  spacing-rows: $spacing-none;
+  spacing-columns: $spacing-none;
+  spacing: $spacing-none;
+}
+
+.calendar-month-label
+{
+  font-family: Raleway;
+  font-size: $font-size-large;
+  font-weight: normal;
+
+  margin: $spacing-small $spacing-none;
+
+  color: $fg_color;
+}
+
+.calendar-month-label:focus
+{
+  background-color: transparent;
+}
+
+.calendar-change-month-back
+{
+  width: 18px;
+  height: 12px;
+
+  background-color: transparent;
+  background-image: url('images/calendar-arrow-left.svg');
+}
+
+.calendar-change-month-back:rtl
+{
+  background-image: url('images/calendar-arrow-right.svg');
+}
+
+.calendar-change-month-back:hover,
+.calendar-change-month-back:focus,
+.calendar-change-month-back:active
+{
+  background-color: transparent;
+  background-image: url('images/calendar-arrow-left-hover.svg');
+}
+
+.calendar-change-month-forward
+{
+  width: 18px;
+  height: 12px;
+
+  background-color: transparent;
+  background-image: url('images/calendar-arrow-right.svg');
+}
+
+.calendar-change-month-forward:rtl
+{
+  background-image: url('images/calendar-arrow-left.svg');
+}
+
+.calendar-change-month-forward:hover,
+.calendar-change-month-forward:focus,
+.calendar-change-month-forward:active
+{
+  background-color: transparent;
+  background-image: url('images/calendar-arrow-right-hover.svg');
+}
+
+.calendar-day-base
+{
+  font-size: $font-size-small;
+
+  width: $spacing-huge;
+  height: $spacing-large;
+  margin: $spacing-none;
+  padding: $spacing-none;
+
+  transition-duration: $transition-fast;
+  text-align: center;
+
+  border: $spacing-none;
+  border-right: $spacing-none;
+  border-bottom: $spacing-none;
+  border-radius: $spacing-none;
+}
+
+.calendar-day-base:hover,
+.calendar-day-base:focus
+{
+  transition-duration: $transition-fast;
+
+  color: $fg_color;
+  border-color: transparent;
+  border-radius: $spacing-none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}
+
+.calendar-day-base:active
+{
+  color: $fg_color;
+  border-color: transparent;
+  border-radius: $spacing-none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+.calendar-day
+{
+  font-size: $font-size-small;
+
+  padding: $spacing-none;
+
+  text-align: center;
+}
+
+.calendar-day-top
+{
+  border-top-width: $spacing-none;
+}
+
+.calendar-day-left
+{
+  border-left-width: $spacing-none;
+}
+
+.calendar-nonwork-day
+{
+  color: $insensitive_fg_color;
+  background-color: rgba(255,255,255,.1);
+}
+
+.calendar-today
+{
+  color: $fg_color;
+  border: $spacing-none;
+  border-radius: $spacing-none;
+  background-image: none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+.calendar-day-with-events
+{
+  font-weight: bold;
+
+  color: $fg_color;
+  background-image: none;
+}
+
+.calendar-other-month-day
+{
+  color: $insensitive_fg_color;
+}
+
+.calendar-day-base.calendar-day-heading,
+.calendar-week-number
+{
+  font-size: $font-size-small;
+  font-weight: normal;
+
+  margin: $spacing-none;
+  padding: $spacing-small;
+
+  color: $insensitive_fg_color;
+  border: $spacing-none;
+}
+
+.datemenu-today-button,
+.datemenu-displays-box,
+{
+  margin: $spacing-none $spacing-normal;
+}
+
+.datemenu-calendar-column
+{
+  spacing: $spacing-tiny;
+}
+
+.datemenu-displays-section
+{
+  padding-bottom: $spacing-tiny;
+}
+
+.datemenu-today-button,
+.world-clocks-button
+{
+  padding: $spacing-tiny $spacing-small;
+
+  border-radius: $spacing-none;
+}
+
+.world-clocks-button
+{
+  height: $spacing-none;
+  padding: $spacing-none;
+}
+
+.datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.world-clocks-button:hover,
+.world-clocks-button:focus
+{
+  color: $fg_color;
+  border-color: transparent;
+  border-radius: $spacing-none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}
+
+.datemenu-today-button:active,
+.world-clocks-button:active
+{
+  color: $fg_color;
+  border-color: transparent;
+  border-radius: $spacing-none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+.datemenu-today-button .date-label,
+.world-clocks-header
+{
+  font-family: Raleway;
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  color: $fg_color;
+
+  spacing: $spacing-tiny;
+}
+
+.world-clocks-grid
+{
+  font-family: $font-family;
+  font-size: $font-size-small;
+  font-weight: normal;
+
+  color: $fg_color;
+
+  spacing-rows: $spacing-tiny;
+}
+
+.pager-button
+{
+  width: 18px;
+  height: 12px;
+
+  color: $fg_color;
+  border-radius: $spacing-none;
+  background-color: transparent;
+}
+
+.pager-button:hover,
+.pager-button:focus,
+.pager-button:active
+{
+  background-color: transparent;
+}

@@ -2,9 +2,9 @@
 #keyboard
 {
   border: 1px solid transparent;
-  border-right: 0;
-  border-bottom: 0;
-  border-left: 0;
+  border-right: $spacing-none;
+  border-bottom: $spacing-none;
+  border-left: $spacing-none;
 
   background-gradient-start: transparent;
   background-gradient-end: transparent;
@@ -13,12 +13,12 @@
 
 .keyboard-layout
 {
-  padding: 2em;
+  padding: $spacing-large;
 
-  border: 1px solid rgba(174,167,159,.6);
-  border-radius: 2px;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
 
-  spacing: 1em;
+  spacing: $spacing-normal;
   background-gradient-start: rgba(0,0,0,.9);
   background-gradient-end: rgba(0,0,0,.7);
   background-gradient-direction: vertical;
@@ -31,17 +31,17 @@
 
 .keyboard-key
 {
-  font-size: 14pt;
+  font-size: $font-size-large;
   font-weight: bold;
 
-  width: 3em;
-  height: 2em;
-  padding: .25em .5em;
+  width: $spacing-huge;
+
+  padding: $spacing-tiny $spacing-small;
 
   color: rgba(255,255,255,.8);
   border: 1px solid rgba(0,0,0,0);
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
 
   caret-color: rgba(255,255,255,.6);
   background-gradient-direction: vertical;
@@ -59,8 +59,8 @@
 {
   color: white;
   border: 1px solid rgba(0,0,0,0);
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.15);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.4);
@@ -71,8 +71,8 @@
 {
   color: white;
   border: 1px solid rgba(0,0,0,0);
-  border-radius: 2px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.15);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.2);
@@ -87,7 +87,7 @@
 
   -arrow-border-radius: 10px;
   -arrow-background-color: #090909;
-  -arrow-border-width: 2px;
+  -arrow-border-width: $border-radius;
   -arrow-border-color: white;
   -arrow-base: 20px;
   -arrow-rise: 10px;

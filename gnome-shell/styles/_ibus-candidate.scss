@@ -2,29 +2,29 @@
 .candidate-page-button-box
 {
   width: 80px;
-  height: 2em;
+  height: $spacing-large;
 }
 
 .vertical .candidate-page-button-box
 {
-  padding-top: .5em;
+  padding-top: $spacing-small;
 }
 
 .horizontal .candidate-page-button-box
 {
-  padding-left: .5em;
+  padding-left: $spacing-small;
 }
 
 .candidate-page-button
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
   font-weight: bold;
 
-  padding: .5em 1.2em;
+  padding: $spacing-small 1.2em;
 
-  color: rgba(0,0,0,.8);
-  border: 1px solid rgba(255,255,255,.0);
-  border-radius: 2px;
+  color: $insensitive_bg_color;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.8);
@@ -41,7 +41,7 @@
 .candidate-page-button:active,
 .candidate-page-button:pressed
 {
-  color: rgba(0,0,0,.9);
+  color: $bg_color;
   border: 1px solid black;
   box-shadow: inset 0 0 1px 1px black;
 
@@ -52,11 +52,11 @@
 
 .candidate-page-button:insensitive
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
 
-  color: rgba(0,0,0,.8);
-  border: 0;
-  border-radius: 2px;
+  color: $insensitive_bg_color;
+  border: $spacing-none;
+  border-radius: $border-radius;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.9);
@@ -65,12 +65,12 @@
 
 .candidate-page-button-previous
 {
-  border-radius: 2px 0 0 2px;
+  border-radius: $border-radius $spacing-none $spacing-none $border-radius;
 }
 
 .candidate-page-button-next
 {
-  border-radius: 0 2px 2px 0;
+  border-radius: $spacing-none $border-radius $border-radius $spacing-none;
 }
 
 .candidate-page-button-icon
@@ -80,31 +80,31 @@
 
 .candidate-popup-content
 {
-  padding: .5em;
+  padding: $spacing-small;
 
-  spacing: .3em;
+  spacing: $spacing-tiny;
 }
 
 .candidate-index
 {
-  padding: 0 .5em 0 0;
+  padding: $spacing-none $spacing-small $spacing-none $spacing-none;
 
   color: #ccc;
 }
 
 .candidate-box
 {
-  padding: .3em .5em .3em .5em;
+  padding: $spacing-tiny $spacing-small $spacing-tiny $spacing-small;
 }
 
 .candidate-box:selected
 {
-  border-radius: 2px;
+  border-radius: $border-radius;
   background-color: rgba(255,255,255,.2);
 }
 
 .candidate-box:hover
 {
-  border-radius: 2px;
+  border-radius: $border-radius;
   background-color: rgba(255,255,255,.1);
 }

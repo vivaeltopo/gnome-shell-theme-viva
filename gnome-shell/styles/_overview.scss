@@ -5,8 +5,8 @@
 {
   spacing: 12px;
   background-gradient-direction: radial;
-  background-gradient-start: rgba(0,0,0,.3);
-  background-gradient-end: rgba(0,0,0,.9);
+  background-gradient-start: $insensitive_bg_color;
+  background-gradient-end: $bg_color;
 }
 
 .overview-controls
@@ -16,15 +16,15 @@
 
 .search-entry .search-entry-icon
 {
-  color: rgba(255,255,255,.9);
+  color: $fg_color;
 
-  icon-size: 1.5em;
+  icon-size: 1$spacing-small;
 }
 
 .search-entry:hover .search-entry-icon,
 .search-entry:focus .search-entry-icon
 {
-  color: white;
+  color: $fg_color;
 }
 
 /* Search Results */
@@ -32,25 +32,25 @@
 #searchResultsBin
 {
   max-width: 100em;
-  margin: 0 1em 0 1em;
+  margin: 0 $spacing-normal 0 $spacing-normal;
 }
 
 #searchResultsContent
 {
-  padding-right: 1em;
+  padding-right: $spacing-normal;
 
-  spacing: 2em;
+  spacing: $spacing-large;
 }
 
 .search-section
 {
   /* This should be equal to #searchResultsContent spacing */
-  spacing: 2em;
+  spacing: $spacing-large;
 }
 
 .search-section-content
 {
-  spacing: 2em;
+  spacing: $spacing-large;
 }
 
 
@@ -59,18 +59,18 @@
   height: 1px;
 
   -gradient-height: 1px;
-  -gradient-start: rgba(255,255,255,0);
-  -gradient-end: rgba(255,255,255,.5);
-  -margin-horizontal: 1.5em;
+  -gradient-start: transparent;
+  -gradient-end: $fg_color;
+  -margin-horizontal: $spacing-large;
 }
 
 .search-statustext,
 .no-frequent-applications-label
 {
-  font-size: 2em;
+  font-size: $spacing-large;
   font-weight: bold;
 
-  color: #eeeeec;
+  color: $fg_color;
 }
 
 .ripple-box,
@@ -81,70 +81,70 @@
 
 .workspace-thumbnails
 {
-  padding: 1em;
+  padding: $spacing-normal;
 
-  border: 1px solid rgba(174, 167, 159, .5);
+  border: 1px solid $viva-border-color;
   border-right: 0;
-  border-radius: 2px 0 0 2px;
-  background: rgba(0,0,0,.9);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.7);
+  border-radius: $border-radius 0 0 $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
 
-  spacing: 1em;
-  visible-width: 2em; /* Amount visible before hovering */
+  spacing: $spacing-normal;
+  visible-width: $spacing-large; /* Amount visible before hovering */
 }
 
 .workspace-thumbnails:rtl
 {
   border-right: 1px;
   border-left: 0;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 $border-radius $border-radius 0;
 }
 
 .workspace-thumbnail-indicator
 {
   padding: 2px;
 
-  border: 1px solid rgba(174, 167, 159, .5);
-  border-radius: 2px;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.15);
-  background-gradient-end: rgba(255,255,255,.3);
+  background-gradient-start: $viva-gradient-start;
+  background-gradient-end: $viva-gradient-end;
 }
 
 .window-caption
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
-  padding: .5em 1em;
+  padding: $spacing-small $spacing-normal;
 
-  transition-duration: 100ms;
+  transition-duration: $transition-fast;
 
-  color: white;
+  color: $fg_color;
   border: 0;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
-  -shell-caption-spacing: .5em;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+  -shell-caption-spacing: $spacing-small;
 }
 
 .window-caption:focus,
 .window-caption:hover
 {
-  transition-duration: 200ms;
+  transition-duration: $transition-slow;
 
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .window-close
@@ -152,12 +152,12 @@
   width: 32px;
   height: 32px;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  background-color: rgba(221,72,20,.9);
-  background-image: url('../images/close.png');
+  background-color: $viva-color2;
+  background-image: url('images/close.png');
   background-size: 16px;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   -shell-close-overlap: 16px;
@@ -170,25 +170,25 @@
 
 .window-clone-border
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
-  color: white;
+  color: $fg_color;
   border: 0;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .window-picker
 {
-  padding-right: 2.5em;
-  padding-bottom: 2.5em;
-  padding-left: 2.5em;
+  padding-right: $spacing-huge;
+  padding-bottom: $spacing-huge;
+  padding-left: $spacing-huge;
 
   -horizontal-spacing: 5em;
   -vertical-spacing: 5em;
@@ -203,7 +203,7 @@
 
 .icon-grid
 {
-  spacing: 1em;
+  spacing: $spacing-normal;
   -shell-grid-horizontal-item-size: 128px;
   -shell-grid-vertical-item-size: 128px;
 }
@@ -215,9 +215,9 @@
 
 .app-display
 {
-  padding: 1em;
+  padding: $spacing-normal;
 
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 .app-view-controls
@@ -230,18 +230,18 @@
 {
   font-weight: normal;
 
-  margin: .25em;
-  padding: .5em 1em;
+  margin: $spacing-tiny;
+  padding: $spacing-small $spacing-normal;
 
-  color: white;
+  color: $fg_color;
   border-color: transparent;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .app-view-control:first-child:ltr,
@@ -261,7 +261,7 @@
 .app-view-control:hover,
 .app-view-control:focus
 {
-  text-shadow: 0 1px white;
+  text-shadow: 0 1px $fg_color;
 }
 
 .app-view-control:active,
@@ -269,15 +269,15 @@
 {
   font-weight: normal;
 
-  color: white;
+  color: $fg_color;
   border-color: transparent;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .search-display > StBoxLayout,
@@ -290,48 +290,48 @@
 
 .page-indicator
 {
-  padding: 1em;
+  padding: $spacing-normal;
 }
 
 .page-indicator .page-indicator-icon
 {
-  width: 2em;
-  height: 2em;
+  width: $spacing-large;
+  height: $spacing-large;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .page-indicator:hover .page-indicator-icon
 {
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: rgba(255,255,255,.3);
+  background-gradient-end: $viva-gradient-end;
 }
 
 .page-indicator:checked .page-indicator-icon
 {
-  width: 2em;
-  height: 2em;
+  width: $spacing-large;
+  height: $spacing-large;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .no-frequent-applications-label
 {
-  font-size: 18pt;
+  font-size: $font-size-huge;
 
   color: #999;
 }
@@ -346,9 +346,9 @@
 
 .list-search-result-content
 {
-  padding: .5em;
+  padding: $spacing-small;
 
-  spacing: .5em;
+  spacing: $spacing-small;
 }
 
 .list-search-result-title
@@ -356,14 +356,14 @@
   font-family: Raleway;
   font-weight: normal;
 
-  padding-bottom: .25em;
+  padding-bottom: $spacing-tiny;
 
-  color: white;
+  color: $fg_color;
 }
 
 .list-search-result-description
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
   color: rgba(255,255,255,.75);
@@ -382,16 +382,16 @@
 .list-search-result:selected,
 .list-search-result:hover
 {
-  transition-duration: 200ms;
+  transition-duration: $transition-slow;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .search-provider-icon:active,
@@ -399,16 +399,16 @@
 .list-search-result:active,
 .list-search-result:checked
 {
-  transition-duration: 100ms;
+  transition-duration: $transition-fast;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
@@ -416,7 +416,7 @@
 {
   /* since the label controls its own spacing, it is visually more
   consistent to use different padding values for top and bottom */
-  padding: .75em .5em .25em .5em;
+  padding: $spacing-normal $spacing-small $spacing-tiny $spacing-small;
 
   spacing: 4px;
 }
@@ -427,7 +427,7 @@
 .list-search-result,
 .grid-search-result .overview-icon
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
   padding: 2px;
@@ -439,15 +439,15 @@
 
 .search-provider-icon
 {
-  padding: 1em;
+  padding: $spacing-normal;
 }
 
 .app-folder-popup
 {
   -arrow-border-radius: 0;
-  -arrow-background-color: rgba(255,255,255,.1);
+  -arrow-background-color: $viva-gradient-start;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(255,255,255,.3);
+  -arrow-border-color: $viva-gradient-end;
   -arrow-base: 20px;
   -arrow-rise: 10px;
 }
@@ -459,14 +459,14 @@
 
 .app-well-app.app-folder > .overview-icon
 {
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.15);
+  box-shadow: $viva-box-shadow;
   text-shadow: 1px 1px 2px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.1);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .app-display .app-well-app > .overview-icon
@@ -488,16 +488,16 @@
 .grid-search-result:active .overview-icon,
 .grid-search-result:checked .overview-icon
 {
-  transition-duration: 250ms;
+  transition-duration: $transition-slow;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .app-well-app:hover .overview-icon,
@@ -513,32 +513,32 @@
 .grid-search-result:focus .overview-icon,
 .grid-search-result:selected .overview-icon
 {
-  transition-duration: 250ms;
+  transition-duration: $transition-slow;
 
-  color: white;
+  color: $fg_color;
   border-radius: 0;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
 }
 
 .app-well-app-running-dot
 {
-  width: 3em;
-  height: .25em;
+  width: $spacing-huge;
+  height: $spacing-tiny;
 
-  transition-duration: 100ms;
+  transition-duration: $transition-fast;
 
-  color: white;
-  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(243,115,32,.8);
-  background-gradient-end: rgba(221,72,20,.8);
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
 }
 
 .search-provider-icon,
@@ -548,12 +548,12 @@
 .show-apps .overview-icon,
 .grid-search-result .overview-icon
 {
-  padding: .5em;
+  padding: $spacing-small;
 
-  transition-duration: 100ms;
+  transition-duration: $transition-fast;
   text-align: center;
 
-  color: white;
+  color: $fg_color;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -561,7 +561,7 @@
 .show-apps:checked .show-apps-icon,
 .show-apps:focus .show-apps-icon
 {
-  transition-duration: 250ms;
+  transition-duration: $transition-slow;
 
-  color: white;
+  color: $fg_color;
 }

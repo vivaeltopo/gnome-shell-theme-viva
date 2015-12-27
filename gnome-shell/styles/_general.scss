@@ -1,0 +1,73 @@
+
+/* default text style */
+stage
+{
+	font-family: $font-family;
+	font-size: $font-size-normal;
+
+	color: $fg_color;
+}
+
+/* links */
+.shell-link
+{
+	text-decoration: underline;
+
+	color: $viva-color1;
+}
+
+.shell-link:hover
+{
+	color: $viva-color2;
+}
+
+StEntry
+{
+	font-size: $font-size-large;
+	font-weight: normal;
+
+	width: 20em;
+	margin-bottom: 0;
+	padding: $spacing-tiny $spacing-small;
+
+	color: $fg_color;
+	border: 1px solid $bg_color;
+	border-radius: $border-radius;
+	box-shadow: $viva-box-shadow;
+
+	caret-color: $fg_color;
+	caret-size: 1px;
+	selected-color: $selected_fg_color;
+	selection-background-color: $selected_bg_color;
+	background-gradient-direction: vertical;
+	background-gradient-start: $viva-gradient-start;
+	background-gradient-end: $viva-gradient-end;
+}
+
+StEntry:focus
+{
+	border: 1px solid $selected_bg_color;
+	box-shadow: $viva-box-shadow;
+}
+
+StEntry:insensitive
+{
+	color: $insensitive_fg_color;
+	border-color: $insensitive_bg_color;
+	box-shadow: none;
+}
+StEntry StIcon.capslock-warning
+{
+	padding: $spacing-none $spacing-tiny;
+
+	icon-size: $font-size-huge;
+	warning-color: $warning_color;
+}
+
+/* Background menu */
+
+.background-menu
+{
+	-boxpointer-gap: 1px;
+	-arrow-rise: 1em;
+}

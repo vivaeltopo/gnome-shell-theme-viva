@@ -1,0 +1,216 @@
+
+/* LookingGlass */
+
+#LookingGlassDialog
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding: $spacing-tiny;
+
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
+  border-top: 0;
+  border-radius: $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+#LookingGlassDialog > #Toolbar
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  height: $spacing-huge;
+
+  color: transparent;
+  border: 0 solid $viva-border-color;
+  background-color: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
+}
+
+#LookingGlassDialog .labels
+{
+  spacing: 0;
+}
+
+#LookingGlassDialog .notebook-tab
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding-right: $spacing-tiny;
+  padding-left: $spacing-tiny;
+
+  transition-duration: $transition-fast;
+
+  color: $insensitive_fg_color;
+
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 6px;
+}
+
+#LookingGlassDialog .notebook-tab:hover
+{
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}
+
+#LookingGlassDialog .notebook-tab:selected
+{
+  color: $fg_color;
+  border: 0;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+#LookingGlassDialog StBoxLayout#EvalBox
+{
+  padding: $spacing-tiny;
+
+  spacing: $spacing-tiny;
+}
+
+#LookingGlassDialog StBoxLayout#ResultsArea
+{
+  spacing: $spacing-tiny;
+}
+
+#LookingGlassDialog .lg-inspector-title
+{
+  font-weight: bold;
+
+  padding-bottom: $spacing-tiny;
+}
+
+.lg-dialog StEntry
+{
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  min-width: 20em;
+  margin-bottom: 0;
+  padding: $spacing-tiny $spacing-tiny;
+
+  color: $fg_color;
+  border: 1px solid rgba(174,167,159,.5);
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
+
+  caret-color: $fg_color;
+  caret-size: 1px;
+  selected-color: $fg_color;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-start;
+  background-gradient-end: $viva-gradient-end;
+}
+
+.lg-completions-text
+{
+  font-size: $font-size-normal;
+  font-style: italic;
+}
+
+.lg-obj-inspector-title
+{
+  spacing: $spacing-tiny;
+}
+
+.lg-obj-inspector-button
+{
+  padding: $spacing-tiny;
+
+  border: 1px solid rgba(174,167,159,.5);
+  border-radius: $border-radius;
+}
+
+.lg-obj-inspector-button:hover
+{
+  border: 1px solid $fg_color;
+}
+
+.lg-dialog .shell-link
+{
+  color: $viva-color1;
+}
+
+.lg-dialog .shell-link:hover
+{
+  color: #ddd;
+}
+
+#lookingGlassExtensions
+{
+  padding: $spacing-tiny;
+}
+
+.lg-extensions-list
+{
+  padding: $spacing-tiny;
+
+  spacing: $spacing-tiny;
+}
+
+.lg-extension
+{
+  margin-right: $spacing-tiny;
+  padding: $spacing-normal;
+
+  transition-duration: 200ms;
+
+  color: $fg_color;
+  border: 0;
+  border-radius: $border-radius;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}
+
+.lg-extension:hover,
+.lg-extension:focus
+{
+  transition-duration: $transition-fast;
+
+  color: $fg_color;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
+
+.lg-extension-name
+{
+  font-family: $font-family-fancy;
+  font-size: $font-size-large;
+  font-weight: normal;
+}
+
+.lg-extension-meta
+{
+  spacing: $spacing-normal;
+}
+
+#LookingGlassPropertyInspector
+{
+  padding: $spacing-normal;
+
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  background: $bg_color;
+
+  spacing: $spacing-tiny $spacing-small;
+}

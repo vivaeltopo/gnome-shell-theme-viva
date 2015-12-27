@@ -1,13 +1,13 @@
-COLOR_BLUE1=53,177,239
-COLOR_BLUE2=23,147,209
+.PHONY: clean blue orange
 
-COLOR_ORANGE1=243,115,32
-COLOR_ORANGE2=221,72,20
+clean:
+	@rm -rf ./gnome-shell/{,styles/}.sass-cache
+	@rm gnome-shell/gnome-shell.css
 
 blue:
-	sed -i 's/${COLOR_ORANGE1}/${COLOR_BLUE1}/g' gnome-shell/styles/*.css
-	sed -i 's/${COLOR_ORANGE2}/${COLOR_BLUE2}/g' gnome-shell/styles/*.css
+	sed -i 's/orange/blue/g' gnome-shell/gnome-shell.scss
+	sass --sourcemap=none --update ./gnome-shell/
 
 orange:
-	sed -i 's/${COLOR_BLUE1}/${COLOR_ORANGE1}/g' gnome-shell/styles/*.css
-	sed -i 's/${COLOR_BLUE2}/${COLOR_ORANGE2}/g' gnome-shell/styles/*.css
+	sed -i 's/blue/orange/g' gnome-shell/gnome-shell.scss
+	sass --sourcemap=none --update ./gnome-shell/

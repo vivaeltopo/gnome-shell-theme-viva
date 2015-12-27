@@ -1,0 +1,18 @@
+
+.polkit-dialog-user-layout,
+.polkit-dialog-user-layout:rtl
+{
+	font-family: $font-family-fancy;
+	font-size: $font-size-huge;
+
+	padding: $spacing-none;
+
+	color: $fg_color;
+
+	spacing: $spacing-normal;
+}
+
+.polkit-dialog-user-root-label
+{
+	color: $warning-color;
+}

@@ -1,51 +1,51 @@
 
 .end-session-dialog-subject
 {
-  font-size: 22pt;
+  font-size: $font-size-huge;
 }
 
 .end-session-dialog
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
 
   width: 40em;
-  padding: 2em;
+  padding: $spacing-large;
 
-  color: #fff;
-  border: 1px solid rgba(174, 167, 159, .5);
-  border-radius: 2px;
-  background: rgba(0,0,0,.9);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
+  border-radius: $border-radius;
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
 
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 
 .end-session-dialog-list
 {
-  padding: 0;
+  padding: $spacing-none;
 }
 
 .end-session-dialog-layout
 {
-  padding: 0;
+  padding: $spacing-none;
 }
 
 .end-session-dialog-layout:rtl
 {
-  padding: 0;
+  padding: $spacing-none;
 }
 
 .end-session-dialog-description,
 .end-session-dialog-description:rtl
 {
-  font-size: 9pt;
+  font-size: $font-size-small;
 
   width: 30em;
-  margin: 0;
-  padding: .25em 0;
+  margin: $spacing-none;
+  padding: $spacing-tiny $spacing-none;
 
-  color: white;
+  color: $fg_color;
 }
 
 .end-session-dialog-warning
@@ -53,7 +53,7 @@
   width: 28em;
   padding-top: 6px;
 
-  color: #f57900;
+  color: $warning-color;
 }
 
 .end-session-dialog-warning:rtl
@@ -63,63 +63,63 @@
 
   text-align: right;
 
-  color: #f57900;
+  color: $warning-color;
 }
 
 .end-session-dialog-logout-icon
 {
-  padding: 0;
+  padding: $spacing-none;
 
-  border: 0;
+  border: $spacing-none;
 }
 
 .end-session-dialog-shutdown-icon
 {
-  padding: 1em;
+  padding: $spacing-normal;
 
-  border: 0;
+  border: $spacing-none;
 }
 
 .end-session-dialog-inhibitor-layout
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
 
   max-height: 40em;
-  padding-left: 2em;
+  padding-left: $spacing-large;
 
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 .end-session-dialog-list-header
 {
-  font-size: 9pt;
+  font-size: $font-size-small;
   font-weight: normal;
 }
 
 .end-session-dialog-session-list,
 .end-session-dialog-app-list
 {
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 .end-session-dialog-app-list-item,
 .end-session-dialog-session-list-item
 {
-  padding: .2em;
+  padding: $spacing-tiny;
 
-  spacing: 1em;
+  spacing: $spacing-normal;
 }
 
 .end-session-dialog-app-list-item-name,
 .end-session-dialog-session-list-item-name
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: bold;
 }
 
 .end-session-dialog-app-list-item-description
 {
-  font-size: 9pt;
+  font-size: $font-size-small;
 
-  color: rgba(255,255,255,.8);
+  color: $fg_color;
 }

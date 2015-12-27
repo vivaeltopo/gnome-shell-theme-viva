@@ -3,14 +3,14 @@
 .show-processes-dialog-subject,
 .mount-question-dialog-subject
 {
-  font-size: 14pt;
+  font-size: $font-size-large;
   font-weight: bold;
 
   padding-top: 10px;
   padding-bottom: 6px;
   padding-left: 17px;
 
-  color: #999;
+  color: $insensitive_fg_color;
 }
 
 /* ShellMountOperation Dialogs */
@@ -21,13 +21,13 @@
 
 .mount-password-reask
 {
-  color: red;
+  color: $error-color;
 }
 
 .show-processes-dialog,
 .mount-question-dialog
 {
-  font-size: 12pt;
+  font-size: $font-size-normal;
   font-weight: normal;
 
   min-width: 40em;
@@ -35,17 +35,17 @@
   max-height: 40em;
   padding: 0;
 
-  color: #fff;
-  border: 1px solid rgba(174,167,159,.5);
+  color: $fg_color;
+  border: 1px solid $viva-border-color;
   border-radius: 0;
-  background: rgba(0,0,0,.9);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.9);
+  background: $bg_color;
+  box-shadow: $viva-box-shadow-dark;
 }
 
 .show-processes-dialog-subject,
 .mount-question-dialog-subject
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
   font-weight: bold;
 
   padding-top: 10px;
@@ -70,12 +70,12 @@
 .show-processes-dialog-description,
 .mount-question-dialog-description
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
 
   width: 28em;
   padding-left: 17px;
 
-  color: white;
+  color: $fg_color;
 }
 
 .show-processes-dialog-description:rtl,
@@ -86,7 +86,7 @@
 
 .show-processes-dialog-app-list
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
 
   max-height: 200px;
   padding-top: 24px;
@@ -107,7 +107,7 @@
 
 .show-processes-dialog-app-list-item:hover
 {
-  color: white;
+  color: $fg_color;
 }
 
 .show-processes-dialog-app-list-item:ltr
@@ -132,5 +132,5 @@
 
 .show-processes-dialog-app-list-item-name
 {
-  font-size: 10pt;
+  font-size: $font-size-small;
 }

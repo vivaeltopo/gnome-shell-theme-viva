@@ -11,13 +11,13 @@
 .toggle-switch-us,
 .toggle-switch-intl
 {
-	background-image: url('../images/off.png');
+	background-image: url('images/off.png');
 	background-size: contain;
 }
 
 .toggle-switch-us:checked,
 .toggle-switch-intl:checked
 {
-	background-image: url('../images/on.png');
+	background-image: url('images/on.png');
 	background-size: contain;
 }

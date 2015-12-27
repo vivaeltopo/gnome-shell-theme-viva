@@ -1,0 +1,49 @@
+
+/* Check Boxes */
+
+.check-box StBoxLayout
+{
+  spacing: $spacing-normal;
+}
+
+.check-box StBin
+{
+  width: $spacing-large;
+  height: $spacing-large;
+
+  color: $fg_color;
+  border-radius: $border-radius;
+  background-image: none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-start;
+}
+
+.check-box:focus StBin,
+.check-box:hover StBin
+{
+  background-image: none;
+
+  background-gradient-start: rgba(255,255,255,.45);
+  background-gradient-end: $viva-gradient-end;
+}
+
+.check-box:checked StBin,
+.check-box:focus:checked StBin
+{
+  width: $spacing-large;
+  height: $spacing-large;
+
+  color: $fg_color;
+  border-radius: $border-radius;
+  background-image: none;
+  box-shadow: $viva-box-shadow;
+  text-shadow: 0 1px black;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-color1;
+  background-gradient-end: $viva-color2;
+}
