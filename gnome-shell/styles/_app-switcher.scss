@@ -22,62 +22,60 @@
 	background: $color-bg;
 }
 
+.switcher-list
+{
+	.item-box
+	{
+		font-size: $font-size-normal;
+		font-weight: normal;
+
+		padding: $spacing-small;
+
+		transition-duration: $transition-fast;
+
+		border: 1px solid transparent;
+		border-radius: $viva-border-radius;
+
+		&:selected,
+		&:outlined
+		{
+			color: $color-fg-selected;
+			border: 1px solid transparent;
+			box-shadow: $viva-box-shadow;
+			text-shadow: $viva-text-shadow;
+
+			background-gradient-direction: vertical;
+			background-gradient-start: $viva-color1;
+			background-gradient-end: $viva-color2;
+		}
+	}
+
+	.thumbnail-box
+	{
+		padding: $spacing-none;
+
+		spacing: $spacing-none;
+	}
+
+	.thumbnail
+	{
+		width: 256px;
+		padding: $spacing-none;
+
+		spacing: $spacing-small;
+	}
+
+	.separator
+	{
+		width: 1px;
+
+		background: $viva-gradient-2;
+	}
+}
+
 .switcher-list-item-container
 {
-	spacing: 1em;
-}
-
-.switcher-list .item-box
-{
-	font-size: $font-size-normal;
-	font-weight: normal;
-
-	padding: $spacing-small;
-
-	transition-duration: $transition-fast;
-
-	border: 1px solid transparent;
-	border-radius: $viva-border-radius;
-}
-
-.switcher-list .item-box:selected,
-.switcher-list .item-box:outlined
-{
-	padding: 0;
-
-	transition-duration: $transition-fast;
-
-	color: white;
-	border: 1px solid transparent;
-	border-radius: $viva-border-radius;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
-
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-color1;
-	background-gradient-end: $viva-color2;
-}
-
-.switcher-list .thumbnail-box
-{
-	padding: 0;
-
-	spacing: 0;
-}
-
-.switcher-list .thumbnail
-{
-	width: 256px;
-	padding: 0;
-
-	spacing: $spacing-small;
-}
-
-.switcher-list .separator
-{
-	width: 1px;
-
-	background: $viva-gradient-2;
+	spacing: $spacing-normal;
 }
 
 .switcher-arrow,
@@ -98,16 +96,17 @@
 	text-align: center;
 
 	spacing: $spacing-small;
-}
 
-.osd-window .level
-{
-	height: $spacing-tiny;
+	.level
+	{
+		height: $spacing-tiny;
 
-	color: $viva-color2;
-	border-radius: $viva-border-radius;
-}
-.osd-window .osd-monitor-label
-{
-	font-size: 2em;
+		color: $viva-color2;
+		border-radius: $viva-border-radius;
+	}
+
+	.osd-monitor-label
+	{
+		font-size: 2em;
+	}
 }
