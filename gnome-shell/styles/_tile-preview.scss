@@ -5,9 +5,9 @@
 .tile-preview-right.on-primary,
 .tile-preview-left.tile-preview-right.on-primary
 {
-	color: $fg_color;
+	color: $color-fg;
 	border-width: $spacing-none;
-	border-radius: $border-radius;
+	border-radius: $viva-border-radius;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 1px 1px 2px black;
 

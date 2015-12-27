@@ -8,10 +8,10 @@
 
   padding: 0;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -24,22 +24,22 @@
   margin-bottom: 0;
   padding: $spacing-tiny $spacing-small;
 
-  color: $fg_color;
-  border: 1px solid $insensitive_bg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border: 1px solid $color-bg-insensitive;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
-  caret-color: $fg_color;
+  caret-color: $color-fg;
   caret-size: 1px;
-  selected-color: $fg_color;
+  selected-color: $color-fg;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
 }
 
 .modal-dialog .run-dialog-entry:focus
 {
-  border: 1px solid $insensitive_bg_color;
+  border: 1px solid $color-bg-insensitive;
 }
 
 .modal-dialog .run-dialog-button-box
@@ -54,14 +54,14 @@
 
   padding-bottom: $spacing-tiny;
 
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .modal-dialog .run-dialog-error-box
 {
   padding: $spacing-tiny;
 
-  color: $error-color;
+  color: $viva-color-error;
 
   spacing: $spacing-tiny;
 }
@@ -71,5 +71,5 @@
   font-size: $font-size-normal;
   font-weight: bold;
 
-  color: $error-color;
+  color: $viva-color-error;
 }

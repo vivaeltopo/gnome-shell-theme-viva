@@ -9,10 +9,10 @@
   max-height: 40em;
   padding: $spacing-none;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -34,7 +34,7 @@
 .nm-dialog-header,
 .nm-dialog-airplane-headline
 {
-  font-family: $font-family-fancy;
+  font-family: $viva-font-family-fancy;
   font-size: $font-size-huge;
   font-weight: normal;
 
@@ -52,7 +52,7 @@
 {
   font-size: $font-size-normal;
 
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .nm-dialog-header-icon
@@ -65,8 +65,8 @@
   padding: $spacing-large $spacing-none;
 
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -77,7 +77,7 @@
   margin-left: $spacing-huge;
   padding: $spacing-small;
 
-  color: $fg_color;
+  color: $color-fg;
   border: $spacing-none;
 
   spacing: $spacing-tiny;
@@ -88,7 +88,7 @@
 .nm-dialog-item:active,
 .nm-dialog-item:selected
 {
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
@@ -109,14 +109,14 @@
 
   padding-left: $spacing-small;
 
-  color: $fg_color;
+  color: $color-fg;
 
   icon-size: 1.3em;
 }
 
 .no-networks-label
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .no-networks-box

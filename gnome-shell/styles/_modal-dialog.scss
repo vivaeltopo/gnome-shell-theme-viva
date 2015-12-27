@@ -11,7 +11,7 @@
 
 .flashspot
 {
-  background-color: $fg_color;
+  background-color: $color-fg;
 }
 
 .modal-dialog
@@ -21,10 +21,10 @@
 
   padding: 0;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -37,7 +37,7 @@
 {
   padding: $spacing-small $spacing-normal;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 0;
   border-top: 1px solid $viva-border-color;
   border-right: 1px solid $viva-border-color;
@@ -46,8 +46,8 @@
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
   icon-shadow: 0 1px black;
 }
 
@@ -55,7 +55,7 @@
 {
   padding: $spacing-small $spacing-normal;
 
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
   border: 0;
   border-top: 1px solid $viva-border-color;
   border-right: 1px solid $viva-border-color;
@@ -64,8 +64,8 @@
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
   icon-shadow: 0 1px black;
 }
 
@@ -74,17 +74,17 @@
 {
   padding: $spacing-small $spacing-normal;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 0;
   border-top: 1px solid $viva-border-color;
   border-right: 1px solid $viva-border-color;
   background-color: transparent;
   box-shadow: inset 0 0 transparent;
-  text-shadow: 0 1px $fg_color;
+  text-shadow: 0 1px $color-fg;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
   icon-shadow: 0 1px black;
 }
 
@@ -93,7 +93,7 @@
 {
   padding: $spacing-small $spacing-normal;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 0;
   border-top: 1px solid $viva-color1;
   border-right: 1px solid $viva-border-color;
@@ -133,28 +133,28 @@
   margin-bottom: 0;
   padding: $spacing-tiny $spacing-small;
 
-  color: $fg_color;
-  border: 1px solid $insensitive_bg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border: 1px solid $color-bg-insensitive;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
-  caret-color: $fg_color;
+  caret-color: $color-fg;
   caret-size: 1px;
-  selected-color: $fg_color;
+  selected-color: $color-fg;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
 }
 
 .modal-dialog StEntry:focus
 {
-  border: 1px solid $insensitive_bg_color;
+  border: 1px solid $color-bg-insensitive;
 }
 
 .modal-dialog StEntry:insensitive
 {
   color: rgba(0, 0, 0, .7);
-  border: 1px solid $insensitive_fg_color;
+  border: 1px solid $color-fg-insensitive;
 }
 
 .modal-dialog-button-box
@@ -171,25 +171,25 @@
 
   padding: $spacing-small $spacing-large;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .modal-dialog-button:hover,
 .modal-dialog-button:focus,
 .modal-dialog-button:insensitive
 {
-  color: $fg_color;
+  color: $color-fg;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255, 255, 255, .4);
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-2;
 }
 
 .modal-dialog-button:active,
@@ -197,7 +197,7 @@
 {
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 1px 1px 2px black;
 
@@ -215,15 +215,15 @@
   margin-bottom: 0;
   padding: $spacing-tiny $spacing-small;
 
-  color: $fg_color;
-  border: 1px solid $insensitive_bg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border: 1px solid $color-bg-insensitive;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
-  caret-color: $fg_color;
+  caret-color: $color-fg;
   caret-size: 1px;
-  selected-color: $fg_color;
+  selected-color: $color-fg;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
 }

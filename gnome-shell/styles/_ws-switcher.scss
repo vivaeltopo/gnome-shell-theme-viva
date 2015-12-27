@@ -10,8 +10,8 @@
   padding: $spacing-normal;
 
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
 }
 
 .workspace-switcher
@@ -31,8 +31,8 @@
 {
   height: 3em;
 
-  color: $fg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
@@ -46,11 +46,11 @@
   height: 3em;
 
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
 }

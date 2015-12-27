@@ -10,7 +10,7 @@
   padding-bottom: 6px;
   padding-left: 17px;
 
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 
 /* ShellMountOperation Dialogs */
@@ -21,7 +21,7 @@
 
 .mount-password-reask
 {
-  color: $error-color;
+  color: $viva-color-error;
 }
 
 .show-processes-dialog,
@@ -35,10 +35,10 @@
   max-height: 40em;
   padding: 0;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
   border-radius: 0;
-  background: $bg_color;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -75,7 +75,7 @@
   width: 28em;
   padding-left: 17px;
 
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .show-processes-dialog-description:rtl,
@@ -107,7 +107,7 @@
 
 .show-processes-dialog-app-list-item:hover
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .show-processes-dialog-app-list-item:ltr

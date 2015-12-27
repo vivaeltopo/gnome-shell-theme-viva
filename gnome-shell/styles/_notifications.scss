@@ -57,12 +57,12 @@
 
 .notification-banner .notification-button:first-child
 {
-	border-radius: 0 0 0 $border-radius;
+	border-radius: 0 0 0 $viva-border-radius;
 }
 
 .notification-banner .notification-button:last-child
 {
-	border-radius: 0 0 $border-radius 0;
+	border-radius: 0 0 $viva-border-radius 0;
 }
 
 .notification-banner .notification-button:hover,
@@ -103,10 +103,10 @@
 	width: 1.6em;
 	height: 1.6em;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 1px solid $viva-border-color;
-	border-radius: $border-radius;
-	background: $bg_color;
+	border-radius: $viva-border-radius;
+	background: $color-bg;
 	box-shadow: $viva-box-shadow-dark;
 
 	-shell-counter-overlap-x: 3px;
@@ -137,15 +137,15 @@
 
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 0 solid transparent;
-	border-radius: $border-radius;
+	border-radius: $viva-border-radius;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
 	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-end;
-	background-gradient-end: $viva-gradient-start;
+	background-gradient-start: $viva-gradient-2;
+	background-gradient-end: $viva-gradient-1;
 }
 
 .notification-button:hover,
@@ -155,14 +155,14 @@
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 0;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
 	background-gradient-direction: vertical;
 	background-gradient-start: rgba(255,255,255,.45);
-	background-gradient-end: $viva-gradient-end;
+	background-gradient-end: $viva-gradient-2;
 }
 
 .notification-button:insensitive,
@@ -178,8 +178,8 @@
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
-	border-radius: $border-radius;
+	color: $color-fg;
+	border-radius: $viva-border-radius;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
@@ -235,7 +235,7 @@
 	font-size: $font-size-huge;
 	font-weight: normal;
 
-	color: $fg_color;
+	color: $color-fg;
 
 	spacing: $spacing-small
 }
@@ -253,7 +253,7 @@
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border-color: transparent;
 	border-radius: 0;
 	background: transparent;
@@ -267,7 +267,7 @@
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border-color: transparent;
 	border-radius: 0;
 	box-shadow: $viva-box-shadow;
@@ -275,15 +275,15 @@
 
 	icon-size: 24px;
 	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-end;
-	background-gradient-end: $viva-gradient-start;
+	background-gradient-start: $viva-gradient-2;
+	background-gradient-end: $viva-gradient-1;
 }
 
 .message-list-section-close:active > StIcon
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border-color: transparent;
 	border-radius: 0;
 	text-shadow: 1px 1px 2px black;
@@ -302,11 +302,11 @@
 
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 1px solid $viva-border-color;
 	border-top: 0;
 	border-radius: 0 0 2px 2px;
-	background-color: $bg_color;
+	background-color: $color-bg;
 }
 
 .message:hover,
@@ -314,7 +314,7 @@
 {
 	transition-duration: $transition-fast;
 
-	background-color: $bg_color;
+	background-color: $color-bg;
 }
 
 /* messages in the calendar popup */
@@ -326,14 +326,14 @@
 
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 0;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
 	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-end;
-	background-gradient-end: $viva-gradient-start;
+	background-gradient-start: $viva-gradient-2;
+	background-gradient-end: $viva-gradient-1;
 }
 
 .message-list .message:hover,
@@ -342,7 +342,7 @@
 {
 	transition-duration: $transition-fast;
 
-	color: $fg_color;
+	color: $color-fg;
 	border-radius: 0;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
@@ -368,7 +368,7 @@
 {
 	font-size: $font-size-small;
 
-	color: $fg_color;
+	color: $color-fg;
 }
 
 .message-secondary-bin > StIcon

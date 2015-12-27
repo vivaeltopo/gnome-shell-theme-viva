@@ -30,13 +30,13 @@ StScrollBar StBin#trough
 StScrollBar StButton#vhandle
 {
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 StScrollBar StButton#vhandle:focus,
@@ -45,13 +45,13 @@ StScrollBar StButton#vhandle:active
 {
   color: white;
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-2;
 }
 
 StScrollBar StButton#vhandle:active
@@ -63,28 +63,28 @@ StScrollBar StButton#vhandle:active
 StScrollBar StButton#hhandle
 {
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: horizontal;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 StScrollBar StButton#hhandle:focus,
 StScrollBar StButton#hhandle:hover,
 StScrollBar StButton#hhandle:active
 {
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: horizontal;
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-2;
 }
 
 StScrollBar StButton#hhandle:active

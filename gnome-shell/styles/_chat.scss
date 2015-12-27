@@ -11,7 +11,7 @@
 
 .chat-log-message
 {
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 
 .chat-empty-line
@@ -22,7 +22,7 @@
 .chat-received
 {
   padding-left: $spacing-tiny;
-  color: $fg_color;
+  color: $color-fg;
 }
 
   .chat-received:rtl
@@ -34,7 +34,7 @@
 .chat-sent
 {
   padding-left: $spacing-normal;
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 
   .chat-sent:rtl
@@ -48,7 +48,7 @@
   padding-left: $spacing-tiny;
   font-size: $font-size-small;
   font-weight: bold;
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 
   .chat-meta-message:rtl
@@ -61,11 +61,11 @@
 {
   font-size: $font-size-normal;
   font-weight: normal;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   border: 1px solid $viva-border-color;
-  background: $bg_color;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
-  color: $fg_color;
+  color: $color-fg;
   padding: $spacing-normal;
   max-height: 30em;
 }
@@ -73,18 +73,18 @@
 .chat-response,
 .chat-response > StEntry
 {
-  color: $fg_color;
-  caret-color: $fg_color;
+  color: $color-fg;
+  caret-color: $color-fg;
   caret-size: 1px;
-  selected-color: $fg_color;
+  selected-color: $color-fg;
   font-weight: normal;
   font-size: $font-size-large;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
   box-shadow: $viva-box-shadow;
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   min-width: 20em;
   padding: $spacing-tiny $spacing-small;
   margin-bottom: $spacing-none;

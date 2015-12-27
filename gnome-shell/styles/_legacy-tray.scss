@@ -3,19 +3,19 @@
 {
   border: 1px solid $viva-border-color;
   border-bottom-width: 0;
-  background-color: $insensitive_bg_color;
+  background-color: $color-bg-insensitive;
 }
 
 .legacy-tray:ltr
 {
   border-left-width: 0;
-  border-radius: 0 $border-radius $border-radius 0;
+  border-radius: 0 $viva-border-radius $viva-border-radius 0;
 }
 
 .legacy-tray:rtl
 {
   border-right-width: 0;
-  border-radius: $border-radius 0 0 $border-radius;
+  border-radius: $viva-border-radius 0 0 $viva-border-radius;
 }
 
 .legacy-tray-handle StIcon
@@ -47,11 +47,11 @@
   transition-duration: $transition-fast;
 
   color: white;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 1px 1px 2px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }

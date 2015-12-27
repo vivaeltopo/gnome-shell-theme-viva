@@ -7,12 +7,12 @@
 
   padding: $spacing-small;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   border-left: 0;
   border-radius: 0;
-  background: $bg_color;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -46,7 +46,7 @@
 
   border: 1px solid $viva-border-color;
   border-radius: 0;
-  background: $bg_color;
+  background: $color-bg;
 
   -x-offset: 1em;
 }
@@ -63,12 +63,12 @@
 
 .show-apps-icon
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .show-apps:hover .show-apps-icon
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 #dash .app-well-app

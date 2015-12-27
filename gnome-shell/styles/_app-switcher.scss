@@ -16,10 +16,10 @@
 
 	padding: $spacing-small;
 
-	color: $fg_color;
+	color: $color-fg;
 	border: 1px solid $viva-border-color;
-	border-radius: $border-radius;
-	background: $bg_color;
+	border-radius: $viva-border-radius;
+	background: $color-bg;
 }
 
 .switcher-list-item-container
@@ -37,7 +37,7 @@
 	transition-duration: $transition-fast;
 
 	border: 1px solid transparent;
-	border-radius: $border-radius;
+	border-radius: $viva-border-radius;
 }
 
 .switcher-list .item-box:selected,
@@ -49,7 +49,7 @@
 
 	color: white;
 	border: 1px solid transparent;
-	border-radius: $border-radius;
+	border-radius: $viva-border-radius;
 	box-shadow: $viva-box-shadow;
 	text-shadow: 0 1px black;
 
@@ -77,7 +77,7 @@
 {
 	width: 1px;
 
-	background: $viva-gradient-end;
+	background: $viva-gradient-2;
 }
 
 .switcher-arrow,
@@ -105,7 +105,7 @@
 	height: $spacing-tiny;
 
 	color: $viva-color2;
-	border-radius: $border-radius;
+	border-radius: $viva-border-radius;
 }
 .osd-window .osd-monitor-label
 {

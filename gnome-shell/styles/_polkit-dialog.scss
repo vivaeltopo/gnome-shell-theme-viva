@@ -2,17 +2,17 @@
 .polkit-dialog-user-layout,
 .polkit-dialog-user-layout:rtl
 {
-	font-family: $font-family-fancy;
+	font-family: $viva-font-family-fancy;
 	font-size: $font-size-huge;
 
 	padding: $spacing-none;
 
-	color: $fg_color;
+	color: $color-fg;
 
 	spacing: $spacing-normal;
 }
 
 .polkit-dialog-user-root-label
 {
-	color: $warning-color;
+	color: $viva-color-warning;
 }

@@ -16,7 +16,7 @@
   padding: $spacing-large;
 
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
 
   spacing: $spacing-normal;
   background-gradient-start: rgba(0,0,0,.9);
@@ -40,7 +40,7 @@
 
   color: rgba(255,255,255,.8);
   border: 1px solid rgba(0,0,0,0);
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
   caret-color: rgba(255,255,255,.6);
@@ -59,7 +59,7 @@
 {
   color: white;
   border: 1px solid rgba(0,0,0,0);
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
   background-gradient-direction: vertical;
@@ -71,7 +71,7 @@
 {
   color: white;
   border: 1px solid rgba(0,0,0,0);
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
   background-gradient-direction: vertical;
@@ -87,7 +87,7 @@
 
   -arrow-border-radius: 10px;
   -arrow-background-color: #090909;
-  -arrow-border-width: $border-radius;
+  -arrow-border-width: $viva-border-radius;
   -arrow-border-color: white;
   -arrow-base: 20px;
   -arrow-rise: 10px;

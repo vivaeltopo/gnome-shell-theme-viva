@@ -1,30 +1,30 @@
 
-$bg_color: rgba(0,0,0,0.9);
-$fg_color: rgba(255,255,255,0.9);
+$color-fg: rgba(255,255,255,0.8);
+$color-fg-selected: rgba(255,255,255,1.0);
+$color-fg-insensitive: rgba(255,255,255,0.6);
 
-$selected_bg_color: rgba(0,0,0,1.0);
-$selected_fg_color: rgba(255,255,255,1.0);
-
-$insensitive_bg_color: rgba(0,0,0,0.5);
-$insensitive_fg_color: rgba(255,255,255,0.5);
+$color-bg: rgba(0,0,0,0.8);
+$color-bg-selected: rgba(0,0,0,1.0);
+$color-bg-insensitive: rgba(0,0,0,0.6);
 
 $viva-color1: if($variant =='orange', rgba(243,115,32,.8), rgba(53,177,239,.8));
 $viva-color2: if($variant =='orange', rgba(221,72,20,.8), rgba(23,147,209,.8));
 
-$viva-gradient-start: rgba(255,255,255,.15);
-$viva-gradient-end: rgba(255,255,255,.3);
+$viva-gradient-1: rgba(255,255,255,.15);
+$viva-gradient-2: rgba(255,255,255,.3);
+$viva-gradient-3: rgba(255,255,255,.45);
 
 $viva-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
 $viva-box-shadow-dark: inset 0 0 1px 1px rgba(0,0,0,.9);
 $viva-border-color: rgba(174,167,159,.5);
 
-$warning_color: orange;
-$error_color: red;
+$viva-color-warning: orange;
+$viva-color-error: red;
 
-$border-radius: 2px;
+$viva-border-radius: 2px;
 
-$font-family: Open Sans, Sans, Cantarell, Sans-Serif;
-$font-family-fancy: Raleway, $font-family;
+$viva-font-family: Open Sans, Sans, Cantarell, Sans-Serif;
+$viva-font-family-fancy: Raleway, $viva-font-family;
 
 $font-size-small: 9pt;
 $font-size-normal: 11pt;
@@ -38,5 +38,5 @@ $spacing-normal: 1em;
 $spacing-large: 2em;
 $spacing-huge: 2.5em;
 
-$transition-fast: 250ms;
-$transition-slow: 500ms;
+$transition-fast: 200ms;
+$transition-slow: 400ms;

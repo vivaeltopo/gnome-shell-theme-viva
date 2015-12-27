@@ -3,9 +3,9 @@
 {
   font-size: $font-size-normal;
   font-weight: normal;
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid transparent;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   background-gradient-direction: vertical;
   background-gradient-start: rgba(255,255,255,0.2);
   background-gradient-end: rgba(255,255,255,0.1);
@@ -18,10 +18,10 @@
 .button:hover,
 .button:insensitive
 {
-  color: $selected_fg_color;
+  color: $color-fg-selected;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
   border: 1px solid transparent;
   icon-shadow: 0 1px black;
 }
@@ -32,7 +32,7 @@
   background-gradient-start: $viva-color1;
   background-gradient-end: $viva-color2;
   box-shadow: $viva-box-shadow;
-  color: $selected_fg_color;
+  color: $color-fg-selected;
   text-shadow: 1px 1px 2px black;
   font-weight: normal;
 }

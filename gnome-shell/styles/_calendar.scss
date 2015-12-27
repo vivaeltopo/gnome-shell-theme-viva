@@ -26,7 +26,7 @@
 
   margin: $spacing-small $spacing-none;
 
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .calendar-month-label:focus
@@ -101,20 +101,20 @@
 {
   transition-duration: $transition-fast;
 
-  color: $fg_color;
+  color: $color-fg;
   border-color: transparent;
   border-radius: $spacing-none;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .calendar-day-base:active
 {
-  color: $fg_color;
+  color: $color-fg;
   border-color: transparent;
   border-radius: $spacing-none;
   box-shadow: $viva-box-shadow;
@@ -146,13 +146,13 @@
 
 .calendar-nonwork-day
 {
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
   background-color: rgba(255,255,255,.1);
 }
 
 .calendar-today
 {
-  color: $fg_color;
+  color: $color-fg;
   border: $spacing-none;
   border-radius: $spacing-none;
   background-image: none;
@@ -168,13 +168,13 @@
 {
   font-weight: bold;
 
-  color: $fg_color;
+  color: $color-fg;
   background-image: none;
 }
 
 .calendar-other-month-day
 {
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 
 .calendar-day-base.calendar-day-heading,
@@ -186,7 +186,7 @@
   margin: $spacing-none;
   padding: $spacing-small;
 
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
   border: $spacing-none;
 }
 
@@ -225,21 +225,21 @@
 .world-clocks-button:hover,
 .world-clocks-button:focus
 {
-  color: $fg_color;
+  color: $color-fg;
   border-color: transparent;
   border-radius: $spacing-none;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .datemenu-today-button:active,
 .world-clocks-button:active
 {
-  color: $fg_color;
+  color: $color-fg;
   border-color: transparent;
   border-radius: $spacing-none;
   box-shadow: $viva-box-shadow;
@@ -257,18 +257,18 @@
   font-size: $font-size-huge;
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
 
   spacing: $spacing-tiny;
 }
 
 .world-clocks-grid
 {
-  font-family: $font-family;
+  font-family: $viva-font-family;
   font-size: $font-size-small;
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
 
   spacing-rows: $spacing-tiny;
 }
@@ -278,7 +278,7 @@
   width: 18px;
   height: 12px;
 
-  color: $fg_color;
+  color: $color-fg;
   border-radius: $spacing-none;
   background-color: transparent;
 }

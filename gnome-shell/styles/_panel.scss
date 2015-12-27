@@ -11,7 +11,7 @@
 
   color: transparent;
   border: $spacing-none;
-  background-color: $bg_color;
+  background-color: $color-bg;
   box-shadow: inset 0 -1px $viva-border-color;
 }
 
@@ -62,7 +62,7 @@
 /* used for the app menu header only */
 #appMenu  .label-shadow
 {
-  color: $insensitive_bg_color;
+  color: $color-bg-insensitive;
 }
 
 #panel .panel-button #appMenuIcon,
@@ -111,7 +111,7 @@
 .lock-screen #panel .panel-button:hover,
 .lock-screen #panel .panel-button:active
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 #panel .panel-button:hover,
@@ -119,13 +119,13 @@
 #panel .panel-status-button:checked,
 #panel .panel-status-button:focus
 {
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 #panel .panel-button:active,
@@ -133,7 +133,7 @@
 #panel .panel-button:focus,
 #panel .panel-button:checked
 {
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
@@ -170,7 +170,7 @@
 
 #panel .screencast-indicator
 {
-  color: $warning-color;
+  color: $viva-color-warning;
 }
 
 .aggregate-menu
@@ -209,7 +209,7 @@
 
   transition-duration: $transition-fast;
 
-  color: $fg_color;
+  color: $color-fg;
   border: $spacing-none;
   background: transparent;
 }
@@ -222,7 +222,7 @@
 
   transition-duration: $transition-fast;
 
-  color: $fg_color;
+  color: $color-fg;
   border-radius: $spacing-none;
   border-radius: 1px;
   box-shadow: $viva-box-shadow;
@@ -249,7 +249,7 @@
 .candidate-popup-boxpointer
 {
   -arrow-border-radius: $spacing-none;
-  -arrow-background-color: $bg_color;
+  -arrow-background-color: $color-bg;
   -arrow-border-width: 1px;
   -arrow-border-color: $viva-border-color;
   -arrow-base: $spacing-large;
@@ -288,13 +288,13 @@
   margin: $spacing-none;
   padding: $spacing-none;
 
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: inset 0 -1px 1px 0 $viva-border-color;
   text-shadow: 1px 1px solid black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-1;
 }
 
 /* The remaining popup-menu sizing is all done in ems, so that if you
@@ -325,13 +325,13 @@
 {
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .popup-menu .popup-menu-item:checked,
@@ -339,7 +339,7 @@
 {
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
@@ -355,12 +355,12 @@
 
 .popup-menu .popup-inactive-menu-item
 {
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .popup-menu .popup-inactive-menu-item:insensitive
 {
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 }
 .popup-menu .active
 {
@@ -372,7 +372,7 @@
   height: 1px;
   margin: 1px 0;
 
-  border-bottom: 1px solid $fg_color;
+  border-bottom: 1px solid $color-fg;
 }
 
 .popup-alternating-menu-item:alternate
@@ -384,7 +384,7 @@
 {
   font-weight: normal;
 
-  color: $fg_color;
+  color: $color-fg;
 }
 
 .popup-menu-icon
@@ -398,13 +398,13 @@
   min-width: 5 * $spacing-normal;
   height: $spacing-normal;
 
-  color: $fg_color;
+  color: $color-fg;
 
   -slider-height: $spacing-tiny;
-  -slider-background-color: $insensitive_fg_color;
-  -slider-border-color: $insensitive_bg_color;
+  -slider-background-color: $color-fg-insensitive;
+  -slider-border-color: $color-bg-insensitive;
   -slider-border-width: 1px;
   -slider-handle-radius: $spacing-small;
   -slider-active-background-color: $viva-color2;
-  -slider-active-border-color: $insensitive_bg_color;
+  -slider-active-border-color: $color-bg-insensitive;
 }

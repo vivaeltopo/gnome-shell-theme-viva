@@ -8,11 +8,11 @@
 
   padding: $spacing-tiny;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid $viva-border-color;
   border-top: 0;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -25,7 +25,7 @@
 
   color: transparent;
   border: 0 solid $viva-border-color;
-  background-color: $bg_color;
+  background-color: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 }
 
@@ -44,7 +44,7 @@
 
   transition-duration: $transition-fast;
 
-  color: $insensitive_fg_color;
+  color: $color-fg-insensitive;
 
   -natural-hpadding: 12px;
   -minimum-hpadding: 6px;
@@ -52,18 +52,18 @@
 
 #LookingGlassDialog .notebook-tab:hover
 {
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 #LookingGlassDialog .notebook-tab:selected
 {
-  color: $fg_color;
+  color: $color-fg;
   border: 0;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
@@ -101,17 +101,17 @@
   margin-bottom: 0;
   padding: $spacing-tiny $spacing-tiny;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 1px solid rgba(174,167,159,.5);
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
-  caret-color: $fg_color;
+  caret-color: $color-fg;
   caret-size: 1px;
-  selected-color: $fg_color;
+  selected-color: $color-fg;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-start;
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
 }
 
 .lg-completions-text
@@ -130,12 +130,12 @@
   padding: $spacing-tiny;
 
   border: 1px solid rgba(174,167,159,.5);
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
 }
 
 .lg-obj-inspector-button:hover
 {
-  border: 1px solid $fg_color;
+  border: 1px solid $color-fg;
 }
 
 .lg-dialog .shell-link
@@ -167,15 +167,15 @@
 
   transition-duration: 200ms;
 
-  color: $fg_color;
+  color: $color-fg;
   border: 0;
-  border-radius: $border-radius;
+  border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .lg-extension:hover,
@@ -183,7 +183,7 @@
 {
   transition-duration: $transition-fast;
 
-  color: $fg_color;
+  color: $color-fg;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
@@ -194,7 +194,7 @@
 
 .lg-extension-name
 {
-  font-family: $font-family-fancy;
+  font-family: $viva-font-family-fancy;
   font-size: $font-size-large;
   font-weight: normal;
 }
@@ -209,8 +209,8 @@
   padding: $spacing-normal;
 
   border: 1px solid $viva-border-color;
-  border-radius: $border-radius;
-  background: $bg_color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
 
   spacing: $spacing-tiny $spacing-small;
 }

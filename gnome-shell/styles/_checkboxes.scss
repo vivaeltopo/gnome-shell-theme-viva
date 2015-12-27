@@ -11,15 +11,15 @@
   width: $spacing-large;
   height: $spacing-large;
 
-  color: $fg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border-radius: $viva-border-radius;
   background-image: none;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-end;
-  background-gradient-end: $viva-gradient-start;
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 }
 
 .check-box:focus StBin,
@@ -28,7 +28,7 @@
   background-image: none;
 
   background-gradient-start: rgba(255,255,255,.45);
-  background-gradient-end: $viva-gradient-end;
+  background-gradient-end: $viva-gradient-2;
 }
 
 .check-box:checked StBin,
@@ -37,8 +37,8 @@
   width: $spacing-large;
   height: $spacing-large;
 
-  color: $fg_color;
-  border-radius: $border-radius;
+  color: $color-fg;
+  border-radius: $viva-border-radius;
   background-image: none;
   box-shadow: $viva-box-shadow;
   text-shadow: 0 1px black;
