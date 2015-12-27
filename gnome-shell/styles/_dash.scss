@@ -10,31 +10,30 @@
   color: $color-fg;
   border: 1px solid $viva-border-color;
   border-radius: $viva-border-radius;
-  border-left: 0;
-  border-radius: 0;
+  border-left: $spacing-none;
+  border-radius: $spacing-none;
   background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
-}
 
-#dash:rtl
-{
-  border: 1px solid $viva-border-color;
-  border-right: 0;
-  border-radius: 0;
-}
+  &:rtl
+  {
+    border-right: 0;
+    border-radius: 0;
+  }
 
-#dash .placeholder
-{
-  height: 24px;
+  .placeholder
+  {
+    height: 24px;
 
-  background-image: url('./images/dash-placeholder.svg');
-  background-size: contain;
-}
+    background-image: url('./images/dash-placeholder.svg');
+    background-size: contain;
+  }
 
-#dash .empty-dash-drop-target
-{
-  width: 24px;
-  height: 24px;
+  .empty-dash-drop-target
+  {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .dash-label
@@ -45,7 +44,7 @@
   padding: $spacing-small $spacing-normal;
 
   border: 1px solid $viva-border-color;
-  border-radius: 0;
+  border-radius: $viva-border-radius;
   background: $color-bg;
 
   -x-offset: 1em;
