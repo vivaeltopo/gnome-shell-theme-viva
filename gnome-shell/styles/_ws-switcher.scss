@@ -2,7 +2,7 @@
 /* Workspace Switcher */
 .workspace-switcher-group
 {
-  padding: 0;
+  padding: $spacing-none;
 }
 
 .workspace-switcher-container
@@ -16,10 +16,10 @@
 
 .workspace-switcher
 {
-  padding: 0;
+  padding: $spacing-none;
 
-  border: 0;
-  border-radius: 0;
+  border: $spacing-none;
+  border-radius: $spacing-none;
   background: transparent;
   box-shadow: inset 0 0 1px 1px transparent;
 
@@ -34,7 +34,7 @@
   color: $color-fg;
   border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+  text-shadow: $viva-text-shadow;
 
   background-gradient-direction: vertical;
   background-gradient-start: $viva-color1;
@@ -43,12 +43,12 @@
 
 .ws-switcher-box
 {
-  height: 3em;
+  height: $spacing-huge;
 
   border: 1px solid transparent;
   border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+  text-shadow: $viva-text-shadow;
 
   background-gradient-direction: vertical;
   background-gradient-start: $viva-gradient-1;
