@@ -1,0 +1,360 @@
+
+/* Network Dialog */
+.show-processes-dialog,
+.mount-question-dialog,
+.end-session-dialog,
+.promt-dialog,
+.nm-dialog
+{
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  color: $color-fg;
+
+  padding: $spacing-none;
+  spacing: $spacing-none;
+}
+
+.nm-dialog-content
+{
+  font-size: $font-size-small;
+
+  padding: $spacing-normal;
+  spacing: $spacing-tiny;
+}
+.end-session-dialog-layout,
+.end-session-dialog-layout:rtl,
+.nm-dialog-header-hbox,
+.nm-dialog-airplane-box
+{
+  padding-bottom: $spacing-small;
+
+  spacing: $spacing-tiny;
+}
+.show-processes-dialog-subject,
+.show-processes-dialog-subject:rtl,
+.mount-question-dialog-subject,
+.mount-question-dialog-subject:rtl,
+.end-session-dialog-subject,
+.prompt-dialog-headline,
+.nm-dialog-header,
+.nm-dialog-airplane-headline
+{
+  font-family: $viva-font-family-fancy;
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  max-width: 500em;
+
+  color: $color-fg;
+  padding: 0;
+  padding-bottom: $spacing-tiny;
+}
+
+.nm-dialog-airplane-text
+{
+  font-size: $font-size-normal;
+
+  color: $color-fg;
+}
+
+.shell-mount-operation-icon,
+.end-session-dialog-shutdown-icon,
+.nm-dialog-header-icon
+{
+  icon-size: 5em;
+  padding: $spacing-small
+}
+
+.nm-dialog-scroll-view
+{
+  padding: $spacing-tiny $spacing-none;
+
+  border: 1px solid $viva-border-color;
+  border-radius: $viva-border-radius;
+}
+
+.nm-dialog-item
+{
+  font-size: $font-size-small;
+
+  margin-left: $spacing-tiny;
+  padding: $spacing-small;
+  spacing: $spacing-tiny;
+
+  color: $color-fg;
+  border: $spacing-none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:selected
+  {
+    color: $color-fg;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
+}
+
+.nm-dialog-item-box,
+.nm-dialog-icons
+{
+  spacing: $spacing-none;
+}
+
+.nm-dialog-icon
+{
+  font-size: $font-size-small;
+
+  padding-left: $spacing-small;
+
+  color: $color-fg;
+
+  icon-size: 1.3em;
+}
+
+.network-dialog-secret-table,
+.keyring-dialog-control-table
+{
+  font-size: $font-size-normal;
+
+  spacing-rows: 15px;
+  spacing-columns: $spacing-normal;
+}
+
+.no-networks-label
+{
+  font-family: $viva-font-family;
+  font-size: $font-size-normal;
+
+  color: $color-fg;
+}
+
+.no-networks-box
+{
+  spacing: $spacing-normal;
+}
+
+/* Password or Authentication Dialog */
+.prompt-dialog-main-layout,
+.prompt-dialog-message-layout
+{
+  font-size: $font-size-small;
+
+  padding: $spacing-none;
+
+  spacing: $spacing-normal;
+}
+
+.end-session-dialog-description,
+.end-session-dialog-description:rtl,
+.prompt-dialog-description
+.prompt-dialog-description:rtl
+{
+  font-size: $font-size-small;
+
+  margin: $spacing-none;
+  padding: $spacing-tiny $spacing-none;
+
+  color: $color-fg;
+}
+
+.prompt-dialog-error-label
+{
+  font-size: $font-size-normal;
+  font-weight: bold;
+
+  color: $viva-color-error;
+}
+
+.prompt-dialog-info-label
+{
+  font-size: $font-size-small;
+
+  padding-bottom: $spacing-none;
+}
+
+.hidden
+{
+  color: transparent;
+}
+
+.prompt-dialog-null-label
+{
+  font-size: $font-size-small;
+
+  padding-bottom: $spacing-none;
+}
+
+.prompt-dialog-password-entry .capslock-warning
+{
+  padding: $spacing-none $spacing-tiny;
+
+  icon-size: 1.3em;
+  viva-color-warning: $viva-color-warning;
+}
+
+/* Polkit Dialog */
+.polkit-dialog-user-layout,
+.polkit-dialog-user-layout:rtl
+{
+  font-family: $viva-font-family-fancy;
+  font-size: $font-size-huge;
+
+  padding: $spacing-none;
+
+  color: $color-fg;
+
+  spacing: $spacing-normal;
+}
+
+.polkit-dialog-user-root-label
+{
+  color: $viva-color-warning;
+}
+
+/* ShellMountOperation Dialogs */
+.mount-password-reask
+{
+  color: $viva-color-error;
+}
+
+.show-processes-dialog-description,
+.mount-question-dialog-description
+{
+  font-size: $font-size-small;
+
+  min-width: 28em;
+  padding-left: 17px;
+
+  color: $color-fg;
+}
+
+.show-processes-dialog-description:rtl,
+.mount-question-dialog-description:rtl
+{
+  padding-right: 17px;
+}
+
+.show-processes-dialog-app-list
+{
+  font-size: $font-size-small;
+
+  max-height: 200px;
+  padding-top: 24px;
+  padding-right: 32px;
+  padding-left: 49px;
+}
+
+.show-processes-dialog-app-list:rtl
+{
+  padding-right: 49px;
+  padding-left: 32px;
+}
+
+.show-processes-dialog-app-list-item
+{
+  color: #ccc;
+  padding-right: 1em;
+
+  &:hover
+  {
+    color: $color-fg;
+  }
+
+  &:rtl
+  {
+    padding-left: 1em;
+  }
+}
+
+.show-processes-dialog-app-list-item-icon:ltr
+{
+  padding-right: 17px;
+}
+
+.show-processes-dialog-app-list-item-icon:rtl
+{
+  padding-left: 17px;
+}
+
+.show-processes-dialog-app-list-item-name
+{
+  font-size: $font-size-small;
+}
+
+/* End Session Dialog */
+.end-session-dialog-list
+{
+  padding: $spacing-none;
+}
+
+.end-session-dialog-warning,
+.end-session-dialog-warning:rtl
+{
+  width: 30em;
+  margin: $spacing-none;
+  padding: $spacing-tiny $spacing-none;
+
+  text-align: right;
+
+  color: $viva-color-warning;
+}
+
+.end-session-dialog-logout-icon
+{
+  padding: $spacing-none;
+
+  border: $spacing-none;
+}
+
+.end-session-dialog-inhibitor-layout
+{
+  font-size: $font-size-normal;
+
+  max-height: 40em;
+
+  spacing: $spacing-small;
+
+  padding: $spacing-tiny;
+}
+
+.end-session-dialog-list-header
+{
+  font-size: $font-size-small;
+  font-weight: normal;
+}
+
+.end-session-dialog-session-list,
+.end-session-dialog-app-list
+{
+  spacing: $spacing-normal;
+  padding-left: $spacing-normal;
+}
+
+.end-session-dialog-app-list-item,
+.end-session-dialog-session-list-item
+{
+  padding: $spacing-tiny;
+
+  spacing: $spacing-small;
+}
+
+.end-session-dialog-app-list-item-name,
+.end-session-dialog-session-list-item-name
+{
+  font-size: $font-size-normal;
+  font-weight: bold;
+  padding-bottom: $spacing-tiny;
+}
+
+.end-session-dialog-app-list-item-description
+{
+  font-size: $font-size-small;
+
+  color: $color-fg;
+}

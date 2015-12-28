@@ -12,10 +12,12 @@
   background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
 
+  .prompt-dialog-password-box,
   .run-dialog-button-box,
   .modal-dialog-content-box
   {
     padding: $spacing-normal;
+    spacing: $spacing-none;
   }
 
   StEntry
@@ -23,7 +25,7 @@
     font-size: $font-size-large;
     font-weight: normal;
 
-    width: 20em;
+    min-width: 10em;
     margin-bottom: 0;
     padding: $spacing-tiny $spacing-small;
 
@@ -57,7 +59,7 @@
     font-size: $font-size-large;
     font-weight: normal;
 
-    width: 20em;
+    min-width: 10em;
     margin-bottom: 0;
     padding: $spacing-tiny $spacing-small;
 
