@@ -1,8 +1,5 @@
 
-#panel,
-#panel.lock-screen,
-#panel.unlock-screen,
-#panel.login-screen
+#panel
 {
   font-size: $font-size-normal;
   font-weight: normal;
@@ -13,164 +10,143 @@
   border: $spacing-none;
   background-color: $color-bg;
   box-shadow: inset 0 -1px $viva-border-color;
-}
 
-#panel.unlock-screen,
-#panel.login-screen
-{
-  background-color: transparent;
-}
+  &.lock-screen,
+  &.unlock-screen,
+  &.login-screen
+  {
+    background-color: $color-bg;
+  }
 
-#panelLeft,
-#panelCenter
-{
-  spacing: $spacing-normal;
-}
+  #panelLeft,
+  #panelCenter,
+  #panelRight
+  {
+    spacing: $spacing-small;
+  }
 
-#panelLeft:rtl,
-#panelRight:ltr
-{
-  padding-left: $spacing-tiny;
-}
+  .panel-corner
+  {
+    -panel-corner-background-color: transparent;
+    -panel-corner-border-color: transparent;
 
-#panelLeft:ltr,
-#panelRight:rtl
-{
-  padding-right: $spacing-tiny;
-}
+    &:active,
+    &:overview,
+    &:focus,
+    &.lock-screen,
+    &.unlock-screen,
+    &.login-screen
+    {
+      -panel-corner-background-color: transparent;
+      -panel-corner-border-color: transparent;
+    }
+  }
 
-#panel .panel-corner,
-#panel .panel-corner:active,
-#panel .panel-corner:overview,
-#panel .panel-corner:focus,
-#panel .panel-corner.lock-screen,
-#panel .panel-corner.unlock-screen,
-#panel .panel-corner.login-screen
-{
-  -panel-corner-background-color: transparent;
-  -panel-corner-border-color: transparent;
+  .panel-button
+  {
+    font-size: 11pt;
+    font-weight: bold;
+
+    color: $color-fg;
+
+    // -natural-hpadding: $spacing-small;
+    // -minimum-hpadding: $spacing-small;
+    -natural-hpadding: 12px;
+    -minimum-hpadding: 6px;
+
+    &:hover,
+    &focus
+    {
+      color: $color-fg-selected;
+      box-shadow: $viva-box-shadow;
+      text-shadow: $viva-text-shadow;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-gradient-2;
+      background-gradient-end: $viva-gradient-1;
+
+      & > .system-status-icon
+      {
+        icon-shadow: black 0 2px 2px;
+      }
+    }
+
+    &:active,
+    &:overview,
+    &:checked
+    {
+      color: $color-fg-selected;
+      box-shadow: $viva-box-shadow;
+      text-shadow: $viva-text-shadow;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-color1;
+      background-gradient-end: $viva-color2;
+
+      & > .system-status-icon
+      {
+        icon-shadow: black 0 1px 1px;
+      }
+    }
+
+    .app-menu-icon
+    {
+      margin-right: $spacing-tiny;
+      margin-left: $spacing-tiny;
+
+      -st-icon-style: symbolic;
+    }
+
+    .system-status-icon
+    {
+      padding: $spacing-tiny;
+
+      icon-size: 1.09em;
+    }
+
+    .unlock-screen &,
+    .login-screen &,
+    .lock-screen &
+    {
+      color: $color-fg;
+      &:focus,
+      &:hover,
+      &:active
+      {
+        color: $color-fg-selected;
+      }
+    }
+  }
+
+  .app-menu-icon
+  {
+    width: 24px;
+    height: 24px;
+  }
+
+  .panel-status-indicators-box,
+  .panel-status-menu-box
+  {
+    spacing: $spacing-tiny;
+  }
+
+  .screencast-indicator
+  {
+    color: $viva-color-error;
+  }
 }
 
 #appMenu
 {
-  padding: $spacing-none $spacing-normal;
+  // spinner-image: url('images/process-working.svg');
+  spinner-image: url('resource:///org/gnome/shell/theme/process-working.svg');
+  spacing: $spacing-tiny;
 
-  spinner-image: url('./images/process-working.svg');
-  spacing: $spacing-none;
-}
-
-/* used for the app menu header only */
-#appMenu  .label-shadow
-{
-  color: $color-bg-insensitive;
-}
-
-#panel .panel-button #appMenuIcon,
-#panel .panel-button:active #appMenuIcon,
-#panel .panel-button:checked #appMenuIcon,
-#panel .panel-button:focus #appMenuIcon
-{
-  app-icon-bottom-clip: 1px;
-}
-
-#panel .app-menu-icon
-{
-  width: 24px;
-  height: 24px;
-}
-
-#panel .panel-button .app-menu-icon
-{
-  margin-right: $spacing-none;
-  margin-left: $spacing-none;
-
-  -st-icon-style: symbolic;
-}
-
-#panel .panel-button,
-.unlock-screen #panel .panel-button,
-.login-screen #panel .panel-button,
-.lock-screen #panel .panel-button
-{
-  font-size: $font-size-normal;
-  font-weight: bold;
-
-  color: rgba(255,255,255,.7);
-
-  -natural-hpadding: $spacing-normal;
-  -minimum-hpadding: $spacing-normal;
-}
-
-.unlock-screen #panel .panel-button:focus,
-.unlock-screen #panel .panel-button:hover,
-.unlock-screen #panel .panel-button:active,
-.login-screen #panel .panel-button:focus,
-.login-screen #panel .panel-button:hover,
-.login-screen #panel .panel-button:active,
-.lock-screen #panel .panel-button:focus,
-.lock-screen #panel .panel-button:hover,
-.lock-screen #panel .panel-button:active
-{
-  color: $color-fg;
-}
-
-#panel .panel-button:hover,
-#panel .panel-status-button:active,
-#panel .panel-status-button:checked,
-#panel .panel-status-button:focus
-{
-  color: $color-fg;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-}
-
-#panel .panel-button:active,
-#panel .panel-button:overview,
-#panel .panel-button:focus,
-#panel .panel-button:checked
-{
-  color: $color-fg;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-}
-
-#panel .panel-button .system-status-icon
-{
-  padding: $spacing-none;
-
-  icon-size: 1.09em;
-}
-
-#panel .panel-button:active > .system-status-icon,
-#panel .panel-button:overview > .system-status-icon,
-#panel .panel-button:focus > .system-status-icon,
-#panel .panel-button:checked > .system-status-icon
-{
-  icon-shadow: black 0 0 3px;
-}
-
-.popup-menu.panel-menu
-{
-  -boxpointer-gap: 1px;
-}
-
-#panel .panel-status-indicators-box,
-#panel .panel-status-menu-box
-{
-  spacing: $spacing-normal;
-}
-
-#panel .screencast-indicator
-{
-  color: $viva-color-warning;
+  /* used for the app menu header only */
+  .label-shadow
+  {
+    color: $color-bg-insensitive;
+  }
 }
 
 .aggregate-menu
@@ -211,40 +187,35 @@
 
   color: $color-fg;
   border: $spacing-none;
+  border-radius: $viva-border-radius;
   background: transparent;
-}
 
-.system-menu-action:hover,
-.system-menu-action:focus,
-.system-menu-action:active
-{
-  padding: $spacing-normal;
+  &:hover,
+  &:focus,
+  &:active
+  {
+    padding: $spacing-normal;
 
-  transition-duration: $transition-fast;
+    transition-duration: $transition-fast;
 
-  color: $color-fg;
-  border-radius: $spacing-none;
-  border-radius: 1px;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+    color: $color-fg;
+    border-radius: $spacing-none;
+    border-radius: 1px;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-}
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
 
-.system-menu-action > StIcon
-{
-  icon-size: 1.5em;
-}
-
-.screencast-indicator
-{
-  color: red;
+  & > StIcon
+  {
+    icon-size: 1.5em;
+  }
 }
 
 /* PopupMenu */
-
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer
 {
@@ -260,7 +231,89 @@
 {
   font-size: $font-size-small;
 
-  min-width: 3em;
+  min-width: 15em;
+
+  .popup-sub-menu
+  {
+    padding: $spacing-none;
+
+    color: $color-fg;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
+
+    background: $viva-gradient-1;
+  }
+
+  /* The remaining popup-menu sizing is all done in ems, so that if you
+   * override .popup-menu.font-size, everything else will scale with it.
+   */
+  .popup-menu-content
+  {
+    padding: $spacing-small $spacing-none;
+  }
+
+  .popup-menu-item
+  {
+    spacing: $spacing-normal;
+    padding: $spacing-small $spacing-large $spacing-small $spacing-normal;
+
+    font-weight: normal;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
+
+    &:rtl
+    {
+      padding: $spacing-small $spacing-normal $spacing-small $spacing-large;
+    }
+
+    &:focus,
+    &:hover
+    {
+      color: $color-fg-selected;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-gradient-2;
+      background-gradient-end: $viva-gradient-1;
+    }
+
+    &:checked,
+    &:active
+    {
+      color: $color-fg-selected;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-color1;
+      background-gradient-end: $viva-color2;
+    }
+
+    &:insensitive
+    {
+      color: $color-fg-insensitive;
+    }
+  }
+
+  .popup-inactive-menu-item
+  {
+    color: $color-fg;
+
+    &:insensitive
+    {
+      color: $color-fg-insensitive;
+    }
+  }
+
+  &.panel-menu
+  {
+    -boxpointer-gap: 0;
+  }
+
+  .popup-separator-menu-item
+  {
+    height: 1px;
+    margin: 1px 0;
+
+    border-bottom: 1px solid $color-fg;
+  }
 }
 
 .popup-menu-ornament
@@ -281,98 +334,6 @@
   color: transparent;
 
   spacing: $spacing-none;
-}
-
-.popup-menu .popup-sub-menu
-{
-  margin: $spacing-none;
-  padding: $spacing-none;
-
-  color: $color-fg;
-  box-shadow: inset 0 -1px 1px 0 $viva-border-color;
-  text-shadow: 1px 1px solid black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-1;
-}
-
-/* The remaining popup-menu sizing is all done in ems, so that if you
- * override .popup-menu.font-size, everything else will scale with it.
- */
-.popup-menu .popup-menu-content
-{
-  padding: $spacing-small $spacing-none;
-}
-
-.popup-menu .popup-menu-item
-{
-  spacing: $spacing-normal;
-}
-
-.popup-menu .popup-menu-item:ltr
-{
-  padding: $spacing-small $spacing-large $spacing-small $spacing-normal;
-}
-
-.popup-menu .popup-menu-item:rtl
-{
-  padding: $spacing-small $spacing-normal $spacing-small $spacing-large;
-}
-
-.popup-menu .popup-menu-item:focus,
-.popup-menu .popup-menu-item:hover
-{
-  font-weight: normal;
-
-  color: $color-fg;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-}
-
-.popup-menu .popup-menu-item:checked,
-.popup-menu .popup-menu-item:active
-{
-  font-weight: normal;
-
-  color: $color-fg;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-}
-
-.popup-menu .popup-menu-item:insensitive
-{
-  color: grey;
-}
-
-.popup-menu .popup-inactive-menu-item
-{
-  color: $color-fg;
-}
-
-.popup-menu .popup-inactive-menu-item:insensitive
-{
-  color: $color-fg-insensitive;
-}
-.popup-menu .active
-{
-  background-color: transparent;
-}
-
-.popup-menu .popup-separator-menu-item
-{
-  height: 1px;
-  margin: 1px 0;
-
-  border-bottom: 1px solid $color-fg;
 }
 
 .popup-alternating-menu-item:alternate
