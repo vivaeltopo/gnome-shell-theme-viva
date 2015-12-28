@@ -64,6 +64,21 @@ StEntry StIcon.capslock-warning
 	viva-color-warning: $viva-color-warning;
 }
 
+.headline
+{
+  font-size: 110%;
+}
+
+.lightbox
+{
+  background-color: black;
+}
+
+.flashspot
+{
+  background-color: $color-fg;
+}
+
 /* Background menu */
 
 .background-menu

@@ -1,36 +1,110 @@
 
-.headline
-{
-  font-size: 110%;
-}
-
-.lightbox
-{
-  background-color: black;
-}
-
-.flashspot
-{
-  background-color: $color-fg;
-}
-
 .modal-dialog
 {
   font-size: $font-size-normal;
   font-weight: normal;
 
-  padding: 0;
+  padding: $spacing-none;
 
   color: $color-fg;
   border: 1px solid $viva-border-color;
   border-radius: $viva-border-radius;
   background: $color-bg;
   box-shadow: $viva-box-shadow-dark;
-}
 
-.modal-dialog .modal-dialog-content-box
-{
-  padding: $spacing-normal;
+  .run-dialog-button-box,
+  .modal-dialog-content-box
+  {
+    padding: $spacing-normal;
+  }
+
+  StEntry
+  {
+    font-size: $font-size-large;
+    font-weight: normal;
+
+    width: 20em;
+    margin-bottom: 0;
+    padding: $spacing-tiny $spacing-small;
+
+    color: $color-fg;
+    border: 1px solid $color-bg;
+    border-radius: $viva-border-radius;
+    box-shadow: $viva-box-shadow;
+
+    caret-color: $color-fg;
+    caret-size: 1px;
+    selected-color: $color-fg;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-1;
+    background-gradient-end: $viva-gradient-2;
+
+    &:focus
+    {
+      border: 1px solid $color-bg-selected;
+    }
+
+    &:insensitive
+    {
+      color: rgba(0, 0, 0, .7);
+      border: 1px solid $color-fg-insensitive;
+    }
+  }
+
+  .prompt-dialog-password-entry,
+  .run-dialog-entry
+  {
+    font-size: $font-size-large;
+    font-weight: normal;
+
+    width: 20em;
+    margin-bottom: 0;
+    padding: $spacing-tiny $spacing-small;
+
+    color: $color-fg;
+    border: 1px solid $color-bg;
+    border-radius: $viva-border-radius;
+    box-shadow: $viva-box-shadow;
+
+    caret-color: $color-fg;
+    caret-size: 1px;
+    selected-color: $color-fg;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-1;
+    background-gradient-end: $viva-gradient-2;
+
+    &:focus
+    {
+      border: 1px solid $color-bg-selected;
+    }
+  }
+
+  .run-dialog-label
+  {
+    font-size: $font-size-normal;
+    font-weight: normal;
+
+    padding-bottom: $spacing-tiny;
+
+    color: $color-fg;
+  }
+
+  .run-dialog-error-box
+  {
+    padding: $spacing-tiny;
+
+    color: $viva-color-error;
+
+    spacing: $spacing-tiny;
+  }
+
+  .run-dialog-error-label
+  {
+    font-size: $font-size-normal;
+    font-weight: bold;
+
+    color: $viva-color-error;
+  }
 }
 
 .modal-dialog-linked-button
@@ -38,267 +112,88 @@
   padding: $spacing-small $spacing-normal;
 
   color: $color-fg;
-  border: 0;
+  border: $spacing-none;
   border-top: 1px solid $viva-border-color;
   border-right: 1px solid $viva-border-color;
   background-color: transparent;
   box-shadow: inset 0 0 transparent;
-  text-shadow: 0 1px black;
+  text-shadow: $viva-text-shadow;
 
   background-gradient-direction: vertical;
   background-gradient-start: $viva-gradient-2;
   background-gradient-end: $viva-gradient-1;
-  icon-shadow: 0 1px black;
-}
+  icon-shadow: $viva-text-shadow;
 
-.modal-dialog-linked-button:insensitive
-{
-  padding: $spacing-small $spacing-normal;
+  &:insensitive
+  {
+    padding: $spacing-small $spacing-normal;
 
-  color: $color-fg-insensitive;
-  border: 0;
-  border-top: 1px solid $viva-border-color;
-  border-right: 1px solid $viva-border-color;
-  background-color: transparent;
-  box-shadow: inset 0 0 transparent;
-  text-shadow: 0 1px black;
+    color: $color-fg-insensitive;
+    border: $spacing-none;
+    border-top: 1px solid $viva-border-color;
+    border-right: 1px solid $viva-border-color;
+    background-color: transparent;
+    box-shadow: inset 0 0 transparent;
+    text-shadow: $viva-text-shadow;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-  icon-shadow: 0 1px black;
-}
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+    icon-shadow: $viva-text-shadow;
+  }
 
-.modal-dialog-linked-button:hover,
-.modal-dialog-linked-button:focus
-{
-  padding: $spacing-small $spacing-normal;
+  &:hover,
+  &:focus
+  {
+    padding: $spacing-small $spacing-normal;
 
-  color: $color-fg;
-  border: 0;
-  border-top: 1px solid $viva-border-color;
-  border-right: 1px solid $viva-border-color;
-  background-color: transparent;
-  box-shadow: inset 0 0 transparent;
-  text-shadow: 0 1px $color-fg;
+    color: $color-fg-selected;
+    border: $spacing-none;
+    border-top: 1px solid $viva-border-color;
+    border-right: 1px solid $viva-border-color;
+    background-color: transparent;
+    box-shadow: inset 0 0 transparent;
+    text-shadow: $viva-text-shadow;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-  icon-shadow: 0 1px black;
-}
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-3;
+    background-gradient-end: $viva-gradient-2;
+    icon-shadow: $viva-text-shadow;
+  }
 
-.modal-dialog-linked-button:clicked,
-.modal-dialog-linked-button:active
-{
-  padding: $spacing-small $spacing-normal;
+  &:clicked,
+  &:active
+  {
+    padding: $spacing-small $spacing-normal;
 
-  color: $color-fg;
-  border: 0;
-  border-top: 1px solid $viva-color1;
-  border-right: 1px solid $viva-border-color;
-  background-color: transparent;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+    color: $color-fg-selected;
+    border: $spacing-none;
+    border-top: 1px solid $viva-color1;
+    border-right: 1px solid $viva-border-color;
+    background-color: transparent;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-  icon-shadow: 0 1px black;
-}
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+    icon-shadow: $viva-text-shadow;
+  }
 
-.modal-dialog-linked-button:first-child
-{
-  border-radius: 0;
-}
+  &:first-child
+  {
+    border-radius: $spacing-none;
+  }
 
-.modal-dialog-linked-button:last-child
-{
-  border-right-width: 0;
-  border-radius: 0;
-}
+  &:last-child
+  {
+    border-right-width: $spacing-none;
+    border-radius: $spacing-none;
+  }
 
-.modal-dialog-linked-button:first-child:last-child
-{
-  border-right-width: 0;
-  border-radius: 0;
-}
-
-.modal-dialog StEntry
-{
-  font-size: $font-size-large;
-  font-weight: normal;
-
-  width: 20em;
-  margin-bottom: 0;
-  padding: $spacing-tiny $spacing-small;
-
-  color: $color-fg;
-  border: 1px solid $color-bg-insensitive;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  caret-color: $color-fg;
-  caret-size: 1px;
-  selected-color: $color-fg;
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
-}
-
-.modal-dialog StEntry:focus
-{
-  border: 1px solid $color-bg-insensitive;
-}
-
-.modal-dialog StEntry:insensitive
-{
-  color: rgba(0, 0, 0, .7);
-  border: 1px solid $color-fg-insensitive;
-}
-
-.modal-dialog-button-box
-{
-  padding-top: $spacing-small;
-
-  spacing: $spacing-normal;
-}
-
-.modal-dialog-button
-{
-  font-size: $font-size-normal;
-  font-weight: normal;
-
-  padding: $spacing-small $spacing-large;
-
-  color: $color-fg;
-  border: 1px solid transparent;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-}
-
-.modal-dialog-button:hover,
-.modal-dialog-button:focus,
-.modal-dialog-button:insensitive
-{
-  color: $color-fg;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(255, 255, 255, .4);
-  background-gradient-end: $viva-gradient-2;
-}
-
-.modal-dialog-button:active,
-.modal-dialog-button:pressed
-{
-  font-weight: normal;
-
-  color: $color-fg;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 1px 1px 2px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-}
-
-.modal-dialog .prompt-dialog-password-entry
-{
-  font-size: $font-size-large;
-  font-weight: normal;
-
-  width: 20em;
-  margin-bottom: 0;
-  padding: $spacing-tiny $spacing-small;
-
-  color: $color-fg;
-  border: 1px solid $color-bg-insensitive;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  caret-color: $color-fg;
-  caret-size: 1px;
-  selected-color: $color-fg;
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
-}
-
-/* Run Dialog */
-
-.run-dialog
-{
-  font-size: $font-size-normal;
-  font-weight: normal;
-
-  padding: 0;
-
-  color: $color-fg;
-  border: 1px solid $viva-border-color;
-  border-radius: $viva-border-radius;
-  background: $color-bg;
-  box-shadow: $viva-box-shadow-dark;
-}
-
-.modal-dialog .run-dialog-entry
-{
-  font-size: $font-size-large;
-  font-weight: normal;
-
-  width: 20em;
-  margin-bottom: 0;
-  padding: $spacing-tiny $spacing-small;
-
-  color: $color-fg;
-  border: 1px solid $color-bg-insensitive;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  caret-color: $color-fg;
-  caret-size: 1px;
-  selected-color: $color-fg;
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
-}
-
-.modal-dialog .run-dialog-entry:focus
-{
-  border: 1px solid $color-bg-insensitive;
-}
-
-.modal-dialog .run-dialog-button-box
-{
-  padding-top: $spacing-normal;
-}
-
-.modal-dialog .run-dialog-label
-{
-  font-size: $font-size-normal;
-  font-weight: normal;
-
-  padding-bottom: $spacing-tiny;
-
-  color: $color-fg;
-}
-
-.modal-dialog .run-dialog-error-box
-{
-  padding: $spacing-tiny;
-
-  color: $viva-color-error;
-
-  spacing: $spacing-tiny;
-}
-
-.modal-dialog .run-dialog-error-label
-{
-  font-size: $font-size-normal;
-  font-weight: bold;
-
-  color: $viva-color-error;
+  &:first-child:last-child
+  {
+    border-right-width: $spacing-none;
+    border-radius: $spacing-none;
+  }
 }
