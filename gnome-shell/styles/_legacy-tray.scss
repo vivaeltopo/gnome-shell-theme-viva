@@ -4,18 +4,18 @@
   border: 1px solid $viva-border-color;
   border-bottom-width: 0;
   background-color: $color-bg-insensitive;
-}
 
-.legacy-tray:ltr
-{
-  border-left-width: 0;
-  border-radius: 0 $viva-border-radius $viva-border-radius 0;
-}
+  &:ltr
+  {
+    border-left-width: 0;
+    border-radius: 0 $viva-border-radius 0 0;
+  }
 
-.legacy-tray:rtl
-{
-  border-right-width: 0;
-  border-radius: $viva-border-radius 0 0 $viva-border-radius;
+  &:rtl
+  {
+    border-right-width: 0;
+    border-radius: 0 0 0 $viva-border-radius;
+  }
 }
 
 .legacy-tray-handle StIcon
@@ -33,25 +33,30 @@
   padding: $spacing-tiny;
 
   spacing: $spacing-small;
-}
 
-.legacy-tray-icon-box StButton
-{
-  width: 32px;
-  height: 32px;
-}
+  StButton
+  {
+    width: 32px;
+    height: 32px;
+  }
 
-.legacy-tray-icon-box StButton:focus,
-.legacy-tray-icon-box StButton:hover
-{
-  transition-duration: $transition-fast;
+  StButton:focus,
+  StButton:hover
+  {
+    transition-duration: $transition-fast;
 
-  color: white;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 1px 1px 2px black;
+    color: $color-fg;
+    border-radius: $viva-border-radius;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+  }
+
+  StButton:active,
+  StButton:clicked
+  {
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
 }
