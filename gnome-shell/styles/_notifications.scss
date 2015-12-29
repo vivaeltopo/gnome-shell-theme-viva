@@ -1,74 +1,58 @@
 
-.notification-close
+.notification-banner
 {
-	width: 24px;
-	height: 24px;
-
-	background-image: url('images/close.png');
-	background-size: 16px;
-
-	-shell-close-overlap-x: 0;
-	-shell-close-overlap-y: 0;
-}
-
-.notification-close:rtl
-{
-	-shell-close-overlap-x: -14px;
-}
-
-.notification-banner:hover,
-.notification-banner:focus
-{
-	background: black;
-}
-
-.notification-banner .notification-icon
-{
-	padding: $spacing-tiny;
-}
-
-.notification-banner .notification-content
-{
+	width: 30em;
+	height: 4em;
 	padding: $spacing-tiny;
 
-	spacing: $spacing-tiny;
-}
+	transition-duration: $transition-fast;
 
-.notification-banner .secondary-icon
-{
-	icon-size: 1.09em;
-}
+	color: $color-fg;
+	border: 0 solid transparent;
+	border-radius: $viva-border-radius;
+	background: $color-bg;
+	box-shadow: $viva-box-shadow;
+	text-shadow: $viva-text-shadow;
+	&:hover,
+	&:focus,
+	&:active,
+	&:selected
+	{
+		background: $color-bg-selected;
+	}
+	.notification-icon
+	{
+		padding: $spacing-tiny;
+	}
+	.notification-content
+	{
+		padding: $spacing-tiny;
 
-.notification-banner .notification-actions
-{
-	padding-top: $spacing-tiny;
+		spacing: $spacing-tiny;
+	}
+	.secondary-icon
+	{
+		icon-size: 1.09em;
+	}
+	.notification-actions
+	{
+		padding-top: $spacing-tiny;
 
-	background-color: #1c1f1f;
+		background-color: #1c1f1f;
 
-	spacing: $spacing-tiny;
-}
+		spacing: $spacing-tiny;
+	}
+	.notification-button
+	{
+		padding: $spacing-tiny;
 
-.notification-banner .notification-button
-{
-	padding: $spacing-tiny;
-
-	background-color: #222728;
-}
-
-.notification-banner .notification-button:first-child
-{
-	border-radius: 0 0 0 $viva-border-radius;
-}
-
-.notification-banner .notification-button:last-child
-{
-	border-radius: 0 0 $viva-border-radius 0;
-}
-
-.notification-banner .notification-button:hover,
-.notification-banner .notification-button:focus
-{
-	background-color: #292f30;
+		background-color: $color-bg;
+		&:first-child
+		&:last-child
+		{
+			border-radius: $viva-border-radius;
+		}
+	}
 }
 
 .notification-unexpanded
@@ -85,14 +69,6 @@
 .notification-body
 {
 	spacing: 0;
-}
-
-
-.notification-actions
-{
-	padding: 0;
-
-	spacing: $spacing-normal;
 }
 
 .summary-source-counter
@@ -113,100 +89,16 @@
 	-shell-counter-overlap-y: 3px;
 }
 
-.notification-scrollview
-{
-	max-height: 18em;
-
-	-st-vfade-offset: 24px;
-}
-
-.notification-scrollview:ltr > StScrollBar
-{
-	padding-left: $spacing-tiny;
-}
-
-.notification-scrollview:rtl > StScrollBar
-{
-	padding-right: $spacing-tiny;
-}
-
-.notification-button,
-.notification-icon-button
-{
-	height: 24px;
-
-	transition-duration: $transition-fast;
-
-	color: $color-fg;
-	border: 0 solid transparent;
-	border-radius: $viva-border-radius;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
-
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-2;
-	background-gradient-end: $viva-gradient-1;
-}
-
-.notification-button:hover,
-.notification-button:focus,
-.notification-icon-button:focus,
-.notification-icon-button:hover
-{
-	transition-duration: $transition-fast;
-
-	color: $color-fg;
-	border: 0;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
-
-	background-gradient-direction: vertical;
-	background-gradient-start: rgba(255,255,255,.45);
-	background-gradient-end: $viva-gradient-2;
-}
-
-.notification-button:insensitive,
-.notification-icon-button:insensitive
-{
-	color: grey;
-}
-
-.notification-button:active,
-.notification-button:pressed,
-.notification-icon-button:active,
-.notification-icon-button:pressed
-{
-	transition-duration: $transition-fast;
-
-	color: $color-fg;
-	border-radius: $viva-border-radius;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
-
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-color1;
-	background-gradient-end: $viva-color2;
-}
-
-.notification-icon-button > StIcon
-{
-	width: 16px;
-	height: 16px;
-	padding: $spacing-small $spacing-normal;
-
-	icon-size: 1.3em;
-	spacing: $spacing-normal
-}
-
 /* Message list */
 .message-list
 {
 	width: 35em;
+	max-height: 6 * ( 5em + $spacing-normal);
 }
 
 .message-list-sections
 {
-	margin: 0 $spacing-small;
+	margin: $spacing-none $spacing-small;
 
 	spacing: $spacing-small;
 }
@@ -214,30 +106,30 @@
 .message-list-section,
 .message-list-section-list
 {
-	spacing: $spacing-small
+	spacing: $spacing-small;
 }
 
 .message-list-section-list:ltr
 {
-	padding-left: $spacing-small
+	padding-left: $spacing-small;
 }
 
 .message-list-section-list:rtl
 {
-	padding-right: $spacing-small
+	padding-right: $spacing-small;
 }
 
 .world-clocks-button,
 .message-list-section-title,
 .message-list-section-title-box
 {
-	font-family: Raleway;
+	font-family: $viva-font-family-fancy;
 	font-size: $font-size-huge;
 	font-weight: normal;
 
 	color: $color-fg;
 
-	spacing: $spacing-small
+	spacing: $spacing-small;
 }
 
 .message-list-section-title:hover,
@@ -262,118 +154,122 @@
 	icon-size: 24px;
 }
 
-.message-list-section-close:hover > StIcon,
-.message-list-section-close:focus > StIcon
+.message-list-section-close
 {
-	transition-duration: $transition-fast;
+	&:hover > StIcon,
+	&:focus > StIcon
+	{
+		transition-duration: $transition-fast;
 
-	color: $color-fg;
-	border-color: transparent;
-	border-radius: 0;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 1px 1px 2px black;
+		color: $color-fg;
+		border-color: transparent;
+		border-radius: 0;
 
-	icon-size: 24px;
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-2;
-	background-gradient-end: $viva-gradient-1;
-}
+		icon-size: 24px;
+		background-gradient-direction: vertical;
+		background-gradient-start: $viva-gradient-2;
+		background-gradient-end: $viva-gradient-1;
+	}
+	&:active > StIcon
+	{
+		transition-duration: $transition-fast;
 
-.message-list-section-close:active > StIcon
-{
-	transition-duration: $transition-fast;
-
-	color: $color-fg;
-	border-color: transparent;
-	border-radius: 0;
-	text-shadow: 1px 1px 2px black;
-
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-color1;
-	background-gradient-end: $viva-color2;
+		background-gradient-direction: vertical;
+		background-gradient-start: $viva-color1;
+		background-gradient-end: $viva-color2;
+	}
 }
 
 .message
 {
 	font-size: $font-size-normal;
+	// offset from the top = tiny + panel-height
 
-	margin-top: $spacing-tiny;
+	margin-top: $spacing-tiny + $spacing-huge;
 	padding: $spacing-small;
 
 	transition-duration: $transition-fast;
 
 	color: $color-fg;
+	border-radius: $viva-border-radius;
+	background-color: $color-bg;
 	border: 1px solid $viva-border-color;
-	border-top: 0;
-	border-radius: 0 0 2px 2px;
-	background-color: $color-bg;
-}
 
-.message:hover,
-.message:focus
-{
-	transition-duration: $transition-fast;
+	&:hover,
+	&:focus
+	{
+		transition-duration: $transition-fast;
 
-	background-color: $color-bg;
+		color: $color-fg-selected;
+		background-color: $color-bg-selected;
+		border: 1px solid $viva-border-color-selected;
+	}
 }
 
 /* messages in the calendar popup */
 .message-list .message
 {
 	margin-top: 0;
-	margin-right: $spacing-small;
+	margin-right: $spacing-normal + $spacing-small;
 	padding: 0;
 
 	transition-duration: $transition-fast;
 
 	color: $color-fg;
-	border: 0;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
 
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-gradient-2;
-	background-gradient-end: $viva-gradient-1;
-}
+	border: 0px solid $viva-border-color-selected;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 
-.message-list .message:hover,
-.message-list .message:focus,
-.message-list .message:active
-{
-	transition-duration: $transition-fast;
+	&:hover,
+	&:focus
+	{
+		transition-duration: $transition-fast;
 
-	color: $color-fg;
-	border-radius: 0;
-	box-shadow: $viva-box-shadow;
-	text-shadow: 0 1px black;
+		color: $color-fg-selected;
+		border-color: transparent;
 
-	background-gradient-direction: vertical;
-	background-gradient-start: $viva-color1;
-	background-gradient-end: $viva-color2;
+		background-gradient-direction: vertical;
+		background-gradient-start: $viva-gradient-2;
+		background-gradient-end: $viva-gradient-1;
+	}
+
+	&:active,
+	&:selected
+	{
+		transition-duration: $transition-fast;
+
+		color: $color-fg-selected;
+		border-color: transparent;
+
+		background-gradient-direction: vertical;
+		background-gradient-start: $viva-color1;
+		background-gradient-end: $viva-color2;
+	}
 }
 
 .message-icon-bin,
 .message-icon-bin:rtl
 {
-	padding: $spacing-normal
-}
+	padding: $spacing-normal;
 
-.message-icon-bin > StIcon
-{
-	icon-size: 48px;
+	& > StIcon
+	{
+		icon-size: 48px;
+	}
 }
-
 
 .message-secondary-bin
 {
 	font-size: $font-size-small;
 
 	color: $color-fg;
-}
 
-.message-secondary-bin > StIcon
-{
-	icon-size: 16px;
+	& > StIcon
+	{
+		icon-size: 24px;
+	}
 }
 
 .message-title
@@ -381,10 +277,10 @@
 	font-size: $font-size-normal;
 	font-weight: bold;
 
-	padding-bottom: $spacing-small
+	padding-bottom: $spacing-tiny;
 }
 
 .message-content
 {
-	padding: $spacing-normal
+	padding: $spacing-small;
 }
