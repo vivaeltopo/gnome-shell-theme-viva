@@ -13,14 +13,14 @@
   margin: $spacing-none;
   padding: $spacing-none;
 
-  spacing-rows: $spacing-none;
-  spacing-columns: $spacing-none;
+  spacing-rows: $spacing-tiny;
+  spacing-columns: $spacing-tiny;
   spacing: $spacing-none;
 }
 
 .calendar-month-label
 {
-  font-family: Raleway;
+  font-family: $viva-font-family-fancy;
   font-size: $font-size-large;
   font-weight: normal;
 
@@ -41,41 +41,57 @@
 
   background-color: transparent;
   background-image: url('images/calendar-arrow-left.svg');
+
+  &:rtl
+  {
+    background-image: url('images/calendar-arrow-right.svg');
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+      background-color: transparent;
+      background-image: url('images/calendar-arrow-right-hover.svg');
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active
+  {
+    background-color: transparent;
+    background-image: url('images/calendar-arrow-left-hover.svg');
+  }
 }
 
-.calendar-change-month-back:rtl
-{
-  background-image: url('images/calendar-arrow-right.svg');
-}
-
-.calendar-change-month-back:hover,
-.calendar-change-month-back:focus,
-.calendar-change-month-back:active
-{
-  background-color: transparent;
-  background-image: url('images/calendar-arrow-left-hover.svg');
-}
-
-.calendar-change-month-forward
+.calendar-change-month-back
 {
   width: 18px;
   height: 12px;
 
   background-color: transparent;
   background-image: url('images/calendar-arrow-right.svg');
-}
 
-.calendar-change-month-forward:rtl
-{
-  background-image: url('images/calendar-arrow-left.svg');
-}
+  &:rtl
+  {
+    background-image: url('images/calendar-arrow-left.svg');
 
-.calendar-change-month-forward:hover,
-.calendar-change-month-forward:focus,
-.calendar-change-month-forward:active
-{
-  background-color: transparent;
-  background-image: url('images/calendar-arrow-right-hover.svg');
+    &:hover,
+    &:focus,
+    &:active
+    {
+      background-color: transparent;
+      background-image: url('images/calendar-arrow-left-hover.svg');
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active
+  {
+    background-color: transparent;
+    background-image: url('images/calendar-arrow-right-hover.svg');
+  }
 }
 
 .calendar-day-base
@@ -94,35 +110,35 @@
   border-right: $spacing-none;
   border-bottom: $spacing-none;
   border-radius: $spacing-none;
-}
 
-.calendar-day-base:hover,
-.calendar-day-base:focus
-{
-  transition-duration: $transition-fast;
+  &:hover,
+  &:focus
+  {
+    transition-duration: $transition-fast;
 
-  color: $color-fg;
-  border-color: transparent;
-  border-radius: $spacing-none;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+    color: $color-fg;
+    border-color: transparent;
+    border-radius: $spacing-none;
+    box-shadow: $viva-box-shadow;
+    text-shadow: 0 1px black;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-}
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+  }
 
-.calendar-day-base:active
-{
-  color: $color-fg;
-  border-color: transparent;
-  border-radius: $spacing-none;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
+  &:active
+  {
+    color: $color-fg;
+    border-color: transparent;
+    border-radius: $spacing-none;
+    box-shadow: $viva-box-shadow;
+    text-shadow: 0 1px black;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
 }
 
 .calendar-day
@@ -212,6 +228,33 @@
   padding: $spacing-tiny $spacing-small;
 
   border-radius: $spacing-none;
+
+  &:hover,
+  &:focus,
+  {
+    color: $color-fg;
+    border-color: transparent;
+    border-radius: $spacing-none;
+    box-shadow: $viva-box-shadow;
+    text-shadow: 0 1px black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+  }
+
+  &:active
+  {
+    color: $color-fg;
+    border-color: transparent;
+    border-radius: $spacing-none;
+    box-shadow: $viva-box-shadow;
+    text-shadow: 0 1px black;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
 }
 
 .world-clocks-button
@@ -220,40 +263,10 @@
   padding: $spacing-none;
 }
 
-.datemenu-today-button:hover,
-.datemenu-today-button:focus,
-.world-clocks-button:hover,
-.world-clocks-button:focus
-{
-  color: $color-fg;
-  border-color: transparent;
-  border-radius: $spacing-none;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-}
-
-.datemenu-today-button:active,
-.world-clocks-button:active
-{
-  color: $color-fg;
-  border-color: transparent;
-  border-radius: $spacing-none;
-  box-shadow: $viva-box-shadow;
-  text-shadow: 0 1px black;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
-}
-
 .datemenu-today-button .date-label,
 .world-clocks-header
 {
-  font-family: Raleway;
+  font-family: $viva-font-family-fancy;
   font-size: $font-size-huge;
   font-weight: normal;
 
@@ -281,11 +294,11 @@
   color: $color-fg;
   border-radius: $spacing-none;
   background-color: transparent;
-}
 
-.pager-button:hover,
-.pager-button:focus,
-.pager-button:active
-{
-  background-color: transparent;
+  &:hover,
+  &:focus,
+  &:active
+  {
+    background-color: transparent;
+  }
 }

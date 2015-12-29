@@ -217,10 +217,8 @@
 
 	color: $color-fg;
 
-	border: 0px solid $viva-border-color-selected;
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
+	border: 0;
+	background: transparent;
 
 	&:hover,
 	&:focus
