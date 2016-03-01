@@ -16,6 +16,67 @@
   spacing-rows: $spacing-tiny;
   spacing-columns: $spacing-tiny;
   spacing: $spacing-none;
+
+
+  .calendar-change-month-back
+  {
+    width: 18px;
+    height: 12px;
+
+    background-color: transparent;
+    background-image: url('images/calendar-arrow-left.svg');
+
+    &:rtl
+    {
+      background-image: url('images/calendar-arrow-right.svg');
+
+      &:hover,
+      &:focus,
+      &:active
+      {
+        background-color: transparent;
+        background-image: url('images/calendar-arrow-right-hover.svg');
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+      background-color: transparent;
+      background-image: url('images/calendar-arrow-left-hover.svg');
+    }
+  }
+
+  .calendar-change-month-forward
+  {
+    width: 18px;
+    height: 12px;
+
+    background-color: transparent;
+    background-image: url('images/calendar-arrow-right.svg');
+
+    &:rtl
+    {
+      background-image: url('images/calendar-arrow-left.svg');
+
+      &:hover,
+      &:focus,
+      &:active
+      {
+        background-color: transparent;
+        background-image: url('images/calendar-arrow-left-hover.svg');
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+      background-color: transparent;
+      background-image: url('images/calendar-arrow-right-hover.svg');
+    }
+  }
 }
 
 .calendar-month-label
@@ -32,66 +93,6 @@
 .calendar-month-label:focus
 {
   background-color: transparent;
-}
-
-.calendar-change-month-back
-{
-  width: 18px;
-  height: 12px;
-
-  background-color: transparent;
-  background-image: url('images/calendar-arrow-left.svg');
-
-  &:rtl
-  {
-    background-image: url('images/calendar-arrow-right.svg');
-
-    &:hover,
-    &:focus,
-    &:active
-    {
-      background-color: transparent;
-      background-image: url('images/calendar-arrow-right-hover.svg');
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active
-  {
-    background-color: transparent;
-    background-image: url('images/calendar-arrow-left-hover.svg');
-  }
-}
-
-.calendar-change-month-back
-{
-  width: 18px;
-  height: 12px;
-
-  background-color: transparent;
-  background-image: url('images/calendar-arrow-right.svg');
-
-  &:rtl
-  {
-    background-image: url('images/calendar-arrow-left.svg');
-
-    &:hover,
-    &:focus,
-    &:active
-    {
-      background-color: transparent;
-      background-image: url('images/calendar-arrow-left-hover.svg');
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active
-  {
-    background-color: transparent;
-    background-image: url('images/calendar-arrow-right-hover.svg');
-  }
 }
 
 .calendar-day-base
