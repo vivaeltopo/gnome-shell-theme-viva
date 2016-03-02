@@ -194,8 +194,7 @@
   color: $color-fg-insensitive;
 }
 
-.calendar-day-base.calendar-day-heading,
-.calendar-week-number
+.calendar-day-base.calendar-day-heading
 {
   font-size: $font-size-small;
   font-weight: normal;
@@ -205,6 +204,20 @@
 
   color: $color-fg-insensitive;
   border: $spacing-none;
+}
+
+.calendar-week-number
+{
+  font-size: $font-size-small;
+  font-weight: normal;
+
+  margin: $spacing-none;
+  padding: $spacing-tiny;
+  padding-top: $spacing-normal;
+
+  color: $color-fg-insensitive;
+  border: $spacing-none;
+  background: transparent;
 }
 
 .datemenu-today-button,
