@@ -233,17 +233,6 @@
 
   min-width: 15em;
 
-  .popup-sub-menu
-  {
-    padding: $spacing-none;
-
-    color: $color-fg;
-    box-shadow: $viva-box-shadow;
-    text-shadow: $viva-text-shadow;
-
-    background: $viva-gradient-1;
-  }
-
   /* The remaining popup-menu sizing is all done in ems, so that if you
    * override .popup-menu.font-size, everything else will scale with it.
    */
@@ -254,8 +243,9 @@
 
   .popup-menu-item
   {
-    spacing: $spacing-normal;
-    padding: $spacing-small $spacing-large $spacing-small $spacing-normal;
+    spacing: $spacing-small;
+    padding: $spacing-small $spacing-normal $spacing-small $spacing-small;
+    margin: $spacing-none $spacing-small;
 
     font-weight: normal;
     box-shadow: $viva-box-shadow;
@@ -289,6 +279,23 @@
     &:insensitive
     {
       color: $color-fg-insensitive;
+    }
+  }
+
+  .popup-sub-menu
+  {
+    margin: $spacing-none $spacing-small;
+    padding: $spacing-none;
+
+    color: $color-fg;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
+
+    background: $viva-gradient-1;
+
+    .popup-menu-item
+    {
+      margin: $spacing-none $spacing-none;
     }
   }
 
