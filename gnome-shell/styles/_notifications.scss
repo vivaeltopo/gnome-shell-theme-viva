@@ -124,7 +124,7 @@
 .message-list-section-title-box
 {
 	font-family: $viva-font-family-fancy;
-	font-size: $font-size-huge;
+	font-size: $font-size-large;
 	font-weight: normal;
 
 	color: $color-fg;
@@ -150,6 +150,7 @@
 	border-radius: 0;
 	background: transparent;
 	text-shadow: 1px 1px 2px black;
+	border-right: $spacing-normal solid transparent;
 
 	icon-size: 24px;
 }

@@ -4,7 +4,7 @@
 
 #calendarArea
 {
-  padding: $spacing-normal $spacing-large;
+  padding: $spacing-small $spacing-normal;
   padding-left: $spacing-none;
 }
 
@@ -281,7 +281,7 @@
 .world-clocks-header
 {
   font-family: $viva-font-family-fancy;
-  font-size: $font-size-huge;
+  font-size: $font-size-large;
   font-weight: normal;
 
   color: $color-fg;
