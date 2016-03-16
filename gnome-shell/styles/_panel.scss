@@ -141,6 +141,7 @@
   // spinner-image: url('images/process-working.svg');
   spinner-image: url('resource:///org/gnome/shell/theme/process-working.svg');
   spacing: $spacing-tiny;
+  padding-right: $spacing-small;
 
   /* used for the app menu header only */
   .label-shadow
