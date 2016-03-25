@@ -22,8 +22,8 @@
   font-weight: normal;
 
   min-width: 10em;
-  margin-bottom: 0;
-  padding: $spacing-tiny $spacing-small;
+  margin: $spacing-normal $spacing-none;
+  padding: $spacing-small $spacing-normal;
 
   color: $color-fg-insensitive;
   border: 1px solid $color-bg;
@@ -47,7 +47,8 @@
   &:hover,
   &:focus
   {
-    padding: $spacing-tiny $spacing-small;
+    margin: $spacing-normal $spacing-none;
+    padding: $spacing-small $spacing-normal;
 
     color: $color-fg;
     border-width: 1px;
