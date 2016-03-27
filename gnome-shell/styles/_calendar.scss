@@ -95,14 +95,15 @@
   background-color: transparent;
 }
 
-.calendar-day-base
+.calendar-day-base,
+.calendar-day
 {
   font-size: $font-size-small;
 
   width: $spacing-huge;
-  height: $spacing-large;
+  height: $spacing-normal;
   margin: $spacing-none;
-  padding: $spacing-none;
+  padding: $spacing-small;
 
   transition-duration: $transition-fast;
   text-align: center;
@@ -140,15 +141,6 @@
     background-gradient-start: $viva-color1;
     background-gradient-end: $viva-color2;
   }
-}
-
-.calendar-day
-{
-  font-size: $font-size-small;
-
-  padding: $spacing-none;
-
-  text-align: center;
 }
 
 .calendar-day-top
@@ -194,28 +186,18 @@
   color: $color-fg-insensitive;
 }
 
-.calendar-day-base.calendar-day-heading
-{
-  font-size: $font-size-small;
-  font-weight: normal;
-
-  margin: $spacing-none;
-  padding: $spacing-small;
-
-  color: $color-fg-insensitive;
-  border: $spacing-none;
-}
-
+.calendar-day-base.calendar-day-heading,
 .calendar-week-number
 {
   font-size: $font-size-small;
   font-weight: normal;
 
+  width: $spacing-huge;
+  height: $spacing-normal;
   margin: $spacing-none;
-  padding: $spacing-tiny;
-  padding-top: $spacing-normal;
+  padding: $spacing-small;
 
-  color: $color-fg-insensitive;
+  color: $viva-gradient-2;
   border: $spacing-none;
   background: transparent;
 }
