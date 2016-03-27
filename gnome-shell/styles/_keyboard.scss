@@ -13,77 +13,66 @@
 
 .keyboard-layout
 {
-  padding: $spacing-large;
+  padding: $spacing-normal;
 
   border: 1px solid $viva-border-color;
   border-radius: $viva-border-radius;
 
   spacing: $spacing-normal;
-  background-gradient-start: rgba(0,0,0,.9);
-  background-gradient-end: rgba(0,0,0,.7);
+  background-gradient-start: $color-bg;
+  background-gradient-end: $color-bg;
   background-gradient-direction: vertical;
 }
 
 .keyboard-row
 {
-  spacing: 2px;
+  spacing: $spacing-tiny;
 }
 
 .keyboard-key
 {
   font-size: $font-size-large;
-  font-weight: bold;
+  font-weight: normal;
 
   width: $spacing-huge;
 
   padding: $spacing-tiny $spacing-small;
 
-  color: rgba(255,255,255,.8);
-  border: 1px solid rgba(0,0,0,0);
+  color: $color-fg;
+  border: 1px solid transparent;
   border-radius: $viva-border-radius;
   box-shadow: $viva-box-shadow;
 
-  caret-color: rgba(255,255,255,.6);
+  caret-color: $color-fg-insensitive;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.3);
-  background-gradient-end: rgba(255,255,255,.15);
-}
+  background-gradient-start: $viva-gradient-2;
+  background-gradient-end: $viva-gradient-1;
 
-.keyboard-key:grayed
-{
-  color: black;
-}
+  &:grayed
+  {
+    color: $color-bg-insensitive;
+  }
 
-.keyboard-key:checked,
-.keyboard-key:hover
-{
-  color: white;
-  border: 1px solid rgba(0,0,0,0);
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
+  &:checked,
+  &:hover,
+  &:active
+  {
+    color: $color-fg-selected;
+    border: 1px solid transparent;
+    border-radius: $viva-border-radius;
+    box-shadow: $viva-box-shadow;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.4);
-  background-gradient-end: rgba(255,255,255,.2);
-}
-
-.keyboard-key:active
-{
-  color: white;
-  border: 1px solid rgba(0,0,0,0);
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(255,255,255,.2);
-  background-gradient-end: rgba(255,255,255,.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-3;
+    background-gradient-end: $viva-gradient-2;
+  }
 }
 
 .keyboard-subkeys
 {
   padding: 5px;
 
-  color: white;
+  color: red;
 
   -arrow-border-radius: 10px;
   -arrow-background-color: #090909;
