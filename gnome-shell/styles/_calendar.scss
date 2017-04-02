@@ -5,7 +5,6 @@
 #calendarArea
 {
   padding: $spacing-small $spacing-normal;
-  padding-left: $spacing-none;
 }
 
 .calendar
@@ -17,6 +16,7 @@
   spacing-columns: $spacing-tiny;
   spacing: $spacing-none;
 
+  margin-left: $spacing-normal;
 
   .calendar-change-month-back
   {
@@ -253,7 +253,9 @@
   }
 }
 
-.world-clocks-button
+.world-clocks-header,
+.world-clocks-button,
+.weather-button
 {
   height: $spacing-none;
   padding: $spacing-none;
