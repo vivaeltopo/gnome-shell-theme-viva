@@ -5,6 +5,9 @@
 	padding: $spacing-small;
 
 	spacing: $spacing-small;
+
+	background: $color-bg-insensitive;
+	transition-duration: $transition-slow;
 }
 
 .osd-window,
