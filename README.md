@@ -7,7 +7,10 @@ A Gnome Shell 3.18 Theme
 
 INSTALL
 ----------------------
-Just copy this theme to __~/.local/share/themes/__ or __/usr/share/gnome-shell/theme__
+1) Install your favourite sass css compiler, see http://sass-lang.com/install
+2) clone this repo, into your theme folder __~/.local/share/themes/__ (user only) or 
+__/usr/share/gnome-shell/theme__ (system wide)
+3) compile sass to css by running 'make'
 
 Change Color
 ----------------------
