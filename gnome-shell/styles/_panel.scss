@@ -10,6 +10,7 @@
   border: $spacing-none;
   background-color: $color-bg;
   box-shadow: inset 0 -1px $viva-border-color;
+  text-shadow: $viva-text-shadow;
 
   &.lock-screen,
   &.unlock-screen,
@@ -22,7 +23,7 @@
   #panelCenter,
   #panelRight
   {
-    spacing: $spacing-small;
+    spacing: $spacing-none;
   }
 
   .panel-corner
@@ -44,15 +45,17 @@
 
   .panel-button
   {
-    font-size: 11pt;
+    font-size: $font-size-normal;
     font-weight: bold;
 
     color: $color-fg;
+    // border: 1px solid $viva-border-color;
+    // border-radius: $viva-border-radius;
+    // margin: $spacing-small $spacing-normal;
+    // background: $color-bg;
 
-    // -natural-hpadding: $spacing-small;
-    // -minimum-hpadding: $spacing-small;
-    -natural-hpadding: 12px;
-    -minimum-hpadding: 6px;
+    // -natural-hpadding: $spacing-normal;
+    // -minimum-hpadding: $spacing-normal;
 
     &:hover,
     &focus
@@ -234,6 +237,8 @@
   font-size: $font-size-small;
 
   min-width: 15em;
+
+  .popup-menu-arrow { } //defined globally in the TOP BAR
 
   /* The remaining popup-menu sizing is all done in ems, so that if you
    * override .popup-menu.font-size, everything else will scale with it.

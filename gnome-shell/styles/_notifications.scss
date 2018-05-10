@@ -1,8 +1,8 @@
 
 .notification-banner
 {
-	width: 30em;
-	height: 4em;
+	width: 25%;
+	height: 10%;
 	padding: $spacing-tiny;
 
 	transition-duration: $transition-fast;
@@ -13,6 +13,7 @@
 	background: $color-bg;
 	box-shadow: $viva-box-shadow;
 	text-shadow: $viva-text-shadow;
+
 	&:hover,
 	&:focus,
 	&:active,
@@ -27,7 +28,6 @@
 	.notification-content
 	{
 		padding: $spacing-tiny;
-
 		spacing: $spacing-tiny;
 	}
 	.secondary-icon
@@ -37,16 +37,14 @@
 	.notification-actions
 	{
 		padding-top: $spacing-tiny;
-
 		background-color: #1c1f1f;
-
 		spacing: $spacing-tiny;
 	}
 	.notification-button
 	{
 		padding: $spacing-tiny;
-
 		background-color: $color-bg;
+
 		&:first-child
 		&:last-child
 		{
@@ -281,7 +279,8 @@
 
 .message-secondary-bin
 {
-	font-size: $font-size-small;
+	font-size: $font-size-normal;
+	padding-bottom: $spacing-tiny;
 
 	color: $color-fg;
 

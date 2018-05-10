@@ -1,5 +1,10 @@
 
 /* Workspace Switcher */
+.cycler-highlight
+{
+  border: 1px solid $viva-border-color;
+}
+
 .workspace-switcher-group
 {
   padding: $spacing-none;
@@ -7,6 +12,7 @@
 
 .workspace-switcher-container
 {
+  color: red;
   padding: $spacing-normal;
 
   border: 1px solid $viva-border-color;

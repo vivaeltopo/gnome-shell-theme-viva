@@ -1,7 +1,10 @@
-.PHONY: clean blue orange
+.PHONY: clean viva blue orange
 
-default:
-	sass --sourcemap=none --update ./gnome-shell/
+default: viva
+
+viva:
+	sassc --sourcemap gnome-shell/gnome-shell.scss gnome-shell/gnome-shell.css
+	@#sass --sourcemap=none --update ./gnome-shell/
 
 clean:
 	@rm -rf ./gnome-shell/{,styles/}.sass-cache

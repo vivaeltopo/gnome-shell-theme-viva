@@ -1,10 +1,10 @@
 
-$color-fg: rgba(255,255,255,0.9);
-$color-fg-selected: rgba(255,255,255,1.0);
+$color-fg: #fff;
+$color-fg-selected: #fff;
 $color-fg-insensitive: rgba(255,255,255,0.6);
 
-$color-bg: rgba(0,0,0,0.9);
-$color-bg-selected: rgba(0,0,0,1.0);
+$color-bg: #000;
+$color-bg-selected: #000;
 $color-bg-insensitive: rgba(0,0,0,0.6);
 
 $viva-color1: if($variant =='orange', rgba(243,115,32,.8), rgba(53,177,239,.8));
@@ -16,7 +16,7 @@ $viva-gradient-3: rgba(255,255,255,.45);
 
 $viva-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
 $viva-box-shadow-dark: inset 0 0 1px 1px rgba(0,0,0,.9);
-$viva-text-shadow: 0px 1px black;
+$viva-text-shadow: 1px 2px black;
 
 $viva-color-warning: orange;
 $viva-color-error: red;
@@ -28,9 +28,9 @@ $viva-border-color-selected: rgba(255,255,255,.3);
 $viva-font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif;
 $viva-font-family-fancy: Raleway, $viva-font-family;
 
-$font-size-small: 10.5pt;
-$font-size-normal: 13.5pt;
-$font-size-large: 15.5pt;
+$font-size-small: 11pt;
+$font-size-normal: 13pt;
+$font-size-large: 15pt;
 $font-size-huge: 18pt;
 
 $spacing-none: 0;

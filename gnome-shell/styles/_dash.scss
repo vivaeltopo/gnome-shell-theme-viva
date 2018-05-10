@@ -51,7 +51,7 @@
   -x-offset: 1em;
 }
 
-.dash-item-container > StButton
+.dash-item-container > StWidget
 {
   padding: $spacing-none;
 }
@@ -66,9 +66,12 @@
   color: $color-fg;
 }
 
-.show-apps:hover .show-apps-icon
+.show-apps:hover .show-apps-icon,
+.show-apps:checked .show-apps-icon,
+.show-apps:focused .show-apps-icon
 {
   color: $color-fg;
+  transition-duration: $transition-fast;
 }
 
 #dash .app-well-app
