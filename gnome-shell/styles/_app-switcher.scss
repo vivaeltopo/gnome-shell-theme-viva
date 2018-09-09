@@ -105,8 +105,15 @@
 		height: $spacing-tiny;
 
 		color: $viva-color2;
-		border-radius: $viva-border-radius;
-	}
+
+    -barlevel-height: $spacing-normal;
+	  -barlevel-background-color: $viva-gradient-2; //background of the trough
+	  -barlevel-border-color: $color-bg-insensitive; //trough border color
+	  -barlevel-active-background-color: $viva-color2; //active trough fill
+	  -barlevel-active-border-color: $color-bg-insensitive; //active trough border
+	  -barlevel-overdrive-color: $color-fg-insensitive;
+	  -barlevel-overdrive-separator-width: $spacing-small;
+  }
 
 	.osd-monitor-label
 	{
