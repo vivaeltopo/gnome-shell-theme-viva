@@ -374,12 +374,14 @@
   height: $spacing-normal;
 
   color: $color-fg;
-
-  -slider-height: $spacing-tiny;
-  -slider-background-color: $color-fg-insensitive;
-  -slider-border-color: $color-bg-insensitive;
-  -slider-border-width: 1px;
-  -slider-handle-radius: $spacing-small;
-  -slider-active-background-color: $viva-color2;
-  -slider-active-border-color: $color-bg-insensitive;
+  -barlevel-height: $spacing-tiny;
+  -barlevel-background-color: $color-fg-insensitive; //background of the trough
+  -barlevel-border-color: $color-bg-insensitive; //trough border color
+  -barlevel-active-background-color: $viva-color2; //active trough fill
+  -barlevel-active-border-color: $color-bg-insensitive; //active trough border
+  -barlevel-overdrive-color: $color-bg-insensitive;
+  -barlevel-overdrive-border-color: $viva-color2;
+  -barlevel-overdrive-separator-width: $spacing-small;
+  -barlevel-border-width: 1px;
+  -slider-handle-radius: 6px;
 }
