@@ -1,0 +1,249 @@
+/* Date/Time Menu */
+
+.clock-display-box {
+  spacing: $spacing-small / 2;
+
+  .clock {
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+  }
+}
+
+// overall menu
+#calendarArea {
+  padding:0;
+}
+
+// Calendar menu side column
+.datemenu-calendar-column {
+  spacing: $spacing-small;
+  border: 0 solid $viva-border-color;
+  padding: 0 $spacing-small * 2;
+
+  &:ltr {margin-right: $spacing-tiny * 2; border-left-width: 1px; }
+  &:rtl {margin-left: $spacing-tiny * 2; border-right-width: 1px; }
+
+  .datemenu-displays-section {
+  }
+
+  .datemenu-displays-box {
+    spacing: $spacing-small;
+  }
+}
+
+.events-section-title {
+  @include notification_bubble($flat: true);
+  color: desaturate(darken($color-fg,40%), 10%);
+  font-weight: bold;
+  padding: .4em;
+}
+
+/* today button (the date) */
+.datemenu-today-button {
+  font-family: $viva-font-family-fancy;
+  @include notification_bubble($flat: true);
+  padding: $spacing-small * 1.5;
+
+  // weekday label
+  .day-label {
+    @include fontsize($font-size-base+1);
+    font-weight: bold;
+  }
+
+  // date label
+  .date-label {
+    @include fontsize($font-size-base+7);
+    font-weight: 1000;
+  }
+}
+
+/* Calendar */
+.calendar {
+  @include notification_bubble;
+  padding: $spacing-small;
+
+  // month
+  .calendar-month-label {
+    font-family: $viva-font-family-fancy;
+    font-size: $font-size-large;
+    font-weight: normal;
+
+    margin: $spacing-small $spacing-none;
+
+    color: $color-fg;
+    &:focus {}
+  }
+
+  // prev/next month icons
+  .calendar-change-month-back StIcon,
+  .calendar-change-month-forward StIcon {
+    icon-size: $base_icon_size;
+  }
+
+  .pager-button {
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    border-radius: $viva-border-radius;
+    &:hover, &:focus { background-color: lighten($color-bg, 5%); }
+    &:active { background-color: $color-bg; }
+  }
+
+
+  $calendar_day_size: 32px;
+
+  .calendar-day-base,
+  .calendar-day {
+    font-size: $font-size-small;
+
+    width: $spacing-large;
+    height: $spacing-normal;
+    margin: $spacing-none;
+    padding: $spacing-none $spacing-tiny;
+
+    transition-duration: $transition-fast;
+    text-align: center;
+
+    border: $spacing-none;
+    border-right: $spacing-none;
+    border-bottom: $spacing-none;
+    border-radius: $viva-border-radius;
+
+    &:hover,
+    &:focus
+    {
+      transition-duration: $transition-fast;
+
+      color: $color-fg;
+      border-color: transparent;
+      border-radius: $viva-border-radius;
+      box-shadow: $viva-box-shadow;
+      text-shadow: 0 1px black;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-gradient-2;
+      background-gradient-end: $viva-gradient-1;
+    }
+
+    &:active
+    {
+      color: $color-fg;
+      border-color: transparent;
+      border-radius: $viva-border-radius;
+      box-shadow: $viva-box-shadow;
+      text-shadow: 0 1px black;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-color1;
+      background-gradient-end: $viva-color2;
+    }
+
+    // day of week heading
+    &.calendar-day-heading {
+      font-size: $font-size-small;
+      font-weight: normal;
+
+      width: $spacing-large;
+      height: $spacing-normal;
+      margin: $spacing-none;
+      padding: $spacing-tiny;
+
+      color: $viva-gradient-2;
+      border: $spacing-none;
+      background: transparent;
+    }
+  }
+
+  .calendar-day-top
+  {
+    border-top-width: $spacing-none;
+  }
+
+  .calendar-day-left
+  {
+    border-left-width: $spacing-none;
+  }
+
+  .calendar-nonwork-day
+  {
+    color: $color-fg-insensitive;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 0;
+  }
+
+  .calendar-work-day {}
+
+  // Today
+  .calendar-today {
+    color: $color-fg;
+    border: $spacing-none;
+    border-radius: $viva-border-radius;
+    background-image: none;
+    box-shadow: $viva-box-shadow;
+    text-shadow: 0;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
+
+  .calendar-day-with-events {
+    font-weight: bold;
+    color: $color-fg;
+    background-image: none;
+  }
+
+  .calendar-other-month-day {
+    color: $color-fg-insensitive;
+  }
+
+  .calendar-week-number {
+    font-size: $font-size-small;
+    font-weight: normal;
+
+    width: $spacing-huge;
+    height: $spacing-normal;
+    margin: $spacing-none;
+    padding: $spacing-small;
+
+    color: $viva-gradient-2;
+    border: $spacing-none;
+    background: transparent;
+  }
+}
+
+/* World clocks */
+/* Weather */
+.world-clocks-header,
+.world-clocks-button,
+.world-clocks-grid,
+.weather-button,
+.weather-box,
+.datemenu-displays-box
+{
+  height: $spacing-none;
+  padding: $spacing-none;
+}
+
+.datemenu-today-button .date-label,
+.world-clocks-header
+{
+  font-family: $viva-font-family-fancy;
+  font-size: $font-size-large;
+  font-weight: normal;
+
+  color: $color-fg;
+
+  spacing: $spacing-tiny;
+}
+
+.world-clocks-grid
+{
+  font-family: $viva-font-family;
+  font-size: $font-size-small;
+  font-weight: normal;
+
+  color: $color-fg;
+
+  spacing-rows: $spacing-tiny;
+}

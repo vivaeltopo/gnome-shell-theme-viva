@@ -1,0 +1,18 @@
+// Links
+.shell-link {
+	text-decoration: underline;
+
+	color: $viva-color1;
+
+	&:hover { color: $viva-color2; }
+}
+
+// Outline for low res icons
+.lowres-icon {
+  icon-shadow: 0 1px 2px rgba(black, 0.3);
+}
+
+// Dropshadow for large icons
+.icon-dropshadow {
+  icon-shadow: 0 1px 2px rgba(black, 0.4);
+}

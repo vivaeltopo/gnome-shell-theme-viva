@@ -1,0 +1,78 @@
+/* App Switcher */
+
+.switcher-popup {
+  padding: $spacing-small;
+
+  spacing: $spacing-small;
+
+  background: $color-bg-insensitive;
+  transition-duration: $transition-slow;
+}
+
+// switcher onscreen panel
+.switcher-list {
+  @extend %osd_panel;
+
+  .item-box {
+    font-size: $font-size-normal;
+    font-weight: normal;
+
+    padding: $spacing-small;
+
+    transition-duration: $transition-fast;
+
+    border: 1px solid transparent;
+    border-radius: $viva-border-radius;
+
+    &:selected,
+    &:outlined
+    {
+      color: $color-fg-selected;
+      border: 1px solid transparent;
+      box-shadow: $viva-box-shadow;
+      text-shadow: $viva-text-shadow;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva-color1;
+      background-gradient-end: $viva-color2;
+    }
+  }
+
+  // window thumbnails
+  .thumbnail-box {
+    padding: $spacing-none;
+    spacing: $spacing-none;
+  }
+
+  .thumbnail {
+    width: 256px;
+    padding: $spacing-none;
+    spacing: $spacing-small;
+  }
+
+  .separator {
+    width: 1px;
+    background: $viva-gradient-2;
+  }
+
+  .switcher-list-item-container {
+    spacing: $spacing-small;
+  }
+}
+
+.switcher-arrow {
+  color: transparent;
+  border-color: transparent;
+}
+
+// Input Source Switcher
+.input-source-switcher-symbol {
+  font-size: 34pt;
+  width: 96px;
+  height: 96px;
+}
+
+// Window cycler highlight
+.cycler-highlight {
+  border: 5px solid $color-bg-selected;
+}

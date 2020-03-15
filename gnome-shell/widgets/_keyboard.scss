@@ -1,10 +1,8 @@
+/* On-screen Keyboard */
 
 #keyboard
 {
-  border: 1px solid transparent;
-  border-right: $spacing-none;
-  border-bottom: $spacing-none;
-  border-left: $spacing-none;
+  border: 0;
 
   background-gradient-start: transparent;
   background-gradient-end: transparent;
@@ -81,4 +79,27 @@
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -boxpointer-gap: 5px;
+}
+
+// emoji
+.emoji-page {
+  .keyboard-key {
+    background-color: transparent;
+    border: none;
+    color: initial;
+  }
+}
+
+.emoji-panel {
+  .keyboard-key:latched {
+    border-color: lighten($color-bg-selected, 5%);
+    background-color: $color-bg-selected;
+  }
+}
+
+// suggestions
+.word-suggestions {
+  @include fontsize($font-size-base + 3);
+  spacing: 12px;
+  min-height: 20pt;
 }

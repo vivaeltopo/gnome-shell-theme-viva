@@ -1,16 +1,13 @@
-
 /* Switches */
+
+// these are equal to the size of the SVG assets
 .toggle-switch
+.toggle-switch-us,
+.toggle-switch-intl
 {
 	width: 64px;
 	height: 22px;
 
-	background-size: contain;
-}
-
-.toggle-switch-us,
-.toggle-switch-intl
-{
 	background-image: url('images/off.png');
 	background-size: contain;
 

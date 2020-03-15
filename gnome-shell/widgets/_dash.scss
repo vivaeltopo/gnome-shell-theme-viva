@@ -1,0 +1,62 @@
+/* Dash */
+
+$dash_placeholder_size: 32px;
+$dash_spacing: $spacing-normal;
+$dash_border_radius: $viva-border-radius * 1.5;
+
+#dash {
+  @extend %overview_panel;
+  @include fontsize($font-size-base);
+  padding: ($dash_spacing / 2) 0;
+
+  border-radius: 0 $viva-border-radius $viva-border-radius 0;
+  border-left-width: 0;
+  &:rtl {
+    border-radius: $viva-border-radius 0 0 $viva-border-radius;
+    border-right-width: 0;
+  }
+
+  .placeholder {
+    background-image: url('./images/dash-placeholder.svg');
+    background-size: contain;
+    height: $dash_placeholder_size;
+  }
+
+  .empty-dash-drop-target {
+    width: $dash_placeholder_size;
+    height: $dash_placeholder_size;
+  }
+}
+
+// Dash Items
+.dash-item-container > StWidget {
+  padding: $spacing-none;
+}
+
+// OSD Tooltip
+.dash-label {
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  padding: $spacing-small $spacing-normal;
+
+  border: 1px solid $viva-border-color;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
+
+  -x-offset: 1em;
+}
+
+// Show apps button
+.show-apps {
+  @include overview-icon($color-fg);
+
+  &:focus,
+  &:checked {
+    .overview-icon {
+      background-color: darken($color-bg,10%);
+      color: $color-fg;
+    }
+  }
+}
+

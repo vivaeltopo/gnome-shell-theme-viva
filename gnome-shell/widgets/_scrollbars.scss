@@ -1,5 +1,4 @@
-
-/* Scroll Bars */
+/* Scrollbars */
 
 StScrollBar
 {
@@ -7,8 +6,8 @@ StScrollBar
 
   StScrollView &
   {
-    min-width: $spacing-large;
-    min-height: $spacing-large;
+    min-width: $spacing-normal;
+    min-height: $spacing-normal;
     padding: 0;
   }
 

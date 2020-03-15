@@ -1,0 +1,52 @@
+/* Check Boxes */
+
+// these are equal to the size of the SVG assets
+
+.check-box {
+	& StBoxLayout
+	{
+	  spacing: $spacing-normal;
+	}
+
+	& StBin
+	{
+	  width: $spacing-large;
+	  height: $spacing-large;
+
+	  color: $color-fg;
+	  border-radius: $viva-border-radius;
+	  background-image: none;
+	  box-shadow: $viva-box-shadow;
+	  text-shadow: 0 1px black;
+
+	  background-gradient-direction: vertical;
+	  background-gradient-start: $viva-gradient-2;
+	  background-gradient-end: $viva-gradient-1;
+	}
+
+	&:focus StBin,
+	&:hover StBin
+	{
+	  background-image: none;
+
+	  background-gradient-start: rgba(255,255,255,.45);
+	  background-gradient-end: $viva-gradient-2;
+	}
+
+	&:checked StBin,
+	&:focus:checked StBin
+	{
+	  width: $spacing-large;
+	  height: $spacing-large;
+
+	  color: $color-fg;
+	  border-radius: $viva-border-radius;
+	  background-image: none;
+	  box-shadow: $viva-box-shadow;
+	  text-shadow: 0 1px black;
+
+	  background-gradient-direction: vertical;
+	  background-gradient-start: $viva-color1;
+	  background-gradient-end: $viva-color2;
+	}
+}

@@ -1,0 +1,12 @@
+/* Activities Ripple */
+
+.ripple-box {
+  background-color: transparent;
+  box-shadow: none;
+  width: 0;
+  height: 0;
+  border-radius: 0; // radius equals the size of the box to give us the curve
+
+  // just a simple change to the border radius position
+  &:rtl { border-radius: 0; }
+}

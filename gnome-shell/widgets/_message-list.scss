@@ -1,0 +1,193 @@
+/* Message List */
+// a.k.a. notifications in the menu
+
+// main list
+.message-list {
+  width: 35em;
+  max-height: 6 * ( 5em + $spacing-normal);
+  padding: 0 $spacing-small * 2;
+
+  .message-list-placeholder { spacing: 12px; }
+}
+
+.message-list-sections {
+  spacing: $spacing-small;
+  margin: 0 $spacing-tiny * 4; // to account for scrollbar
+}
+
+.message-list-section,
+.message-list-section-list {
+  spacing: $spacing-small;
+}
+
+// do-not-disturb + clear button
+.message-list-controls {
+  margin: ($spacing-tiny * 2) ($spacing-tiny * 4) 0;
+  // NOTE: remove the padding if notification_bubble could remove margin for drop shadow
+  padding: $spacing-tiny;
+  spacing: $spacing-small * 2;
+  padding-top: $spacing-normal;
+  border-top: 1px solid $viva-border-color-selected;
+}
+
+// message bubbles
+.message {
+  @include notification_bubble;
+
+  &:hover,
+  &:focus
+  {
+    transition-duration: $transition-fast;
+
+    color: $color-fg-selected;
+    background-color: $color-bg-selected;
+    border: 1px solid $viva-border-color-selected;
+  }
+
+  // icon container
+  .message-icon-bin {
+    padding: ($spacing-small * 3) 0 ($spacing-small * 3) ($spacing-small * 2);
+
+    &:rtl {
+      padding: ($spacing-small * 3) ($spacing-small * 2) ($spacing-small * 3) 0;
+    }
+
+    // icon size and color
+    > StIcon {
+      icon-size: $base_icon_size*2; // 32px
+      -st-icon-style: symbolic;
+    }
+
+    // fallback
+    > .fallback-app-icon {
+      width: $base_icon_size;
+      height: $base_icon_size;
+    }
+  }
+
+  // content
+  .message-content {
+    padding: $spacing-small + $spacing-tiny * 2;
+    spacing: 4px;
+  }
+
+  // title
+  .message-title {
+    font-weight: bold;
+  }
+
+  // secondary container in title box
+  .message-secondary-bin {
+    padding: 0 $spacing-tiny * 2;
+
+    // notification time stamp
+    > .event-time {
+      color: transparentize($color-fg, 0.5);
+      @include fontsize($font-size-base - 2);
+      text-align: right;
+      /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */
+      padding-bottom: 0.13em;
+    }
+  }
+
+  // close button
+  .message-close-button {
+    color: lighten($color-fg, 15%);
+    &:hover { color: if($variant=='light', lighten($color-fg, 30%), darken($color-fg, 10%)); }
+    &:active { color: if($variant=='light', lighten($color-fg, 40%), darken($color-fg, 20%)); }
+  }
+
+  // body
+  .message-body {
+    color: darken($color-fg, 10%);
+  }
+}
+
+
+/* messages in the calendar popup */
+.message-list .message
+{
+  margin-top: 0;
+  margin-right: $spacing-normal + $spacing-small;
+  padding: 0;
+
+  transition-duration: $transition-fast;
+
+  color: $color-fg;
+
+  border: 0;
+  background: transparent;
+
+  &:hover,
+  &:focus
+  {
+    transition-duration: $transition-fast;
+
+    color: $color-fg-selected;
+    border-color: transparent;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+  }
+
+  &:active,
+  &:selected
+  {
+    transition-duration: $transition-fast;
+
+    color: $color-fg-selected;
+    border-color: transparent;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
+}
+
+// URLs in messages
+.url-highlighter {
+  link-color: $color-bg-selected;
+}
+
+/* Media Controls */
+.message-media-control {
+  padding: $spacing-small * 2 $spacing-small * 4;
+  color: darken($color-fg, 15%);
+
+  // uses $color-bg since the media controls are in a notification_bubble
+  &:hover {
+    color: $color-fg;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-2;
+    background-gradient-end: $viva-gradient-1;
+  }
+
+  &:active {
+    color: $color-fg;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
+
+  &:insensitive { color: darken($color-fg,40%); }
+
+  // fix border-radius for last button
+  &:last-child:ltr { border-radius: 0 $viva-border-radius $viva-border-radius 0; }
+  &:last-child:rtl { border-radius: $viva-border-radius 0 0 $viva-border-radius; }
+}
+
+// album-art
+.media-message-cover-icon {
+  icon-size: $base_icon_size*2 !important; // 48px
+  border-radius: $viva-border-radius;
+
+  // when there is no artwork
+  &.fallback {
+    color: darken($color-fg, 17%);
+    background-color: $color-bg;
+    border: 1px solid transparent;
+    border-radius: $viva-border-radius;
+    icon-size: $base_icon_size * 2 !important;
+  }
+}

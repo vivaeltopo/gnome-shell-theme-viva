@@ -1,0 +1,116 @@
+/* Network Dialogs */
+.nm-dialog {
+  font-size: $font-size-normal;
+  font-weight: normal;
+
+  color: $color-fg;
+
+  padding: $spacing-none;
+  spacing: $spacing-none;
+}
+
+.nm-dialog-content {
+  font-size: $font-size-small;
+
+  padding: $spacing-normal;
+  spacing: $spacing-tiny;
+}
+
+.nm-dialog-airplane-box {
+  padding-bottom: $spacing-small;
+
+  spacing: $spacing-tiny;
+}
+
+.nm-dialog-airplane-headline {
+  font-family: $viva-font-family-fancy;
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  max-width: 500em;
+
+  color: $color-fg;
+  padding: 0;
+  padding-bottom: $spacing-tiny;
+}
+
+.nm-dialog-airplane-text {
+  font-size: $font-size-normal;
+
+  color: $color-fg;
+}
+
+// header
+.nm-dialog-header {
+  font-family: $viva-font-family-fancy;
+  font-size: $font-size-huge;
+  font-weight: normal;
+
+  max-width: 500em;
+
+  color: $color-fg;
+  padding: 0;
+  padding-bottom: $spacing-tiny;
+}
+.nm-dialog-header-icon {
+  icon-size: 5em;
+  padding: $spacing-small
+}
+.nm-dialog-header-hbox {
+  padding-bottom: $spacing-small;
+
+  spacing: $spacing-tiny;
+}
+
+// list of networks
+.nm-dialog-scroll-view {
+  padding: $spacing-tiny $spacing-none;
+
+  border: 0;
+  background-color: $color-bg;
+  padding-bottom: $spacing-large;
+  border-bottom: 1px solid $color-fg;
+}
+
+// list item
+.nm-dialog-item {
+  font-size: $font-size-small;
+
+  margin-left: $spacing-tiny;
+  padding: $spacing-small;
+  spacing: $spacing-tiny;
+
+  color: $color-fg;
+  border: $spacing-none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:selected
+  {
+    color: $color-fg;
+    box-shadow: $viva-box-shadow;
+    text-shadow: $viva-text-shadow;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-color1;
+    background-gradient-end: $viva-color2;
+  }
+}
+
+// icons in list
+.nm-dialog-icon {
+  font-size: $font-size-small;
+
+  padding-left: $spacing-small;
+
+  color: $color-fg;
+
+  icon-size: 1.3em;
+}
+.nm-dialog-icons { spacing: $spacing-small * 2; }
+
+// no networks
+.no-networks-label { color: $color-fg-insensitive; }
+.no-networks-box { spacing: $spacing-normal; }
+

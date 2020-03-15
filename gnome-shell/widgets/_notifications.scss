@@ -1,0 +1,74 @@
+/* Notifications & Mesage Tray */
+
+// Banner notifications
+.notification-banner {
+  width: 25%;
+  height: 10%;
+  padding: $spacing-tiny;
+
+  transition-duration: $transition-fast;
+
+  color: $color-fg;
+  border: 0 solid transparent;
+  border-radius: $viva-border-radius;
+  background: $color-bg;
+  box-shadow: $viva-box-shadow;
+  text-shadow: $viva-text-shadow;
+
+  .notification-actions {
+    padding-top: $spacing-tiny;
+    background-color: #1c1f1f;
+    spacing: $spacing-tiny;
+  }
+
+  .notification-button {
+    @extend %bubble_button;
+    padding: $spacing-tiny;
+    background-color: $color-bg;
+
+    &:first-child
+    &:last-child
+    {
+      border-radius: $viva-border-radius;
+    }
+  }
+}
+
+// counter
+.summary-source-counter {
+  font-size: $font-size-base - 1pt;
+  font-weight: bold;
+  height: 1.6em;
+  width: 1.6em;
+  -shell-counter-overlap-x: 3px;
+  -shell-counter-overlap-y: 3px;
+  background-color: $color-bg-selected;
+  color: $color-fg-selected;
+  border: 2px solid $color-fg;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+  border-radius: 0.9em; // should be 0.8 but whatever; wish I could do 50%;
+}
+
+// chat bubbles
+.chat-body { spacing: 5px; }
+.chat-response { margin: 5px; }
+.chat-log-message { color: darken($color-fg,10%); }
+.chat-new-group { padding-top: 1em; }
+.chat-received {
+  padding-left: 4px;
+  &:rtl { padding-left: 0px; padding-right: 4px; }
+}
+
+.chat-sent {
+  padding-left: 18pt;
+  color: lighten($color-fg, 15%);
+  &:rtl { padding-left: 0; padding-right: 18pt; }
+}
+
+.chat-meta-message {
+  padding-left: 4px;
+  @include fontsize($font-size-base - 2);
+  font-weight: bold;
+  color: lighten($color-fg,18%);
+  &:rtl { padding-left: 0; padding-right: 4px; }
+}

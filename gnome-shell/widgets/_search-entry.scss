@@ -1,0 +1,45 @@
+// Search entry
+
+.search-entry
+{
+  font-size: $font-size-large;
+  font-weight: normal;
+
+  min-width: 10em;
+  margin: $spacing-normal $spacing-none;
+  padding: $spacing-small $spacing-normal;
+
+  color: $color-fg-insensitive;
+  border: 1px solid $color-bg;
+  border-radius: $viva-border-radius;
+  box-shadow: $viva-box-shadow;
+
+  caret-color: $color-fg;
+  caret-size: 1px;
+  selected-color: $color-fg;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: $viva-gradient-2;
+
+  .search-entry-icon
+  {
+    padding: 0 4px;
+
+    color: $color-fg-insensitive;
+
+    icon-size: 1em;
+  }
+  &:hover,
+  &:focus
+  {
+    margin: $spacing-normal $spacing-none;
+    padding: $spacing-small $spacing-normal;
+
+    color: $color-fg;
+    border-width: 1px;
+    .search-entry-icon
+    {
+      color: $color-fg;
+    }
+  }
+}
