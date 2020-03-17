@@ -3,8 +3,8 @@
 default: viva
 
 viva:
-	sassc --sourcemap gnome-shell/gnome-shell.scss gnome-shell/gnome-shell.css
-	@#sass --sourcemap=none --update ./gnome-shell/
+	@sassc gnome-shell/gnome-shell.scss gnome-shell/gnome-shell.css
+	@#sass --update ./gnome-shell/
 
 clean:
 	@rm -rf ./gnome-shell/{,styles/}.sass-cache

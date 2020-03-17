@@ -15,14 +15,34 @@
   box-shadow: $viva-box-shadow;
   text-shadow: $viva-text-shadow;
 
+  &:hover,
+  &:focus {
+    color: $color-fg;
+    background-color: $color-bg;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: $viva-box-shadow;
+
+    font-size: $font-size-small;
+    font-weight: normal;
+
+    border-radius: $viva-border-radius;
+    background-gradient-direction: vertical;
+    background-gradient-start: $color-bg;
+    background-gradient-end: $color-bg;
+
+    border: 1px solid $viva-border-color-selected;
+  }
+
   .notification-actions {
     padding-top: $spacing-tiny;
-    background-color: #1c1f1f;
+    background-color: $color-bg;
     spacing: $spacing-tiny;
   }
 
   .notification-button {
-    @extend %bubble_button;
+    @extend %button;
     padding: $spacing-tiny;
     background-color: $color-bg;
 
