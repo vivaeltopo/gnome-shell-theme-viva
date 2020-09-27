@@ -43,6 +43,12 @@
   font-family: $viva-font-family-fancy;
   @include notification_bubble($flat: true);
   padding: $spacing-small * 1.5;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva-gradient-1;
+  background-gradient-end: rgba(255,255,255,.1);
+  border: 1px solid $viva-border-color-insensitive;
+  box-shadow: none;
+  margin-top: 1em;
 
   // weekday label
   .day-label {
