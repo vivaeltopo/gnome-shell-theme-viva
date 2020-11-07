@@ -163,6 +163,7 @@
 .lg-extension
 {
   margin-right: $spacing-tiny;
+  margin-bottom:  $spacing-normal;
   padding: $spacing-normal;
 
   transition-duration: 200ms;
@@ -194,7 +195,7 @@
 
 .lg-extension-name
 {
-  font-family: $viva-font-family-fancy;
+  font-family: $viva-font-family;
   font-size: $font-size-large;
   font-weight: normal;
 }
