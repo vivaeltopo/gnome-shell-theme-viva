@@ -1,11 +1,11 @@
 /* Modal Dialogs */
 
 .headline {
-  @include fontsize($font-size-base + 1);
+  @include fontsize($base_font_size + 1);
 }
 
 .modal-dialog {
-  border-radius: $viva-border-radius;
+  border-radius: $modal_radius;
   @extend %bubble_panel;
 
   .modal-dialog-content-box {
@@ -25,7 +25,7 @@
 
   .end-session-dialog-battery-warning,
   .dialog-list-title {
-    color: $viva-color-warning;
+    color: $warning_color;
   }
 }
 
@@ -38,7 +38,7 @@
     font-size: 18pt;
     font-weight: 800;
 
-    &.leightweight {
+    &.lightweight {
       font-size: 13pt;
       font-weight: 800;
     }
@@ -64,8 +64,8 @@
 
       .dialog-list-item-title { font-weight: bold; }
       .dialog-list-item-description {
-        color: darken($color-fg,5%);
-        @include fontsize($font-size-base - 1);
+        color: darken($fg_color,5%);
+        @include fontsize($base_font_size - 1);
       }
     }
   }
@@ -79,9 +79,9 @@
   }
   .run-dialog-entry { width: 20em; }
   .run-dialog-description {
-    @include fontsize($font-size-base - 1);
+    @include fontsize($base_font_size - 1);
     text-align: center;
-    color: darken($color-fg, 20%);
+    color: darken($fg_color, 20%);
   }
 }
 
@@ -120,11 +120,11 @@
 .prompt-dialog-info-label,
 .prompt-dialog-null-label {
   text-align: center;
-  @include fontsize($font-size-base - 1);
+  @include fontsize($base_font_size - 1);
 }
 
 .prompt-dialog-error-label {
-  color: $viva-color-warning;
+  color: $warning_color;
 }
 
 
@@ -135,11 +135,7 @@
   spacing: 8px;
   margin-bottom: 6px;
 
-  .polkit-dialog-user-icon {
-    border-radius: 99px;
-    background-size: contain;
-  }
-  .polkit-dialog-user-root-label { color: $viva-color-warning; }
+  .polkit-dialog-user-root-label { color: $warning_color; }
 }
 
 /* Audio selection dialog */
@@ -149,12 +145,12 @@
 }
 
 .audio-selection-device {
-  border: 1px solid $viva-border-color;
+  border: 1px solid $bubble_borders_color;
   border-radius: 12px;
-  &:hover,&:focus { background-color: $color-bg; }
+  &:hover,&:focus { background-color: $hover_bg_color; }
   &:active { 
-    background-color: $color-bg-selected;
-    color: $color-fg-selected;
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
   }
 }
 
@@ -165,4 +161,13 @@
 
 .audio-selection-device-icon {
   icon-size: $base_icon_size * 4;
+}
+
+/* Welcome dialog */
+.welcome-dialog-image {
+  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
+  background-size: contain;
+  /* Reasonable maximum dimensions */
+  height: 300px;
+  width: 300px;
 }

@@ -1,51 +1,75 @@
+// When color definition differs for dark and light variant,
+// it gets @if ed depending on $variant
 
-$color-fg: #fff;
-$color-fg-selected: #ddd;
-$color-fg-insensitive: rgba(255,255,255,0.6);
+$base_color: if($variant == 'light', #fff, lighten(#111111, 2%));
+$bg_color: if($variant == 'light', #f6f5f4, darken(#222222, 4%));
+$fg_color: if($variant == 'light', #2e3436, #f5f5f5);
 
-$color-bg: #000;
-$color-bg-selected: #222;
-$color-bg-insensitive: rgba(0,0,0,0.6);
+$selected_fg_color: #fff;
+$selected_bg_color: if($variant == 'light', #3584e4, darken(#ff4500, 10%));
+$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
+$borders_color: if($variant == 'light', darken($bg_color, 18%), darken($bg_color, 8%));
+$borders_edge: if($variant == 'light', rgba(255,255,255,0.8), transparentize($fg_color, 0.93));
+$link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
+$link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$top_hilight: $borders_edge;
 
-$viva-color1: if($variant =='orange', rgba(243,115,32,.7), rgba(53,177,239,.8));
-$viva-color2: if($variant =='orange', rgba(221,72,20,.7), rgba(23,147,209,.8));
+$warning_color: #f57900;
+$error_color: #ff8080;
+$success_color: if($variant == 'light', #33d17a, darken(#33d17a, 10%));
+$destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
+
+$osd_fg_color: #eeeeec;
+$osd_text_color: white;
+$osd_bg_color: $bg_color;
+$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+$osd_borders_color: transparentize(black, 0.3);
+$osd_outer_borders_color: transparentize(white, 0.84);
+
+$shadow_color: if($variant == 'light', rgba(0,0,0,0.1), rgba(0,0,0,0.2));
+$system_bg_color: desaturate(#241f31,100%); //neutralize the HIG color
+
+//insensitive state derived colors
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_borders_color: mix($borders_color, $base_color, 60%);
+
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: if($variant =='light', darken($base_color,1%), lighten($base_color,1%));
+$backdrop_bg_color: $bg_color;
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
+$backdrop_insensitive_color: if($variant =='light', darken($backdrop_bg_color,15%), lighten($backdrop_bg_color,15%));
+$backdrop_borders_color: mix($borders_color, $bg_color, 90%);
+$backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
+
+
+$viva-color: if($variant =='dark', rgba(232,93,26,.7), rgba(38,162,224,.8));
+$viva-color1: lighten($viva-color, 5%);
+$viva-color2: darken($viva-color, 10%);
 
 $viva-gradient-1: rgba(255,255,255,.15);
 $viva-gradient-2: rgba(255,255,255,.3);
 $viva-gradient-3: rgba(255,255,255,.45);
-
-$viva-color-shadow: rgba(0,0,0,.9);
-$viva-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
-$viva-box-shadow-dark: inset 0 0 1px 1px $viva-color-shadow;
-$viva-text-shadow: 1px 2px black;
 
 $viva-color-warning: #f57900;
 $viva-color-error: #f30;
 $viva-color-success: green;
 $viva-color-destructive: #e01b24;
 
-$viva-border-radius: 3px;
 $viva-border-color: rgba(255,255,255,.15);
 $viva-border-color-selected: rgba(255,255,255,.3);
 $viva-border-color-insensitive: rgba(255,255,255,.05);
 
-$viva-font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif;
+$viva-color-shadow: rgba(0,0,0,.9);
+$viva-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.1);
+$viva-box-shadow-dark: inset 0 0 1px 1px $viva-color-shadow;
+$viva-text-shadow: 1px 2px black;
 
-$font-size-base: 12;
-$font-size-small: 12pt;
-$font-size-normal: 14pt;
-$font-size-large: 16pt;
-$font-size-huge: 18pt;
-
-$spacing-none: 0;
-$spacing-tiny: 0.25em;
-$spacing-small: 0.5em;
-$spacing-normal: 1em;
-$spacing-large: 2em;
-$spacing-huge: 2.5em;
+$osd_viva-border-color: transparentize(black, 0.3);
+$osd_outer_viva-border-color: transparentize(white, 0.84);
 
 $transition-fast: 200ms;
 $transition-slow: 400ms;
 
-$osd_viva-border-color: transparentize(black, 0.3);
-$osd_outer_viva-border-color: transparentize(white, 0.84);
+$viva-font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif;

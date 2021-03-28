@@ -1,14 +1,13 @@
 
 /* Tiled window previews */
-
 .tile-preview,
 .tile-preview-left.on-primary,
 .tile-preview-right.on-primary,
 .tile-preview-left.tile-preview-right.on-primary
 {
-	color: $color-fg;
-	border-width: $spacing-none;
-	border-radius: $viva-border-radius;
+	color: $fg_color;
+	border-width: 0;
+	border-radius: $base_border_radius;
 	box-shadow: $viva-box-shadow;
 	text-shadow: $viva-text-shadow;
 

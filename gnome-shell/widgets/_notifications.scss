@@ -1,70 +1,69 @@
-/* Notifications & Mesage Tray */
+/* Notifications & Message Tray */
 
 // Banner notifications
 .notification-banner {
   width: 25%;
   height: 10%;
-  padding: $spacing-tiny;
+  padding: $base_spacing;
 
   transition-duration: $transition-fast;
 
-  color: $color-fg;
+  color: $fg_color;
   border: 0 solid transparent;
-  border-radius: $viva-border-radius;
-  background: $color-bg;
+  border-radius: $base_border_radius;
+  background: $bg_color;
   box-shadow: $viva-box-shadow;
   text-shadow: $viva-text-shadow;
 
   &:hover,
   &:focus {
-    color: $color-fg;
-    background-color: $color-bg;
+    color: $fg_color;
+    background-color: $bg_color;
     border-color: transparent;
     text-shadow: none;
     box-shadow: none;
     icon-shadow: $viva-box-shadow;
 
-    font-size: $font-size-small;
     font-weight: normal;
 
-    border-radius: $viva-border-radius;
+    border-radius: $base_border_radius;
     background-gradient-direction: vertical;
-    background-gradient-start: $color-bg;
-    background-gradient-end: $color-bg;
+    background-gradient-start: $bg_color;
+    background-gradient-end: $bg_color;
 
     border: 1px solid $viva-border-color-selected;
   }
 
   .notification-actions {
-    padding-top: $spacing-tiny;
-    background-color: $color-bg;
-    spacing: $spacing-tiny;
+    padding-top: $base_spacing;
+    background-color: $bg_color;
+    spacing: $base_spacing;
   }
 
   .notification-button {
-    @extend %button;
-    padding: $spacing-tiny;
-    background-color: $color-bg;
+    @extend %bubble_button;
+    padding: $base_spacing;
+    background-color: $bg_color;
 
     &:first-child
     &:last-child
     {
-      border-radius: $viva-border-radius;
+      border-radius: $base_border_radius;
     }
   }
 }
 
 // counter
 .summary-source-counter {
-  font-size: $font-size-base - 1pt;
+  font-size: $base_font_size - 1pt;
   font-weight: bold;
   height: 1.6em;
   width: 1.6em;
   -shell-counter-overlap-x: 3px;
   -shell-counter-overlap-y: 3px;
-  background-color: $color-bg-selected;
-  color: $color-fg-selected;
-  border: 2px solid $color-fg;
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  border: 2px solid $fg_color;
   box-shadow: 0 2px 2px rgba(0,0,0,0.5);
   border-radius: 0.9em; // should be 0.8 but whatever; wish I could do 50%;
 }
@@ -72,7 +71,7 @@
 // chat bubbles
 .chat-body { spacing: 5px; }
 .chat-response { margin: 5px; }
-.chat-log-message { color: darken($color-fg,10%); }
+.chat-log-message { color: darken($fg_color,10%); }
 .chat-new-group { padding-top: 1em; }
 .chat-received {
   padding-left: 4px;
@@ -81,14 +80,14 @@
 
 .chat-sent {
   padding-left: 18pt;
-  color: lighten($color-fg, 15%);
+  color: lighten($fg_color, 15%);
   &:rtl { padding-left: 0; padding-right: 18pt; }
 }
 
 .chat-meta-message {
   padding-left: 4px;
-  @include fontsize($font-size-base - 2);
+  @include fontsize($base_font_size - 2);
   font-weight: bold;
-  color: lighten($color-fg,18%);
+  color: lighten($fg_color,18%);
   &:rtl { padding-left: 0; padding-right: 4px; }
 }

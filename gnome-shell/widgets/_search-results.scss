@@ -3,18 +3,18 @@
 // search overview container
 #searchResultsContent {
   max-width: 1024px;
-  spacing: $spacing-large;
+  spacing: $base_margin * 2;
 }
 
 // search results sections "the boxes"
 .search-section {
   // This should be equal to #searchResultsContent spacing
-  spacing: $spacing-tiny * 2;
+  spacing: $base_margin * 2;
 
   // separator
   .search-section-separator {
     // height: 1px;
-    // background-color: $osd_outer_viva-border-color;
+    // background-color: $osd_outer_borders_color;
     height: 0;
     background-color: transparent;
   }
@@ -22,15 +22,14 @@
 
 // content
 .search-section-content {
-  background-color: transparentize(lighten($color-bg, 5%), 0.2);
-  border-radius: $viva-border-radius;
-  border: 1px solid $viva-border-color;
+  background-color: $osd_bg_color;
+  border-radius: $base_border_radius;  border: 1px solid $viva-border-color;
   box-shadow: 0 2px 4px 0 $viva-color-shadow;
   text-shadow: 0 1px if($variant == 'light', rgba(255,255,255,0.2), rgba(0,0,0,0.2));
-  color: $color-fg;
-  padding: $spacing-small * 3;
+  color: $osd_fg_color;
+  padding: $base_padding * 3;
   // This is the space between the provider icon and the results container
-  spacing: $spacing-tiny * 2;
+  spacing: $base_margin * 2;
 }
 
 %search-section-content-item {
@@ -39,19 +38,24 @@
   &:focus,
   &:hover,
   &:selected {
-    background-color: transparentize($color-fg, .9);
+    background-color: transparentize($osd_fg_color, .9);
     transition-duration: 200ms;
   }
 
   &:active,
   &:checked {
-    background-color: transparentize(darken($color-bg, 10%), .1);
+    background-color: transparentize(darken($osd_bg_color, 10%), .1);
   }
 }
 
 // "no results" text
 .search-statustext {
   @extend %status_text;
+}
+
+.grid-search-results {
+  spacing: $base_spacing * 6;
+  margin: 10 * $base_margin 0;
 }
 
 // Search results with icons
@@ -65,13 +69,13 @@
 
   // content
   .list-search-provider-content {
-    spacing: $spacing-small * 2;
+    spacing: $base_spacing * 2;
 
     // provider labels
     .list-search-provider-details {
       width: 120px;
       margin-top: 0;
-      color: darken($color-fg, 8%);
+      color: darken($osd_fg_color, 8%);
       // font-weight: bold;
     }
   }
@@ -79,7 +83,7 @@
 
 // search results list
 .list-search-results {
-  spacing: $spacing-small;
+  spacing: $base_spacing;
 }
 
 // search result listitem
@@ -88,17 +92,17 @@
 
   // content
   .list-search-result-content {
-    spacing: $spacing-small;
+    spacing: $base_padding;
   }
 
   // list item title (with leading icon)
   .list-search-result-title {
-    spacing: $spacing-small * 2;
+    spacing: $base_spacing * 2;
     // font-weight: bold;
   }
 
   // list item description
   .list-search-result-description {
-    color: darken($color-fg, 30%);
+    color: darken($osd_fg_color, 30%);
   }
 }

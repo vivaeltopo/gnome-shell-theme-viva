@@ -1,84 +1,94 @@
 /* On-screen Keyboard */
 
-#keyboard
-{
-  border: 0;
+$key_size: 1.2em;
+$key_border_radius: $base_border_radius + 3px;
+$key_bg_color:  $bg_color;
+// $default_key_bg_color: darken($key_bg_color, 4%);
+$default_key_bg_color: if($variant=='light', darken($osd_bg_color, 11%), lighten($osd_bg_color, 2%));
 
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  background-gradient-direction: vertical;
-}
 
-.keyboard-layout
-{
-  padding: $spacing-normal;
+// draw keys using button function
+#keyboard {
+  background-color: transparentize(if($variant=='light', darken($bg_color, 5%), darken($bg_color, 8%)), 0.1);
+  box-shadow: inset 0 1px 0 0 $osd_outer_borders_color;
 
-  border: 1px solid $viva-border-color;
-  border-radius: $viva-border-radius;
+  .page-indicator {
+    padding: $base_padding;
 
-  spacing: $spacing-normal;
-  background-gradient-start: $color-bg;
-  background-gradient-end: $color-bg;
-  background-gradient-direction: vertical;
-}
-
-.keyboard-row
-{
-  spacing: $spacing-tiny;
-}
-
-.keyboard-key
-{
-  font-size: $font-size-large;
-  font-weight: normal;
-
-  width: $spacing-huge;
-
-  padding: $spacing-tiny $spacing-small;
-
-  color: $color-fg;
-  border: 1px solid transparent;
-  border-radius: $viva-border-radius;
-  box-shadow: $viva-box-shadow;
-
-  caret-color: $color-fg-insensitive;
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-
-  &:grayed
-  {
-    color: $color-bg-insensitive;
-  }
-
-  &:checked,
-  &:hover,
-  &:active
-  {
-    color: $color-fg-selected;
-    border: 1px solid transparent;
-    border-radius: $viva-border-radius;
-    box-shadow: $viva-box-shadow;
-
-    background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-3;
-    background-gradient-end: $viva-gradient-2;
+    .page-indicator-icon {
+      width: 8px;
+      height: 8px;
+    }
   }
 }
 
-.keyboard-subkeys
-{
-  padding: 5px;
+// the container for individual keys
+.key-container {
+  padding: $base_margin;
+  spacing: $base_margin;
+}
 
-  color: red;
+// the keys
+.keyboard-key {
 
-  -arrow-border-radius: 10px;
-  -arrow-background-color: #090909;
-  -arrow-border-width: $viva-border-radius;
-  -arrow-border-color: white;
+  @include button(normal, $c:$key_bg_color);
+
+  &:focus { @include button(focus);}
+  &:hover, &:checked { @include button(hover, $c: $key_bg_color);}
+  &:active { @include button(active, $c: $key_bg_color); }
+
+  @include fontsize($base_font_size + 5);
+  min-height: $key_size;
+  min-width: $key_size;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $key_border_radius;
+
+  &:grayed { //FIXMEy
+    background-color: darken($bg_color, 3%);
+    color: $osd_fg_color;
+    border-color: $osd_borders_color;
+  }
+
+  // non-character keys
+  &.default-key {
+    @include button(normal, $c:$default_key_bg_color);
+    &:hover, &:checked {@include button(hover, $c: $default_key_bg_color);}
+    &:active { @include button(active, $c: $default_key_bg_color);}
+  }
+
+  // enter key is suggested-action
+  &.enter-key {
+    @include button(normal, $c:$selected_bg_color, $tc:$selected_fg_color);
+    &:hover, &:checked { @include button(hover, $c: lighten($selected_bg_color, 3%));}
+    &:active {@include button(active, $c: darken($selected_bg_color, 2%));}
+  }
+
+  &.shift-key-uppercase { color: $selected_bg_color }
+
+  StIcon { icon-size: 1.125em; }
+}
+
+// long press on a key popup
+.keyboard-subkeys {
+  color: $osd_fg_color;
+  -arrow-border-radius: $modal_radius;
+  -arrow-background-color: $osd_bg_color;
+  -arrow-border-width: 1px;
+  -arrow-border-color: lighten($osd_bg_color, 9%);
   -arrow-base: 20px;
   -arrow-rise: 10px;
-  -boxpointer-gap: 5px;
+  -boxpointer-gap: $base_spacing;
+
+  .keyboard-key {
+    @include button(normal, $c:$key_bg_color);
+
+    &:focus { @include button(focus);}
+    &:hover, &:checked { @include button(hover, $c: $key_bg_color);}
+    &:active { @include button(active, $c: $key_bg_color); }
+
+    border-radius:$base_border_radius;
+  }
 }
 
 // emoji
@@ -92,14 +102,14 @@
 
 .emoji-panel {
   .keyboard-key:latched {
-    border-color: lighten($color-bg-selected, 5%);
-    background-color: $color-bg-selected;
+    border-color: lighten($selected_bg_color, 5%);
+    background-color: $selected_bg_color;
   }
 }
 
 // suggestions
 .word-suggestions {
-  @include fontsize($font-size-base + 3);
+  @include fontsize($base_font_size + 3);
   spacing: 12px;
   min-height: 20pt;
 }

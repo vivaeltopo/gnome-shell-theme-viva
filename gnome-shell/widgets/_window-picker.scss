@@ -1,51 +1,27 @@
 /* Window Picker */
 
+$window_picker_spacing: $base_spacing; // 6px
+$window_picker_padding: $base_padding * 2; // 12px
+
 // Window picker
 .window-picker {
   // Space between window thumbnails
-  -horizontal-spacing: $spacing-huge;
-  -vertical-spacing: $spacing-huge;
-  // Padding for container around window thumbnails
-  padding: $spacing-huge;
-
-  &.external-monitor { padding: $spacing-huge; }
-}
-
-// Borders on window thumbnails
-.window-clone-border {
-  font-size: $font-size-normal;
-  font-weight: normal;
-
-  color: $color-fg;
-  border: 0;
-  border-radius: 0;
-  box-shadow: $viva-box-shadow;
-  text-shadow: $viva-text-shadow;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
+  spacing: $window_picker_spacing;
 }
 
 // Window titles
 .window-caption {
-  font-size: $font-size-normal;
+  color: $osd_fg_color;
   font-weight: normal;
-
-  padding: $spacing-small $spacing-normal;
+  background-color: $osd_bg_color;
+  padding: $base_padding $base_padding * 2;
 
   transition-duration: $transition-fast;
 
-  color: $color-fg;
   border: 0;
-  border-radius: $viva-border-radius;
+  border-radius: $base_border_radius;
   box-shadow: $viva-box-shadow;
   text-shadow: $viva-text-shadow;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-  -shell-caption-spacing: $spacing-small;
 }
 
 // Close button
@@ -53,8 +29,8 @@
   width: 32px;
   height: 32px;
 
-  color: $color-fg;
-  border-radius: $viva-border-radius;
+  color: $fg_color;
+  border-radius: $base_border_radius;
   background-color: $viva-color1;
   background-image: url('images/close.png');
   background-size: 16px;
@@ -63,6 +39,8 @@
 
   -shell-close-overlap: 16px;
 
+  & StIcon { icon-size: 24px; }
+
   &:hover {
     background-color: $viva-color2;
   }
@@ -70,4 +48,11 @@
   &:active {
     background-color: $viva-gradient-3;
   }
+}
+
+.workspace-background {
+  // keep in sync with BACKGROUND_CORNER_RADIUS_PIXELS in workspace.js
+  border-radius: 30px;
+  background-color: $osd_bg_color;
+  box-shadow: 0 4px 16px 4px transparentize(darken($osd_bg_color, 30%), 0.7);
 }

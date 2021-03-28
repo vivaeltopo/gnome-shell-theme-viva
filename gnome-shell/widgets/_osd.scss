@@ -6,8 +6,8 @@ $osd_levelbar_height:8px;
   @extend %osd_panel;
   text-align: center;
   font-weight: bold;
-  spacing: $spacing-small * 2; // 12px
-  margin: $spacing-tiny * 8; // 32px
+  spacing: $base_spacing * 2; // 12px
+  margin: $base_margin * 8; // 32px
   min-width: 64px;
   min-height: 64px;
 
@@ -16,12 +16,12 @@ $osd_levelbar_height:8px;
   }
 
   .osd-monitor-label { font-size: 3em; }
-  
+
   .level {
     height: $osd_levelbar_height;
     -barlevel-height: $osd_levelbar_height;
-    -barlevel-background-color: transparentize($color-fg, if($variant=='light', 0.7, 0.9));
-    -barlevel-active-background-color: $color-fg;
+    -barlevel-background-color: transparentize($osd_fg_color, if($variant=='light', 0.7, 0.9));
+    -barlevel-active-background-color: $fg_color;
     -barlevel-overdrive-color: $viva-color-destructive;
     -barlevel-overdrive-separator-width: 3px;
   }

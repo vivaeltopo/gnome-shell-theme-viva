@@ -2,39 +2,27 @@
 
 // thumbnails in overview
 .workspace-thumbnails {
-  padding: $spacing-normal;
+  visible-width: 32px; //amount visible before hover
+  spacing: 5 * $base_spacing;
+  padding: $base_padding;
 
-  border: 1px solid $viva-border-color;
-  border-right: 0;
-  border-radius: $viva-border-radius 0 0 $viva-border-radius;
-  background: $color-bg;
-  box-shadow: $viva-box-shadow-dark;
-
-  spacing: $spacing-normal;
-  visible-width: $spacing-large; /* Amount visible before hovering */
-
-  &:rtl {
-    border-right: 1px;
-    border-left: 0;
-    border-radius: 0 $viva-border-radius $viva-border-radius 0;
+  .workspace-thumbnail {
+    @extend %overview_panel;
+    border-radius: $base_border_radius;
   }
 
   // drag and drop indicator
   .placeholder {
     background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
     background-size: contain;
-    height: 24px;
+    width: 18px;
   }
 }
 
 // selected indicator
 .workspace-thumbnail-indicator {
-  padding: $spacing-tiny;
-
-  border: 1px solid $viva-border-color;
-  border-radius: $viva-border-radius;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
+  border: 1px solid $viva-color;
+  border-radius: $base_border_radius;
+  padding: 5px;
+  // background-color: transparentize($selected_bg_color, 0.9);
 }

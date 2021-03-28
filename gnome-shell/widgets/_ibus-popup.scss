@@ -11,13 +11,13 @@
 
 .candidate-index {
   padding: 0 0.5em 0 0;
-  color: darken($color-fg,10%);
+  color: darken($fg_color,10%);
 }
 
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
-  border-radius: $viva-border-radius;
-  &:selected,&:hover { background-color: $color-bg-selected; color: $color-fg-selected; }
+  border-radius: $base_border_radius;
+  &:selected,&:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
 }
 
 .candidate-page-button-box {
@@ -30,6 +30,6 @@
   padding: 4px;
 }
 
-.candidate-page-button-previous { border-radius: $viva-border-radius 0px 0px $viva-border-radius; border-right-width: 0; }
-.candidate-page-button-next { border-radius: 0px $viva-border-radius $viva-border-radius 0px;  }
+.candidate-page-button-previous { border-radius: $base_border_radius 0px 0px $base_border_radius; border-right-width: 0; }
+.candidate-page-button-next { border-radius: 0px $base_border_radius $base_border_radius 0px;  }
 .candidate-page-button-icon { icon-size: 1em; }

@@ -1,18 +1,27 @@
 /* Slider */
 
-.slider {
-  min-width: 5 * $spacing-normal;
-  height: $spacing-normal;
+$slider_size: 15px;
 
-  color: $color-fg;
-  -barlevel-height: $spacing-tiny;
-  -barlevel-background-color: $color-fg-insensitive; //background of the trough
-  -barlevel-border-color: $color-bg-insensitive; //trough border color
-  -barlevel-active-background-color: $viva-color2; //active trough fill
-  -barlevel-active-border-color: $color-bg-insensitive; //active trough border
-  -barlevel-overdrive-color: $color-bg-insensitive;
-  -barlevel-overdrive-border-color: $viva-color2;
-  -barlevel-overdrive-separator-width: $spacing-small;
+.slider {
+  height: $slider_size;
+  // slider trough
+  -barlevel-height: 3px; // has to be an odd number
+  -barlevel-background-color: $insensitive_fg_color; //background of the trough
   -barlevel-border-width: 1px;
-  -slider-handle-radius: 6px;
+  -barlevel-border-color: $insensitive_fg_color; // trough border color
+  // fill style
+  -barlevel-active-background-color: $selected_bg_color; //active trough fill
+  -barlevel-active-border-color: $viva-color2; //active trough border
+  // overfill style (red in this case)
+  -barlevel-overdrive-color: $insensitive_bg_color;
+  -barlevel-overdrive-border-color: $viva-color2; //trough border when red;
+  -barlevel-overdrive-separator-width: 2px;
+  // slider handler
+  -slider-handle-radius: $slider_size * 0.5; // half the size of the size
+  -slider-handle-border-width: 1px;
+  -slider-handle-border-color: if($variant == 'light', $borders_color, $fg_color);
+
+  color: if($variant == 'light', lighten($bg_color, 10%), $fg_color);
+  &:hover { color: $hover_bg_color; }
+  &:active { color: $active_bg_color; }
 }

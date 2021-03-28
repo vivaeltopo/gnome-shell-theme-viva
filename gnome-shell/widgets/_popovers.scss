@@ -1,53 +1,66 @@
 /* Popovers/Menus */
 
-$popover_arrow_height: 12px;
+$popover_arrow_height: 8px;
 
 //.the popover itself
 .popup-menu-boxpointer {
-  -arrow-border-radius: $viva-border-radius;
-  -arrow-background-color: $color-bg;
+  -arrow-border-radius: $base_border_radius;
+  -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
   -arrow-border-color: $viva-border-color;
-  -arrow-base: $spacing-large;
-  -arrow-rise: $spacing-normal;
+  -arrow-base: $popover_arrow_height * 2;
+  -arrow-rise: $popover_arrow_height;
   -arrow-box-shadow: 0 1px 3px rgba(0,0,0,0.5); // dreaming bugzilla #689995
 }
 
 // container of the popover menu
 .popup-menu {
   min-width: 15em;
-  color: $color-fg;
+  color: $fg_color;
 
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
-    -boxpointer-gap: $spacing-tiny; // distance from the panel
+    -boxpointer-gap: $base_margin; // distance from the panel
     margin-bottom: 1.75em;
   }
 }
 
 .popup-menu-content {
-  padding: $spacing-small $spacing-none;
+  padding: $base_padding * 2 0;
 }
 
 // menu items
 .popup-menu-item {
-  spacing: $spacing-small;
-  padding: $spacing-small $spacing-normal $spacing-small $spacing-small;
-  margin: $spacing-none;
+  spacing: $base_padding;
+  padding: $base_padding;
 
   font-weight: normal;
   box-shadow: $viva-box-shadow;
   text-shadow: $viva-text-shadow;
 
-  &:rtl
-  {
-    padding: $spacing-small $spacing-normal $spacing-small $spacing-large;
+  &:ltr { padding-right:1.75em; padding-left: 0; }
+  &:rtl { padding-right: 0; padding-left:1.75em; }
+
+  &:checked {
+    background-color: lighten($bg_color, 2%);
+    box-shadow: none;
   }
+
+  &.selected {
+    background-color: transparentize(white, if($variant=='light', 0.2, 0.9));
+    color: $fg_color;
+  }
+
+  &:active {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+  }
+
 
   &:focus,
   &:hover
   {
-    color: $color-fg-selected;
+    color: $selected_fg_color;
 
     background-gradient-direction: vertical;
     background-gradient-start: $viva-gradient-2;
@@ -57,7 +70,7 @@ $popover_arrow_height: 12px;
   &:checked,
   &:active
   {
-    color: $color-fg-selected;
+    color: $selected_fg_color;
 
     background-gradient-direction: vertical;
     background-gradient-start: $viva-color1;
@@ -66,18 +79,15 @@ $popover_arrow_height: 12px;
 
   &:insensitive
   {
-    color: $color-fg-insensitive;
+    color: transparentize($fg_color,0.5);
   }
 }
 
 // all icons and other graphical elements
 .popup-inactive-menu-item {
-  color: $color-fg;
+  color: $fg_color;
 
-  &:insensitive
-  {
-    color: $color-fg-insensitive;
-  }
+  &:insensitive { color: transparentize($fg_color,0.5); }
 }
 
 // symbolic icons in popover
@@ -86,25 +96,18 @@ $popover_arrow_height: 12px;
 
 // popover submenus
 .popup-sub-menu {
-  border-top: 1px solid $viva-border-color-selected;
-  border-bottom: 1px solid $viva-border-color;
-
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-2;
-  background-gradient-end: $viva-gradient-1;
-
-  .popup-menu-item
-  {
-    margin: $spacing-none $spacing-none;
-  }
+  background-color: darken($bg_color, 3%);
+  box-shadow: none;
+  border-top: 1px solid transparentize($borders_color, 0.2);
+  border-bottom: 1px solid transparentize($borders_color, 0.2);
 }
 
 // container for radio and check boxes
 .popup-menu-ornament {
-  width: $spacing-none;
-  margin-left: $spacing-none;
+  width: 1.2em;
 
-  text-align: right;
+  &:ltr { text-align: right };
+  &:rtl { text-align: left };
 }
 
 // separator
@@ -112,7 +115,7 @@ $popover_arrow_height: 12px;
     height: 1px;
     margin: 1px 0;
 
-    background: $color-bg;
+    background: $bg_color;
     box-shadow: none;
 
   .popup-separator-menu-item-separator {
@@ -121,9 +124,10 @@ $popover_arrow_height: 12px;
 
     background: $viva-border-color-selected;
     box-shadow: none;
+
     .popup-sub-menu & { //submenu separators
       height: 1px;
-      margin: 0 $spacing-large 0 0;
+      margin: 0 $base_spacing * 5 0 0;
       padding: 0;
 
       background: $viva-border-color-selected;
@@ -134,29 +138,29 @@ $popover_arrow_height: 12px;
 
 // desktop background menu
 .background-menu {
-  -boxpointer-gap: $spacing-tiny;
+  -boxpointer-gap: $base_margin;
   -arrow-rise: 0px; // hide the beak on the menu
 }
 
 // system status menu
 .aggregate-menu {
-  width: 22em;
+  min-width: 21em;
 
   // lock screen, shutdown, etc. buttons
   .popup-menu-icon {
     padding:0;
-    margin: 0 $spacing-tiny;
+    margin: 0 $base_margin;
     -st-icon-style: symbolic;
   }
 
   .popup-sub-menu .popup-menu-item > :first-child {
     // account for icons in submenus with padding
     &:ltr {
-      padding-left: $spacing-small + $spacing-tiny * 2;
+      padding-left: $base_padding + $base_margin * 2;
       margin-left: $base_icon_size;
     }
     &:rtl {
-      padding-right: $spacing-small + $spacing-tiny * 2; ;
+      padding-right: $base_padding + $base_margin * 2; ;
       margin-right: $base_icon_size;
     }
   }

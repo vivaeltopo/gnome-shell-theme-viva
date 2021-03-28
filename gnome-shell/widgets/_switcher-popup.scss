@@ -1,11 +1,11 @@
 /* App Switcher */
 
 .switcher-popup {
-  padding: $spacing-small;
+  padding: $base_padding;
 
-  spacing: $spacing-small;
+  spacing: $base_spacing;
 
-  background: $color-bg-insensitive;
+  background: transparentize($insensitive_bg_color, 0.75);
   transition-duration: $transition-slow;
 }
 
@@ -14,20 +14,19 @@
   @extend %osd_panel;
 
   .item-box {
-    font-size: $font-size-normal;
     font-weight: normal;
 
-    padding: $spacing-small;
+    padding: $base_padding;
 
     transition-duration: $transition-fast;
 
     border: 1px solid transparent;
-    border-radius: $viva-border-radius;
+    border-radius: $base_border_radius;
 
     &:selected,
     &:outlined
     {
-      color: $color-fg-selected;
+      color: $selected_fg_color;
       border: 1px solid transparent;
       box-shadow: $viva-box-shadow;
       text-shadow: $viva-text-shadow;
@@ -40,14 +39,14 @@
 
   // window thumbnails
   .thumbnail-box {
-    padding: $spacing-none;
-    spacing: $spacing-none;
+    padding: 0;
+    spacing: 0;
   }
 
   .thumbnail {
     width: 256px;
-    padding: $spacing-none;
-    spacing: $spacing-small;
+    padding: 0;
+    spacing: $base_spacing;
   }
 
   .separator {
@@ -56,7 +55,7 @@
   }
 
   .switcher-list-item-container {
-    spacing: $spacing-small;
+    spacing: $base_spacing * 2;
   }
 }
 
@@ -74,5 +73,5 @@
 
 // Window cycler highlight
 .cycler-highlight {
-  border: 5px solid $color-bg-selected;
+  border: 5px solid $selected_bg_color;
 }

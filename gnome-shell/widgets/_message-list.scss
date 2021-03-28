@@ -4,8 +4,8 @@
 // main list
 .message-list {
   width: 35em;
-  max-height: 6 * ( 5em + $spacing-normal);
-  padding: 0 $spacing-small * 2;
+  max-height: 6 * 5em;
+  padding: 0 $base_padding * 2;
 
   padding-top: 1em;
 
@@ -13,22 +13,22 @@
 }
 
 .message-list-sections {
-  spacing: $spacing-small;
-  margin: 0 $spacing-tiny * 4; // to account for scrollbar
+  spacing: $base_spacing;
+  margin: 0 $base_margin * 4; // to account for scrollbar
 }
 
 .message-list-section,
 .message-list-section-list {
-  spacing: $spacing-small;
+  spacing: $base_spacing;
 }
 
 // do-not-disturb + clear button
 .message-list-controls {
-  margin: ($spacing-tiny * 2) ($spacing-tiny * 4) 0;
+  margin: ($base_margin * 2) ($base_margin * 4) 0;
   // NOTE: remove the padding if notification_bubble could remove margin for drop shadow
-  padding: $spacing-tiny;
-  spacing: $spacing-small * 2;
-  padding-top: $spacing-normal;
+  padding: $base_margin;
+  spacing: $base_spacing * 2;
+  padding-top: $base_padding;
   border-top: 1px solid $viva-border-color;
 }
 
@@ -41,17 +41,17 @@
   {
     transition-duration: $transition-fast;
 
-    color: $color-fg-selected;
-    background-color: $color-bg-selected;
+    color: $selected_fg_color;
+    // background-color: $selected_bg_color;
     border: 1px solid $viva-border-color-selected;
   }
 
   // icon container
   .message-icon-bin {
-    padding: ($spacing-small * 3) 0 ($spacing-small * 3) ($spacing-small * 2);
+    padding: ($base_padding * 3) 0 ($base_padding * 3) ($base_padding * 2);
 
     &:rtl {
-      padding: ($spacing-small * 3) ($spacing-small * 2) ($spacing-small * 3) 0;
+      padding: ($base_padding * 3) ($base_padding * 2) ($base_padding * 3) 0;
     }
 
     // icon size and color
@@ -69,7 +69,7 @@
 
   // content
   .message-content {
-    padding: $spacing-small + $spacing-tiny * 2;
+    padding: $base_padding + $base_margin * 2;
     spacing: 4px;
   }
 
@@ -80,29 +80,36 @@
 
   // secondary container in title box
   .message-secondary-bin {
-    padding: 0 $spacing-tiny * 2;
+    padding: 0 $base_margin * 2;
 
     // notification time stamp
     > .event-time {
-      color: transparentize($color-fg, 0.5);
-      @include fontsize($font-size-base - 2);
-      text-align: right;
+      color: transparentize($fg_color, 0.5);
+      @include fontsize($base_font_size - 2);
       /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */
       padding-bottom: 0.13em;
+
+      &:ltr { text-align: right };
+      &:rtl { text-align: left };
     }
   }
 
   // close button
   .message-close-button {
-    color: lighten($color-fg, 15%);
-    &:hover { color: if($variant=='light', lighten($color-fg, 30%), darken($color-fg, 10%)); }
-    &:active { color: if($variant=='light', lighten($color-fg, 40%), darken($color-fg, 20%)); }
+    color: lighten($fg_color, 15%);
+    &:hover { color: if($variant=='light', lighten($fg_color, 30%), darken($fg_color, 10%)); }
+    &:active { color: if($variant=='light', lighten($fg_color, 40%), darken($fg_color, 20%)); }
   }
 
   // body
   .message-body {
-    color: darken($color-fg, 10%);
+    color: darken($fg_color, 10%);
   }
+}
+
+// URLs in messages
+.url-highlighter {
+  link-color: $link_color;
 }
 
 
@@ -110,12 +117,12 @@
 .message-list .message
 {
   margin-top: 0;
-  margin-right: $spacing-normal + $spacing-small;
+  margin-right: $base_padding * 3;
   padding: 0;
 
   transition-duration: $transition-fast;
 
-  color: $color-fg;
+  color: $fg_color;
 
   border: 0;
   background: $viva-border-color;
@@ -129,7 +136,7 @@
   {
     transition-duration: $transition-fast;
 
-    color: $color-fg-selected;
+    color: $selected_fg_color;
     border-color: transparent;
 
     background-gradient-direction: vertical;
@@ -142,7 +149,7 @@
   {
     transition-duration: $transition-fast;
 
-    color: $color-fg-selected;
+    color: $selected_fg_color;
     border-color: transparent;
 
     background-gradient-direction: vertical;
@@ -151,49 +158,44 @@
   }
 }
 
-// URLs in messages
-.url-highlighter {
-  link-color: $color-bg-selected;
-}
-
 /* Media Controls */
 .message-media-control {
-  padding: $spacing-small * 2 $spacing-small * 4;
-  color: darken($color-fg, 15%);
+  padding: $base_spacing * 2 $base_spacing * 4;
+  color: darken($fg_color, 15%);
 
-  // uses $color-bg since the media controls are in a notification_bubble
+  // uses $hover_bg_color since the media controls are in a notification_bubble
   &:hover {
-    color: $color-fg;
+    color: $fg_color;
     background-gradient-direction: vertical;
     background-gradient-start: $viva-gradient-2;
     background-gradient-end: $viva-gradient-1;
   }
 
   &:active {
-    color: $color-fg;
+    color: $fg_color;
     background-gradient-direction: vertical;
     background-gradient-start: $viva-color1;
     background-gradient-end: $viva-color2;
   }
 
-  &:insensitive { color: darken($color-fg,40%); }
+  &:insensitive { color: darken($fg_color,40%); }
 
   // fix border-radius for last button
-  &:last-child:ltr { border-radius: 0 $viva-border-radius $viva-border-radius 0; }
-  &:last-child:rtl { border-radius: $viva-border-radius 0 0 $viva-border-radius; }
+  &:last-child:ltr { border-radius: 0 $base_border_radius $base_border_radius 0; }
+  &:last-child:rtl { border-radius: $base_border_radius 0 0 $base_border_radius; }
 }
 
 // album-art
 .media-message-cover-icon {
   icon-size: $base_icon_size*2 !important; // 48px
-  border-radius: $viva-border-radius;
+  border-radius: $base_border_radius;
 
   // when there is no artwork
   &.fallback {
-    color: darken($color-fg, 17%);
-    background-color: $color-bg;
+    color: darken($fg_color, 17%);
+    background-color: $bg_color;
     border: 1px solid transparent;
-    border-radius: $viva-border-radius;
+    border-radius: $base_border_radius;
     icon-size: $base_icon_size * 2 !important;
   }
 }

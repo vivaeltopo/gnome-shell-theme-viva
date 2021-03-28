@@ -2,7 +2,7 @@
 
 // generic drawing of more complex things
 
-@function draw_widget_edge($c:$viva-border-color) {
+@function draw_widget_edge($c:$borders_edge) {
 // outer highlight "used" on most widgets
   @return 0 1px $c;
 }
@@ -25,7 +25,7 @@
 
 // entries
 
-@mixin entry($t, $fc:$color-bg-selected, $edge: $viva-border-color) {
+@mixin entry($t, $fc:$selected_bg_color, $edge: $borders_edge) {
 //
 // Entries drawing function
 //
@@ -38,27 +38,34 @@
 //
 
   @if $t==normal {
-    background-color: $color-bg;
-    border-color: $viva-border-color;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva-gradient-1;
+    background-gradient-end: $viva-gradient-2;
+    border-color: $borders_color;
 
   }
   @if $t==focus {
-    border-color: if($fc==$color-bg-selected,
-              $viva-border-color-selected,
-              darken($fc,35%));
-    box-shadow: inset 0 0 0 1px $fc;
+    border-color: $borders_color;
+    box-shadow: $viva-box-shadow;
   }
   @if $t==hover { }
   @if $t==insensitive {
-    color: $color-fg-insensitive;
-    border-color: $color-bg-insensitive;
+    color: $insensitive_fg_color;
+    border-color: $insensitive_bg_color;
     box-shadow: none;
   }
 }
 
 // buttons
 
-@function draw-text-color-shadow ($tc:$color-fg, $bg:$color-bg) {
+@function draw_border_color ($c) {
+  //
+  // colored buttons want the border form the base color
+  //
+  @return if($variant == 'light', darken($c, 18%), darken($c, 4%));
+}
+
+@function draw_text_shadow_color ($tc:$fg_color, $bg:$bg_color) {
 //
 // calculate the color of text shadows
 //
@@ -72,7 +79,7 @@
 
 @function draw_button_hilight_color($c) {
 //
-// calculate the right top hilight color for buttons
+// calculate the right top highlight color for buttons
 //
 // $c: base color;
 //
@@ -83,7 +90,7 @@
   @else { @return rgba(255,255,255, 0.1); }
 }
 
-@mixin draw_button_text_shadow ($tc:$color-fg, $bg:$color-bg) {
+@mixin draw_button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
 //
 // helper function for the text emboss effect
 //
@@ -92,7 +99,7 @@
 // TODO: this functions needs a way to deal with special cases
 //
 
-  $shadow: draw-text-color-shadow($tc, $bg);
+  $shadow: draw_text_shadow_color($tc, $bg);
 
   @if lightness($tc)<50% {
     text-shadow: 0 1px $shadow;
@@ -104,7 +111,7 @@
   }
 }
 
-@mixin button($t, $c:$color-bg, $tc:$color-fg, $edge: $viva-border-color, $shadow: $viva-color-shadow) {
+@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $viva-border-color, $shadow: $viva-color-shadow) {
 //
 // Button drawing function
 //
@@ -131,11 +138,11 @@
     box-shadow: none;
     icon-shadow: $viva-box-shadow;
 
-    font-size: $font-size-small;
+    // font-size: $font-size-small;
     font-weight: normal;
 
-    padding: $spacing-small $spacing-large;
-    border-radius: $viva-border-radius;
+    padding: $base_padding 2*$base_padding;
+    border-radius: $base_border_radius;
     background-gradient-direction: vertical;
     background-gradient-start: $c;
     background-gradient-end: $c;
@@ -148,7 +155,7 @@
     icon-shadow: $viva-box-shadow;
     transition-duration: $transition-fast;
 
-    color: $color-fg-selected;
+    color: $selected_fg_color;
     border-color: transparent;
 
     background-gradient-direction: vertical;
@@ -158,8 +165,8 @@
 
   // hover button
   @else if $t==hover {
-    color: $color-fg-selected;
-    background: $color-bg;
+    color: $selected_fg_color;
+    background: $bg_color;
     text-shadow: none;
     box-shadow: $viva-box-shadow;
     icon-shadow: $viva-box-shadow;
@@ -172,7 +179,7 @@
   @else if $t==active {
     font-weight: normal;
 
-    color: $color-fg-selected;
+    color: $selected_fg_color;
     box-shadow: $viva-box-shadow;
     text-shadow: $viva-box-shadow;
 
@@ -188,7 +195,7 @@
     icon-shadow: $viva-box-shadow;
     transition-duration: $transition-fast;
 
-    color: $color-fg-insensitive;
+    color: $insensitive_fg_color;
     border-color: transparent;
 
     background-gradient-direction: vertical;
@@ -205,11 +212,11 @@
     box-shadow: $viva-box-shadow;
     icon-shadow: $viva-box-shadow;
 
-    font-size: $font-size-small;
+    // font-size: $font-size-small;
     font-weight: normal;
 
-    padding: $spacing-small $spacing-large;
-    border-radius: $viva-border-radius;
+    padding: $base_padding 2*$base_padding;
+    border-radius: $base_border_radius;
   }
 }
 
@@ -217,17 +224,17 @@
 @mixin overview-icon($color) {
   .overview-icon {
     @extend %icon_tile;
-    font-size: $font-size-normal;
+    // font-size: $font-size-normal;
     font-weight: normal;
 
-    padding: $spacing-small;
+    padding: 4*$base_spacing;
 
     transition-duration: $transition-fast;
     text-align: center;
 
-    color: $color-fg;
+    color: $fg_color;
     border: 0;
-    border-radius: $spacing-none;
+    border-radius: 0;
     box-shadow: $viva-box-shadow;
     text-shadow: $viva-text-shadow;
   }
@@ -239,7 +246,7 @@
       background-color: transparentize($color, .9);
       transition-duration: $transition-slow;
 
-      color: $color-fg-selected;
+      color: $selected_fg_color;
       box-shadow: $viva-box-shadow;
       text-shadow: $viva-text-shadow;
 
@@ -251,10 +258,10 @@
 
   &:drop {
     .overview-icon {
-      background-color: transparentize($color-bg-selected, .15);
+      background-color: transparentize($selected_bg_color, .15);
       transition-duration: $transition-slow;
 
-      color: $color-fg-selected;
+      color: $selected_fg_color;
       box-shadow: $viva-box-shadow;
       text-shadow: $viva-text-shadow;
 
@@ -267,10 +274,10 @@
   &:active,
   &:checked {
     .overview-icon {
-      background-color: transparentize(darken($color-bg, 10%), .5);
+      background-color: transparentize(darken($bg_color, 10%), .5);
       transition-duration: $transition-slow;
 
-      color: $color-fg-selected;
+      color: $selected_fg_color;
       box-shadow: $viva-box-shadow;
       text-shadow: $viva-text-shadow;
 

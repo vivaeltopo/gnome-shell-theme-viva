@@ -25,7 +25,33 @@ $cakeisalie: "This stylesheet is generated, DO NOT EDIT";
 
 /* Global Values */
 
-$variant: 'orange';
+// padding, margin and spacing
+$base_padding: 4px;
+$base_margin: 2px;
+$base_spacing: 4px;
+
+// border radii
+$base_border_radius: 2px;
+
+$modal_radius: $base_border_radius;
+
+// non-standard colors
+$bubble_borders_color: lighten($borders_color, if($variant=='light', 0%, 5%));
+// $bubble_borders_color: if($variant == 'light', rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+
+// hover
+$hover_bg_color: if($variant=='light', darken($bg_color, 3%), lighten($bg_color, 5%));
+$hover_fg_color: if($variant=='light', darken($fg_color, 5%), lighten($fg_color, 5%));
+$hover_borders_color: lighten($borders_color,if($variant=='light', 5%, 3%));
+
+// active
+$active_bg_color: if($variant == 'light', darken($bg_color, 7%), darken($bg_color, 9%));
+$active_fg_color: darken($fg_color,if($variant=='light', 5%, 3%));
+$active_borders_color: darken($borders_color,if($variant=='light', 5%, 3%));
+
+// fonts
+$base_font_size: 12;
+$text_shadow_color: if($variant == 'light', rgba(255,255,255,0.3), rgba(0,0,0,0.2));
 
 // icons
 $base_icon_size: 1.09em;
@@ -33,42 +59,44 @@ $base_icon_size: 1.09em;
 
 // Stage
 stage {
-  @include fontsize($font-size-base);
-  font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif;
-  color: $color-fg;
+  @include fontsize($base_font_size);
+  color: $fg_color;
 }
 
 /* Common Stylings */
+
+* {
+  font-family: $viva-font-family;
+}
 
 // Text
 %status_text {
   font-size: 2em;
   font-weight: bold;
-  color: $color-fg;
+  color: $osd_fg_color;
 }
 
 // osd panels
 %osd_panel {
-  color: $color-fg;
-  padding: $spacing-normal;
-
+  color: $osd_fg_color;
+  background-color: $osd_bg_color;
   border: 1px solid $viva-border-color;
-  border-radius: $viva-border-radius;
-  background: $color-bg;
+  border-radius: $base_border_radius;
+  padding: $base_padding * 2;
 }
 
 // Overview panels
 // for the dash and workspace switcher
 %overview_panel {
-  color: $color-fg;
-  background-color: transparentize($color-bg, 0.2);
-  border: 1px solid $viva-border-color;
+  color: $osd_fg_color;
+  background-color: transparentize($osd_fg_color, 0.9);
+  border: 1px solid $base_border_radius;
 }
 
 // icon tiles
 %icon_tile {
-  border-radius: $viva-border-radius;
-  padding: $spacing-small;
+  border-radius: $base_border_radius;
+  padding: $base_padding;
   border: 2px solid transparent;
   transition-duration: 100ms;
   text-align: center;
@@ -76,18 +104,18 @@ stage {
 
 // dialogs
 %bubble_panel {
-  color: $color-fg;
-  background-color: $color-bg;
-  border: 1px solid if($variant=='light', rgba(0,0,0, 0.6), $viva-border-color);
+  color: $fg_color;
+  background-color: $bg_color;
+  border: 1px solid if($variant=='light', rgba(0,0,0, 0.6), $borders_color);
 }
 
 // button styling
 %button {
-  border-radius: $viva-border-radius;
+  border-radius: $base_border_radius;
   border-style: solid;
   border-width: 1px;
   min-height: 22px;
-  padding: $spacing-small * 0.5 $spacing-small * 4;
+  padding: $base_padding * 0.5 $base_padding * 4;
 
   @include button(normal);
   &:focus { @include button(focus);}
@@ -99,7 +127,7 @@ stage {
 // buttons in dialogs
 %bubble_button {
   @include button(normal, $shadow: none);
-  padding: $spacing-small * 2;
+  padding: $base_padding * 2;
   border-style: solid;
   border-width: 1px;
   border-left-width: 0;
@@ -112,16 +140,16 @@ stage {
 
   // radius is 2 pixel less to fit in bubble
   &:first-child {
-    border-radius: 0 0 0 $viva-border-radius;
+    border-radius: 0 0 0 $base_border_radius;
   }
 
   &:last-child {
     border-right-width: 0;
-    border-radius: 0 0 $viva-border-radius 0;
+    border-radius: 0 0 $base_border_radius 0;
   }
 
   &:first-child:last-child {
-    border-radius: 0 0 $viva-border-radius $viva-border-radius;
+    border-radius: 0 0 $base_border_radius $base_border_radius;
   }
 }
 
@@ -130,8 +158,8 @@ stage {
 @mixin notification_bubble($flat: false) {
   border-width: 1px;
   border-style: solid;
-  border-radius: $viva-border-radius;
-  margin: $spacing-tiny;
+  border-radius: $base_border_radius;
+  margin: $base_margin;
 
   @if $flat {
     @include button(undecorated);

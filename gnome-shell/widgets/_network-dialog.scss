@@ -1,94 +1,94 @@
 /* Network Dialogs */
 .nm-dialog {
-  font-size: $font-size-normal;
+  // font-size: $font-size-normal;
   font-weight: normal;
 
-  color: $color-fg;
+  color: $fg_color;
 
-  padding: $spacing-none;
-  spacing: $spacing-none;
+  padding: $base_spacing * 0;
+  spacing: $base_spacing * 0;
 }
 
 .nm-dialog-content {
-  font-size: $font-size-small;
+  // font-size: $font-size-small;
 
-  padding: $spacing-normal;
-  spacing: $spacing-tiny;
+  padding: $base_spacing * 3;
+  spacing: $base_spacing;
 }
 
 .nm-dialog-airplane-box {
-  padding-bottom: $spacing-small;
+  padding-bottom: $base_spacing * 2;
 
-  spacing: $spacing-tiny;
+  spacing: $base_spacing;
 }
 
 .nm-dialog-airplane-headline {
   font-family: $viva-font-family;
-  font-size: $font-size-huge;
+  font-size: 18pt;
   font-weight: normal;
 
   max-width: 500em;
 
-  color: $color-fg;
+  color: $fg_color;
   padding: 0;
-  padding-bottom: $spacing-tiny;
+  padding-bottom: $base_spacing;
 }
 
 .nm-dialog-airplane-text {
-  font-size: $font-size-normal;
+  // font-size: $font-size-normal;
 
-  color: $color-fg;
+  color: $fg_color;
 }
 
 // header
 .nm-dialog-header {
   font-family: $viva-font-family;
-  font-size: $font-size-huge;
+  font-size: 18pt;
   font-weight: normal;
 
   max-width: 500em;
 
-  color: $color-fg;
+  color: $fg_color;
   padding: 0;
-  padding-bottom: $spacing-tiny;
+  padding-bottom: $base_spacing;
 }
 .nm-dialog-header-icon {
-  icon-size: 5em;
-  padding: $spacing-small
+  icon-size: 3.5em;
+  padding: $base_spacing * 2
 }
 .nm-dialog-header-hbox {
-  padding-bottom: $spacing-small;
+  padding-bottom: $base_spacing * 2;
 
-  spacing: $spacing-tiny;
+  spacing: $base_spacing;
 }
 
 // list of networks
 .nm-dialog-scroll-view {
-  padding: $spacing-tiny $spacing-none;
+  padding: $base_spacing $base_spacing * 0;
 
   border: 0;
-  background-color: $color-bg;
-  padding-bottom: $spacing-large;
-  border-bottom: 1px solid $color-fg;
+  background-color: $bg_color;
+  padding-bottom: $base_spacing * 4;
+  border-bottom: 1px solid $fg_color;
 }
 
 // list item
 .nm-dialog-item {
-  font-size: $font-size-small;
+  // font-size: $font-size-small;
 
-  margin-left: $spacing-tiny;
-  padding: $spacing-small;
-  spacing: $spacing-tiny;
+  margin-left: $base_spacing;
+  padding: $base_spacing * 2;
+  spacing: $base_spacing;
 
-  color: $color-fg;
-  border: $spacing-none;
+  color: $fg_color;
+  border: $base_spacing * 0;
 
   &:hover,
   &:focus,
   &:active,
   &:selected
   {
-    color: $color-fg;
+    color: $fg_color;
     box-shadow: $viva-box-shadow;
     text-shadow: $viva-text-shadow;
 
@@ -100,17 +100,16 @@
 
 // icons in list
 .nm-dialog-icon {
-  font-size: $font-size-small;
+  // font-size: $font-size-small;
 
-  padding-left: $spacing-small;
+  padding-left: $base_spacing * 2;
 
-  color: $color-fg;
+  color: $fg_color;
 
   icon-size: 1.3em;
 }
-.nm-dialog-icons { spacing: $spacing-small * 2; }
+.nm-dialog-icons { spacing: $base_spacing * 2 * 2; }
 
 // no networks
-.no-networks-label { color: $color-fg-insensitive; }
-.no-networks-box { spacing: $spacing-normal; }
-
+.no-networks-label { color: $insensitive_fg_color; }
+.no-networks-box { spacing: $base_spacing * 3; }

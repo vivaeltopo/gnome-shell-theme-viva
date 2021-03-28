@@ -2,12 +2,14 @@
 
 StScrollBar
 {
-  padding: $spacing-tiny;
+  margin-right: 10px;
+  width: 10px;
+  padding: $base_padding;
 
   StScrollView &
   {
-    min-width: $spacing-normal;
-    min-height: $spacing-normal;
+    min-width: $base_spacing;
+    min-height: $base_spacing;
     padding: 0;
   }
 
@@ -21,7 +23,7 @@ StScrollBar
     color: color-fg;
 
     border: 1px solid transparent;
-    border-radius: $viva-border-radius;
+    border-radius: $base_border_radius;
     box-shadow: $viva-box-shadow;
     text-shadow: $viva-text-shadow;
 
@@ -68,10 +70,10 @@ StScrollBar
 
 StScrollView.vfade
 {
-  -st-vfade-offset: 8*$spacing-normal;
+  -st-vfade-offset: 8*$base_spacing;
 }
 
 StScrollView.hfade
 {
-  -st-hfade-offset: 8*$spacing-normal;
+  -st-hfade-offset: 8*$base_spacing;
 }
