@@ -29,7 +29,7 @@
   padding: $base_margin;
   spacing: $base_spacing * 2;
   padding-top: $base_padding;
-  border-top: 1px solid $viva-border-color;
+  border-top: 1px solid $viva_border_color;
 }
 
 // message bubbles
@@ -41,29 +41,31 @@
   {
     transition-duration: $transition-fast;
 
-    color: $selected_fg_color;
-    // background-color: $selected_bg_color;
-    border: 1px solid $viva-border-color-selected;
+    color: $viva_color_fg_selected;
+    // background-color: $viva_color_bg_selected;
+    border: 1px solid $viva_border_color_selected;
   }
 
   // icon container
   .message-icon-bin {
-    padding: ($base_padding * 3) 0 ($base_padding * 3) ($base_padding * 2);
+    padding: 2 * $base_padding;
 
     &:rtl {
-      padding: ($base_padding * 3) ($base_padding * 2) ($base_padding * 3) 0;
+      padding: 2 * $base_padding;
     }
 
     // icon size and color
     > StIcon {
-      icon-size: $base_icon_size*2; // 32px
+      icon-size: $base_icon_size*3;
       -st-icon-style: symbolic;
+      width: $base_icon_size*3;
+      height: $base_icon_size*3;
     }
 
     // fallback
     > .fallback-app-icon {
-      width: $base_icon_size;
-      height: $base_icon_size;
+      width: $base_icon_size*3;
+      height: $base_icon_size*3;
     }
   }
 
@@ -125,23 +127,23 @@
   color: $fg_color;
 
   border: 0;
-  background: $viva-border-color;
+  background: $viva_border_color;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
+  background-gradient-start: $viva_gradient_1;
   background-gradient-end: rgba(255,255,255,.1);
-  border: 1px solid $viva-border-color-insensitive;
+  border: 1px solid $viva_border_color_insensitive;
 
   &:hover,
   &:focus
   {
     transition-duration: $transition-fast;
 
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
     border-color: transparent;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-2;
-    background-gradient-end: $viva-gradient-1;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
   }
 
   &:active,
@@ -149,12 +151,12 @@
   {
     transition-duration: $transition-fast;
 
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
     border-color: transparent;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-color1;
-    background-gradient-end: $viva-color2;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 }
 
@@ -167,15 +169,15 @@
   &:hover {
     color: $fg_color;
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-2;
-    background-gradient-end: $viva-gradient-1;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
   }
 
   &:active {
     color: $fg_color;
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-color1;
-    background-gradient-end: $viva-color2;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 
   &:insensitive { color: darken($fg_color,40%); }

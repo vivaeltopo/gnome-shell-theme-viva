@@ -25,7 +25,7 @@
 
 // entries
 
-@mixin entry($t, $fc:$selected_bg_color, $edge: $borders_edge) {
+@mixin entry($t, $fc:$viva_color_bg_selected, $edge: $borders_edge) {
 //
 // Entries drawing function
 //
@@ -39,19 +39,19 @@
 
   @if $t==normal {
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-1;
-    background-gradient-end: $viva-gradient-2;
+    background-gradient-start: $viva_gradient_1;
+    background-gradient-end: $viva_gradient_2;
     border-color: $borders_color;
 
   }
   @if $t==focus {
     border-color: $borders_color;
-    box-shadow: $viva-box-shadow;
+    box-shadow: $viva_box_shadow;
   }
   @if $t==hover { }
   @if $t==insensitive {
-    color: $insensitive_fg_color;
-    border-color: $insensitive_bg_color;
+    color: $viva_color_fg_insensitive;
+    border-color: $viva_color_bg_insensitive;
     box-shadow: none;
   }
 }
@@ -111,7 +111,7 @@
   }
 }
 
-@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $viva-border-color, $shadow: $viva-color-shadow) {
+@mixin button($t, $c:$bg_color, $tc:$fg_color, $edge: $viva_border_color, $shadow: $viva_color_shadow) {
 //
 // Button drawing function
 //
@@ -136,7 +136,7 @@
     border-color: transparent;
     text-shadow: none;
     box-shadow: none;
-    icon-shadow: $viva-box-shadow;
+    icon-shadow: $viva_box_shadow;
 
     // font-size: $font-size-small;
     font-weight: normal;
@@ -151,51 +151,51 @@
   // focused button
   @if $t==focus {
     text-shadow: none;
-    box-shadow: $viva-box-shadow;
-    icon-shadow: $viva-box-shadow;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
     transition-duration: $transition-fast;
 
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
     border-color: transparent;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-2;
-    background-gradient-end: $viva-gradient-1;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
   }
 
   // hover button
   @else if $t==hover {
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
     background: $bg_color;
     text-shadow: none;
-    box-shadow: $viva-box-shadow;
-    icon-shadow: $viva-box-shadow;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
     border-color: transparent;
-    background-gradient-start: $viva-gradient-2;
-    background-gradient-end: $viva-gradient-1;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
   }
 
   // active button
   @else if $t==active {
     font-weight: normal;
 
-    color: $selected_fg_color;
-    box-shadow: $viva-box-shadow;
-    text-shadow: $viva-box-shadow;
+    color: $viva_color_fg_selected;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_box_shadow;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-color1;
-    background-gradient-end: $viva-color2;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 
   // insensitive button
   @else if $t==insensitive {
     text-shadow: none;
     box-shadow: none;
-    icon-shadow: $viva-box-shadow;
+    icon-shadow: $viva_box_shadow;
     transition-duration: $transition-fast;
 
-    color: $insensitive_fg_color;
+    color: $viva_color_fg_insensitive;
     border-color: transparent;
 
     background-gradient-direction: vertical;
@@ -209,8 +209,8 @@
     background-color: $c;
     border-color: transparent;
     text-shadow: none;
-    box-shadow: $viva-box-shadow;
-    icon-shadow: $viva-box-shadow;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
 
     // font-size: $font-size-small;
     font-weight: normal;
@@ -235,8 +235,8 @@
     color: $fg_color;
     border: 0;
     border-radius: 0;
-    box-shadow: $viva-box-shadow;
-    text-shadow: $viva-text-shadow;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_text_shadow;
   }
 
   &:hover,
@@ -246,28 +246,28 @@
       background-color: transparentize($color, .9);
       transition-duration: $transition-slow;
 
-      color: $selected_fg_color;
-      box-shadow: $viva-box-shadow;
-      text-shadow: $viva-text-shadow;
+      color: $viva_color_fg_selected;
+      box-shadow: $viva_box_shadow;
+      text-shadow: $viva_text_shadow;
 
       background-gradient-direction: vertical;
-      background-gradient-start: $viva-gradient-2;
-      background-gradient-end: $viva-gradient-1;
+      background-gradient-start: $viva_gradient_2;
+      background-gradient-end: $viva_gradient_1;
     }
   }
 
   &:drop {
     .overview-icon {
-      background-color: transparentize($selected_bg_color, .15);
+      background-color: transparentize($viva_color_bg_selected, .15);
       transition-duration: $transition-slow;
 
-      color: $selected_fg_color;
-      box-shadow: $viva-box-shadow;
-      text-shadow: $viva-text-shadow;
+      color: $viva_color_fg_selected;
+      box-shadow: $viva_box_shadow;
+      text-shadow: $viva_text_shadow;
 
       background-gradient-direction: vertical;
-      background-gradient-start: $viva-gradient-2;
-      background-gradient-end: $viva-gradient-1;
+      background-gradient-start: $viva_gradient_2;
+      background-gradient-end: $viva_gradient_1;
     }
   }
 
@@ -277,13 +277,13 @@
       background-color: transparentize(darken($bg_color, 10%), .5);
       transition-duration: $transition-slow;
 
-      color: $selected_fg_color;
-      box-shadow: $viva-box-shadow;
-      text-shadow: $viva-text-shadow;
+      color: $viva_color_fg_selected;
+      box-shadow: $viva_box_shadow;
+      text-shadow: $viva_text_shadow;
 
       background-gradient-direction: vertical;
-      background-gradient-start: $viva-color1;
-      background-gradient-end: $viva-color2;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
     }
   }
 }

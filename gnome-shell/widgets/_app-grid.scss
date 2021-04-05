@@ -93,9 +93,9 @@ $app_grid_fg_color: #fff;
 // Running app indicator (also shown in dash)
 .app-well-app-running-dot {
   height: 5px;
-  width: 5px;
-  border-radius:5px;
-  background-color: $osd_fg_color;
+  width: 50px;
+  border-radius:$base_border_radius;
+  background-color: $fg_color;
   margin-bottom: 1px;
 }
 

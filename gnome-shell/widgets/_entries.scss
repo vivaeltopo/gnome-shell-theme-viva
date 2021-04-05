@@ -13,12 +13,12 @@ StEntry {
 
   &:insensitive { @include entry(insensitive);}
 
-  selection-background-color: $selected_bg_color;
-  selected-color: $selected_fg_color;
+  selection-background-color: $viva_color_bg_selected;
+  selected-color: $viva_color_fg_selected;
 
   StIcon.capslock-warning {
     icon-size: 16px;
-    warning-color: $warning_color;
+    warning-color: $viva_color_warning;
     padding: 0 4px;
   }
 

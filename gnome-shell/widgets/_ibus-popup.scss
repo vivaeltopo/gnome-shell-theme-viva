@@ -17,7 +17,7 @@
 .candidate-box {
   padding: 0.3em 0.5em 0.3em 0.5em;
   border-radius: $base_border_radius;
-  &:selected,&:hover { background-color: $selected_bg_color; color: $selected_fg_color; }
+  &:selected,&:hover { background-color: $viva_color_bg_selected; color: $viva_color_fg_selected; }
 }
 
 .candidate-page-button-box {

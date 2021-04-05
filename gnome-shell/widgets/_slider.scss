@@ -6,15 +6,15 @@ $slider_size: 15px;
   height: $slider_size;
   // slider trough
   -barlevel-height: 3px; // has to be an odd number
-  -barlevel-background-color: $insensitive_fg_color; //background of the trough
+  -barlevel-background-color: $viva_color_fg_insensitive; //background of the trough
   -barlevel-border-width: 1px;
-  -barlevel-border-color: $insensitive_fg_color; // trough border color
+  -barlevel-border-color: $viva_color_fg_insensitive; // trough border color
   // fill style
-  -barlevel-active-background-color: $selected_bg_color; //active trough fill
-  -barlevel-active-border-color: $viva-color2; //active trough border
+  -barlevel-active-background-color: $viva_color_bg_selected; //active trough fill
+  -barlevel-active-border-color: $viva_color2; //active trough border
   // overfill style (red in this case)
-  -barlevel-overdrive-color: $insensitive_bg_color;
-  -barlevel-overdrive-border-color: $viva-color2; //trough border when red;
+  -barlevel-overdrive-color: $viva_color_bg_insensitive;
+  -barlevel-overdrive-border-color: $viva_color2; //trough border when red;
   -barlevel-overdrive-separator-width: 2px;
   // slider handler
   -slider-handle-radius: $slider_size * 0.5; // half the size of the size

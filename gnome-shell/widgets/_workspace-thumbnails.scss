@@ -21,8 +21,8 @@
 
 // selected indicator
 .workspace-thumbnail-indicator {
-  border: 1px solid $viva-color;
+  border: 1px solid $viva_color;
   border-radius: $base_border_radius;
   padding: 5px;
-  // background-color: transparentize($selected_bg_color, 0.9);
+  // background-color: transparentize($viva_color_bg_selected, 0.9);
 }

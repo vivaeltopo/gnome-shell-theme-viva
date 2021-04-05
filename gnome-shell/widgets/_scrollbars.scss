@@ -24,11 +24,11 @@ StScrollBar
 
     border: 1px solid transparent;
     border-radius: $base_border_radius;
-    box-shadow: $viva-box-shadow;
-    text-shadow: $viva-text-shadow;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_text_shadow;
 
-    background-gradient-start: $viva-gradient-1;
-    background-gradient-end: $viva-gradient-2;
+    background-gradient-start: $viva_gradient_1;
+    background-gradient-end: $viva_gradient_2;
 
     &#vhandle
     {
@@ -37,14 +37,14 @@ StScrollBar
       &:focus,
       &:hover
       {
-        background-gradient-start: $viva-gradient-2;
-        background-gradient-end: $viva-gradient-3;
+        background-gradient-start: $viva_gradient_2;
+        background-gradient-end: $viva_gradient_3;
       }
 
       &:active
       {
-        background-gradient-start:$viva-color1;
-        background-gradient-end: $viva-color2;
+        background-gradient-start:$viva_color1;
+        background-gradient-end: $viva_color2;
       }
     }
 
@@ -55,14 +55,14 @@ StScrollBar
       &:focus,
       &:hover
       {
-        background-gradient-start: $viva-gradient-2;
-        background-gradient-end: $viva-gradient-3;
+        background-gradient-start: $viva_gradient_2;
+        background-gradient-end: $viva_gradient_3;
       }
 
       &:active
       {
-        background-gradient-start: $viva-color1;
-        background-gradient-end: $viva-color2;
+        background-gradient-start: $viva_color1;
+        background-gradient-end: $viva_color2;
       }
     }
   }

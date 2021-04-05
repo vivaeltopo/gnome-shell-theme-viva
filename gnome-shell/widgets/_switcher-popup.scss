@@ -5,7 +5,7 @@
 
   spacing: $base_spacing;
 
-  background: transparentize($insensitive_bg_color, 0.75);
+  background: transparentize($viva_color_bg_insensitive, 0.75);
   transition-duration: $transition-slow;
 }
 
@@ -26,14 +26,14 @@
     &:selected,
     &:outlined
     {
-      color: $selected_fg_color;
+      color: $viva_color_fg_selected;
       border: 1px solid transparent;
-      box-shadow: $viva-box-shadow;
-      text-shadow: $viva-text-shadow;
+      box-shadow: $viva_box_shadow;
+      text-shadow: $viva_text_shadow;
 
       background-gradient-direction: vertical;
-      background-gradient-start: $viva-color1;
-      background-gradient-end: $viva-color2;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
     }
   }
 
@@ -51,7 +51,7 @@
 
   .separator {
     width: 1px;
-    background: $viva-gradient-2;
+    background: $viva_gradient_2;
   }
 
   .switcher-list-item-container {
@@ -73,5 +73,5 @@
 
 // Window cycler highlight
 .cycler-highlight {
-  border: 5px solid $selected_bg_color;
+  border: 5px solid $viva_color_bg_selected;
 }

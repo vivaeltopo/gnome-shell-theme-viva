@@ -59,12 +59,12 @@ $default_key_bg_color: if($variant=='light', darken($osd_bg_color, 11%), lighten
 
   // enter key is suggested-action
   &.enter-key {
-    @include button(normal, $c:$selected_bg_color, $tc:$selected_fg_color);
-    &:hover, &:checked { @include button(hover, $c: lighten($selected_bg_color, 3%));}
-    &:active {@include button(active, $c: darken($selected_bg_color, 2%));}
+    @include button(normal, $c:$viva_color_bg_selected, $tc:$viva_color_fg_selected);
+    &:hover, &:checked { @include button(hover, $c: lighten($viva_color_bg_selected, 3%));}
+    &:active {@include button(active, $c: darken($viva_color_bg_selected, 2%));}
   }
 
-  &.shift-key-uppercase { color: $selected_bg_color }
+  &.shift-key-uppercase { color: $viva_color_bg_selected }
 
   StIcon { icon-size: 1.125em; }
 }
@@ -102,8 +102,8 @@ $default_key_bg_color: if($variant=='light', darken($osd_bg_color, 11%), lighten
 
 .emoji-panel {
   .keyboard-key:latched {
-    border-color: lighten($selected_bg_color, 5%);
-    background-color: $selected_bg_color;
+    border-color: lighten($viva_color_bg_selected, 5%);
+    background-color: $viva_color_bg_selected;
   }
 }
 

@@ -17,7 +17,7 @@
 // Calendar menu side column
 .datemenu-calendar-column {
   spacing: $base_spacing;
-  border: 0 solid $bubble_borders_color;
+  border: 0 solid $viva_border_color;
   padding: 0 $base_padding * 2;
 
   &:ltr {margin-right: $base_margin * 2; border-left-width: 1px; }
@@ -40,8 +40,15 @@
 
 /* today button (the date) */
 .datemenu-today-button {
+  font-family: $viva-font-family;
   @include notification_bubble($flat: true);
   padding: $base_padding * 1.5;
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva_gradient_1;
+  background-gradient-end: rgba(255,255,255,.1);
+  border: 1px solid $viva_border_color_insensitive;
+  box-shadow: none;
+  margin-top: 1em;
 
   // weekday label
   .day-label {
@@ -64,7 +71,7 @@
   // month
   .calendar-month-label {
     color: lighten($fg_color,5%);
-    font-weight: bold;
+    font-weight: normal;
     padding: 8px 0;
     &:focus {}
   }
@@ -87,27 +94,64 @@
 
   $calendar_day_size: 32px;
 
-  .calendar-day-base {
-    @include fontsize($base_font_size - 3);
+  .calendar-day-base,
+  .calendar-day {
+    font-size: 11pt;
+
+    width: $base_padding * 6;
+    height: $base_padding * 4;
+    margin: 0;
+    padding: 0 $base_padding;
+
+    transition-duration: $transition-fast;
     text-align: center;
-    width: $calendar_day_size;
-    height: $calendar_day_size;
-    padding: 0;
-    margin: 2px;
-    border-radius: $calendar_day_size * 0.5 + 2px;
-    border: 1px solid transparent; //avoid jumparound due to today
-    font-feature-settings: "tnum";
-    &:hover, &:focus { background-color: $hover_bg_color; }
-    &:active,&:selected {
-      color: lighten($fg_color,10%);
-      background-color: darken($bg_color,5%);
+
+    border: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: $base_border_radius;
+
+    &:hover,
+    &:focus
+    {
+      transition-duration: $transition_fast;
+
+      color: $fg_color;
+      border-color: transparent;
+      border-radius: $base_border_radius;
+      box-shadow: $viva_box_shadow;
+      text-shadow: 0 1px black;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_gradient_2;
+      background-gradient-end: $viva_gradient_1;
+    }
+
+    &:active
+    {
+      color: $fg_color;
+      border-color: transparent;
+      border-radius: $base_border_radius;
+      box-shadow: $viva_box_shadow;
+      text-shadow: 0 1px black;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
     }
 
     // day of week heading
     &.calendar-day-heading {
-      color: lighten($fg_color,10%);
-      margin-top: 1em;
-      @include fontsize($base_font_size - 4);
+      font-weight: normal;
+
+      width: $base_padding * 6;
+      height: $base_padding * 6;
+      margin: 0;
+      padding: $base_padding;
+
+      color: $viva_gradient_2;
+      border: 0;
+      background: transparent;
     }
   }
 
@@ -126,34 +170,49 @@
   .calendar-work-day {}
 
   .calendar-nonwork-day {
-    color: $insensitive_fg_color;
+    color: $viva_color_fg_insensitive;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 0;
   }
 
   // Today
   .calendar-today {
-    font-weight: bold;
-    border: 1px solid transparent;
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    color: $fg_color;
+    border: 0;
+    border-radius: $base_border_radius;
+    background-image: none;
+    box-shadow: $viva_box_shadow;
+    text-shadow: 0;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
 
     &:hover,&:focus {
-      background-color:lighten($selected_bg_color, 3%);
-      color: $selected_fg_color;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
+      color: $viva_color_fg_selected;
     }
 
     &:active,&:selected {
-      background-color: $selected_bg_color;
-      color: $selected_fg_color;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
+      color: $viva_color_fg_selected;
 
       &:hover,&:focus {
-        background-color:lighten($selected_bg_color, 3%);
-        color: $selected_fg_color;
+        background-gradient-direction: vertical;
+        background-gradient-start: $viva_color1;
+        background-gradient-end: $viva_color2;
+        color: $viva_color_fg_selected;
       }
     }
   }
 
   .calendar-day-with-events {
-    background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
+    background-image: none;
+    font-weight: bold;
     &.calendar-work-day {
        color: lighten($fg_color,10%);
        font-weight: bold;

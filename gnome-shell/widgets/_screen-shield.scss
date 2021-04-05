@@ -73,6 +73,6 @@
   StButton#vhandle, StButton#hhandle {
     background-color: transparentize($bg_color,0.7);
     &:hover, &:focus { background-color: transparentize($bg_color,0.5); }
-    &:active { background-color: transparentize($selected_bg_color,0.5); }
+    &:active { background-color: transparentize($viva_color_bg_selected,0.5); }
   }
 }

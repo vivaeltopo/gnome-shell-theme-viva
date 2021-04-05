@@ -47,25 +47,25 @@
       color: transparentize($osd_fg_color, 0.3);
     }
     &:default {
-      @include button(normal, $c:$selected_bg_color, $tc:$selected_fg_color);
-      border-color: $selected_bg_color;
+      @include button(normal, $c:$viva_color_bg_selected, $tc:$viva_color_fg_selected);
+      border-color: $viva_color_bg_selected;
       &:hover, &:focus { 
-        @include button(hover,$c:$selected_bg_color, $tc:$selected_fg_color);
-        $_def_hover_c: lighten($selected_bg_color, 5%);
+        @include button(hover,$c:$viva_color_bg_selected, $tc:$viva_color_fg_selected);
+        $_def_hover_c: lighten($viva_color_bg_selected, 5%);
         background-color: $_def_hover_c;
         border-color: $_def_hover_c;
       }
       &:active {
-        @include button(active,$c:$selected_bg_color, $tc:$selected_fg_color);
-        $_def_active_c: darken($selected_bg_color, 5%);
+        @include button(active,$c:$viva_color_bg_selected, $tc:$viva_color_fg_selected);
+        $_def_active_c: darken($viva_color_bg_selected, 5%);
         background-color: $_def_active_c;
         border-color: $_def_active_c;
       }
       &:insensitive {
         @include button(insensitive);
-        border-color: darken($selected_bg_color, 10%);
-        background-color: darken($selected_bg_color, 10%);
-        color: transparentize($selected_fg_color, 0.3);
+        border-color: darken($viva_color_bg_selected, 10%);
+        background-color: darken($viva_color_bg_selected, 10%);
+        color: transparentize($viva_color_fg_selected, 0.3);
       }
     }
   }
@@ -113,8 +113,8 @@
 .login-dialog-user-list {
   spacing: 12px;
   width: 23em;
-  &:expanded .login-dialog-user-list-item:selected { background-color: $selected_bg_color; color: $selected_fg_color; }
-  &:expanded .login-dialog-user-list-item:logged-in { border-right: 2px solid $selected_bg_color; }
+  &:expanded .login-dialog-user-list-item:selected { background-color: $viva_color_bg_selected; color: $viva_color_fg_selected; }
+  &:expanded .login-dialog-user-list-item:logged-in { border-right: 2px solid $viva_color_bg_selected; }
 }
 
 .login-dialog-user-list-item {
@@ -128,7 +128,7 @@
     margin-top: 6px;
     background-color: $osd_fg_color;
   }
-  &:focus .login-dialog-timed-login-indicator { background-color: $selected_fg_color; }
+  &:focus .login-dialog-timed-login-indicator { background-color: $viva_color_fg_selected; }
 }
 
 .user-widget-label {

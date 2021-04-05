@@ -22,7 +22,7 @@ $osd_levelbar_height:8px;
     -barlevel-height: $osd_levelbar_height;
     -barlevel-background-color: transparentize($osd_fg_color, if($variant=='light', 0.7, 0.9));
     -barlevel-active-background-color: $fg_color;
-    -barlevel-overdrive-color: $viva-color-destructive;
+    -barlevel-overdrive-color: $viva_color_destructive;
     -barlevel-overdrive-separator-width: 3px;
   }
 }

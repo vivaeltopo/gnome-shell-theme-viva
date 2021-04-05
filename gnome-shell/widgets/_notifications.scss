@@ -12,8 +12,8 @@
   border: 0 solid transparent;
   border-radius: $base_border_radius;
   background: $bg_color;
-  box-shadow: $viva-box-shadow;
-  text-shadow: $viva-text-shadow;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
 
   &:hover,
   &:focus {
@@ -22,7 +22,7 @@
     border-color: transparent;
     text-shadow: none;
     box-shadow: none;
-    icon-shadow: $viva-box-shadow;
+    icon-shadow: $viva_box_shadow;
 
     font-weight: normal;
 
@@ -31,7 +31,7 @@
     background-gradient-start: $bg_color;
     background-gradient-end: $bg_color;
 
-    border: 1px solid $viva-border-color-selected;
+    border: 1px solid $viva_border_color_selected;
   }
 
   .notification-actions {
@@ -61,8 +61,8 @@
   width: 1.6em;
   -shell-counter-overlap-x: 3px;
   -shell-counter-overlap-y: 3px;
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
+  background-color: $viva_color_bg_selected;
+  color: $viva_color_fg_selected;
   border: 2px solid $fg_color;
   box-shadow: 0 2px 2px rgba(0,0,0,0.5);
   border-radius: 0.9em; // should be 0.8 but whatever; wish I could do 50%;

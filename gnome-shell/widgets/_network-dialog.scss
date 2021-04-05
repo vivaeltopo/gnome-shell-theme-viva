@@ -23,7 +23,7 @@
 }
 
 .nm-dialog-airplane-headline {
-  font-family: $viva-font-family;
+  font-family: $viva_font_family;
   font-size: 18pt;
   font-weight: normal;
 
@@ -42,7 +42,7 @@
 
 // header
 .nm-dialog-header {
-  font-family: $viva-font-family;
+  font-family: $viva_font_family;
   font-size: 18pt;
   font-weight: normal;
 
@@ -89,12 +89,12 @@
   &:selected
   {
     color: $fg_color;
-    box-shadow: $viva-box-shadow;
-    text-shadow: $viva-text-shadow;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_text_shadow;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-color1;
-    background-gradient-end: $viva-color2;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 }
 
@@ -111,5 +111,5 @@
 .nm-dialog-icons { spacing: $base_spacing * 2 * 2; }
 
 // no networks
-.no-networks-label { color: $insensitive_fg_color; }
+.no-networks-label { color: $viva_color_fg_insensitive; }
 .no-networks-box { spacing: $base_spacing * 3; }

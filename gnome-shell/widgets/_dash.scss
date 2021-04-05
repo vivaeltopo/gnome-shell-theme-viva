@@ -35,7 +35,7 @@ $dash_border_radius: $base_border_radius;
   margin-bottom: 0;
   padding: $dash_padding;
   border-radius: $dash_border_radius $dash_border_radius 0 0;
-  border: 1px solid $viva-border-color;
+  border: 1px solid $viva_border_color;
 }
 
 // Dash Items
@@ -57,7 +57,7 @@ $dash_border_radius: $base_border_radius;
 
   padding: $base_padding * 2 $base_padding * 4;
 
-  border: 1px solid $viva-border-color;
+  border: 1px solid $viva_border_color;
   border-radius: $base_border_radius;
   background: $bg_color;
 
@@ -71,7 +71,7 @@ $dash_border_radius: $base_border_radius;
   &:focus,
   &:checked {
     .overview-icon {
-      background-color: transparentize($osd_bg_color,0.5);
+      background-color: none !important;
       color: $fg_color;
     }
   }

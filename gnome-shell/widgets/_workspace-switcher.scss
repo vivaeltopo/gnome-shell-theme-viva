@@ -2,7 +2,7 @@
 
 .cycler-highlight
 {
-  border: 1px solid $viva-border-color;
+  border: 1px solid $viva_border_color;
 }
 
 .workspace-switcher-group {
@@ -27,12 +27,12 @@
   background-size: 32px;
   border: 1px solid transparent;
   border-radius: $base_border_radius;
-  box-shadow: $viva-box-shadow;
-  text-shadow: $viva-text-shadow;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
+  background-gradient-start: $viva_gradient_1;
+  background-gradient-end: $viva_gradient_2;
 }
 
 // active workspace in the switcher
@@ -44,9 +44,9 @@
   border: 1px solid transparent;
   padding: 1px;
   border-radius: $base_border_radius;
-  color: $selected_fg_color;
+  color: $viva_color_fg_selected;
 
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-color1;
-  background-gradient-end: $viva-color2;
+  background-gradient-start: $viva_color1;
+  background-gradient-end: $viva_color2;
 }

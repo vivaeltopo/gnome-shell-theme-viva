@@ -2,17 +2,15 @@
 
 // these are equal to the size of the SVG assets
 .toggle-switch
-.toggle-switch-us,
-.toggle-switch-intl
 {
 	width: 64px;
 	height: 22px;
 
-	background-image: url('images/off.png');
+	background-image: url('./images/off.png');
 	background-size: contain;
 
 	&:checked
 	{
-		background-image: url('images/on.png');
+		background-image: url('./images/on.png');
 	}
 }

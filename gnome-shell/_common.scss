@@ -66,7 +66,7 @@ stage {
 /* Common Stylings */
 
 * {
-  font-family: $viva-font-family;
+  font-family: $viva_font_family;
 }
 
 // Text
@@ -80,7 +80,7 @@ stage {
 %osd_panel {
   color: $osd_fg_color;
   background-color: $osd_bg_color;
-  border: 1px solid $viva-border-color;
+  border: 1px solid $viva_border_color;
   border-radius: $base_border_radius;
   padding: $base_padding * 2;
 }

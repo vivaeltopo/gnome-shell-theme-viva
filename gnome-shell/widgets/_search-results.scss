@@ -23,8 +23,8 @@
 // content
 .search-section-content {
   background-color: $osd_bg_color;
-  border-radius: $base_border_radius;  border: 1px solid $viva-border-color;
-  box-shadow: 0 2px 4px 0 $viva-color-shadow;
+  border-radius: $base_border_radius;  border: 1px solid $viva_border_color;
+  box-shadow: 0 2px 4px 0 $viva_color_shadow;
   text-shadow: 0 1px if($variant == 'light', rgba(255,255,255,0.2), rgba(0,0,0,0.2));
   color: $osd_fg_color;
   padding: $base_padding * 3;

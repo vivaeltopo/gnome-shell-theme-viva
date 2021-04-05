@@ -13,14 +13,14 @@ $search_entry_height: 36px;
   color: transparentize($fg_color,0.3);
   border: 1px solid $bg_color;
   border-radius: $base_border_radius;
-  box-shadow: $viva-box-shadow;
+  box-shadow: $viva_box_shadow;
 
   caret-color: $fg_color;
   caret-size: 1px;
   selected-color: $fg_color;
   background-gradient-direction: vertical;
-  background-gradient-start: $viva-gradient-1;
-  background-gradient-end: $viva-gradient-2;
+  background-gradient-start: $viva_gradient_1;
+  background-gradient-end: $viva_gradient_2;
 
   &:hover {
     border-color: $hover_borders_color;
@@ -31,7 +31,7 @@ $search_entry_height: 36px;
     padding: 2*$base_padding 3*$base_padding;
     color: $fg_color;
     border: 1px solid $bg_color;
-    box-shadow: $viva-box-shadow;
+    box-shadow: $viva_box_shadow;
   }
 
   .search-entry-icon {

@@ -7,7 +7,7 @@ $popover_arrow_height: 8px;
   -arrow-border-radius: $base_border_radius;
   -arrow-background-color: $bg_color;
   -arrow-border-width: 1px;
-  -arrow-border-color: $viva-border-color;
+  -arrow-border-color: $viva_border_color;
   -arrow-base: $popover_arrow_height * 2;
   -arrow-rise: $popover_arrow_height;
   -arrow-box-shadow: 0 1px 3px rgba(0,0,0,0.5); // dreaming bugzilla #689995
@@ -35,8 +35,8 @@ $popover_arrow_height: 8px;
   padding: $base_padding;
 
   font-weight: normal;
-  box-shadow: $viva-box-shadow;
-  text-shadow: $viva-text-shadow;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
 
   &:ltr { padding-right:1.75em; padding-left: 0; }
   &:rtl { padding-right: 0; padding-left:1.75em; }
@@ -52,29 +52,29 @@ $popover_arrow_height: 8px;
   }
 
   &:active {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    background-color: $viva_color_bg_selected;
+    color: $viva_color_fg_selected;
   }
 
 
   &:focus,
   &:hover
   {
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-gradient-2;
-    background-gradient-end: $viva-gradient-1;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
   }
 
   &:checked,
   &:active
   {
-    color: $selected_fg_color;
+    color: $viva_color_fg_selected;
 
     background-gradient-direction: vertical;
-    background-gradient-start: $viva-color1;
-    background-gradient-end: $viva-color2;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 
   &:insensitive
@@ -122,7 +122,7 @@ $popover_arrow_height: 8px;
     height: 1px;
     margin: 1px 0;
 
-    background: $viva-border-color-selected;
+    background: $viva_border_color_selected;
     box-shadow: none;
 
     .popup-sub-menu & { //submenu separators
@@ -130,7 +130,7 @@ $popover_arrow_height: 8px;
       margin: 0 $base_spacing * 5 0 0;
       padding: 0;
 
-      background: $viva-border-color-selected;
+      background: $viva_border_color_selected;
       box-shadow: none;
     }
   }
