@@ -1,12 +1,9 @@
 /* Window Picker */
 
-$window_picker_spacing: $base_spacing; // 6px
-$window_picker_padding: $base_padding * 2; // 12px
-
 // Window picker
 .window-picker {
   // Space between window thumbnails
-  spacing: $window_picker_spacing;
+  spacing: $base_padding;
 }
 
 // Window titles

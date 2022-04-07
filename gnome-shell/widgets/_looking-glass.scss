@@ -1,7 +1,5 @@
 /* Looking Glass */
 
-$text_fg_color: #ccc;
-
 // Dialog
 #LookingGlassDialog {
   background-color: $osd_bg_color;
@@ -15,6 +13,13 @@ $text_fg_color: #ccc;
     border: none;
     border-radius: $base_border_radius;
     background-color: $osd_bg_color;
+
+    .lg-toolbar-button {
+      padding: $base_padding $base_padding*2;
+      @extend %button;
+
+      & > StIcon { icon-size: $base_icon_size; }
+    }
   }
 
   .labels { spacing: $base_spacing; }
@@ -32,7 +37,7 @@ $text_fg_color: #ccc;
     }
     &:selected {
       border-bottom-width: 2px;
-      box-shadow: inset 0 -2px 0 0 lighten($viva_color_bg_selected, 5%);
+      box-shadow: inset 0 -2px 0 0 lighten($selected_bg_color, 5%);
       color: $osd_fg_color;
     }
   }
@@ -41,63 +46,64 @@ $text_fg_color: #ccc;
 }
 
 .lg-dialog {
+
   StEntry {
     background-color: transparentize(lighten($osd_bg_color, 5%), 0.4);
     color: $osd_fg_color;
     border-color: transparentize($osd_fg_color, 0.8);
     min-height: 22px;
-    selection-background-color: $viva_color_bg_selected;
-    selected-color: $viva_color_fg_selected;
+    selection-background-color: $selected_bg_color;
+    selected-color: $selected_fg_color;
   }
+
   .shell-link {
     color: $link_color;
     &:hover { color: lighten($link_color, 10%); }
     &:active { color: darken($link_color, 10%); }
    }
+
   .actor-link {
-    color: $text_fg_color;
-    &:hover { color: lighten($text_fg_color, 20%); }
-    &:active { color: darken($text_fg_color, 20%); }
+    color: $insensitive_fg_color;
+    &:hover { color: lighten($insensitive_fg_color, 20%); }
+    &:active { color: darken($insensitive_fg_color, 20%); }
    }
 }
 
 .lg-completions-text {
-    font-size: .9em;
-    font-style: italic;
+  @extend %caption;
+  font-style: italic;
 }
 
 .lg-obj-inspector-title {
-    spacing: $base_spacing;
+  spacing: $base_padding;
 }
 
 .lg-obj-inspector-button {
-    border: 1px solid $osd_borders_color;
-    padding: 4px;
-    border-radius: $base_border_radius;
-    &:hover { border: 1px solid #ffffff; }
+  border: 1px solid $osd_borders_color;
+  padding: 4px;
+  border-radius: $base_border_radius;
+  &:hover { border: 1px solid #ffffff; }
 }
 
 // Extensions
-#lookingGlassExtensions { padding: 4px; }
+#lookingGlassExtensions { padding: $base_padding; }
 
 .lg-extensions-list {
-    padding: 4px;
-    spacing: 6px;
+  padding: $base_padding;
+  spacing: $base_padding;
 }
 
 .lg-extension {
-    border: 1px solid lighten($osd_borders_color, 5%);
-    background-color: lighten($osd_bg_color, 5%);
-    border-radius: $base_border_radius;
-    padding: 4px;
+  padding: $base_padding*2;
+  @include card;
 }
 
 .lg-extension-name {
-    font-weight: bold;
+  @extend %heading;
 }
 
 .lg-extension-meta {
-    spacing: 6px;
+  spacing: $base_padding;
 }
 
 // Inspector
@@ -105,5 +111,19 @@ $text_fg_color: #ccc;
   background: $osd_bg_color;
   border: 1px solid $osd_borders_color;
   border-radius: $base_border_radius;
-  padding: 6px;
+  padding: $base_padding;
+}
+
+.lg-debug-flag-button {
+  StLabel { padding: $base_padding, 2 * $base_padding; }
+
+  color: $fg_color;
+  &:hover { color: lighten($fg_color, 20%); }
+  &:active { color: darken($fg_color, 20%); }
+}
+
+.lg-debug-flags-header {
+  padding-top: 2 * $base_padding;
+  padding: $base_padding;
+  @extend %title_2;
 }

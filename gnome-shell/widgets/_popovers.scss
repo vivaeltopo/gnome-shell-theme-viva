@@ -18,19 +18,28 @@ $popover_arrow_height: 8px;
   min-width: 15em;
   color: $fg_color;
 
-  //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
+  //.popup-status-menu-item {font-weight: normal;  color: pink;} //dunno what that is
   &.panel-menu {
     -boxpointer-gap: $base_margin; // distance from the panel
-    margin-bottom: 1.75em;
+    margin-bottom: 1.75em; // so it doesn't touch the bottom of the screen
   }
 }
 
+// popover content
 .popup-menu-content {
   padding: $base_padding * 2 0;
+  border-radius: $base_border_radius;
+  border: 1px solid transparent;
+  box-shadow: viva_box_shadow;
+  background-color: $bg_color;
 }
 
 // menu items
-.popup-menu-item {
+.popup-menu-item { // TODO
+  border-radius: 0;
+  transition: 0.2s all ease;
+  background-color: none;
+
   spacing: $base_padding;
   padding: $base_padding;
 
@@ -38,12 +47,49 @@ $popover_arrow_height: 8px;
   box-shadow: $viva_box_shadow;
   text-shadow: $viva_text_shadow;
 
-  &:ltr { padding-right:1.75em; padding-left: 0; }
-  &:rtl { padding-right: 0; padding-left:1.75em; }
+  &:ltr {padding-left: $base_padding;}
+  &:rtl {padding-right: $base_padding;}
+
+  &:focus, &:hover {
+    color: $selected_fg_color;
+    border: 0;
+
+    background-color: none;
+    box-shadow: $viva_box_shadow;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
+
+    &:active {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+      box-shadow: $viva_box_shadow;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_gradient_2;
+      background-gradient-end: $viva_gradient_1;
+    }
+  }
+
+  &:checked {background-color: $checked_bg_color !important;}
 
   &:checked {
+    margin-bottom: 0;
+    border-radius: $base_border_radius $base_border_radius 0 0;
+    &:focus, &:hover, &:active {
+      background-color: none;
+      box-shadow: $viva_box_shadow;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1;
+      background-gradient-end: $viva_color2;
+    }
+
+    color: $selected_fg_color;
+
     background-color: lighten($bg_color, 2%);
     box-shadow: none;
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
   }
 
   &.selected {
@@ -52,38 +98,26 @@ $popover_arrow_height: 8px;
   }
 
   &:active {
-    background-color: $viva_color_bg_selected;
-    color: $viva_color_fg_selected;
-  }
+    color: $selected_fg_color;
 
-
-  &:focus,
-  &:hover
-  {
-    color: $viva_color_fg_selected;
-
-    background-gradient-direction: vertical;
-    background-gradient-start: $viva_gradient_2;
-    background-gradient-end: $viva_gradient_1;
-  }
-
-  &:checked,
-  &:active
-  {
-    color: $viva_color_fg_selected;
-
+    background-color: none;
+    box-shadow: $viva_box_shadow;
     background-gradient-direction: vertical;
     background-gradient-start: $viva_color1;
     background-gradient-end: $viva_color2;
   }
 
-  &:insensitive
-  {
-    color: transparentize($fg_color,0.5);
+  &:insensitive {color: transparentize($fg_color,0.5);}
+
+  // add margin to switches in menu items
+  .toggle-switch {
+    &:ltr { margin-left: $base_margin;}
+    &:rtl { margin-right: $base_margin;}
   }
 }
 
-// all icons and other graphical elements
+
+// all other graphical elements (sliders)
 .popup-inactive-menu-item {
   color: $fg_color;
 
@@ -94,29 +128,75 @@ $popover_arrow_height: 8px;
 .popup-menu-arrow,
 .popup-menu-icon { icon-size: $base_icon_size; }
 
+.popup-menu-arrow {
+}
+
+
 // popover submenus
 .popup-sub-menu {
   background-color: darken($bg_color, 3%);
   box-shadow: none;
   border-top: 1px solid transparentize($borders_color, 0.2);
   border-bottom: 1px solid transparentize($borders_color, 0.2);
+  border-radius: 0 0 $base_border_radius $base_border_radius;
+
+  .popup-menu-ornament {
+    width: 1.2em;
+
+    &:ltr { text-align: right };
+    &:rtl { text-align: left };
+  }
+
+  // submenu specific styles
+  .popup-menu-item {
+    border-radius: 0;
+    margin: 0;
+
+    &:last-child {
+      border-radius: 0 0 $base_border_radius $base_border_radius;
+    }
+
+    &:focus,&:hover { background-color: lighten($hover_bg_color, 10%) !important;}
+    &:checked {
+      background-color: lighten($checked_bg_color, 10%) !important;
+      &:focus,&:hover { background-color: lighten($checked_bg_color, 8%) !important;}
+    }
+    &:active { background-color: lighten($active_bg_color, 10%) !important;}
+  }
+
+  .popup-menu-section {
+    .popup-menu-item:last-child {
+      &:hover,&:focus { border-radius: 0;}
+    }
+    &:last-child .popup-menu-item:last-child {
+      border-radius: 0 0 $base_border_radius $base_border_radius;
+    }
+  }
 }
 
 // container for radio and check boxes
 .popup-menu-ornament {
+  @extend %heading;
   width: 1.2em;
+  text-align: center !important;
 
-  &:ltr { text-align: right };
-  &:rtl { text-align: left };
+  &:ltr { text-align: right;}
+  &:rtl { text-align: left;}
 }
 
 // separator
 .popup-separator-menu-item {
-    height: 1px;
-    margin: 1px 0;
+  margin: 6px 0;
+  padding:0 !important;
 
-    background: $bg_color;
-    box-shadow: none;
+  height: 1px;
+  margin: 1px 0;
+
+  background: $bg_color;
+  box-shadow: none;
+
+  &:ltr { margin-right: $base_margin;}
+  &:rtl { margin-left: $base_margin;}
 
   .popup-separator-menu-item-separator {
     height: 1px;
@@ -124,14 +204,27 @@ $popover_arrow_height: 8px;
 
     background: $viva_border_color_selected;
     box-shadow: none;
+  }
 
-    .popup-sub-menu & { //submenu separators
-      height: 1px;
-      margin: 0 $base_spacing * 5 0 0;
-      padding: 0;
+  .popup-menu-ornament {
+    width: 0 !important;
+  }
 
-      background: $viva_border_color_selected;
-      box-shadow: none;
+  // separators in submenus
+  .popup-sub-menu & {
+    height: 1px;
+    margin: 0 $base_spacing * 5 0 0;
+    padding: 0;
+
+    background: $viva_border_color_selected;
+    box-shadow: none;
+
+    // account for ornament
+    &:ltr { margin-right: 2.5em;}
+    &:rtl { margin-left: 2.5em;}
+
+    .popup-separator-menu-item-separator {
+      background-color: lighten($borders_color, 7%);
     }
   }
 }
@@ -162,6 +255,23 @@ $popover_arrow_height: 8px;
     &:rtl {
       padding-right: $base_padding + $base_margin * 2; ;
       margin-right: $base_icon_size;
+    }
+  }
+}
+
+// right-click (and panel) app menu
+.app-menu {
+  max-width: 27.25em;
+
+  // this is unneeded at the top-level in this menu, hide it
+  .popup-menu-ornament { width: 0 !important; }
+
+  .popup-inactive-menu-item:first-child {
+    // "Open Windows" label
+    > StLabel {
+      @extend %caption_heading;
+      &:ltr {margin-right: $base_margin*2;}
+      &:rtl {margin-left: $base_margin*2;}
     }
   }
 }

@@ -1,44 +1,51 @@
 // When color definition differs for dark and light variant,
-// it gets @if ed depending on $variant
+// it gets @if-ed depending on $variant
 
-$viva_color_base: lighten(#111111, 2%);
-$bg_color:  darken(#222222, 4%);
+$base_color: lighten(#111111, 2%);
+$bg_color: darken(#222222, 4%);
 $fg_color: #f5f5f5;
 
-$viva_color_fg_selected: #fff;
-$viva_color_bg_selected: darken(#ff4500, 10%);
-$selected_borders_color: darken($viva_color_bg_selected, 30%);
+$selected_fg_color: #fff;
+$selected_bg_color: darken(#ff4500, 10%);
+$selected_borders_color: darken($selected_bg_color, 30%);
+
 $borders_color: darken($bg_color, 8%);
 $borders_edge: transparentize($fg_color, 0.93);
-$link_color: lighten($viva_color_bg_selected, 20%);
-$link_visited_color: lighten($viva_color_bg_selected, 10%);
-$top_hilight: $borders_edge;
+
+$link_color: lighten($selected_bg_color, 20%);
+$link_visited_color: lighten($selected_bg_color, 10%);
+
+$warning_color: #f57900;
+$error_color: #f30;
+$success_color: green;
+$destructive_color: #e01b24;
 
 $osd_fg_color: #eeeeec;
-$osd_text_color: white;
 $osd_bg_color: $bg_color;
-$osd_viva_color_bg_insensitive: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
-$osd_viva_color_fg_insensitive: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
 $osd_borders_color: transparentize(black, 0.3);
 $osd_outer_borders_color: transparentize(white, 0.84);
 
 $shadow_color: rgba(0,0,0,0.2);
-$system_bg_color: desaturate(#241f31,100%); //neutralize the HIG color
+
+// overview background color
+$system_bg_color: desaturate(#241f31,100%);
 
 //insensitive state derived colors
-$viva_color_fg_insensitive: mix($fg_color, $bg_color, 50%);
-$viva_color_bg_insensitive: mix($bg_color, $viva_color_base, 60%);
-$insensitive_borders_color: mix($borders_color, $viva_color_base, 60%);
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_borders_color: mix($borders_color, $base_color, 60%);
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_viva_color_base: lighten($viva_color_base,1%);
+$backdrop_base_color: lighten($base_color,1%);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
 $backdrop_insensitive_color: lighten($backdrop_bg_color,15%);
 $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 $backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
 
-
+// custom colors
 $viva_color: if($variant =='orange', rgba(232,93,26,.7), rgba(38,162,224,.8));
 $viva_color1: lighten($viva_color, 5%);
 $viva_color2: darken($viva_color, 10%);
@@ -46,11 +53,6 @@ $viva_color2: darken($viva_color, 10%);
 $viva_gradient_1: rgba(255,255,255,.15);
 $viva_gradient_2: rgba(255,255,255,.3);
 $viva_gradient_3: rgba(255,255,255,.45);
-
-$viva_color_warning: #f57900;
-$viva_color_error: #f30;
-$viva_color_success: green;
-$viva_color_destructive: #e01b24;
 
 $viva_border_color: rgba(255,255,255,.15);
 $viva_border_color_selected: rgba(255,255,255,.3);

@@ -1,6 +1,10 @@
 /* Search */
 
 // search overview container
+#searchResults {
+  margin: 0 $base_margin;
+}
+
 #searchResultsContent {
   max-width: 1024px;
   spacing: $base_margin * 2;
@@ -23,9 +27,10 @@
 // content
 .search-section-content {
   background-color: $osd_bg_color;
-  border-radius: $base_border_radius;  border: 1px solid $viva_border_color;
-  box-shadow: 0 2px 4px 0 $viva_color_shadow;
-  text-shadow: 0 1px if($variant == 'light', rgba(255,255,255,0.2), rgba(0,0,0,0.2));
+  border-radius: $base_border_radius;
+  border: 1px solid $viva_border_color;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
   color: $osd_fg_color;
   padding: $base_padding * 3;
   // This is the space between the provider icon and the results container
@@ -33,7 +38,8 @@
 }
 
 %search-section-content-item {
-  @extend %icon_tile;
+  @include tile_button($osd_fg_color);
+  border-radius: $base_border_radius;
 
   &:focus,
   &:hover,
@@ -50,7 +56,7 @@
 
 // "no results" text
 .search-statustext {
-  @extend %status_text;
+  @extend %title_1;
 }
 
 .grid-search-results {
@@ -60,7 +66,7 @@
 
 // Search results with icons
 .grid-search-result {
-  @extend %app-well-app;
+  @extend .app-well-app;
 }
 
 // search result provider

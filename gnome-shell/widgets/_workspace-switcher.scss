@@ -1,30 +1,17 @@
 /* Workspace Switcher */
 
-.cycler-highlight
-{
-  border: 1px solid $viva_border_color;
-}
-
-.workspace-switcher-group {
-  padding: 0;
-}
-
-.workspace-switcher-container {
-  @extend %osd_panel;
-  background: $bg_color;
-}
+$ws_indicator_height: $large_icon_size;
+$ws_dot_active: $ws_indicator_height / 3;
+$ws_dot_inactive: $ws_indicator_height / 6;
 
 .workspace-switcher {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  spacing: $base_spacing * 2;
+  @extend %osd_panel;
+  margin-bottom: 2em;
+  spacing: $base_padding * 2;
+  padding: $base_padding * 2 $base_padding * 3;
 }
 
-.ws-switcher-box {
-  height: 50px;
-  background-size: 32px;
+.ws-switcher-indicator {
   border: 1px solid transparent;
   border-radius: $base_border_radius;
   box-shadow: $viva_box_shadow;
@@ -33,20 +20,20 @@
   background-gradient-direction: vertical;
   background-gradient-start: $viva_gradient_1;
   background-gradient-end: $viva_gradient_2;
-}
 
-// active workspace in the switcher
-.ws-switcher-active-up,
-.ws-switcher-active-down,
-.ws-switcher-active-left,
-.ws-switcher-active-right {
-  height: 52px;
-  border: 1px solid transparent;
-  padding: 1px;
-  border-radius: $base_border_radius;
-  color: $viva_color_fg_selected;
+  padding: $base_padding * 3 $base_padding * 4;
+  margin: $base_margin * 2;
 
-  background-gradient-direction: vertical;
-  background-gradient-start: $viva_color1;
-  background-gradient-end: $viva_color2;
+  &:active {
+    border: 1px solid transparent;
+    padding: 1px;
+    border-radius: $base_border_radius;
+    color: $selected_fg_color;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
+    padding: $base_padding * 3 $base_padding * 4;
+    margin: $base_margin * 2;
+  }
 }

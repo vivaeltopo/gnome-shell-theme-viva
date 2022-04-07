@@ -56,11 +56,28 @@
   text-align: center;
   padding-bottom: 8px;
   @include fontsize($base_font_size - 1);
-  color: $viva_color_warning;
+  color: $warning_color;
 }
 
 /* Workspace animation */
 
 .workspace-animation {
   background-color: $system_bg_color;
+}
+
+/* Tiled window previews */
+.tile-preview,
+.tile-preview-left.on-primary,
+.tile-preview-right.on-primary,
+.tile-preview-left.tile-preview-right.on-primary
+{
+  color: $fg_color;
+  border-width: 0;
+  border-radius: $base_border_radius;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
+
+  background-gradient-direction: vertical;
+  background-gradient-start: $viva_color1;
+  background-gradient-end: $viva_color2;
 }

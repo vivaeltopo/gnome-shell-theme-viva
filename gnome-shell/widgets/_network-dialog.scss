@@ -1,8 +1,6 @@
-/* Network Dialogs */
+/* Select Network dialogs */
 .nm-dialog {
-  // font-size: $font-size-normal;
   font-weight: normal;
-
   color: $fg_color;
 
   padding: $base_spacing * 0;
@@ -16,31 +14,6 @@
   spacing: $base_spacing;
 }
 
-.nm-dialog-airplane-box {
-  padding-bottom: $base_spacing * 2;
-
-  spacing: $base_spacing;
-}
-
-.nm-dialog-airplane-headline {
-  font-family: $viva_font_family;
-  font-size: 18pt;
-  font-weight: normal;
-
-  max-width: 500em;
-
-  color: $fg_color;
-  padding: 0;
-  padding-bottom: $base_spacing;
-}
-
-.nm-dialog-airplane-text {
-  // font-size: $font-size-normal;
-
-  color: $fg_color;
-}
-
-// header
 .nm-dialog-header {
   font-family: $viva_font_family;
   font-size: 18pt;
@@ -52,10 +25,16 @@
   padding: 0;
   padding-bottom: $base_spacing;
 }
+
+.nm-dialog-subheader {
+  color: $insensitive_fg_color;
+}
+
 .nm-dialog-header-icon {
   icon-size: 3.5em;
   padding: $base_spacing * 2
 }
+
 .nm-dialog-header-hbox {
   padding-bottom: $base_spacing * 2;
 
@@ -111,5 +90,27 @@
 .nm-dialog-icons { spacing: $base_spacing * 2 * 2; }
 
 // no networks
-.no-networks-label { color: $viva_color_fg_insensitive; }
+.no-networks-label { color: $insensitive_fg_color; }
 .no-networks-box { spacing: $base_spacing * 3; }
+
+// airplane mode
+.nm-dialog-airplane-box {
+  padding-bottom: $base_spacing * 2;
+  spacing: $base_spacing;
+}
+
+.nm-dialog-airplane-headline {
+  font-family: $viva_font_family;
+  font-size: 18pt;
+  font-weight: normal;
+
+  max-width: 500em;
+
+  color: $fg_color;
+  padding: 0;
+  padding-bottom: $base_spacing;
+}
+
+.nm-dialog-airplane-text {
+  color: $fg_color;
+}

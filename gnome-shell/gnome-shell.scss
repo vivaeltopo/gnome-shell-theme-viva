@@ -51,7 +51,7 @@ $variant: 'orange';
 // A11y / misc
 @import 'widgets/a11y';
 @import 'widgets/misc';
-@import 'widgets/tiled-previews';
+// @import 'widgets/tiled-previews';
 @import 'widgets/keyboard';
 @import 'widgets/looking-glass';
 // Lock / login screens
@@ -60,5 +60,5 @@ $variant: 'orange';
 
 
 // /* extensions */
-@import "widgets/_extension-mediaplayer";
-@import "widgets/_extension-open-weather";
+// @import "widgets/_extension-mediaplayer";
+// @import "widgets/_extension-open-weather";

@@ -1,14 +1,5 @@
 /* Date/Time Menu */
 
-.clock-display-box {
-  spacing: 2px;
-
-  .clock {
-    padding-left: $base_padding * 2;
-    padding-right: $base_padding * 2;
-  }
-}
-
 // overall menu
 #calendarArea {
   padding:0;
@@ -31,17 +22,11 @@
   }
 }
 
-.events-section-title {
-  @include notification_bubble($flat: true);
-  color: desaturate(darken($fg_color,40%), 10%);
-  font-weight: bold;
-  padding: .4em;
-}
-
 /* today button (the date) */
 .datemenu-today-button {
+  @include card($flat: true);
   font-family: $viva-font-family;
-  @include notification_bubble($flat: true);
+
   padding: $base_padding * 1.5;
   background-gradient-direction: vertical;
   background-gradient-start: $viva_gradient_1;
@@ -52,45 +37,55 @@
 
   // weekday label
   .day-label {
-    @include fontsize($base_font_size+1);
+    @extend %heading;
     font-weight: bold;
   }
 
   // date label
   .date-label {
-    @include fontsize($base_font_size+7);
-    font-weight: 1000;
+    @extend %title_2;
   }
 }
 
 /* Calendar */
 .calendar {
-  @include notification_bubble;
+  @include card(flat);
+  margin-top: 0;
   padding: $base_padding;
 
-  // month
-  .calendar-month-label {
-    color: lighten($fg_color,5%);
-    font-weight: normal;
-    padding: 8px 0;
-    &:focus {}
+  .calendar-day-top {
+    border-top-width: 1px;
   }
 
-  // prev/next month icons
-  .calendar-change-month-back StIcon,
-  .calendar-change-month-forward StIcon {
-    icon-size: $base_icon_size;
+  .calendar-day-left {
+    border-left-width: 1px;
   }
+  // month header
+  .calendar-month-header {
 
-  .pager-button {
-    background-color: transparent;
-    height: 32px;
-    width: 32px;
-    border-radius: $base_border_radius;
-    &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
-    &:active { background-color: $active_bg_color; }
+    // prev/next month icons
+    .calendar-change-month-back StIcon,
+    .calendar-change-month-forward StIcon {
+      icon-size: $base_icon_size;
+    }
+
+    // month label
+    .calendar-month-label {
+      color: lighten($fg_color,5%);
+      font-weight: normal;
+      padding: 8px 0;
+      &:focus {}
+    }
+
+    .pager-button {
+      background-color: transparent;
+      height: 32px;
+      width: 32px;
+      border-radius: $base_border_radius;
+      &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
+      &:active { background-color: $active_bg_color; }
+    }
   }
-
 
   $calendar_day_size: 32px;
 
@@ -148,31 +143,27 @@
       height: $base_padding * 6;
       margin: 0;
       padding: $base_padding;
+      margin-bottom: $base_padding * 2;
 
-      color: $viva_gradient_2;
+      color: lighten($fg_color, 5%);
       border: 0;
       background: transparent;
     }
   }
 
-  .calendar-day { //border collapse hack - see calendar.js
-    border-width: 0;
-  }
-
-  .calendar-day-top {
-    border-top-width: 1px;
-  }
-
-  .calendar-day-left {
-    border-left-width: 1px;
-  }
-
   .calendar-work-day {}
 
   .calendar-nonwork-day {
-    color: $viva_color_fg_insensitive;
+    color: $insensitive_fg_color;
     background-color: rgba(255,255,255,.1);
     border-radius: 0;
+  }
+
+  .calendar-other-month-day {
+    color: transparentize($fg_color ,0.5);
+    &.calendar-nonwork-day {
+      color: transparentize($insensitive_fg_color, 0.5);
+    }
   }
 
   // Today
@@ -192,20 +183,20 @@
       background-gradient-direction: vertical;
       background-gradient-start: $viva_color1;
       background-gradient-end: $viva_color2;
-      color: $viva_color_fg_selected;
+      color: $selected_fg_color;
     }
 
     &:active,&:selected {
       background-gradient-direction: vertical;
       background-gradient-start: $viva_color1;
       background-gradient-end: $viva_color2;
-      color: $viva_color_fg_selected;
+      color: $selected_fg_color;
 
       &:hover,&:focus {
         background-gradient-direction: vertical;
         background-gradient-start: $viva_color1;
         background-gradient-end: $viva_color2;
-        color: $viva_color_fg_selected;
+        color: $selected_fg_color;
       }
     }
   }
@@ -219,10 +210,6 @@
     }
   }
 
-  .calendar-other-month-day {
-    color: transparentize($fg_color ,0.5);
-  }
-
   .calendar-week-number {
     @include fontsize($base_font_size - 4);
     font-weight: bold;
@@ -230,14 +217,14 @@
     width: 2.3em;
     border-radius: 2px;
     margin: 6px;
-    background-color: darken($bg_color, 2%);
+    background-color: transparent;
     color: lighten($fg_color, 5%);
   }
 }
 
 /* Events */
 .events-button {
-  @include notification_bubble;
+  @include card;
   padding: $base_padding * 2;
 
   .events-box {
@@ -261,9 +248,16 @@
   }
 }
 
+.events-section-title {
+  @include card;
+  color: desaturate(darken($fg_color,40%), 10%);
+  font-weight: bold;
+  padding: .4em;
+}
+
 /* World clocks */
 .world-clocks-button {
-  @include notification_bubble;
+  @include card;
   padding: $base_padding * 2;
   height: 0;
   width: 0;
@@ -271,8 +265,8 @@
   .world-clocks-grid {
     spacing-rows: $base_spacing;
     spacing-columns: $base_spacing * 2;
-  height: 0;
-  width: 0;
+    height: 0;
+    width: 0;
   }
 
   // title
@@ -320,7 +314,7 @@
 
 /* Weather */
 .weather-button {
-  @include notification_bubble;
+  @include card;
   padding: $base_padding * 2;
 
   .weather-box {

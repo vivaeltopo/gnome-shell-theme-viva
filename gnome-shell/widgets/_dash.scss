@@ -4,18 +4,19 @@ $dash_background_color: #000;
 $dash_placeholder_size: 32px;
 $dash_padding: $base_padding + 4px; // 10px
 $dash_spacing: $base_padding / 4;
-
 $dash_bottom_margin: $base_margin * 4;
-
 $dash_border_radius: $base_border_radius;
 
+// container for the dash
 #dash {
+  @extend %caption;
   @include fontsize($base_font_size - 2);
   margin-top: $base_spacing * 2;
   padding: 0 $dash_padding;
 
   .placeholder {
-    background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    // background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    background-image:none;
     background-size: contain;
     height: $dash_placeholder_size;
   }
@@ -25,11 +26,17 @@ $dash_border_radius: $base_border_radius;
     height: $dash_placeholder_size;
   }
 
+  // Running app indicator (also shown in app grid)
+  .app-well-app-running-dot {
+    margin-bottom: 14px; // hardcoded
+  }
+
   .overview-icon {
     padding: $dash_padding / 2;
   }
 }
 
+// background of the dash behind app icons
 .dash-background {
   background-color: $dash_background_color;
   margin-bottom: 0;
@@ -38,11 +45,30 @@ $dash_border_radius: $base_border_radius;
   border: 1px solid $viva_border_color;
 }
 
-// Dash Items
+// items on the dash
+.dash-item-container {
+  > * {margin: 0 2px;}
+  &:ltr:first-child {margin-left: 0;}
+  &:rtl:first-child {margin-right: 0;}
+
+  // each app item on the dash
+  .app-well-app .overview-icon {
+    padding: $base_padding;
+  }
+
+  // show apps button
+  .show-apps { @include overview_icon($osd_fg_color);}
+
+  .show-apps, .app-well-app {
+    padding-bottom: $dash_padding;
+  }
+}
+
 .dash-item-container .app-well-app, .show-apps {
   padding: $dash_padding $dash_spacing $dash_padding + $dash_bottom_margin;
 }
 
+// separator between favourites and running apps
 .dash-separator {
   width: 1px;
   margin: 0 ($dash_spacing + ($dash_padding / 2)) $dash_bottom_margin;

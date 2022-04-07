@@ -1,18 +1,27 @@
 /* App Switcher */
 
+// the full screen container of the switcher
 .switcher-popup {
   padding: $base_padding;
-
   spacing: $base_spacing;
 
-  background: transparentize($viva_color_bg_insensitive, 0.75);
+  background: transparentize($insensitive_bg_color, 0.75);
   transition-duration: $transition-slow;
 }
 
 // switcher onscreen panel
 .switcher-list {
   @extend %osd_panel;
+  padding: $base_padding;
+  border-radius: $base_border_radius;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
 
+  // container for items in list
+  .switcher-list-item-container {
+    spacing: $base_padding * 2;
+  }
+
+  // each item in the list
   .item-box {
     font-weight: normal;
 
@@ -26,7 +35,7 @@
     &:selected,
     &:outlined
     {
-      color: $viva_color_fg_selected;
+      color: $selected_fg_color;
       border: 1px solid transparent;
       box-shadow: $viva_box_shadow;
       text-shadow: $viva_text_shadow;
@@ -37,25 +46,22 @@
     }
   }
 
-  // window thumbnails
-  .thumbnail-box {
-    padding: 0;
-    spacing: 0;
-  }
-
-  .thumbnail {
-    width: 256px;
-    padding: 0;
-    spacing: $base_spacing;
-  }
-
   .separator {
     width: 1px;
     background: $viva_gradient_2;
   }
 
-  .switcher-list-item-container {
-    spacing: $base_spacing * 2;
+  // container of thumbnails
+  .thumbnail-box {
+    padding: 0;
+    spacing: 0;
+  }
+
+  // window thumbnail itself
+  .thumbnail {
+    width: 256px;
+    padding: 0;
+    spacing: $base_spacing;
   }
 }
 
@@ -73,5 +79,5 @@
 
 // Window cycler highlight
 .cycler-highlight {
-  border: 5px solid $viva_color_bg_selected;
+  border: 5px solid $selected_bg_color;
 }

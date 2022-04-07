@@ -1,5 +1,11 @@
 /* Scrollbars */
 
+StScrollView {
+  &.vfade { -st-vfade-offset: 8*$base_spacing; }
+  &.hfade { -st-hfade-offset: 8*$base_spacing; }
+}
+
+
 StScrollBar
 {
   margin-right: 10px;
@@ -66,14 +72,4 @@ StScrollBar
       }
     }
   }
-}
-
-StScrollView.vfade
-{
-  -st-vfade-offset: 8*$base_spacing;
-}
-
-StScrollView.hfade
-{
-  -st-hfade-offset: 8*$base_spacing;
 }

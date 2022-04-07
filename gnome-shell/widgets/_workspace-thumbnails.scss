@@ -3,7 +3,7 @@
 // thumbnails in overview
 .workspace-thumbnails {
   visible-width: 32px; //amount visible before hover
-  spacing: 5 * $base_spacing;
+  spacing: 5 * $base_margin;
   padding: $base_padding;
 
   .workspace-thumbnail {
@@ -13,7 +13,7 @@
 
   // drag and drop indicator
   .placeholder {
-    background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
+    background-image: none;
     background-size: contain;
     width: 18px;
   }

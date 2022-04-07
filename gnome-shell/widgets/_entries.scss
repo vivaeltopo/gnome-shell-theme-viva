@@ -5,20 +5,18 @@ StEntry {
   padding: 8px;
   border-width: 1px;
   color: $fg_color;
+
   @include entry(normal);
-
-  //&:hover { @include entry(hover);}
-
-  &:focus { @include entry(focus); }
-
+  &:hover { @include entry(hover);}
+  &:focus { @include entry(focus);}
   &:insensitive { @include entry(insensitive);}
 
-  selection-background-color: $viva_color_bg_selected;
-  selected-color: $viva_color_fg_selected;
+  selection-background-color: $selected_bg_color;
+  selected-color: $selected_fg_color;
 
   StIcon.capslock-warning {
     icon-size: 16px;
-    warning-color: $viva_color_warning;
+    warning-color: $warning_color;
     padding: 0 4px;
   }
 
