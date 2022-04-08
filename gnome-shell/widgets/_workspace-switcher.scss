@@ -6,7 +6,7 @@ $ws_dot_inactive: $ws_indicator_height / 6;
 
 .workspace-switcher {
   @extend %osd_panel;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
   spacing: $base_padding * 2;
   padding: $base_padding * 2 $base_padding * 3;
 }
@@ -16,11 +16,9 @@ $ws_dot_inactive: $ws_indicator_height / 6;
   border-radius: $base_border_radius;
   box-shadow: $viva_box_shadow;
   text-shadow: $viva_text_shadow;
-
   background-gradient-direction: vertical;
   background-gradient-start: $viva_gradient_1;
   background-gradient-end: $viva_gradient_2;
-
   padding: $base_padding * 3 $base_padding * 4;
   margin: $base_margin * 2;
 
@@ -29,11 +27,11 @@ $ws_dot_inactive: $ws_indicator_height / 6;
     padding: 1px;
     border-radius: $base_border_radius;
     color: $selected_fg_color;
-
     background-gradient-direction: vertical;
     background-gradient-start: $viva_color1;
     background-gradient-end: $viva_color2;
     padding: $base_padding * 3 $base_padding * 4;
     margin: $base_margin * 2;
   }
+
 }
