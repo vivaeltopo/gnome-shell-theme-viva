@@ -30,7 +30,7 @@ $popover_arrow_height: 8px;
 
 // popover content
 .popup-menu-content {
-  padding: $base_padding * 2 0;
+  padding: $base_padding * 2 $base_padding;
   border-radius: $base_border_radius;
   border: 1px solid transparent;
   box-shadow: viva_box_shadow;
@@ -152,7 +152,7 @@ $popover_arrow_height: 8px;
   background-color: $bg_color;
   box-shadow: none;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid $viva_border_color_selected;
+  border-bottom: 1px solid transparent;
   border-radius: 0;
 
   .popup-menu-ornament {
@@ -170,7 +170,7 @@ $popover_arrow_height: 8px;
 
   // submenu specific styles
   .popup-menu-item {
-    border-radius: 0;
+    border-radius: $base_border_radius;
     margin: 0;
 
     &:last-child {
@@ -178,20 +178,32 @@ $popover_arrow_height: 8px;
     }
 
     &:focus, &:hover {
-      background-color: lighten($hover_bg_color, 10%) !important;
+      color: $selected_fg_color;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_gradient_2 !important;
+      background-gradient-end: $viva_gradient_1 !important;
     }
 
     &:checked {
-      background-color: lighten($checked_bg_color, 10%) !important;
+      color: $selected_fg_color;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1 !important;
+      background-gradient-end: $viva_color2 !important;
 
       &:focus, &:hover {
-        background-color: lighten($checked_bg_color, 8%) !important;
+        color: $selected_fg_color;
+        background-gradient-direction: vertical;
+        background-gradient-start: $viva_color1 !important;
+        background-gradient-end: $viva_color2 !important;
       }
 
     }
 
     &:active {
-      background-color: lighten($active_bg_color, 10%) !important;
+      color: $selected_fg_color;
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_color1 !important;
+      background-gradient-end: $viva_color2 !important;
     }
 
   }
@@ -199,7 +211,7 @@ $popover_arrow_height: 8px;
   .popup-menu-section {
     .popup-menu-item:last-child {
       &:hover, &:focus {
-        border-radius: 0;
+        border-radius: $base_border_radius;
       }
 
     }
@@ -215,7 +227,7 @@ $popover_arrow_height: 8px;
 // separator
 .popup-separator-menu-item {
   margin: 6px 0;
-  padding: 0 !important;
+  padding: $base_padding !important;
   height: 1px;
   margin: 1px 0;
   background: $bg_color;

@@ -82,8 +82,17 @@
       height: 32px;
       width: 32px;
       border-radius: $base_border_radius;
-      &:hover, &:focus { background-color: lighten($hover_bg_color, 5%); }
-      &:active { background-color: $active_bg_color; }
+      &:hover, &:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: $viva_gradient_2;
+        background-gradient-end: $viva_gradient_1;
+      }
+
+      &:active {
+        background-gradient-direction: vertical;
+        background-gradient-start: $viva_color1;
+        background-gradient-end: $viva_color2;
+      }
     }
   }
 
