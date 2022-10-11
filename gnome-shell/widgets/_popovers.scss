@@ -230,7 +230,7 @@ $popover_arrow_height: 8px;
   padding: $base_padding !important;
   height: 1px;
   margin: 1px 0;
-  background: $bg_color;
+  background: transparent;
   box-shadow: none;
 
   &:ltr {
