@@ -1,7 +1,7 @@
 Gnome-Shell Theme: viva
 ======================
 
-A Gnome Shell 40.0 Theme
+A Gnome Shell 43.0 Theme
 
 ![Preview of the theme](https://github.com/vivaeltopo/gnome-shell-theme-viva/blob/master/Preview.png)
 
