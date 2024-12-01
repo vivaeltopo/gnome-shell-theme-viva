@@ -1,0 +1,66 @@
+//
+// Main color definitions
+//
+
+@import '_palette.scss';
+@import '_default-colors.scss';
+
+
+// global colors
+$base_color: lighten(#111111, 2%);
+$bg_color: darken(#222222, 4%);
+$fg_color: #f5f5f5;
+
+// OSD elements
+$osd_fg_color: #eeeeec;
+$osd_bg_color: $bg_color;
+
+// panel colors
+$panel_bg_color: $dark_5;
+$panel_fg_color: $light_1;
+
+// card elements
+$card_bg_color: lighten($bg_color, 7%);
+$card_shadow_color: transparent;
+$card_shadow_border_color: transparent;
+
+//
+// Derived Colors
+//
+// colors based on the global defines above
+
+// borders
+$borders_color: darken($bg_color, 8%);
+$outer_borders_color: transparentize($fg_color, 0.93);
+
+// osd colors
+$osd_borders_color: transparentize(black, 0.3);
+$osd_outer_borders_color: transparentize(white, 0.84);
+
+// system colors
+$system_fg_color: $_base_color_light;
+$system_bg_color: desaturate(#241f31,100%);
+$system_base_color: $system_bg_color;
+$system_borders_color: transparentize($system_fg_color, .9);
+$system_insensitive_fg_color: mix($system_fg_color, $system_bg_color, 50%);
+$system_overlay_bg_color: mix($system_base_color, $system_fg_color, 90%); // for non-transparent items, e.g. dash
+
+// insensitive state
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_borders_color: mix($borders_color, $base_color, 60%);
+
+// checked state
+$checked_bg_color: lighten($bg_color, 7%);
+$checked_fg_color: lighten($fg_color, 7%);
+
+// hover state
+$hover_bg_color: lighten($bg_color, 10%);
+$hover_fg_color: lighten($fg_color, 10%);
+
+// active state
+$active_bg_color: lighten($bg_color, 12%);
+$active_fg_color: lighten($fg_color, 12%);
+
+// selection colors
+$selected_borders_color: lighten($selected_bg_color, 15%);

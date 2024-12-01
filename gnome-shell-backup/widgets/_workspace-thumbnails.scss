@@ -1,0 +1,28 @@
+/* Workspace pager */
+
+// thumbnails in overview
+.workspace-thumbnails {
+  visible-width: 32px; //amount visible before hover
+  spacing: 5 * $base_margin;
+  padding: $base_padding;
+
+  .workspace-thumbnail {
+    @extend %overview_panel;
+    border-radius: $base_border_radius;
+  }
+
+  // drag and drop indicator
+  .placeholder {
+    background-image: none;
+    background-size: contain;
+    width: 18px;
+  }
+}
+
+// selected indicator
+.workspace-thumbnail-indicator {
+  border: 1px solid $viva_color;
+  border-radius: $base_border_radius;
+  padding: 5px;
+  // background-color: transparentize($viva_color_bg_selected, 0.9);
+}

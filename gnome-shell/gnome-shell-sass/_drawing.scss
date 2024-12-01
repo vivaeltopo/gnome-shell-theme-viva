@@ -1,0 +1,447 @@
+//
+// Drawing functions
+//
+
+// Function to convert px values to em
+@function to_em($input, $base: 16px) {
+  // multiplied and divided by 1000 to make up for round() shortcoming
+  $em_value: ($input / $base) * 1.091 * 1000;
+  @return round($em_value) / 1000 * 1em;
+}
+
+// Boost the contrast of a color by mixing it with high contrast defined colors
+@function hc_color_mix($c, $mc:$hc_mix_color, $mf:$hc_mix_factor) {
+  //
+  // $c: input color
+  // $mc: mix color, defined in High Contrast specific stylesheet
+  // $mf: mix factor (%), defined in High Contrast specific stylesheet
+  //
+  @return mix($c, $mc, $mf);
+}
+
+// Function to mix the color and make the focus background
+@function focus_bg_color($bg, $fc:$focus_color) {
+  @return mix($fc, $bg, 5%);
+}
+
+//
+// Drawing mixins
+//
+
+// Draw the inset for High Contrast elements
+@mixin draw_hc_inset($width: 1px, $ic: $hc_inset_color, $border: false, $no_inset: false) {
+  //
+  // $width     width of the inset, in pixels
+  // $ic        color of the inset
+  //
+  // $border    if true, use a border instead of a box-shadow to draw inset
+  // $no_inset  if true, override the mixin to not draw an iset
+  //
+
+  box-shadow: inset 0 0 0 $width $ic;
+
+  // draw inset as border
+  @if $border {
+    border: $width solid $ic;
+    box-shadow: none;
+  }
+
+  // don't draw an inset at all
+  @if $no_inset {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+// Draw the focus ring
+@mixin focus_ring($width: 2px, $fc: $focus_border_color, $border: false) {
+  box-shadow: inset 0 0 0 $width $fc !important;
+  @if $border {
+    border:$width solid $fc !important;
+    box-shadow: none;
+  }
+}
+
+// Mixin to convert provided font size in pt to em units
+@mixin fontsize($size, $base: 16px, $unit: pt) {
+  // if pt, convert into unitless value with the assumption: 1pt = 1.091px
+  $adjusted_size: if($unit == pt, $size * 1.091, $size) * 1000;
+  $rounded_size: round($adjusted_size / $base) / 1000;
+  font-size: $rounded_size * 1em;
+  // font-size: round($size) + pt;
+}
+
+// Function to fill the background of a panel button
+@mixin panel_button_fill($bg) {
+  // use a box-shadow to fill the background
+  // this is done because panel buttons use a transparent border to fake padding
+  box-shadow: inset 0 0 0 100px $bg;
+}
+
+// Text entries drawing function
+@mixin entry($type, $c:$fg_color, $bc:$bg_color, $style: null, $always_dark: false) {
+  //
+  // $type:         entry type, possible values: normal, focus, hover, insensitive
+  // $c:            text color
+  // $bc:           background color
+  // $always_dark:  override the light theme check to use dark colors, true or false
+  //
+
+  // entry colors
+  $entry_fg_color: $c;
+  $entry_bg_color: mix($c, $bc, $background_mix_factor);
+  $entry_focus_color: $focus_color;
+
+  // entry color overrides for lockscreen style
+  @if $style == 'lockscreen' {
+    $entry_bg_color: transparentize($c, .9);
+    $entry_focus_color: transparentize($entry_fg_color, 0.6);
+  }
+
+  // background color adjustment factors
+  // the % a color is lightened or darkened for button states
+  $hover_factor: 4%;
+  $insensitive_factor: 3%;
+
+  // entry state background colors
+  $hover_entry_bg_color: lighten($entry_bg_color, $hover_factor);
+  $insensitive_entry_bg_color: darken($entry_bg_color, $insensitive_factor);
+
+  // override entry background colours if element is always dark
+  @if $always_dark {
+    $hover_entry_bg_color: lighten($entry_bg_color, $hover_factor);
+    $insensitive_entry_bg_color: darken($entry_bg_color, $insensitive_factor);
+  }
+
+  // normal
+  @if $type == 'normal' {
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_gradient_1;
+    background-gradient-end: $viva_gradient_2;
+    border: 1px solid $borders_color;
+    color: transparentize($fg_color,0.3);
+  }
+
+  // focus styles
+  @if $type == 'focus' {
+    @include focus_ring();
+    border-color: $borders_color;
+    box-shadow: $viva_box_shadow;
+    &:hover {}
+
+    // lockscreen style
+    @if $style == 'lockscreen' {
+      @include focus_ring($fc:$entry_focus_color);
+      background-color: focus_bg_color($entry_bg_color, $fc:$entry_focus_color);
+    }
+  }
+
+  // hover styles
+  @if $type == 'hover' { }
+
+  // insensitive styles
+  @if $type == 'insensitive' {
+    color: $insensitive_fg_color;
+    border-color: $insensitive_bg_color;
+    box-shadow: none;
+  }
+}
+
+
+// Button drawing function
+@mixin button($type, $tc:$fg_color, $c:$bg_color, $style: null, $always_dark: false) {
+  //
+  // $type:         button type, possible values:
+  //                  - normal, focus, hover, active, checked, insensitive, default, undecorated
+  // $c:            button bg color, derived from bg_color
+  // $tc:           button text color, derived from fg_color
+  // $style:        button style, possible values: card, bubble, flat, default
+  // $always_dark:  override the light theme check to use dark colors, true or false
+  //
+
+  // mix input colors to get button background color
+  $button_bg_color: mix($tc, $c, $background_mix_factor);
+
+  // normal style
+  @if $type == 'normal' {
+    color: $tc;
+    background-color: $c;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: $viva_box_shadow;
+
+    // font-size: $font-size-small;
+    font-weight: normal;
+
+    padding: $base_padding 2*$base_padding;
+    border-radius: $base_border_radius;
+    background-gradient-direction: vertical;
+    background-gradient-start: $c;
+    background-gradient-end: $c;
+  }
+
+  // hover button
+  @else if $type == 'hover' {
+    color: $selected_fg_color;
+    background: $bg_color;
+    text-shadow: none;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
+    border-color: transparent;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
+  }
+
+  // active button
+  @else if $type == 'active' {
+    font-weight: normal;
+
+    color: $selected_fg_color;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_box_shadow;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
+    &:hover { }
+    &:focus { }
+  }
+
+  // checked button
+  @else if $type == 'checked' {
+    text-shadow: none;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
+    transition-duration: $transition-fast;
+
+    color: $selected_fg_color;
+    border-color: transparent;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
+
+    &:hover { }
+    &:active { }
+  }
+
+  // insensitive button
+  @else if $type == 'insensitive' {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: $viva_box_shadow;
+    transition-duration: $transition-fast;
+
+    color: $insensitive_fg_color;
+    border-color: transparent;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $c;
+    background-gradient-end: $c;
+  }
+
+  // focused button
+  @else if $type == 'focus' {
+    color: $tc;
+    @include focus_ring();
+
+    // use a different focus ring color for default style
+    @if $style == 'default' {
+      @include focus_ring($fc:$selected_borders_color);
+    }
+
+    text-shadow: none;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
+    transition-duration: $transition-fast;
+
+    color: $selected_fg_color;
+    border-color: transparent;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
+
+    &:hover { }
+  }
+
+  // reset (unstyled button)
+  @else if $type == 'undecorated' {
+    color: $tc;
+    background-color: $c;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: $viva_box_shadow;
+    icon-shadow: $viva_box_shadow;
+
+    // font-size: $font-size-small;
+    font-weight: normal;
+
+    padding: $base_padding 2*$base_padding;
+    border-radius: $base_border_radius;
+
+    &:insensitive {
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Helper mixin for button-like elements with an icon
+@mixin tile_button($fg:$system_fg_color, $bg:$system_bg_color, $raised: false, $system: true) {
+  //
+  // $fg: foreground color
+  // $bg: background color
+  //
+  // $raised: uses raised style, true or false
+  // $system: uses system styles, true or false
+  //
+
+  @extend %tile;
+
+  @if $raised {
+    @include button(normal, $tc:$fg, $c:$bg, $always_dark: $system);
+    &:focus { @include button(focus, $tc:$fg, $c:$bg, $always_dark: $system);}
+    &:hover { @include button(hover, $tc:$fg, $c:$bg, $always_dark: $system);}
+    &:active { @include button(active, $tc:$fg, $c:$bg, $always_dark: $system);}
+    &:highlighted,&:selected,
+    &:checked { @include button(checked, $tc:$fg, $c:$bg, $always_dark: $system);}
+    &:insensitive { @include button(insensitive, $tc:$fg, $c:$bg, $always_dark: $system);}
+  } @else {
+    @include button(normal, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);
+    &:focus { @include button(focus, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);}
+    &:hover { @include button(hover, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);}
+    &:active { @include button(active, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);}
+    &:highlighted,&:selected,
+    &:checked { @include button(checked, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);}
+    &:insensitive { @include button(insensitive, $tc:$fg, $c:$bg, $style: flat, $always_dark: $system);}
+  }
+
+  &:drop {
+    background-color: transparentize($selected_bg_color, .8);
+    box-shadow: inset 0 0 0 2px transparentize($selected_bg_color, .2);
+  }
+}
+
+// styling for all menuitems in popovers
+@mixin menuitem($bg, $style: flat) {
+
+  // extend common styles
+  @extend %menuitem;
+
+  // lighten the background color always
+  $bg: lighten($bg,5%);
+
+  @if $style == 'flat' {
+    @include button(undecorated);
+  } @else {
+    @include button(normal, $c:$bg);
+  }
+  &:focus,
+  &:hover {
+    @include button(hover, $c:$bg);
+  }
+  &:active {@include button(active, $c:$bg);}
+  &:checked {@include button(checked, $c:$bg);}
+  &:insensitive {@include button(insensitive, $c:$bg);}
+}
+
+// Panel menu/button drawing function
+@mixin panel_button($bg:$panel_fg_color, $fg:$panel_fg_color, $style: null, $highlighted_child: false, $child_class:"") {
+  //
+  // $bg:                 background color, derived from $panel_fg_color
+  // $fg:                 foreground color, also derived from $panel_fg_color
+  // $style:              can be set to 'filled' if button uses a colored background
+  //
+  // $highlighted_child:  if true, applies some special overrides for to a
+  //                      child element, see _panel.scss for details
+  // $child_class:        class name of the child element
+  //
+
+  transition-duration: 150ms;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: $forced_circular_radius;
+
+  font-weight: bold;
+  color: $fg;
+
+  // background fill defines
+  $fill:              transparent;
+  $hover_fill:        transparentize($fg, .83);
+  $active_fill:       transparentize($fg, .72);
+  $active_hover_fill: transparentize($fg, .68);
+
+  @if $style == 'filled' {
+    $fill:              $bg;
+    $hover_fill:        lighten($bg, 5%);
+    $active_fill:       lighten($bg, 9%);
+    $active_hover_fill: lighten($bg, 11%);
+  }
+
+  @include panel_button_fill($fill);
+
+  &:focus, &:hover {
+    @include panel_button_fill($hover_fill);
+    background-color: transparentize($fg, .9);
+    transition-duration: $transition-slow;
+
+    color: $selected_fg_color;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_text_shadow;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_gradient_2;
+    background-gradient-end: $viva_gradient_1;
+  }
+
+  &:active, &:checked  {
+    @include panel_button_fill($active_fill);
+    background-color: transparentize(darken($bg_color, 10%), .5);
+    transition-duration: $transition-slow;
+
+    color: $selected_fg_color;
+    box-shadow: $viva_box_shadow;
+    text-shadow: $viva_text_shadow;
+
+    background-gradient-direction: vertical;
+    background-gradient-start: $viva_color1;
+    background-gradient-end: $viva_color2;
+
+    &:hover{
+      @include panel_button_fill($active_hover_fill);
+    }
+  }
+
+  // some overrides to style a child element
+  @if $highlighted_child {
+
+    // remove the common styles from the parent
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+    // add them to the child
+    #{$child_class} {
+      transition-duration: 150ms;
+      border: 1px solid transparent;
+      border-radius: $forced_circular_radius;
+    }
+
+    &:focus, &:hover {
+      #{$child_class} {
+        @include panel_button_fill($hover_fill);
+      }
+    }
+
+    &:active, &:checked {
+      #{$child_class} {
+        @include panel_button_fill($active_fill);
+
+        &:hover {
+          @include panel_button_fill($active_hover_fill);
+        }
+      }
+    }
+  }
+}

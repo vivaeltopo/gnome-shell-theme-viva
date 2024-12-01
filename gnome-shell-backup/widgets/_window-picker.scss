@@ -1,0 +1,55 @@
+/* Window Picker */
+
+// Window picker
+.window-picker {
+  // Space between window thumbnails
+  spacing: $base_padding;
+}
+
+// Window titles
+.window-caption {
+  color: $osd_fg_color;
+  font-weight: normal;
+  background-color: $osd_bg_color;
+  padding: $base_padding $base_padding * 2;
+
+  transition-duration: $transition-fast;
+
+  border: 0;
+  border-radius: $base_border_radius;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
+}
+
+// Close button
+.window-close {
+  width: 32px;
+  height: 32px;
+
+  color: $fg_color;
+  border-radius: $base_border_radius;
+  background-color: $viva_color1;
+  background-image: url('images/close.png');
+  background-size: 16px;
+  box-shadow: $viva_box_shadow;
+  text-shadow: $viva_text_shadow;
+
+  -shell-close-overlap: 16px;
+
+  & StIcon { icon-size: 24px; }
+
+  &:hover {
+    background-color: $viva_color2;
+  }
+
+  &:active {
+    background-color: $viva_gradient_3;
+  }
+}
+
+.workspace-background {
+  // keep in sync with BACKGROUND_CORNER_RADIUS_PIXELS in workspace.js
+  border-radius: 30px;
+  background-color: $osd_bg_color;
+  box-shadow: 0 4px 16px 4px transparentize(darken($osd_bg_color, 30%), 0.7);
+}

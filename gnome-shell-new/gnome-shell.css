@@ -1,0 +1,4088 @@
+/* This stylesheet is generated, DO NOT EDIT */
+/* Copyright 2009, 2015 Red Hat, Inc.
+ *
+ * Portions adapted from Mx's data/style/default.css
+ *   Copyright 2009 Intel Corporation
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms and conditions of the GNU Lesser General Public License,
+ * version 2.1, as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+/* Global Values */
+* {
+  font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif; }
+
+stage {
+  font-size: 1.091em;
+  font-family: Source Sans Pro, Sans, Cantarell, Sans-Serif;
+  color: #f5f5f5; }
+
+/* Common Stylings */
+#dash .dash-item-container .show-apps,
+#dash .dash-item-container .overview-tile,
+#dash .dash-item-container .grid-search-result {
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0; }
+
+.app-folder-dialog .overview-tile, .app-folder-dialog .grid-search-result, .app-folder, .overview-tile, .grid-search-result, #dash .dash-item-container .show-apps .overview-icon,
+#dash .dash-item-container .overview-tile .overview-icon,
+#dash .dash-item-container .grid-search-result .overview-icon, .list-search-result, .search-provider-icon {
+  border-radius: 4px;
+  padding: 4px;
+  spacing: 4px;
+  border: 2px solid transparent;
+  transition-duration: 100ms;
+  text-align: center; }
+
+.login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item, .login-dialog-not-listed-button, .unlock-dialog .button,
+.unlock-dialog .icon-button,
+.unlock-dialog .message .message-header .message-expand-button,
+.message .message-header .unlock-dialog .message-expand-button,
+.unlock-dialog .message .message-header .message-close-button,
+.message .message-header .unlock-dialog .message-close-button,
+.unlock-dialog .screenshot-ui-show-pointer-button, .screenshot-ui-show-pointer-button, .screenshot-ui-type-button, #LookingGlassDialog .notebook-tab, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .icon-button, .login-dialog-button.cancel-button, .login-dialog-button.switch-user-button, .login-dialog-button.login-dialog-session-list-button, .message .message-header .message-expand-button,
+.message .message-header .message-close-button, .calendar .calendar-month-header .pager-button, .button {
+  border-radius: 2px;
+  padding: 2px 16px;
+  font-weight: bold;
+  transition: border-width 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.icon-button, .login-dialog-button.cancel-button, .login-dialog-button.switch-user-button, .login-dialog-button.login-dialog-session-list-button, .screenshot-ui-show-pointer-button, .message .message-header .message-expand-button,
+.message .message-header .message-close-button, .calendar .calendar-month-header .pager-button, .button {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: bold;
+  padding: 2px 16px;
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .icon-button:focus, .login-dialog-button.cancel-button:focus, .login-dialog-button.switch-user-button:focus, .login-dialog-button.login-dialog-session-list-button:focus, .screenshot-ui-show-pointer-button:focus, .message .message-header .message-expand-button:focus,
+  .message .message-header .message-close-button:focus, .calendar .calendar-month-header .pager-button:focus, .button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .icon-button:hover, .login-dialog-button.cancel-button:hover, .login-dialog-button.switch-user-button:hover, .login-dialog-button.login-dialog-session-list-button:hover, .screenshot-ui-show-pointer-button:hover, .message .message-header .message-expand-button:hover,
+  .message .message-header .message-close-button:hover, .calendar .calendar-month-header .pager-button:hover, .button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .icon-button:insensitive, .login-dialog-button.cancel-button:insensitive, .login-dialog-button.switch-user-button:insensitive, .login-dialog-button.login-dialog-session-list-button:insensitive, .screenshot-ui-show-pointer-button:insensitive, .message .message-header .message-expand-button:insensitive,
+  .message .message-header .message-close-button:insensitive, .calendar .calendar-month-header .pager-button:insensitive, .button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+  .icon-button:active, .login-dialog-button.cancel-button:active, .login-dialog-button.switch-user-button:active, .login-dialog-button.login-dialog-session-list-button:active, .screenshot-ui-show-pointer-button:active, .message .message-header .message-expand-button:active,
+  .message .message-header .message-close-button:active, .calendar .calendar-month-header .pager-button:active, .button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .icon-button:active:hover, .login-dialog-button.cancel-button:active:hover, .login-dialog-button.switch-user-button:active:hover, .login-dialog-button.login-dialog-session-list-button:active:hover, .screenshot-ui-show-pointer-button:active:hover, .message .message-header .message-expand-button:active:hover,
+    .message .message-header .message-close-button:active:hover, .calendar .calendar-month-header .pager-button:active:hover, .button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .icon-button:active:focus, .login-dialog-button.cancel-button:active:focus, .login-dialog-button.switch-user-button:active:focus, .login-dialog-button.login-dialog-session-list-button:active:focus, .screenshot-ui-show-pointer-button:active:focus, .message .message-header .message-expand-button:active:focus,
+    .message .message-header .message-close-button:active:focus, .calendar .calendar-month-header .pager-button:active:focus, .button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .icon-button:checked, .login-dialog-button.cancel-button:checked, .login-dialog-button.switch-user-button:checked, .login-dialog-button.login-dialog-session-list-button:checked, .screenshot-ui-show-pointer-button:checked, .message .message-header .message-expand-button:checked,
+  .message .message-header .message-close-button:checked, .calendar .calendar-month-header .pager-button:checked, .button:checked {
+    color: #f5f5f5;
+    background-color: red; }
+    .icon-button:checked:hover, .login-dialog-button.cancel-button:checked:hover, .login-dialog-button.switch-user-button:checked:hover, .login-dialog-button.login-dialog-session-list-button:checked:hover, .screenshot-ui-show-pointer-button:checked:hover, .message .message-header .message-expand-button:checked:hover,
+    .message .message-header .message-close-button:checked:hover, .calendar .calendar-month-header .pager-button:checked:hover, .button:checked:hover {
+      background-color: red; }
+    .icon-button:checked:active, .login-dialog-button.cancel-button:checked:active, .login-dialog-button.switch-user-button:checked:active, .login-dialog-button.login-dialog-session-list-button:checked:active, .screenshot-ui-show-pointer-button:checked:active, .message .message-header .message-expand-button:checked:active,
+    .message .message-header .message-close-button:checked:active, .calendar .calendar-month-header .pager-button:checked:active, .button:checked:active {
+      background-color: red; }
+
+.calendar .calendar-day-heading, .calendar .calendar-day, .calendar .calendar-month-header .calendar-month-label, .icon-button.flat, .flat.login-dialog-button.cancel-button, .flat.login-dialog-button.switch-user-button, .flat.login-dialog-button.login-dialog-session-list-button, .flat.screenshot-ui-show-pointer-button, .message .message-header .flat.message-expand-button,
+.message .message-header .flat.message-close-button, .calendar .calendar-month-header .pager-button, .button.flat {
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .calendar .calendar-day-heading:focus, .calendar .calendar-day:focus, .calendar .calendar-month-header .calendar-month-label:focus, .icon-button.flat:focus, .flat.login-dialog-button.cancel-button:focus, .flat.login-dialog-button.switch-user-button:focus, .flat.login-dialog-button.login-dialog-session-list-button:focus, .flat.screenshot-ui-show-pointer-button:focus, .message .message-header .flat.message-expand-button:focus,
+  .message .message-header .flat.message-close-button:focus, .calendar .calendar-month-header .pager-button:focus, .button.flat:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .calendar .calendar-day-heading:hover, .calendar .calendar-day:hover, .calendar .calendar-month-header .calendar-month-label:hover, .icon-button.flat:hover, .flat.login-dialog-button.cancel-button:hover, .flat.login-dialog-button.switch-user-button:hover, .flat.login-dialog-button.login-dialog-session-list-button:hover, .flat.screenshot-ui-show-pointer-button:hover, .message .message-header .flat.message-expand-button:hover,
+  .message .message-header .flat.message-close-button:hover, .calendar .calendar-month-header .pager-button:hover, .button.flat:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .calendar .calendar-day-heading:insensitive, .calendar .calendar-day:insensitive, .calendar .calendar-month-header .calendar-month-label:insensitive, .icon-button.flat:insensitive, .flat.login-dialog-button.cancel-button:insensitive, .flat.login-dialog-button.switch-user-button:insensitive, .flat.login-dialog-button.login-dialog-session-list-button:insensitive, .flat.screenshot-ui-show-pointer-button:insensitive, .message .message-header .flat.message-expand-button:insensitive,
+  .message .message-header .flat.message-close-button:insensitive, .calendar .calendar-month-header .pager-button:insensitive, .button.flat:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+  .calendar .calendar-day-heading:selected, .calendar .calendar-day:selected, .calendar .calendar-month-header .calendar-month-label:selected, .icon-button.flat:selected, .flat.login-dialog-button.cancel-button:selected, .flat.login-dialog-button.switch-user-button:selected, .flat.login-dialog-button.login-dialog-session-list-button:selected, .flat.screenshot-ui-show-pointer-button:selected, .message .message-header .flat.message-expand-button:selected,
+  .message .message-header .flat.message-close-button:selected, .calendar .calendar-month-header .pager-button:selected, .button.flat:selected, .calendar .calendar-day-heading:active, .calendar .calendar-day:active, .calendar .calendar-month-header .calendar-month-label:active, .icon-button.flat:active, .flat.login-dialog-button.cancel-button:active, .flat.login-dialog-button.switch-user-button:active, .flat.login-dialog-button.login-dialog-session-list-button:active, .flat.screenshot-ui-show-pointer-button:active, .message .message-header .flat.message-expand-button:active,
+  .message .message-header .flat.message-close-button:active, .calendar .calendar-month-header .pager-button:active, .button.flat:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .calendar .calendar-day-heading:selected:hover, .calendar .calendar-day:selected:hover, .calendar .calendar-month-header .calendar-month-label:selected:hover, .icon-button.flat:selected:hover, .flat.login-dialog-button.cancel-button:selected:hover, .flat.login-dialog-button.switch-user-button:selected:hover, .flat.login-dialog-button.login-dialog-session-list-button:selected:hover, .flat.screenshot-ui-show-pointer-button:selected:hover, .message .message-header .flat.message-expand-button:selected:hover,
+    .message .message-header .flat.message-close-button:selected:hover, .calendar .calendar-month-header .pager-button:selected:hover, .button.flat:selected:hover, .calendar .calendar-day-heading:active:hover, .calendar .calendar-day:active:hover, .calendar .calendar-month-header .calendar-month-label:active:hover, .icon-button.flat:active:hover, .flat.login-dialog-button.cancel-button:active:hover, .flat.login-dialog-button.switch-user-button:active:hover, .flat.login-dialog-button.login-dialog-session-list-button:active:hover, .flat.screenshot-ui-show-pointer-button:active:hover, .message .message-header .flat.message-expand-button:active:hover,
+    .message .message-header .flat.message-close-button:active:hover, .calendar .calendar-month-header .pager-button:active:hover, .button.flat:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .calendar .calendar-day-heading:selected:focus, .calendar .calendar-day:selected:focus, .calendar .calendar-month-header .calendar-month-label:selected:focus, .icon-button.flat:selected:focus, .flat.login-dialog-button.cancel-button:selected:focus, .flat.login-dialog-button.switch-user-button:selected:focus, .flat.login-dialog-button.login-dialog-session-list-button:selected:focus, .flat.screenshot-ui-show-pointer-button:selected:focus, .message .message-header .flat.message-expand-button:selected:focus,
+    .message .message-header .flat.message-close-button:selected:focus, .calendar .calendar-month-header .pager-button:selected:focus, .button.flat:selected:focus, .calendar .calendar-day-heading:active:focus, .calendar .calendar-day:active:focus, .calendar .calendar-month-header .calendar-month-label:active:focus, .icon-button.flat:active:focus, .flat.login-dialog-button.cancel-button:active:focus, .flat.login-dialog-button.switch-user-button:active:focus, .flat.login-dialog-button.login-dialog-session-list-button:active:focus, .flat.screenshot-ui-show-pointer-button:active:focus, .message .message-header .flat.message-expand-button:active:focus,
+    .message .message-header .flat.message-close-button:active:focus, .calendar .calendar-month-header .pager-button:active:focus, .button.flat:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .calendar .calendar-day-heading:checked, .calendar .calendar-day:checked, .calendar .calendar-month-header .calendar-month-label:checked, .icon-button.flat:checked, .flat.login-dialog-button.cancel-button:checked, .flat.login-dialog-button.switch-user-button:checked, .flat.login-dialog-button.login-dialog-session-list-button:checked, .flat.screenshot-ui-show-pointer-button:checked, .message .message-header .flat.message-expand-button:checked,
+  .message .message-header .flat.message-close-button:checked, .calendar .calendar-month-header .pager-button:checked, .button.flat:checked {
+    color: #f5f5f5;
+    background-color: red; }
+    .calendar .calendar-day-heading:checked:hover, .calendar .calendar-day:checked:hover, .calendar .calendar-month-header .calendar-month-label:checked:hover, .icon-button.flat:checked:hover, .flat.login-dialog-button.cancel-button:checked:hover, .flat.login-dialog-button.switch-user-button:checked:hover, .flat.login-dialog-button.login-dialog-session-list-button:checked:hover, .flat.screenshot-ui-show-pointer-button:checked:hover, .message .message-header .flat.message-expand-button:checked:hover,
+    .message .message-header .flat.message-close-button:checked:hover, .calendar .calendar-month-header .pager-button:checked:hover, .button.flat:checked:hover {
+      background-color: red; }
+    .calendar .calendar-day-heading:checked:active, .calendar .calendar-day:checked:active, .calendar .calendar-month-header .calendar-month-label:checked:active, .icon-button.flat:checked:active, .flat.login-dialog-button.cancel-button:checked:active, .flat.login-dialog-button.switch-user-button:checked:active, .flat.login-dialog-button.login-dialog-session-list-button:checked:active, .flat.screenshot-ui-show-pointer-button:checked:active, .message .message-header .flat.message-expand-button:checked:active,
+    .message .message-header .flat.message-close-button:checked:active, .calendar .calendar-month-header .pager-button:checked:active, .button.flat:checked:active {
+      background-color: red; }
+
+.keyboard-brightness-level .button:checked, .quick-menu-toggle .quick-toggle-arrow:checked, .quick-menu-toggle .quick-toggle-arrow:focus, .quick-menu-toggle .quick-toggle-arrow:hover, .quick-menu-toggle .quick-toggle-arrow:active, .calendar .calendar-day.calendar-today, .icon-button.default, .default.login-dialog-button.cancel-button, .default.login-dialog-button.switch-user-button, .default.login-dialog-button.login-dialog-session-list-button, .default.screenshot-ui-show-pointer-button, .message .message-header .default.message-expand-button,
+.message .message-header .default.message-close-button, .calendar .calendar-month-header .default.pager-button, .button.default {
+  color: #fff;
+  background-color: #cc3700;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .keyboard-brightness-level .button:focus:checked, .quick-menu-toggle .quick-toggle-arrow:focus, .calendar .calendar-day.calendar-today:focus, .icon-button.default:focus, .default.login-dialog-button.cancel-button:focus, .default.login-dialog-button.switch-user-button:focus, .default.login-dialog-button.login-dialog-session-list-button:focus, .default.screenshot-ui-show-pointer-button:focus, .message .message-header .default.message-expand-button:focus,
+  .message .message-header .default.message-close-button:focus, .calendar .calendar-month-header .default.pager-button:focus, .button.default:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .keyboard-brightness-level .button:hover:checked, .quick-menu-toggle .quick-toggle-arrow:hover, .calendar .calendar-day.calendar-today:hover, .icon-button.default:hover, .default.login-dialog-button.cancel-button:hover, .default.login-dialog-button.switch-user-button:hover, .default.login-dialog-button.login-dialog-session-list-button:hover, .default.screenshot-ui-show-pointer-button:hover, .message .message-header .default.message-expand-button:hover,
+  .message .message-header .default.message-close-button:hover, .calendar .calendar-month-header .default.pager-button:hover, .button.default:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .keyboard-brightness-level .button:insensitive:checked, .quick-menu-toggle .quick-toggle-arrow:insensitive:checked, .quick-menu-toggle .quick-toggle-arrow:insensitive:focus, .quick-menu-toggle .quick-toggle-arrow:insensitive:hover, .quick-menu-toggle .quick-toggle-arrow:insensitive:active, .calendar .calendar-day.calendar-today:insensitive, .icon-button.default:insensitive, .default.login-dialog-button.cancel-button:insensitive, .default.login-dialog-button.switch-user-button:insensitive, .default.login-dialog-button.login-dialog-session-list-button:insensitive, .default.screenshot-ui-show-pointer-button:insensitive, .message .message-header .default.message-expand-button:insensitive,
+  .message .message-header .default.message-close-button:insensitive, .calendar .calendar-month-header .default.pager-button:insensitive, .button.default:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #cc3700;
+    background-gradient-end: #cc3700; }
+  .keyboard-brightness-level .button:active:checked, .quick-menu-toggle .quick-toggle-arrow:active, .calendar .calendar-day.calendar-today:active, .icon-button.default:active, .default.login-dialog-button.cancel-button:active, .default.login-dialog-button.switch-user-button:active, .default.login-dialog-button.login-dialog-session-list-button:active, .default.screenshot-ui-show-pointer-button:active, .message .message-header .default.message-expand-button:active,
+  .message .message-header .default.message-close-button:active, .calendar .calendar-month-header .default.pager-button:active, .button.default:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-brightness-level .button:active:hover:checked, .quick-menu-toggle .quick-toggle-arrow:active:hover, .calendar .calendar-day.calendar-today:active:hover, .icon-button.default:active:hover, .default.login-dialog-button.cancel-button:active:hover, .default.login-dialog-button.switch-user-button:active:hover, .default.login-dialog-button.login-dialog-session-list-button:active:hover, .default.screenshot-ui-show-pointer-button:active:hover, .message .message-header .default.message-expand-button:active:hover,
+    .message .message-header .default.message-close-button:active:hover, .calendar .calendar-month-header .default.pager-button:active:hover, .button.default:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-brightness-level .button:active:focus:checked, .quick-menu-toggle .quick-toggle-arrow:active:focus, .calendar .calendar-day.calendar-today:active:focus, .icon-button.default:active:focus, .default.login-dialog-button.cancel-button:active:focus, .default.login-dialog-button.switch-user-button:active:focus, .default.login-dialog-button.login-dialog-session-list-button:active:focus, .default.screenshot-ui-show-pointer-button:active:focus, .message .message-header .default.message-expand-button:active:focus,
+    .message .message-header .default.message-close-button:active:focus, .calendar .calendar-month-header .default.pager-button:active:focus, .button.default:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+
+.popup-sub-menu .popup-menu-item, .popup-menu-item {
+  font-weight: normal;
+  spacing: 4px;
+  transition-duration: 100ms;
+  padding: 6px 8px; }
+
+.calendar, .datemenu-today-button, .lg-extension, .quick-toggle-menu, .message, .events-button,
+.world-clocks-button,
+.weather-button {
+  border-radius: 2px;
+  padding: 0.818em;
+  margin: 2px;
+  background-color: #2a2a2a;
+  box-shadow: 0 1px 2px 0 transparent;
+  border: 1px solid transparent; }
+
+.lg-extension, .quick-toggle-menu, .message, .events-button,
+.world-clocks-button,
+.weather-button {
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .lg-extension:hover, .quick-toggle-menu:hover, .message:hover, .events-button:hover,
+  .world-clocks-button:hover,
+  .weather-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .lg-extension:active, .quick-toggle-menu:active, .message:active, .events-button:active,
+  .world-clocks-button:active,
+  .weather-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .lg-extension:active:hover, .quick-toggle-menu:active:hover, .message:active:hover, .events-button:active:hover,
+    .world-clocks-button:active:hover,
+    .weather-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .lg-extension:active:focus, .quick-toggle-menu:active:focus, .message:active:focus, .events-button:active:focus,
+    .world-clocks-button:active:focus,
+    .weather-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .lg-extension:focus, .quick-toggle-menu:focus, .message:focus, .events-button:focus,
+  .world-clocks-button:focus,
+  .weather-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .lg-extension:insensitive, .quick-toggle-menu:insensitive, .message:insensitive, .events-button:insensitive,
+  .world-clocks-button:insensitive,
+  .weather-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+
+.calendar, .datemenu-today-button {
+  border: 1px solid transparent !important;
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px; }
+  .calendar:insensitive, .datemenu-today-button:insensitive {
+    background-color: transparent !important; }
+  .calendar:hover, .datemenu-today-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .calendar:active, .datemenu-today-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .calendar:active:hover, .datemenu-today-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .calendar:active:focus, .datemenu-today-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .calendar:focus, .datemenu-today-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .calendar:insensitive, .datemenu-today-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+
+.unlock-dialog .login-dialog-prompt-entry, .login-dialog .login-dialog-prompt-entry, .app-folder-dialog .folder-name-container .folder-name-entry, .lg-dialog StEntry, StEntry {
+  border-radius: 2px;
+  padding: 6px 6px;
+  selection-background-color: #cc3700;
+  selected-color: #fff; }
+
+StEntry {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  border: 1px solid #030303;
+  color: rgba(245, 245, 245, 0.7); }
+  StEntry:hover {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  StEntry:focus {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  StEntry:insensitive {
+    color: #868686;
+    border-color: #171717;
+    box-shadow: none; }
+  StEntry StLabel.hint-text {
+    color: rgba(245, 245, 245, 0.7); }
+
+.modal-dialog .modal-dialog-linked-button, .notification-button {
+  padding: 8px;
+  font-weight: bold !important;
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .modal-dialog .modal-dialog-linked-button:ltr, .notification-button:ltr {
+    margin-right: 1px; }
+  .modal-dialog .modal-dialog-linked-button:rtl, .notification-button:rtl {
+    margin-left: 1px; }
+  .modal-dialog .modal-dialog-linked-button:focus, .notification-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .modal-dialog .modal-dialog-linked-button:hover, .notification-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .modal-dialog .modal-dialog-linked-button:active, .notification-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .modal-dialog .modal-dialog-linked-button:active:hover, .notification-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .modal-dialog .modal-dialog-linked-button:active:focus, .notification-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .modal-dialog .modal-dialog-linked-button:checked, .notification-button:checked {
+    color: #f5f5f5;
+    background-color: red; }
+    .modal-dialog .modal-dialog-linked-button:checked:hover, .notification-button:checked:hover {
+      background-color: red; }
+    .modal-dialog .modal-dialog-linked-button:checked:active, .notification-button:checked:active {
+      background-color: red; }
+  .modal-dialog .modal-dialog-linked-button:insensitive, .notification-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+  .modal-dialog .modal-dialog-linked-button:first-child:ltr, .notification-button:first-child:ltr {
+    border-radius: 0 0 0 2px; }
+  .modal-dialog .modal-dialog-linked-button:last-child:ltr, .notification-button:last-child:ltr {
+    border-radius: 0 0 2px;
+    margin-right: 0 !important; }
+  .modal-dialog .modal-dialog-linked-button:first-child:rtl, .notification-button:first-child:rtl {
+    border-radius: 0 0 2px; }
+  .modal-dialog .modal-dialog-linked-button:last-child:rtl, .notification-button:last-child:rtl {
+    border-radius: 0 0 0 2px;
+    margin-left: 0 !important; }
+  .modal-dialog .modal-dialog-linked-button:first-child:last-child, .notification-button:first-child:last-child {
+    border-radius: 0 0 2px 2px;
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+
+.dash-label, .screenshot-ui-tooltip {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 4px 8px;
+  text-align: center; }
+
+/* General Typography */
+.login-dialog .user-widget.vertical .user-widget-label,
+.unlock-dialog .user-widget.vertical .user-widget-label, .unlock-dialog-clock .unlock-dialog-clock-date, .app-folder-dialog .folder-name-container .folder-name-label, .app-folder-dialog .folder-name-container .folder-name-entry, .search-statustext {
+  font-weight: 800;
+  font-size: 1.818em; }
+
+.conflicting-session-dialog-content .conflicting-session-dialog-title, .lg-debug-flags-header, .message-dialog-content .message-dialog-title, .message-list .message-list-placeholder, .datemenu-today-button .date-label {
+  font-weight: 800;
+  font-size: 1.364em; }
+
+.login-dialog .user-widget.horizontal .user-widget-label,
+.unlock-dialog .user-widget.horizontal .user-widget-label, .quick-toggle-menu .header .title {
+  font-weight: 700;
+  font-size: 1.364em; }
+
+.login-dialog-auth-list-label, .word-suggestions, .bt-menu-placeholder.popup-menu-item, .message-dialog-content .message-dialog-title.lightweight, .headline {
+  font-weight: 700;
+  font-size: 1.182em; }
+
+.login-dialog-not-listed-label, .lg-extension-name, .background-app-item .title, .osd-window, .dialog-list .dialog-list-title, .message-list-controls, .weather-button .weather-box .weather-header-box .weather-header, .world-clocks-button .world-clocks-header, .events-button .events-box .events-list .event-box .event-summary, .events-button .events-box .events-title, .calendar .calendar-month-header .calendar-month-label {
+  font-weight: 700;
+  font-size: 1em; }
+
+.quick-toggle-menu .header .subtitle, .app-menu .popup-inactive-menu-item:first-child > StLabel {
+  font-weight: 700;
+  font-size: 0.818em; }
+
+.lg-completions-text, .caps-lock-warning-label, .background-app-item .subtitle, .quick-toggle StBoxLayout > .quick-toggle-subtitle, .screenshot-ui-type-button .icon-label-button-container, .prompt-dialog-error-label,
+.prompt-dialog-info-label,
+.prompt-dialog-null-label, .run-dialog .run-dialog-description, .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description, .message .message-header .message-header-content .event-time, .world-clocks-button .world-clocks-grid .world-clocks-timezone, .events-button .events-box .events-list .event-box .event-time {
+  font-weight: 400;
+  font-size: 0.818em; }
+
+.calendar .calendar-week-number, .calendar .calendar-day-heading, .calendar .calendar-day {
+  font-weight: 400;
+  font-size: 0.727em; }
+
+.unlock-dialog-clock .unlock-dialog-clock-time, #panel, .weather-button .weather-box .weather-grid .weather-forecast-temp, .weather-button .weather-box .weather-grid .weather-forecast-time, .world-clocks-button .world-clocks-grid .world-clocks-timezone, .world-clocks-button .world-clocks-grid .world-clocks-time, .events-button .events-box .events-list .event-box .event-time, .calendar .calendar-day-heading, .calendar .calendar-day {
+  font-feature-settings: "tnum"; }
+
+/* OSD Elements */
+#LookingGlassDialog, .screenshot-ui-panel, .workspace-switcher, .switcher-list, .resize-popup, .osd-window {
+  color: #eeeeec;
+  background-color: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 2px;
+  padding: 8px; }
+
+.lg-dialog StEntry {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  border: 1px solid #030303;
+  color: rgba(245, 245, 245, 0.7); }
+  .lg-dialog StEntry:hover {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  .lg-dialog StEntry:focus {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  .lg-dialog StEntry:insensitive {
+    color: #868686;
+    border-color: #171717;
+    box-shadow: none; }
+  .lg-dialog StEntry StLabel.hint-text {
+    color: rgba(238, 238, 236, 0.7); }
+
+#LookingGlassDialog .notebook-tab, #LookingGlassDialog > #Toolbar .lg-toolbar-button {
+  color: #eeeeec;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  #LookingGlassDialog .notebook-tab:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  #LookingGlassDialog .notebook-tab:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  #LookingGlassDialog .notebook-tab:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    #LookingGlassDialog .notebook-tab:active:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    #LookingGlassDialog .notebook-tab:active:focus, #LookingGlassDialog > #Toolbar .lg-toolbar-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  #LookingGlassDialog .notebook-tab:checked, #LookingGlassDialog > #Toolbar .lg-toolbar-button:checked {
+    color: #eeeeec;
+    background-color: red; }
+    #LookingGlassDialog .notebook-tab:checked:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:checked:hover {
+      background-color: red; }
+    #LookingGlassDialog .notebook-tab:checked:active, #LookingGlassDialog > #Toolbar .lg-toolbar-button:checked:active {
+      background-color: red; }
+  #LookingGlassDialog .notebook-tab:insensitive, #LookingGlassDialog > #Toolbar .lg-toolbar-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+
+.screenshot-ui-show-pointer-button, .screenshot-ui-type-button {
+  color: #eeeeec;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .screenshot-ui-show-pointer-button:focus, .screenshot-ui-type-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .screenshot-ui-show-pointer-button:hover, .screenshot-ui-type-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .screenshot-ui-show-pointer-button:active, .screenshot-ui-type-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .screenshot-ui-show-pointer-button:active:hover, .screenshot-ui-type-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .screenshot-ui-show-pointer-button:active:focus, .screenshot-ui-type-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .screenshot-ui-show-pointer-button:checked, .screenshot-ui-type-button:checked {
+    color: #eeeeec;
+    background-color: red; }
+    .screenshot-ui-show-pointer-button:checked:hover, .screenshot-ui-type-button:checked:hover {
+      background-color: red; }
+    .screenshot-ui-show-pointer-button:checked:active, .screenshot-ui-type-button:checked:active {
+      background-color: red; }
+  .screenshot-ui-show-pointer-button:insensitive, .screenshot-ui-type-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+
+/* System Elements */
+.login-dialog .login-dialog-prompt-entry, .app-folder-dialog .folder-name-container .folder-name-entry {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  border: 1px solid #030303;
+  color: rgba(245, 245, 245, 0.7); }
+  .login-dialog .login-dialog-prompt-entry:hover, .app-folder-dialog .folder-name-container .folder-name-entry:hover {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  .login-dialog .login-dialog-prompt-entry:focus, .app-folder-dialog .folder-name-container .folder-name-entry:focus {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  .login-dialog .login-dialog-prompt-entry:insensitive, .app-folder-dialog .folder-name-container .folder-name-entry:insensitive {
+    color: #868686;
+    border-color: #171717;
+    box-shadow: none; }
+  .login-dialog .login-dialog-prompt-entry StLabel.hint-text, .app-folder-dialog .folder-name-container .folder-name-entry StLabel.hint-text {
+    color: rgba(245, 245, 245, 0.7); }
+
+.login-dialog-button.cancel-button, .login-dialog-button.switch-user-button, .login-dialog-button.login-dialog-session-list-button {
+  color: whitesmoke;
+  background-color: #282828;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .login-dialog-button.cancel-button:insensitive, .login-dialog-button.switch-user-button:insensitive, .login-dialog-button.login-dialog-session-list-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #282828;
+    background-gradient-end: #282828; }
+  .login-dialog-button.cancel-button:focus, .login-dialog-button.switch-user-button:focus, .login-dialog-button.login-dialog-session-list-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .login-dialog-button.cancel-button:hover, .login-dialog-button.switch-user-button:hover, .login-dialog-button.login-dialog-session-list-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .login-dialog-button.cancel-button:active, .login-dialog-button.switch-user-button:active, .login-dialog-button.login-dialog-session-list-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .login-dialog-button.cancel-button:active:hover, .login-dialog-button.switch-user-button:active:hover, .login-dialog-button.login-dialog-session-list-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .login-dialog-button.cancel-button:active:focus, .login-dialog-button.switch-user-button:active:focus, .login-dialog-button.login-dialog-session-list-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .login-dialog-button.cancel-button:checked, .login-dialog-button.switch-user-button:checked, .login-dialog-button.login-dialog-session-list-button:checked {
+    color: whitesmoke;
+    background-color: red; }
+    .login-dialog-button.cancel-button:checked:hover, .login-dialog-button.switch-user-button:checked:hover, .login-dialog-button.login-dialog-session-list-button:checked:hover {
+      background-color: red; }
+    .login-dialog-button.cancel-button:checked:active, .login-dialog-button.switch-user-button:checked:active, .login-dialog-button.login-dialog-session-list-button:checked:active {
+      background-color: red; }
+
+/* Lockscreen Elements */
+.unlock-dialog .button,
+.unlock-dialog .icon-button,
+.unlock-dialog .calendar .calendar-month-header .pager-button,
+.calendar .calendar-month-header .unlock-dialog .pager-button,
+.unlock-dialog .message .message-header .message-expand-button,
+.message .message-header .unlock-dialog .message-expand-button,
+.unlock-dialog .message .message-header .message-close-button,
+.message .message-header .unlock-dialog .message-close-button,
+.unlock-dialog .screenshot-ui-show-pointer-button,
+.unlock-dialog .login-dialog-button.cancel-button,
+.unlock-dialog .login-dialog-button.switch-user-button,
+.unlock-dialog .login-dialog-button.login-dialog-session-list-button {
+  color: whitesmoke;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .unlock-dialog .button:focus,
+  .unlock-dialog .icon-button:focus,
+  .unlock-dialog .calendar .calendar-month-header .pager-button:focus,
+  .calendar .calendar-month-header .unlock-dialog .pager-button:focus,
+  .unlock-dialog .message .message-header .message-expand-button:focus,
+  .message .message-header .unlock-dialog .message-expand-button:focus,
+  .unlock-dialog .message .message-header .message-close-button:focus,
+  .message .message-header .unlock-dialog .message-close-button:focus,
+  .unlock-dialog .screenshot-ui-show-pointer-button:focus,
+  .unlock-dialog .login-dialog-button.cancel-button:focus,
+  .unlock-dialog .login-dialog-button.switch-user-button:focus,
+  .unlock-dialog .login-dialog-button.login-dialog-session-list-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .unlock-dialog .button:hover,
+  .unlock-dialog .icon-button:hover,
+  .unlock-dialog .calendar .calendar-month-header .pager-button:hover,
+  .calendar .calendar-month-header .unlock-dialog .pager-button:hover,
+  .unlock-dialog .message .message-header .message-expand-button:hover,
+  .message .message-header .unlock-dialog .message-expand-button:hover,
+  .unlock-dialog .message .message-header .message-close-button:hover,
+  .message .message-header .unlock-dialog .message-close-button:hover,
+  .unlock-dialog .screenshot-ui-show-pointer-button:hover,
+  .unlock-dialog .login-dialog-button.cancel-button:hover,
+  .unlock-dialog .login-dialog-button.switch-user-button:hover,
+  .unlock-dialog .login-dialog-button.login-dialog-session-list-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .unlock-dialog .button:active,
+  .unlock-dialog .icon-button:active,
+  .unlock-dialog .calendar .calendar-month-header .pager-button:active,
+  .calendar .calendar-month-header .unlock-dialog .pager-button:active,
+  .unlock-dialog .message .message-header .message-expand-button:active,
+  .message .message-header .unlock-dialog .message-expand-button:active,
+  .unlock-dialog .message .message-header .message-close-button:active,
+  .message .message-header .unlock-dialog .message-close-button:active,
+  .unlock-dialog .screenshot-ui-show-pointer-button:active,
+  .unlock-dialog .login-dialog-button.cancel-button:active,
+  .unlock-dialog .login-dialog-button.switch-user-button:active,
+  .unlock-dialog .login-dialog-button.login-dialog-session-list-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .unlock-dialog .button:active:hover,
+    .unlock-dialog .icon-button:active:hover,
+    .unlock-dialog .calendar .calendar-month-header .pager-button:active:hover,
+    .calendar .calendar-month-header .unlock-dialog .pager-button:active:hover,
+    .unlock-dialog .message .message-header .message-expand-button:active:hover,
+    .message .message-header .unlock-dialog .message-expand-button:active:hover,
+    .unlock-dialog .message .message-header .message-close-button:active:hover,
+    .message .message-header .unlock-dialog .message-close-button:active:hover,
+    .unlock-dialog .screenshot-ui-show-pointer-button:active:hover,
+    .unlock-dialog .login-dialog-button.cancel-button:active:hover,
+    .unlock-dialog .login-dialog-button.switch-user-button:active:hover,
+    .unlock-dialog .login-dialog-button.login-dialog-session-list-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .unlock-dialog .button:active:focus,
+    .unlock-dialog .icon-button:active:focus,
+    .unlock-dialog .calendar .calendar-month-header .pager-button:active:focus,
+    .calendar .calendar-month-header .unlock-dialog .pager-button:active:focus,
+    .unlock-dialog .message .message-header .message-expand-button:active:focus,
+    .message .message-header .unlock-dialog .message-expand-button:active:focus,
+    .unlock-dialog .message .message-header .message-close-button:active:focus,
+    .message .message-header .unlock-dialog .message-close-button:active:focus,
+    .unlock-dialog .screenshot-ui-show-pointer-button:active:focus,
+    .unlock-dialog .login-dialog-button.cancel-button:active:focus,
+    .unlock-dialog .login-dialog-button.switch-user-button:active:focus,
+    .unlock-dialog .login-dialog-button.login-dialog-session-list-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .unlock-dialog .button:checked,
+  .unlock-dialog .icon-button:checked,
+  .unlock-dialog .calendar .calendar-month-header .pager-button:checked,
+  .calendar .calendar-month-header .unlock-dialog .pager-button:checked,
+  .unlock-dialog .message .message-header .message-expand-button:checked,
+  .message .message-header .unlock-dialog .message-expand-button:checked,
+  .unlock-dialog .message .message-header .message-close-button:checked,
+  .message .message-header .unlock-dialog .message-close-button:checked,
+  .unlock-dialog .screenshot-ui-show-pointer-button:checked,
+  .unlock-dialog .login-dialog-button.cancel-button:checked,
+  .unlock-dialog .login-dialog-button.switch-user-button:checked,
+  .unlock-dialog .login-dialog-button.login-dialog-session-list-button:checked {
+    color: whitesmoke;
+    background-color: red; }
+    .unlock-dialog .button:checked:hover,
+    .unlock-dialog .icon-button:checked:hover,
+    .unlock-dialog .calendar .calendar-month-header .pager-button:checked:hover,
+    .calendar .calendar-month-header .unlock-dialog .pager-button:checked:hover,
+    .unlock-dialog .message .message-header .message-expand-button:checked:hover,
+    .message .message-header .unlock-dialog .message-expand-button:checked:hover,
+    .unlock-dialog .message .message-header .message-close-button:checked:hover,
+    .message .message-header .unlock-dialog .message-close-button:checked:hover,
+    .unlock-dialog .screenshot-ui-show-pointer-button:checked:hover,
+    .unlock-dialog .login-dialog-button.cancel-button:checked:hover,
+    .unlock-dialog .login-dialog-button.switch-user-button:checked:hover,
+    .unlock-dialog .login-dialog-button.login-dialog-session-list-button:checked:hover {
+      background-color: red; }
+    .unlock-dialog .button:checked:active,
+    .unlock-dialog .icon-button:checked:active,
+    .unlock-dialog .calendar .calendar-month-header .pager-button:checked:active,
+    .calendar .calendar-month-header .unlock-dialog .pager-button:checked:active,
+    .unlock-dialog .message .message-header .message-expand-button:checked:active,
+    .message .message-header .unlock-dialog .message-expand-button:checked:active,
+    .unlock-dialog .message .message-header .message-close-button:checked:active,
+    .message .message-header .unlock-dialog .message-close-button:checked:active,
+    .unlock-dialog .screenshot-ui-show-pointer-button:checked:active,
+    .unlock-dialog .login-dialog-button.cancel-button:checked:active,
+    .unlock-dialog .login-dialog-button.switch-user-button:checked:active,
+    .unlock-dialog .login-dialog-button.login-dialog-session-list-button:checked:active {
+      background-color: red; }
+  .unlock-dialog .button:insensitive,
+  .unlock-dialog .icon-button:insensitive,
+  .unlock-dialog .calendar .calendar-month-header .pager-button:insensitive,
+  .calendar .calendar-month-header .unlock-dialog .pager-button:insensitive,
+  .unlock-dialog .message .message-header .message-expand-button:insensitive,
+  .message .message-header .unlock-dialog .message-expand-button:insensitive,
+  .unlock-dialog .message .message-header .message-close-button:insensitive,
+  .message .message-header .unlock-dialog .message-close-button:insensitive,
+  .unlock-dialog .screenshot-ui-show-pointer-button:insensitive,
+  .unlock-dialog .login-dialog-button.cancel-button:insensitive,
+  .unlock-dialog .login-dialog-button.switch-user-button:insensitive,
+  .unlock-dialog .login-dialog-button.login-dialog-session-list-button:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #181818;
+    background-gradient-end: #181818; }
+
+.unlock-dialog .login-dialog-prompt-entry {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  border: 1px solid #030303;
+  color: rgba(245, 245, 245, 0.7); }
+  .unlock-dialog .login-dialog-prompt-entry:hover {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  .unlock-dialog .login-dialog-prompt-entry:focus {
+    border-color: #030303;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 2px rgba(245, 245, 245, 0.4) !important;
+    background-color: rgba(245, 245, 245, 0.115); }
+  .unlock-dialog .login-dialog-prompt-entry:insensitive {
+    color: #868686;
+    border-color: #171717;
+    box-shadow: none; }
+  .unlock-dialog .login-dialog-prompt-entry StLabel.hint-text {
+    color: rgba(245, 245, 245, 0.7); }
+
+/* WIDGETS */
+.shell-link {
+  color: #ff6a33; }
+  .shell-link:hover {
+    color: #ff8f66; }
+
+.lowres-icon {
+  icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+
+.icon-dropshadow {
+  icon-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+
+/* Entries */
+StEntry StIcon.capslock-warning {
+  icon-size: 1.091em;
+  warning-color: #f57900;
+  padding: 0 2px; }
+
+StEntry StIcon.peek-password {
+  icon-size: 1.091em;
+  padding: 0 2px; }
+
+StEntry StLabel.hint-text {
+  margin-left: 1px; }
+
+/* Buttons */
+.button {
+  min-height: 1.5em; }
+
+.icon-button, .login-dialog-button.cancel-button, .login-dialog-button.switch-user-button, .login-dialog-button.login-dialog-session-list-button, .screenshot-ui-show-pointer-button, .message .message-header .message-expand-button,
+.message .message-header .message-close-button, .calendar .calendar-month-header .pager-button {
+  border-radius: 2px;
+  padding: 0.818em;
+  min-height: 1.091em; }
+  .icon-button StIcon, .login-dialog-button.cancel-button StIcon, .login-dialog-button.switch-user-button StIcon, .login-dialog-button.login-dialog-session-list-button StIcon, .screenshot-ui-show-pointer-button StIcon, .message .message-header .message-expand-button StIcon,
+  .message .message-header .message-close-button StIcon, .calendar .calendar-month-header .pager-button StIcon {
+    icon-size: 1.091em;
+    -st-icon-style: symbolic; }
+
+/* Check Boxes */
+.check-box StBoxLayout {
+  spacing: .8em; }
+
+.check-box StBin {
+  width: 24px;
+  height: 24px;
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-off.svg"); }
+
+.check-box:focus StBin {
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-off-focused.svg"); }
+
+.check-box:checked StBin {
+  background-image: url("resource:///org/gnome/shell/theme/checkbox.svg"); }
+
+.check-box:focus:checked StBin {
+  background-image: url("resource:///org/gnome/shell/theme/checkbox-focused.svg"); }
+
+/* Switches */
+.toggle-switch {
+  width: 64px;
+  height: 22px;
+  background-image: url("./images/off.png");
+  background-size: contain; }
+  .toggle-switch:checked {
+    background-image: url("./images/on.png"); }
+
+/* Slider */
+.slider {
+  height: 1.091em;
+  -barlevel-height: 3px;
+  -barlevel-background-color: #868686;
+  -barlevel-border-width: 1px;
+  -barlevel-border-color: #868686;
+  -barlevel-active-background-color: #cc3700;
+  -barlevel-active-border-color: rgba(188, 74, 19, 0.7);
+  -barlevel-overdrive-color: #171717;
+  -barlevel-overdrive-border-color: rgba(188, 74, 19, 0.7);
+  -barlevel-overdrive-separator-width: 2px;
+  -slider-handle-radius: 0.5455em;
+  -slider-handle-border-width: 1px;
+  -slider-handle-border-color: #f5f5f5;
+  color: #f5f5f5; }
+  .slider:hover {
+    color: #313131; }
+  .slider:active {
+    color: #363636; }
+
+/* Scrollbars */
+StScrollView.vfade {
+  -st-vfade-offset: 32px; }
+
+StScrollView.hfade {
+  -st-hfade-offset: 32px; }
+
+StScrollBar {
+  margin-right: 10px;
+  width: 10px;
+  padding: 4px; }
+  StScrollView StScrollBar {
+    min-width: 4px;
+    min-height: 4px;
+    padding: 0; }
+  StScrollBar StBin#trough {
+    background-color: transparent; }
+  StScrollBar StButton {
+    color: color-fg;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: 1px 2px black;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.3); }
+    StScrollBar StButton#vhandle {
+      background-gradient-direction: vertical; }
+      StScrollBar StButton#vhandle:focus, StScrollBar StButton#vhandle:hover {
+        background-gradient-start: rgba(255, 255, 255, 0.3);
+        background-gradient-end: rgba(255, 255, 255, 0.45); }
+      StScrollBar StButton#vhandle:active {
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    StScrollBar StButton#hhandle {
+      background-gradient-direction: horizontal; }
+      StScrollBar StButton#hhandle:focus, StScrollBar StButton#hhandle:hover {
+        background-gradient-start: rgba(255, 255, 255, 0.3);
+        background-gradient-end: rgba(255, 255, 255, 0.45); }
+      StScrollBar StButton#hhandle:active {
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+
+/* Popovers/Menus */
+.popup-menu-boxpointer, .candidate-popup-boxpointer {
+  -arrow-rise: 4px; }
+
+.popup-menu {
+  min-width: 15em;
+  color: #f5f5f5; }
+  .popup-menu.panel-menu {
+    margin-bottom: 1.75em; }
+
+.popup-menu-content, .candidate-popup-content {
+  padding: 4px;
+  background-color: #181818;
+  border-radius: 2.5px;
+  border: 1px solid #252525;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+
+.popup-menu-item {
+  color: #f5f5f5;
+  background-color: #181818;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border-radius: 3px; }
+  .popup-menu-item:insensitive {
+    background-color: transparent !important; }
+  .popup-menu-item:focus, .popup-menu-item:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .popup-menu-item:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .popup-menu-item:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .popup-menu-item:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .popup-menu-item:checked {
+    color: #f5f5f5;
+    background-color: red; }
+    .popup-menu-item:checked:hover {
+      background-color: red; }
+    .popup-menu-item:checked:active {
+      background-color: red; }
+  .popup-menu-item:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #252525;
+    background-gradient-end: #252525; }
+  .popup-menu-item:checked {
+    border-radius: 3px 3px 0 0 !important; }
+  .popup-menu-item .toggle-switch:ltr {
+    margin-left: 2px; }
+  .popup-menu-item .toggle-switch:rtl {
+    margin-right: 2px; }
+
+.popup-ornamented-menu-item:ltr {
+  padding-left: 4px; }
+
+.popup-ornamented-menu-item:rtl {
+  padding-right: 4px; }
+
+.popup-inactive-menu-item {
+  color: #f5f5f5; }
+  .popup-inactive-menu-item:insensitive {
+    color: #868686; }
+
+.popup-menu-arrow,
+.popup-menu-icon {
+  icon-size: 1.091em; }
+
+.popup-sub-menu {
+  border-radius: 0 0 4px 4px;
+  margin-bottom: 4px;
+  border: 1px solid transparent; }
+  .popup-sub-menu .popup-menu-item {
+    border-radius: 0;
+    color: #f5f5f5;
+    background-color: #181818;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    border-top-width: 0; }
+    .popup-sub-menu .popup-menu-item:insensitive {
+      background-color: transparent !important; }
+    .popup-sub-menu .popup-menu-item:focus, .popup-sub-menu .popup-menu-item:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .popup-sub-menu .popup-menu-item:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .popup-sub-menu .popup-menu-item:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .popup-sub-menu .popup-menu-item:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .popup-sub-menu .popup-menu-item:checked {
+      color: #f5f5f5;
+      background-color: red; }
+      .popup-sub-menu .popup-menu-item:checked:hover {
+        background-color: red; }
+      .popup-sub-menu .popup-menu-item:checked:active {
+        background-color: red; }
+    .popup-sub-menu .popup-menu-item:insensitive {
+      text-shadow: none;
+      box-shadow: none;
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #868686;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: #363636;
+      background-gradient-end: #363636; }
+    .popup-sub-menu .popup-menu-item:last-child {
+      border-radius: 0 0 3px 3px;
+      border-bottom-width: 0; }
+  .popup-sub-menu .popup-menu-section .popup-menu-item:last-child:hover, .popup-sub-menu .popup-menu-section .popup-menu-item:last-child:focus {
+    border-radius: 0; }
+  .popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
+    border-radius: 0 0 3px 3px; }
+
+.popup-menu-ornament {
+  icon-size: 1.091em !important;
+  width: 1.091em; }
+
+.popup-separator-menu-item {
+  border: none !important; }
+  .popup-separator-menu-item .popup-separator-menu-item-separator {
+    height: 1px;
+    background-color: #030303; }
+  .popup-sub-menu .popup-separator-menu-item {
+    background-color: transparent; }
+    .popup-sub-menu .popup-separator-menu-item:ltr {
+      margin-right: 2.5em; }
+    .popup-sub-menu .popup-separator-menu-item:rtl {
+      margin-left: 2.5em; }
+    .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
+      background-color: #030303; }
+
+.background-menu {
+  -boxpointer-gap: 0px;
+  -arrow-rise: 0px; }
+
+.app-menu {
+  max-width: 27.25em; }
+  .app-menu .popup-inactive-menu-item:first-child > StLabel:ltr {
+    margin-right: 4px; }
+  .app-menu .popup-inactive-menu-item:first-child > StLabel:rtl {
+    margin-left: 4px; }
+
+/* Date/Time Menu */
+#calendarArea {
+  padding: 2px; }
+
+.datemenu-popover {
+  border-radius: 15px; }
+
+.datemenu-calendar-column {
+  spacing: 4px; }
+  .datemenu-calendar-column:ltr {
+    margin-left: 4px; }
+  .datemenu-calendar-column:rtl {
+    margin-right: 4px; }
+  .datemenu-calendar-column .datemenu-displays-box {
+    spacing: 4px; }
+
+.datemenu-today-button {
+  padding: 6px; }
+  .datemenu-today-button .day-label {
+    font-weight: bold; }
+
+.calendar {
+  margin-top: 0;
+  padding: 0; }
+  .calendar .calendar-month-header .calendar-change-month-back StIcon,
+  .calendar .calendar-month-header .calendar-change-month-forward StIcon {
+    icon-size: 1.091em; }
+  .calendar .calendar-month-header .calendar-month-label {
+    color: #f5f5f5 !important;
+    padding: 8px 0;
+    width: 10em;
+    border-radius: 2px;
+    text-align: center; }
+  .calendar .calendar-month-header .pager-button {
+    height: 2.6em;
+    width: 2.6em;
+    padding: 0; }
+  .calendar .calendar-day {
+    border-radius: 2px;
+    height: 3em;
+    width: 3em;
+    margin: 2px;
+    padding: 0;
+    font-weight: bold;
+    text-align: center; }
+    .calendar .calendar-day.calendar-weekend {
+      color: #868686; }
+    .calendar .calendar-day.calendar-other-month {
+      color: rgba(245, 245, 245, 0.5);
+      font-weight: normal; }
+      .calendar .calendar-day.calendar-other-month.calendar-weekend {
+        color: rgba(245, 245, 245, 0.5); }
+    .calendar .calendar-day.calendar-today {
+      color: #fff !important; }
+      .calendar .calendar-day.calendar-today.calendar-day-with-events {
+        background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg") !important; }
+    .calendar .calendar-day.calendar-day-with-events {
+      background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
+      background-size: contain; }
+  .calendar .calendar-day-heading {
+    font-weight: bold;
+    text-align: center;
+    margin: 2px;
+    padding: 2px 4px;
+    border-radius: 2px; }
+  .calendar .calendar-week-number {
+    font-weight: bold;
+    font-feature-settings: "tnum";
+    text-align: center;
+    margin: 4px;
+    padding: 0 4px;
+    border-radius: 1px;
+    background-color: rgba(134, 134, 134, 0.2);
+    color: #868686; }
+
+.events-button .events-box .events-title {
+  color: #868686;
+  padding-bottom: 4px; }
+
+.events-button .events-box .events-list {
+  spacing: 4px; }
+  .events-button .events-box .events-list .event-box {
+    spacing: 4px;
+    border-radius: 2px; }
+    .events-button .events-box .events-list .event-box .event-time {
+      color: #868686; }
+  .events-button .events-box .events-list .event-placeholder {
+    color: #868686;
+    font-style: italic; }
+
+.world-clocks-button .world-clocks-header {
+  color: #868686; }
+  .world-clocks-button .world-clocks-header.no-world-clocks {
+    color: #f5f5f5; }
+
+.world-clocks-button .world-clocks-grid {
+  spacing-rows: 4px;
+  spacing-columns: 8px; }
+  .world-clocks-button .world-clocks-grid .world-clocks-time {
+    font-weight: bold; }
+    .world-clocks-button .world-clocks-grid .world-clocks-time:ltr {
+      text-align: right; }
+    .world-clocks-button .world-clocks-grid .world-clocks-time:rtl {
+      text-align: left; }
+  .world-clocks-button .world-clocks-grid .world-clocks-timezone {
+    color: #868686; }
+
+.weather-button .weather-box {
+  spacing: 4px; }
+  .weather-button .weather-box .weather-header-box {
+    spacing: 4px; }
+    .weather-button .weather-box .weather-header-box .weather-header {
+      color: #868686; }
+      .weather-button .weather-box .weather-header-box .weather-header.no-location {
+        color: #f5f5f5; }
+      .weather-button .weather-box .weather-header-box .weather-header.location {
+        font-weight: normal; }
+  .weather-button .weather-box .weather-grid {
+    spacing-rows: 4px;
+    spacing-columns: 8px; }
+    .weather-button .weather-box .weather-grid .weather-forecast-time {
+      font-size: 0.909em;
+      padding-top: 0.2em;
+      padding-bottom: 0.4em; }
+    .weather-button .weather-box .weather-grid .weather-forecast-icon {
+      icon-size: 2.182em;
+      margin-bottom: 2px; }
+    .weather-button .weather-box .weather-grid .weather-forecast-temp {
+      font-weight: bold; }
+
+/* Message List */
+.message-list {
+  width: 29em;
+  border: solid #030303; }
+  .message-list:ltr {
+    margin-left: 0;
+    margin-right: 2px;
+    padding-right: 4px;
+    border-right-width: 1px; }
+  .message-list:rtl {
+    margin-right: 0;
+    margin-left: 2px;
+    padding-left: 4px;
+    border-left-width: 1px; }
+  .message-list .message-list-placeholder {
+    color: rgba(245, 245, 245, 0.25); }
+    .message-list .message-list-placeholder > StIcon {
+      icon-size: 96px;
+      margin-bottom: 6px;
+      -st-icon-style: symbolic; }
+
+.message-list-sections {
+  spacing: 8px; }
+  .message-list-sections:ltr {
+    margin-right: 6px; }
+  .message-list-sections:rtl {
+    margin-left: 6px; }
+
+.message-list-section,
+.message-list-section-list {
+  spacing: 8px; }
+
+.message-list-controls {
+  padding: 8px;
+  padding-bottom: 4px;
+  spacing: 4px; }
+  .message-list-controls .dnd-button {
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 32px;
+    border-style: solid; }
+    .message-list-controls .dnd-button:focus {
+      border-color: rgba(204, 55, 0, 0.6); }
+
+.message {
+  padding: 0;
+  margin: 0;
+  border-radius: 2px; }
+  .message:ltr {
+    padding-right: -2px; }
+  .message:rtl {
+    padding-left: -2px; }
+  .message .message-header {
+    padding: 0 0.409em;
+    margin: 4px;
+    margin-bottom: 0;
+    spacing: 4px;
+    color: #868686; }
+    .message .message-header .message-source-icon {
+      icon-size: 1.091em;
+      -st-icon-style: symbolic; }
+    .message .message-header .message-header-content {
+      spacing: 4px;
+      min-height: 1.637em;
+      padding-bottom: 4px; }
+      .message .message-header .message-header-content .message-source-title {
+        font-weight: bold; }
+      .message .message-header .message-header-content .event-time {
+        color: #868686;
+        padding-bottom: 0.068em; }
+        .message .message-header .message-header-content .event-time:ltr {
+          text-align: right; }
+        .message .message-header .message-header-content .event-time:rtl {
+          text-align: left; }
+    .message .message-header .message-expand-button,
+    .message .message-header .message-close-button {
+      color: #f5f5f5;
+      background-color: rgba(245, 245, 245, 0.1);
+      padding: 4px; }
+      .message .message-header .message-expand-button:hover,
+      .message .message-header .message-close-button:hover {
+        background-color: rgba(245, 245, 245, 0.19); }
+      .message .message-header .message-expand-button:active, .message .message-header .message-expand-button:active:hover,
+      .message .message-header .message-close-button:active,
+      .message .message-header .message-close-button:active:hover {
+        background-color: rgba(245, 245, 245, 0.24); }
+      .message .message-header .message-expand-button:insensitive,
+      .message .message-header .message-close-button:insensitive {
+        background-color: rgba(245, 245, 245, 0.07); }
+    .message .message-header .message-expand-button {
+      padding: 6px; }
+      .message .message-header .message-expand-button:ltr {
+        margin-right: 4px; }
+      .message .message-header .message-expand-button:rtl {
+        margin-left: 4px; }
+  .message .message-box {
+    padding: 4px;
+    margin: 4px;
+    margin-top: 0;
+    spacing: 4px; }
+    .message .message-box .message-icon {
+      icon-size: 48px;
+      -st-icon-style: symbolic; }
+      .message .message-box .message-icon:ltr {
+        margin-right: 4px; }
+      .message .message-box .message-icon:rtl {
+        margin-left: 4px; }
+      .message .message-box .message-icon.message-themed-icon {
+        border-radius: 2px;
+        background-color: rgba(245, 245, 245, 0.2);
+        icon-size: 16px;
+        min-width: 48px;
+        min-height: 48px; }
+    .message .message-box:first-child {
+      margin-top: 8px; }
+    .message .message-box .message-content {
+      spacing: 2px; }
+      .message .message-box .message-content .message-title {
+        font-weight: bold; }
+
+.url-highlighter {
+  link-color: #ff6a33; }
+
+/* Media Controls */
+.message-media-control {
+  padding: 0 12px;
+  border-radius: 2px;
+  color: #f5f5f5;
+  border: 1px solid transparent; }
+  .message-media-control:hover {
+    background-color: #3e3e3e;
+    color: #f5f5f5; }
+  .message-media-control:active {
+    background-color: #434343;
+    color: #f5f5f5; }
+  .message-media-control:insensitive {
+    color: #939393; }
+  .message-media-control StIcon {
+    icon-size: 16px; }
+
+.media-message .message-icon {
+  border-radius: 2px !important; }
+  .media-message .message-icon.message-themed-icon {
+    icon-size: 32px !important; }
+
+.candidate-popup-content {
+  padding: 4px;
+  spacing: 4px; }
+
+.candidate-index {
+  padding: 0;
+  padding-right: 4px;
+  color: #868686; }
+
+.candidate-box {
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px; }
+  .candidate-box:selected {
+    background-color: #cc3700;
+    color: #fff; }
+  .candidate-box:hover {
+    background-color: #313131;
+    color: white; }
+
+.candidate-page-button-box {
+  height: 2em; }
+  .vertical .candidate-page-button-box {
+    padding-top: 8px; }
+  .horizontal .candidate-page-button-box {
+    padding-left: 8px; }
+
+.candidate-page-button {
+  padding: 4px; }
+  .candidate-page-button StIcon {
+    icon-size: 16px; }
+
+.candidate-page-button-previous {
+  border-radius: 2px 0px 0px 2px;
+  border-right-width: 0;
+  box-shadow: none; }
+
+.candidate-page-button-next {
+  border-radius: 0px 2px 2px 0px;
+  box-shadow: none; }
+
+/* Notifications & Message Tray */
+.notification-banner {
+  min-height: 64px;
+  width: 34em;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  margin: 2px; }
+
+.notification-buttons-bin {
+  spacing: 0; }
+
+/* Modal Dialogs */
+.modal-dialog {
+  background-color: #181818;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px #252525; }
+  .modal-dialog .modal-dialog-content-box {
+    margin: 16px 20px;
+    spacing: 16px;
+    max-width: 28em; }
+
+/* End Session Dialog */
+.end-session-dialog {
+  width: 30em; }
+  .end-session-dialog .end-session-dialog-battery-warning,
+  .end-session-dialog .dialog-list-title {
+    color: #f57900; }
+
+/* Message Dialog */
+.message-dialog-content {
+  spacing: 12px; }
+  .message-dialog-content .message-dialog-title {
+    text-align: center; }
+  .message-dialog-content .message-dialog-description {
+    text-align: center; }
+
+/* Dialog List */
+.dialog-list {
+  spacing: 12px; }
+  .dialog-list .dialog-list-title {
+    text-align: center; }
+  .dialog-list .dialog-list-scrollview {
+    max-height: 200px; }
+  .dialog-list .dialog-list-box {
+    spacing: 1em; }
+    .dialog-list .dialog-list-box .dialog-list-item {
+      spacing: 1em; }
+      .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
+        font-weight: bold; }
+      .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
+        color: #e8e8e8; }
+
+/* Run Dialog */
+.run-dialog .modal-dialog-content-box {
+  margin-top: 16px;
+  margin-bottom: 8px; }
+
+.run-dialog .run-dialog-entry {
+  width: 20em; }
+
+.run-dialog .run-dialog-description {
+  text-align: center;
+  color: #c2c2c2; }
+
+/* Password or Authentication Dialog */
+.prompt-dialog {
+  width: 28em; }
+  .prompt-dialog .modal-dialog-content-box {
+    margin-bottom: 12px; }
+
+.prompt-dialog-password-grid {
+  spacing-rows: 4px;
+  spacing-columns: 2px; }
+  .prompt-dialog-password-grid .prompt-dialog-password-entry {
+    width: auto; }
+    .prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
+      margin-left: 18px; }
+    .prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
+      margin-right: 18px; }
+
+.prompt-dialog-password-layout {
+  spacing: 4px; }
+
+.prompt-dialog-password-entry {
+  width: 20em; }
+
+.prompt-dialog-error-label,
+.prompt-dialog-info-label,
+.prompt-dialog-null-label {
+  text-align: center; }
+
+.prompt-dialog-error-label {
+  color: #f57900; }
+
+/* Polkit Dialog */
+.polkit-dialog-user-layout {
+  text-align: center;
+  spacing: 4px;
+  margin-bottom: 4px; }
+  .polkit-dialog-user-layout .polkit-dialog-user-root-label {
+    color: #f57900; }
+
+/* Audio selection dialog */
+.audio-device-selection-dialog .modal-dialog-content-box {
+  margin-bottom: 14px; }
+
+.audio-device-selection-dialog .audio-selection-box {
+  spacing: 10px; }
+
+.audio-selection-device {
+  border-radius: 4px; }
+  .audio-selection-device:hover, .audio-selection-device:focus {
+    background-color: #313131; }
+  .audio-selection-device:active {
+    background-color: #cc3700;
+    color: #fff; }
+
+.audio-selection-device-box {
+  padding: 10px;
+  spacing: 10px; }
+
+.audio-selection-device-icon {
+  icon-size: 64px; }
+
+/* Welcome dialog */
+.welcome-dialog-image {
+  background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
+  background-size: contain;
+  /* Reasonable maximum dimensions */
+  height: 300px;
+  width: 300px; }
+
+/* Access portal dialog */
+.access-dialog {
+  text-align: center; }
+
+/* OSD */
+.osd-window {
+  text-align: center;
+  font-weight: bold;
+  spacing: 8px;
+  padding: 8px 12px;
+  margin-bottom: 4em; }
+  .osd-window > * {
+    spacing: 4px; }
+  .osd-window StIcon {
+    icon-size: 32px; }
+  .osd-window StLabel:ltr {
+    margin-right: 4px; }
+  .osd-window StLabel:rtl {
+    margin-left: 4px; }
+  .osd-window .level {
+    margin-bottom: 2px;
+    min-width: 160px;
+    -barlevel-height: 6px;
+    -barlevel-background-color: rgba(238, 238, 236, 0.1);
+    -barlevel-active-background-color: #eeeeec;
+    -barlevel-overdrive-color: #e01b24;
+    -barlevel-overdrive-separator-width: 2px; }
+    .osd-window .level:first-child {
+      margin-bottom: 0; }
+    .osd-window .level:ltr {
+      margin-right: 4px; }
+    .osd-window .level:rtl {
+      margin-left: 4px; }
+
+.osd-monitor-label {
+  background-color: #cc3700;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 3em;
+  font-weight: bold;
+  font-feature-settings: "tnum";
+  margin: 6px;
+  padding: 8px;
+  text-align: center;
+  min-width: 1.5em; }
+
+/* Pad OSD */
+.pad-osd-window {
+  padding: 32px;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .pad-osd-window .pad-osd-title-box {
+    spacing: 12px; }
+  .pad-osd-window .pad-osd-title-menu-box {
+    spacing: 6px; }
+
+.combo-box-label {
+  width: 15em; }
+
+/* App Switcher */
+.switcher-popup {
+  padding: 4px;
+  spacing: 4px;
+  background: rgba(23, 23, 23, 0.25);
+  transition-duration: 400ms; }
+
+.switcher-list {
+  padding: 4px;
+  border-radius: 2px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1); }
+  .switcher-list .switcher-list-item-container {
+    spacing: 8px; }
+  .switcher-list .item-box {
+    font-weight: normal;
+    padding: 4px;
+    transition-duration: 200ms;
+    border: 1px solid transparent;
+    border-radius: 2px; }
+    .switcher-list .item-box:selected, .switcher-list .item-box:outlined {
+      color: #fff;
+      border: 1px solid transparent;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: 1px 2px black;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .switcher-list .separator {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.3); }
+  .switcher-list .thumbnail-box {
+    padding: 0;
+    spacing: 0; }
+  .switcher-list .thumbnail {
+    width: 256px;
+    padding: 0;
+    spacing: 4px; }
+
+.switcher-arrow {
+  color: transparent;
+  border-color: transparent; }
+  .switcher-arrow:highlighted {
+    color: transparent;
+    border-color: transparent; }
+
+.input-source-switcher-symbol {
+  font-size: 34pt;
+  width: 96px;
+  height: 96px; }
+
+.cycler-highlight {
+  border: 5px solid #cc3700; }
+
+/* Workspace Switcher */
+.workspace-switcher {
+  margin-bottom: 5em;
+  spacing: 8px;
+  padding: 8px 12px; }
+
+.ws-switcher-indicator {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 2px black;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  padding: 12px 16px;
+  margin: 4px; }
+  .ws-switcher-indicator:active {
+    border: 1px solid transparent;
+    padding: 1px;
+    border-radius: 2px;
+    color: #fff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7);
+    padding: 12px 16px;
+    margin: 4px; }
+
+.screenshot-ui-panel {
+  border-radius: 2px;
+  padding: 12px;
+  padding-bottom: 6px;
+  margin-bottom: 4em;
+  spacing: 8px; }
+
+.screenshot-ui-close-button {
+  padding: 4px !important;
+  margin-top: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent; }
+  .screenshot-ui-close-button.left {
+    margin-left: 6px; }
+  .screenshot-ui-close-button.right {
+    margin-right: 6px; }
+
+.screenshot-ui-type-button {
+  min-width: 48px;
+  padding: 8px 12px;
+  border-radius: 2px; }
+  .screenshot-ui-type-button .icon-label-button-container {
+    spacing: 0.409em; }
+    .screenshot-ui-type-button .icon-label-button-container > StIcon {
+      icon-size: 32px; }
+
+.screenshot-ui-capture-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  border: 2px #eeeeec;
+  padding: 4px; }
+  .screenshot-ui-capture-button .screenshot-ui-capture-button-circle {
+    background-color: #eeeeec;
+    transition-duration: 200ms;
+    border-radius: 2px; }
+    .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:hover, .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:focus {
+      background-color: #313131; }
+  .screenshot-ui-capture-button:hover .screenshot-ui-capture-button-circle, .screenshot-ui-capture-button:focus .screenshot-ui-capture-button-circle {
+    background-color: #bebeb6; }
+  .screenshot-ui-capture-button:active .screenshot-ui-capture-button-circle {
+    background-color: #747467; }
+  .screenshot-ui-capture-button:cast .screenshot-ui-capture-button-circle {
+    background-color: #f30; }
+  .screenshot-ui-capture-button:cast:hover .screenshot-ui-capture-button-circle, .screenshot-ui-capture-button:cast:focus .screenshot-ui-capture-button-circle {
+    background-color: #ff471a; }
+  .screenshot-ui-capture-button:cast:active .screenshot-ui-capture-button-circle {
+    background-color: #db2c00; }
+
+.screenshot-ui-shot-cast-container {
+  background-color: rgba(238, 238, 236, 0.1);
+  border-radius: 2px;
+  padding: 2px;
+  spacing: 2px; }
+
+.screenshot-ui-shot-cast-button {
+  padding: 4px 8px;
+  background-color: transparent;
+  border-radius: 2px; }
+  .screenshot-ui-shot-cast-button > StIcon {
+    icon-size: 16px; }
+  .screenshot-ui-shot-cast-button:hover, .screenshot-ui-shot-cast-button:focus {
+    background-color: rgba(238, 238, 236, 0.2); }
+  .screenshot-ui-shot-cast-button:active {
+    background-color: rgba(238, 238, 236, 0.5); }
+  .screenshot-ui-shot-cast-button:checked {
+    background-color: #eeeeec;
+    color: #181818; }
+  .screenshot-ui-shot-cast-button:insensitive {
+    color: rgba(238, 238, 236, 0.5); }
+
+.screenshot-ui-area-indicator-shade {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.screenshot-ui-area-selector .screenshot-ui-area-indicator-shade {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.screenshot-ui-area-selector .screenshot-ui-area-indicator-selection {
+  border: 2px white; }
+
+.screenshot-ui-area-selector-handle {
+  border-radius: 99px;
+  background-color: white;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+  width: 24px;
+  height: 24px; }
+
+.screenshot-ui-window-selector {
+  background-color: #282828; }
+  .screenshot-ui-window-selector .screenshot-ui-window-selector-window-container {
+    margin: 100px; }
+  .screenshot-ui-window-selector:primary-monitor .screenshot-ui-window-selector-window-container {
+    margin-bottom: 200px; }
+
+.screenshot-ui-window-selector-window-border {
+  transition-duration: 200ms;
+  border-radius: 2px;
+  border: 1px transparent; }
+
+.screenshot-ui-window-selector-check {
+  transition-duration: 200ms;
+  color: transparent;
+  border-radius: 2px;
+  border-width: 12px;
+  icon-size: 24px; }
+
+.screenshot-ui-window-selector-window:hover .screenshot-ui-window-selector-window-border {
+  border-color: rgba(217, 217, 217, 0.15); }
+
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-window-border {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(204, 55, 0, 0.2); }
+
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-check {
+  color: #fff;
+  background-color: #cc3700; }
+
+.screenshot-ui-screen-selector {
+  transition-duration: 200ms;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .screenshot-ui-screen-selector:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .screenshot-ui-screen-selector:active {
+    background-color: rgba(0, 0, 0, 0.7); }
+  .screenshot-ui-screen-selector:checked {
+    background-color: transparent;
+    border: 1px white; }
+
+.screenshot-ui-tooltip {
+  text-align: center;
+  -y-offset: 12px; }
+
+/* Top Bar */
+#panel {
+  background-color: #000;
+  font-weight: bold;
+  height: 2.2em;
+  transition-duration: 250ms; }
+  #panel .panel-button {
+    transition-duration: 150ms;
+    border: 3px solid transparent;
+    background-color: transparent;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #ccc;
+    box-shadow: inset 0 0 0 100px transparent;
+    -natural-hpadding: 8px;
+    -minimum-hpadding: 4px; }
+    #panel .panel-button:focus, #panel .panel-button:hover {
+      box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.17); }
+    #panel .panel-button:active, #panel .panel-button:checked {
+      box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.28); }
+      #panel .panel-button:active:hover, #panel .panel-button:checked:hover {
+        box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.32); }
+    #panel .panel-button .system-status-icon {
+      icon-size: 1.091em;
+      padding: 0 4px;
+      margin: 0 2px; }
+    #panel .panel-button .app-menu-icon {
+      -st-icon-style: symbolic; }
+    #panel .panel-button .panel-status-menu-box,
+    #panel .panel-button .panel-status-indicators-box {
+      spacing: 2px; }
+      #panel .panel-button .panel-status-menu-box > .system-status-icon,
+      #panel .panel-button .panel-status-indicators-box > .system-status-icon {
+        padding: 0; }
+    #panel .panel-button#panelActivities StBoxLayout {
+      padding: 0 0.2045em;
+      spacing: 5px; }
+    #panel .panel-button#panelActivities .workspace-dot {
+      border-radius: 2px;
+      min-width: 0.5455em;
+      min-height: 0.5455em;
+      background-color: #ccc; }
+    #panel .panel-button.screen-recording-indicator StBoxLayout, #panel .panel-button.screen-sharing-indicator StBoxLayout {
+      spacing: 0.409em; }
+    #panel .panel-button.screen-recording-indicator StIcon, #panel .panel-button.screen-sharing-indicator StIcon {
+      icon-size: 1.091em; }
+    #panel .panel-button.screen-recording-indicator {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: whitesmoke;
+      box-shadow: inset 0 0 0 100px #c01c28; }
+      #panel .panel-button.screen-recording-indicator:focus, #panel .panel-button.screen-recording-indicator:hover {
+        box-shadow: inset 0 0 0 100px #d61f2d; }
+      #panel .panel-button.screen-recording-indicator:active, #panel .panel-button.screen-recording-indicator:checked {
+        box-shadow: inset 0 0 0 100px #e02a37; }
+        #panel .panel-button.screen-recording-indicator:active:hover, #panel .panel-button.screen-recording-indicator:checked:hover {
+          box-shadow: inset 0 0 0 100px #e13340; }
+    #panel .panel-button.screen-sharing-indicator {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: whitesmoke;
+      box-shadow: inset 0 0 0 100px #ff7800; }
+      #panel .panel-button.screen-sharing-indicator:focus, #panel .panel-button.screen-sharing-indicator:hover {
+        box-shadow: inset 0 0 0 100px #ff861a; }
+      #panel .panel-button.screen-sharing-indicator:active, #panel .panel-button.screen-sharing-indicator:checked {
+        box-shadow: inset 0 0 0 100px #ff902e; }
+        #panel .panel-button.screen-sharing-indicator:active:hover, #panel .panel-button.screen-sharing-indicator:checked:hover {
+          box-shadow: inset 0 0 0 100px #ff9638; }
+    #panel .panel-button.clock-display {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: #ccc;
+      box-shadow: inset 0 0 0 100px transparent;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important; }
+      #panel .panel-button.clock-display:focus, #panel .panel-button.clock-display:hover {
+        box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.17); }
+      #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:checked {
+        box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.28); }
+        #panel .panel-button.clock-display:active:hover, #panel .panel-button.clock-display:checked:hover {
+          box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.32); }
+      #panel .panel-button.clock-display .clock {
+        transition-duration: 150ms;
+        border: 3px solid transparent;
+        border-radius: 2px; }
+      #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:hover .clock {
+        box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.17); }
+      #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:checked .clock {
+        box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.28); }
+        #panel .panel-button.clock-display:active .clock:hover, #panel .panel-button.clock-display:checked .clock:hover {
+          box-shadow: inset 0 0 0 100px rgba(204, 204, 204, 0.32); }
+      #panel .panel-button.clock-display .messages-indicator {
+        icon-size: 1.091em; }
+  #panel:overview, #panel.unlock-screen, #panel.login-screen {
+    background-color: transparent; }
+    #panel:overview .panel-button.screen-recording-indicator, #panel.unlock-screen .panel-button.screen-recording-indicator, #panel.login-screen .panel-button.screen-recording-indicator {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: whitesmoke;
+      box-shadow: inset 0 0 0 100px #c01c28; }
+      #panel:overview .panel-button.screen-recording-indicator:focus, #panel:overview .panel-button.screen-recording-indicator:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:focus, #panel.unlock-screen .panel-button.screen-recording-indicator:hover, #panel.login-screen .panel-button.screen-recording-indicator:focus, #panel.login-screen .panel-button.screen-recording-indicator:hover {
+        box-shadow: inset 0 0 0 100px #d61f2d; }
+      #panel:overview .panel-button.screen-recording-indicator:active, #panel:overview .panel-button.screen-recording-indicator:checked, #panel.unlock-screen .panel-button.screen-recording-indicator:active, #panel.unlock-screen .panel-button.screen-recording-indicator:checked, #panel.login-screen .panel-button.screen-recording-indicator:active, #panel.login-screen .panel-button.screen-recording-indicator:checked {
+        box-shadow: inset 0 0 0 100px #e02a37; }
+        #panel:overview .panel-button.screen-recording-indicator:active:hover, #panel:overview .panel-button.screen-recording-indicator:checked:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:active:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:checked:hover, #panel.login-screen .panel-button.screen-recording-indicator:active:hover, #panel.login-screen .panel-button.screen-recording-indicator:checked:hover {
+          box-shadow: inset 0 0 0 100px #e13340; }
+    #panel:overview .panel-button.screen-sharing-indicator, #panel.unlock-screen .panel-button.screen-sharing-indicator, #panel.login-screen .panel-button.screen-sharing-indicator {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: whitesmoke;
+      box-shadow: inset 0 0 0 100px #ff7800; }
+      #panel:overview .panel-button.screen-sharing-indicator:focus, #panel:overview .panel-button.screen-sharing-indicator:hover, #panel.unlock-screen .panel-button.screen-sharing-indicator:focus, #panel.unlock-screen .panel-button.screen-sharing-indicator:hover, #panel.login-screen .panel-button.screen-sharing-indicator:focus, #panel.login-screen .panel-button.screen-sharing-indicator:hover {
+        box-shadow: inset 0 0 0 100px #ff861a; }
+      #panel:overview .panel-button.screen-sharing-indicator:active, #panel:overview .panel-button.screen-sharing-indicator:checked, #panel.unlock-screen .panel-button.screen-sharing-indicator:active, #panel.unlock-screen .panel-button.screen-sharing-indicator:checked, #panel.login-screen .panel-button.screen-sharing-indicator:active, #panel.login-screen .panel-button.screen-sharing-indicator:checked {
+        box-shadow: inset 0 0 0 100px #ff902e; }
+        #panel:overview .panel-button.screen-sharing-indicator:active:hover, #panel:overview .panel-button.screen-sharing-indicator:checked:hover, #panel.unlock-screen .panel-button.screen-sharing-indicator:active:hover, #panel.unlock-screen .panel-button.screen-sharing-indicator:checked:hover, #panel.login-screen .panel-button.screen-sharing-indicator:active:hover, #panel.login-screen .panel-button.screen-sharing-indicator:checked:hover {
+          box-shadow: inset 0 0 0 100px #ff9638; }
+  #panel.unlock-screen .panel-button, #panel.login-screen .panel-button {
+    transition-duration: 150ms;
+    border: 3px solid transparent;
+    background-color: transparent;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 100px transparent; }
+    #panel.unlock-screen .panel-button:focus, #panel.unlock-screen .panel-button:hover, #panel.login-screen .panel-button:focus, #panel.login-screen .panel-button:hover {
+      box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.17); }
+    #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:checked, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:checked {
+      box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.28); }
+      #panel.unlock-screen .panel-button:active:hover, #panel.unlock-screen .panel-button:checked:hover, #panel.login-screen .panel-button:active:hover, #panel.login-screen .panel-button:checked:hover {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.32); }
+    #panel.unlock-screen .panel-button.clock-display, #panel.login-screen .panel-button.clock-display {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: #ffffff;
+      box-shadow: inset 0 0 0 100px transparent;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important; }
+      #panel.unlock-screen .panel-button.clock-display:focus, #panel.unlock-screen .panel-button.clock-display:hover, #panel.login-screen .panel-button.clock-display:focus, #panel.login-screen .panel-button.clock-display:hover {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.17); }
+      #panel.unlock-screen .panel-button.clock-display:active, #panel.unlock-screen .panel-button.clock-display:checked, #panel.login-screen .panel-button.clock-display:active, #panel.login-screen .panel-button.clock-display:checked {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.28); }
+        #panel.unlock-screen .panel-button.clock-display:active:hover, #panel.unlock-screen .panel-button.clock-display:checked:hover, #panel.login-screen .panel-button.clock-display:active:hover, #panel.login-screen .panel-button.clock-display:checked:hover {
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.32); }
+      #panel.unlock-screen .panel-button.clock-display .clock, #panel.login-screen .panel-button.clock-display .clock {
+        transition-duration: 150ms;
+        border: 3px solid transparent;
+        border-radius: 2px; }
+      #panel.unlock-screen .panel-button.clock-display:focus .clock, #panel.unlock-screen .panel-button.clock-display:hover .clock, #panel.login-screen .panel-button.clock-display:focus .clock, #panel.login-screen .panel-button.clock-display:hover .clock {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.17); }
+      #panel.unlock-screen .panel-button.clock-display:active .clock, #panel.unlock-screen .panel-button.clock-display:checked .clock, #panel.login-screen .panel-button.clock-display:active .clock, #panel.login-screen .panel-button.clock-display:checked .clock {
+        box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.28); }
+        #panel.unlock-screen .panel-button.clock-display:active .clock:hover, #panel.unlock-screen .panel-button.clock-display:checked .clock:hover, #panel.login-screen .panel-button.clock-display:active .clock:hover, #panel.login-screen .panel-button.clock-display:checked .clock:hover {
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.32); }
+  #panel:overview .panel-button {
+    transition-duration: 150ms;
+    border: 3px solid transparent;
+    background-color: transparent;
+    border-radius: 2px;
+    font-weight: bold;
+    color: whitesmoke;
+    box-shadow: inset 0 0 0 100px transparent; }
+    #panel:overview .panel-button:focus, #panel:overview .panel-button:hover {
+      box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.17); }
+    #panel:overview .panel-button:active, #panel:overview .panel-button:checked {
+      box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.28); }
+      #panel:overview .panel-button:active:hover, #panel:overview .panel-button:checked:hover {
+        box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.32); }
+    #panel:overview .panel-button#panelActivities .workspace-dot {
+      background-color: whitesmoke; }
+    #panel:overview .panel-button.clock-display {
+      transition-duration: 150ms;
+      border: 3px solid transparent;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+      color: whitesmoke;
+      box-shadow: inset 0 0 0 100px transparent;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important; }
+      #panel:overview .panel-button.clock-display:focus, #panel:overview .panel-button.clock-display:hover {
+        box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.17); }
+      #panel:overview .panel-button.clock-display:active, #panel:overview .panel-button.clock-display:checked {
+        box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.28); }
+        #panel:overview .panel-button.clock-display:active:hover, #panel:overview .panel-button.clock-display:checked:hover {
+          box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.32); }
+      #panel:overview .panel-button.clock-display .clock {
+        transition-duration: 150ms;
+        border: 3px solid transparent;
+        border-radius: 2px; }
+      #panel:overview .panel-button.clock-display:focus .clock, #panel:overview .panel-button.clock-display:hover .clock {
+        box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.17); }
+      #panel:overview .panel-button.clock-display:active .clock, #panel:overview .panel-button.clock-display:checked .clock {
+        box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.28); }
+        #panel:overview .panel-button.clock-display:active .clock:hover, #panel:overview .panel-button.clock-display:checked .clock:hover {
+          box-shadow: inset 0 0 0 100px rgba(245, 245, 245, 0.32); }
+  #panel .panel-status-indicators-box,
+  #panel .panel-status-menu-box {
+    spacing: 2px; }
+  #panel .power-status.panel-status-indicators-box {
+    spacing: 0; }
+  #panel .privacy-indicator {
+    color: #ff7800; }
+
+#appMenu {
+  spacing: 0.409em; }
+  #appMenu .label-shadow {
+    color: transparent; }
+
+#appMenu .panel-status-menu-box {
+  padding: 0 0.409em;
+  spacing: 0.409em; }
+
+.clock-display-box {
+  spacing: 2px; }
+  .clock-display-box .clock {
+    padding-left: 0.818em;
+    padding-right: 0.818em; }
+
+/* Activities Ripple */
+.ripple-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+  width: 52px;
+  height: 52px;
+  border-radius: 0 0 52px 0; }
+  .ripple-box:rtl {
+    border-radius: 0 0 0 52px; }
+
+.quick-settings {
+  padding: 8px;
+  border-radius: 2px; }
+  .quick-settings .icon-button, .quick-settings .login-dialog-button.cancel-button, .quick-settings .login-dialog-button.switch-user-button, .quick-settings .login-dialog-button.login-dialog-session-list-button, .quick-settings .calendar .calendar-month-header .pager-button, .calendar .calendar-month-header .quick-settings .pager-button, .quick-settings .message .message-header .message-expand-button, .message .message-header .quick-settings .message-expand-button,
+  .quick-settings .message .message-header .message-close-button,
+  .message .message-header .quick-settings .message-close-button, .quick-settings .screenshot-ui-show-pointer-button, .quick-settings .button {
+    padding: 8px;
+    border-color: transparent;
+    box-shadow: none; }
+
+.quick-settings-grid {
+  spacing-rows: 8px;
+  spacing-columns: 8px; }
+
+.quick-toggle, .quick-menu-toggle {
+  border-radius: 2px;
+  min-width: 12em;
+  max-width: 12em;
+  min-height: 3.273em; }
+
+.quick-toggle {
+  background-color: none;
+  border-radius: 2px;
+  spacing: 4px;
+  padding: 4px;
+  font-weight: normal;
+  box-shadow: none;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.6);
+  /* Move padding into the box; this is to allow menu arrows
+     to extend to the border */ }
+  .quick-toggle > StBoxLayout {
+    spacing: 4px; }
+  .quick-toggle .quick-toggle-title {
+    font-weight: bold;
+    color: #f5f5f5; }
+  .quick-toggle.button {
+    padding: 0; }
+    .quick-toggle.button .quick-toggle-title, .quick-toggle.button .quick-toggle-subtitle {
+      color: #c9c9c9; }
+  .quick-toggle > StBoxLayout {
+    padding: 0 8px; }
+  .quick-toggle:ltr > StBoxLayout {
+    padding-left: 8px; }
+  .quick-toggle:rtl > StBoxLayout {
+    padding-right: 8px; }
+  .quick-toggle:focus, .quick-toggle:hover {
+    color: #fff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3) !important;
+    background-gradient-end: rgba(255, 255, 255, 0.15) !important; }
+  .quick-toggle:checked {
+    color: #fff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3) !important;
+    background-gradient-end: rgba(255, 255, 255, 0.15) !important; }
+    .quick-toggle:checked .quick-toggle-label {
+      font-weight: normal; }
+    .quick-toggle:checked .quick-toggle-title {
+      font-weight: bold;
+      color: #f5f5f5; }
+    .quick-toggle:checked:focus, .quick-toggle:checked:hover, .quick-toggle:checked:active {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7) !important;
+      background-gradient-end: rgba(188, 74, 19, 0.7) !important; }
+  .quick-toggle.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f5f5f5; }
+  .quick-toggle:active {
+    color: #fff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7) !important;
+    background-gradient-end: rgba(188, 74, 19, 0.7) !important; }
+  .quick-toggle:insensitive {
+    color: rgba(245, 245, 245, 0.5); }
+  .quick-toggle StBoxLayout > .quick-toggle-subtitle {
+    font-weight: normal; }
+  .quick-toggle .quick-toggle-label {
+    font-weight: normal; }
+  .quick-toggle .quick-toggle-icon, .quick-toggle .quick-toggle-arrow {
+    icon-size: 16px; }
+
+.quick-menu-toggle .quick-toggle {
+  min-width: auto;
+  max-width: auto; }
+
+.quick-menu-toggle .quick-toggle-arrow {
+  padding: 0.409em 0.71575em;
+  padding: 4px 4px; }
+  .quick-menu-toggle .quick-toggle-arrow:focus, .quick-menu-toggle .quick-toggle-arrow:hover, .quick-menu-toggle .quick-toggle-arrow:active {
+    border-color: viva_border_color;
+    color: #fff; }
+  .quick-menu-toggle .quick-toggle-arrow:checked {
+    border-color: viva_border_color;
+    color: #fff; }
+  .quick-menu-toggle .quick-toggle-arrow:ltr {
+    border-radius: 0 2px 2px 0;
+    border-left-width: 0px; }
+  .quick-menu-toggle .quick-toggle-arrow:rtl {
+    border-radius: 2px 0 0 2px;
+    border-right-width: 0px; }
+
+.quick-menu-toggle .quick-toggle, .quick-menu-toggle .quick-toggle-arrow {
+  background-color: transparent;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.3) !important;
+  background-gradient-end: rgba(255, 255, 255, 0.15) !important; }
+  .quick-menu-toggle .quick-toggle:focus, .quick-menu-toggle .quick-toggle:hover, .quick-menu-toggle .quick-toggle:active, .quick-menu-toggle .quick-toggle-arrow:focus, .quick-menu-toggle .quick-toggle-arrow:hover, .quick-menu-toggle .quick-toggle-arrow:active {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7) !important;
+    background-gradient-end: rgba(188, 74, 19, 0.7) !important; }
+  .quick-menu-toggle .quick-toggle:checked, .quick-menu-toggle .quick-toggle-arrow:checked {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.45) !important;
+    background-gradient-end: rgba(255, 255, 255, 0.3) !important; }
+    .quick-menu-toggle .quick-toggle:checked:focus, .quick-menu-toggle .quick-toggle:checked:hover, .quick-menu-toggle .quick-toggle:checked:active, .quick-menu-toggle .quick-toggle-arrow:checked:focus, .quick-menu-toggle .quick-toggle-arrow:checked:hover, .quick-menu-toggle .quick-toggle-arrow:checked:active {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7) !important;
+      background-gradient-end: rgba(188, 74, 19, 0.7) !important; }
+
+.quick-slider > StBoxLayout {
+  spacing: 4px; }
+
+.quick-slider .icon-button, .quick-slider .login-dialog-button.cancel-button, .quick-slider .login-dialog-button.switch-user-button, .quick-slider .login-dialog-button.login-dialog-session-list-button, .quick-slider .calendar .calendar-month-header .pager-button, .calendar .calendar-month-header .quick-slider .pager-button, .quick-slider .message .message-header .message-expand-button, .message .message-header .quick-slider .message-expand-button,
+.quick-slider .message .message-header .message-close-button,
+.message .message-header .quick-slider .message-close-button, .quick-slider .screenshot-ui-show-pointer-button {
+  padding: 4px; }
+
+.quick-slider .slider-bin {
+  padding: 4px;
+  border-radius: 2px; }
+  .quick-slider .slider-bin:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+.quick-toggle-menu {
+  border-radius: 2px;
+  margin: 8px 12px 0; }
+  .quick-toggle-menu:insensitive {
+    color: #f5f5f5;
+    background-color: #181818;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .quick-toggle-menu .popup-menu-item > StIcon {
+    -st-icon-style: symbolic;
+    icon-size: 1.091em; }
+  .quick-toggle-menu .header {
+    spacing-rows: 2px;
+    spacing-columns: 8px;
+    padding-bottom: 8px; }
+    .quick-toggle-menu .header .icon {
+      icon-size: 1.6365em;
+      border-radius: 2px;
+      padding: 6px;
+      background-color: rgba(245, 245, 245, 0.2); }
+      .quick-toggle-menu .header .icon.active {
+        background-color: #cc3700;
+        color: #fff; }
+
+.quick-settings-system-item > StBoxLayout {
+  spacing: 8px; }
+
+.quick-settings-system-item .power-item {
+  min-height: 0;
+  min-width: 0; }
+  .quick-settings-system-item .power-item:insensitive {
+    color: #f5f5f5;
+    background-color: #181818;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05);
+    background-color: transparent; }
+
+.nm-network-item .wireless-secure-icon {
+  icon-size: 0.5455em; }
+
+.bt-device-item .popup-menu-icon {
+  -st-icon-style: symbolic; }
+
+.bt-menu-placeholder.popup-menu-item {
+  text-align: center;
+  padding: 2em 4em; }
+
+.device-subtitle {
+  color: rgba(245, 245, 245, 0.5); }
+
+.keyboard-brightness-level {
+  spacing: 4px; }
+
+.background-apps-quick-toggle {
+  min-height: 2.728em;
+  background-color: transparent; }
+  .background-apps-quick-toggle StIcon {
+    icon-size: 1.091em !important; }
+
+.background-app-item .popup-menu-icon {
+  icon-size: 32px !important;
+  -st-icon-style: regular !important; }
+
+.background-app-item .icon-button, .background-app-item .login-dialog-button.cancel-button, .background-app-item .login-dialog-button.switch-user-button, .background-app-item .login-dialog-button.login-dialog-session-list-button, .background-app-item .calendar .calendar-month-header .pager-button, .calendar .calendar-month-header .background-app-item .pager-button, .background-app-item .message .message-header .message-expand-button, .message .message-header .background-app-item .message-expand-button,
+.background-app-item .message .message-header .message-close-button,
+.message .message-header .background-app-item .message-close-button, .background-app-item .screenshot-ui-show-pointer-button {
+  padding: 4px;
+  background-color: rgba(245, 245, 245, 0.13); }
+  .background-app-item .icon-button:hover, .background-app-item .login-dialog-button.cancel-button:hover, .background-app-item .login-dialog-button.switch-user-button:hover, .background-app-item .login-dialog-button.login-dialog-session-list-button:hover, .background-app-item .calendar .calendar-month-header .pager-button:hover, .calendar .calendar-month-header .background-app-item .pager-button:hover, .background-app-item .message .message-header .message-expand-button:hover, .message .message-header .background-app-item .message-expand-button:hover,
+  .background-app-item .message .message-header .message-close-button:hover,
+  .message .message-header .background-app-item .message-close-button:hover, .background-app-item .screenshot-ui-show-pointer-button:hover {
+    background-color: rgba(245, 245, 245, 0.22); }
+  .background-app-item .icon-button:active, .background-app-item .login-dialog-button.cancel-button:active, .background-app-item .login-dialog-button.switch-user-button:active, .background-app-item .login-dialog-button.login-dialog-session-list-button:active, .background-app-item .calendar .calendar-month-header .pager-button:active, .calendar .calendar-month-header .background-app-item .pager-button:active, .background-app-item .message .message-header .message-expand-button:active, .message .message-header .background-app-item .message-expand-button:active,
+  .background-app-item .message .message-header .message-close-button:active,
+  .message .message-header .background-app-item .message-close-button:active, .background-app-item .screenshot-ui-show-pointer-button:active {
+    background-color: rgba(245, 245, 245, 0.31); }
+
+.background-app-item .spinner {
+  padding: 4px; }
+
+.background-app-item.popup-inactive-menu-item {
+  color: #f5f5f5; }
+
+/* OVERVIEW */
+.controls-manager, .secondary-monitor-workspaces {
+  spacing: 8px; }
+
+#overviewGroup {
+  background-color: #282828; }
+
+.overview-controls {
+  padding-bottom: 16px; }
+
+/* Window Picker */
+.window-picker {
+  spacing: 4px; }
+
+.window-caption {
+  color: #eeeeec;
+  font-weight: normal;
+  background-color: #181818;
+  padding: 4px 8px;
+  transition-duration: 200ms;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 2px black; }
+
+.window-close, .screenshot-ui-close-button {
+  width: 32px;
+  height: 32px;
+  color: #f5f5f5;
+  border-radius: 2px;
+  background-color: rgba(234, 109, 49, 0.7);
+  background-image: url("images/close.png");
+  background-size: 16px;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 2px black;
+  -shell-close-overlap: 16px; }
+  .window-close StIcon, .screenshot-ui-close-button StIcon {
+    icon-size: 24px; }
+  .window-close:hover, .screenshot-ui-close-button:hover {
+    background-color: rgba(188, 74, 19, 0.7); }
+  .window-close:active, .screenshot-ui-close-button:active {
+    background-color: rgba(255, 255, 255, 0.45); }
+
+.workspace-background {
+  border-radius: 30px;
+  background-color: #181818;
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3); }
+
+
+.search-entry {
+  width: 320px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: rgba(245, 245, 245, 0.7);
+  border: 1px solid #181818;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  caret-color: #f5f5f5;
+  caret-size: 1px;
+  selected-color: #f5f5f5;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.3); }
+  
+  .search-entry:hover {
+    border-color: #030303;
+    color: white; }
+  
+  .search-entry:focus {
+    padding: 8px 12px;
+    color: #f5f5f5;
+    border: 1px solid #181818;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+  
+  .search-entry .search-entry-icon {
+    icon-size: 16px;
+    padding: 0 4px;
+    color: inherit; }
+
+/* Search */
+#searchResults {
+  margin: 0 2px; }
+
+#searchResultsContent {
+  max-width: 1044px;
+  spacing: 4px; }
+
+.search-section {
+  spacing: 12px; }
+  .search-section .search-section-separator {
+    height: 0;
+    background-color: transparent; }
+
+.search-section-content {
+  background-color: #181818;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 2px black;
+  color: #eeeeec;
+  padding: 12px;
+  spacing: 4px; }
+
+.list-search-result, .search-provider-icon {
+  color: whitesmoke;
+  background-color: #3d3d3d;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  padding: 8px; }
+  .list-search-result:focus, .search-provider-icon:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .list-search-result:hover, .search-provider-icon:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .list-search-result:active, .search-provider-icon:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .list-search-result:active:hover, .search-provider-icon:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .list-search-result:active:focus, .search-provider-icon:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .list-search-result:highlighted, .search-provider-icon:highlighted, .list-search-result:selected, .search-provider-icon:selected, .list-search-result:checked, .search-provider-icon:checked {
+    color: whitesmoke;
+    background-color: red; }
+    .list-search-result:highlighted:hover, .search-provider-icon:highlighted:hover, .list-search-result:selected:hover, .search-provider-icon:selected:hover, .list-search-result:checked:hover, .search-provider-icon:checked:hover {
+      background-color: red; }
+    .list-search-result:highlighted:active, .search-provider-icon:highlighted:active, .list-search-result:selected:active, .search-provider-icon:selected:active, .list-search-result:checked:active, .search-provider-icon:checked:active {
+      background-color: red; }
+  .list-search-result:insensitive, .search-provider-icon:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #3d3d3d;
+    background-gradient-end: #3d3d3d; }
+  .list-search-result:drop, .search-provider-icon:drop {
+    background-color: rgba(204, 55, 0, 0.2);
+    box-shadow: inset 0 0 0 2px rgba(204, 55, 0, 0.8); }
+  .list-search-result:focus, .search-provider-icon:focus, .list-search-result:hover, .search-provider-icon:hover, .list-search-result:selected, .search-provider-icon:selected {
+    transition-duration: 200ms;
+    background-color: #cc3700;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3) !important;
+    background-gradient-end: rgba(255, 255, 255, 0.15) !important; }
+  .list-search-result:active, .search-provider-icon:active, .list-search-result:checked, .search-provider-icon:checked {
+    color: #fff;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7) !important;
+    background-gradient-end: rgba(188, 74, 19, 0.7) !important; }
+
+.grid-search-results {
+  spacing: 24px;
+  margin: 20px 0; }
+
+.search-provider-icon:ltr {
+  margin-right: 2px; }
+
+.search-provider-icon:rtl {
+  margin-left: 2px; }
+
+.search-provider-icon .list-search-provider-content {
+  spacing: 8px; }
+  .search-provider-icon .list-search-provider-content .list-search-provider-details {
+    width: 120px;
+    margin-top: 0;
+    color: #dbdbd6; }
+
+.list-search-results {
+  spacing: 4px; }
+
+.list-search-result .list-search-result-content {
+  spacing: 4px; }
+
+.list-search-result .list-search-result-title {
+  spacing: 8px; }
+
+.list-search-result .list-search-result-description {
+  color: #959595; }
+
+/* Dash */
+#dash {
+  margin-top: 6px; }
+  #dash .dash-background {
+    background-color: #3d3d3d;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 7px;
+    padding-right: 7px; }
+  #dash .dash-item-container .placeholder {
+    background-image: none;
+    background-size: contain;
+    height: 32px; }
+  #dash .dash-item-container .empty-dash-drop-target {
+    width: 32px;
+    height: 32px; }
+  #dash .dash-item-container .show-apps,
+  #dash .dash-item-container .overview-tile,
+  #dash .dash-item-container .grid-search-result {
+    margin: 0 1px;
+    padding-bottom: 6px; }
+    #dash .dash-item-container .show-apps .overview-icon,
+    #dash .dash-item-container .overview-tile .overview-icon,
+    #dash .dash-item-container .grid-search-result .overview-icon {
+      color: whitesmoke;
+      background-color: #3d3d3d;
+      border-color: transparent;
+      text-shadow: none;
+      box-shadow: none;
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      font-weight: normal;
+      padding: 4px 8px;
+      border-radius: 2px;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.15);
+      background-gradient-end: rgba(255, 255, 255, 0.05); }
+    #dash .dash-item-container .show-apps:focus .overview-icon,
+    #dash .dash-item-container .overview-tile:focus .overview-icon,
+    #dash .dash-item-container .grid-search-result:focus .overview-icon {
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #fff;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    #dash .dash-item-container .show-apps:hover .overview-icon,
+    #dash .dash-item-container .overview-tile:hover .overview-icon,
+    #dash .dash-item-container .grid-search-result:hover .overview-icon {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    #dash .dash-item-container .show-apps:active .overview-icon,
+    #dash .dash-item-container .overview-tile:active .overview-icon,
+    #dash .dash-item-container .grid-search-result:active .overview-icon {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      #dash .dash-item-container .show-apps:active .overview-icon:hover,
+      #dash .dash-item-container .overview-tile:active .overview-icon:hover,
+      #dash .dash-item-container .grid-search-result:active .overview-icon:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      #dash .dash-item-container .show-apps:active .overview-icon:focus,
+      #dash .dash-item-container .overview-tile:active .overview-icon:focus,
+      #dash .dash-item-container .grid-search-result:active .overview-icon:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    #dash .dash-item-container .show-apps:checked .overview-icon,
+    #dash .dash-item-container .overview-tile:checked .overview-icon,
+    #dash .dash-item-container .grid-search-result:checked .overview-icon {
+      color: whitesmoke;
+      background-color: red; }
+      #dash .dash-item-container .show-apps:checked .overview-icon:hover,
+      #dash .dash-item-container .overview-tile:checked .overview-icon:hover,
+      #dash .dash-item-container .grid-search-result:checked .overview-icon:hover {
+        background-color: red; }
+      #dash .dash-item-container .show-apps:checked .overview-icon:active,
+      #dash .dash-item-container .overview-tile:checked .overview-icon:active,
+      #dash .dash-item-container .grid-search-result:checked .overview-icon:active {
+        background-color: red; }
+  #dash .dash-item-container .app-grid-running-dot {
+    margin-bottom: 11px; }
+  #dash .dash-separator {
+    width: 1px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: rgba(245, 245, 245, 0.1); }
+  #dash .dash-separator,
+  #dash .dash-background {
+    margin-bottom: 6px; }
+
+.dash-label {
+  -y-offset: 4px; }
+
+/* App Grid */
+.icon-grid {
+  row-spacing: 8px;
+  column-spacing: 8px;
+  max-row-spacing: 24px;
+  max-column-spacing: 24px;
+  page-padding-top: 16px;
+  page-padding-bottom: 16px;
+  page-padding-left: 12px;
+  page-padding-right: 12px; }
+
+/* App Icons */
+.overview-tile, .grid-search-result {
+  color: whitesmoke;
+  background-color: #282828;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 8px; }
+  .overview-tile:focus, .grid-search-result:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .overview-tile:hover, .grid-search-result:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .overview-tile:active, .grid-search-result:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .overview-tile:active:hover, .grid-search-result:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .overview-tile:active:focus, .grid-search-result:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .overview-tile:highlighted, .grid-search-result:highlighted, .overview-tile:selected, .grid-search-result:selected, .overview-tile:checked, .grid-search-result:checked {
+    color: whitesmoke;
+    background-color: red; }
+    .overview-tile:highlighted:hover, .grid-search-result:highlighted:hover, .overview-tile:selected:hover, .grid-search-result:selected:hover, .overview-tile:checked:hover, .grid-search-result:checked:hover {
+      background-color: red; }
+    .overview-tile:highlighted:active, .grid-search-result:highlighted:active, .overview-tile:selected:active, .grid-search-result:selected:active, .overview-tile:checked:active, .grid-search-result:checked:active {
+      background-color: red; }
+  .overview-tile:insensitive, .grid-search-result:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #282828;
+    background-gradient-end: #282828; }
+  .overview-tile:drop, .grid-search-result:drop {
+    background-color: rgba(204, 55, 0, 0.2);
+    box-shadow: inset 0 0 0 2px rgba(204, 55, 0, 0.8); }
+  .overview-tile .overview-icon.overview-icon-with-label > StBoxLayout, .grid-search-result .overview-icon.overview-icon-with-label > StBoxLayout {
+    spacing: 4px; }
+
+.app-folder {
+  color: whitesmoke;
+  background-color: #282828;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .app-folder:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .app-folder:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .app-folder:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .app-folder:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .app-folder:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .app-folder:highlighted, .app-folder:selected, .app-folder:checked {
+    color: whitesmoke;
+    background-color: red; }
+    .app-folder:highlighted:hover, .app-folder:selected:hover, .app-folder:checked:hover {
+      background-color: red; }
+    .app-folder:highlighted:active, .app-folder:selected:active, .app-folder:checked:active {
+      background-color: red; }
+  .app-folder:insensitive {
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #868686;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: #282828;
+    background-gradient-end: #282828; }
+  .app-folder:drop {
+    background-color: rgba(204, 55, 0, 0.2);
+    box-shadow: inset 0 0 0 2px rgba(204, 55, 0, 0.8); }
+
+.app-grid-running-dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin-bottom: 2px; }
+
+.app-folder-dialog-container {
+  padding-top: 2.2em; }
+
+.app-folder-dialog {
+  width: 720px;
+  height: 720px;
+  border-radius: 8px;
+  background-color: #3d3d3d;
+  color: whitesmoke;
+  padding: 0 1px;
+  box-shadow: inset 0 0 0 1px rgba(245, 245, 245, 0.1); }
+  .app-folder-dialog .folder-name-container {
+    padding: 16px 24px;
+    padding-bottom: 0; }
+    .app-folder-dialog .folder-name-container .folder-name-entry {
+      width: 12em; }
+  .app-folder-dialog .icon-button, .app-folder-dialog .login-dialog-button.cancel-button, .app-folder-dialog .login-dialog-button.switch-user-button, .app-folder-dialog .login-dialog-button.login-dialog-session-list-button, .app-folder-dialog .calendar .calendar-month-header .pager-button, .calendar .calendar-month-header .app-folder-dialog .pager-button, .app-folder-dialog .message .message-header .message-expand-button, .message .message-header .app-folder-dialog .message-expand-button,
+  .app-folder-dialog .message .message-header .message-close-button,
+  .message .message-header .app-folder-dialog .message-close-button, .app-folder-dialog .screenshot-ui-show-pointer-button {
+    color: whitesmoke;
+    background-color: #3d3d3d;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05); }
+    .app-folder-dialog .icon-button:hover, .app-folder-dialog .login-dialog-button.cancel-button:hover, .app-folder-dialog .login-dialog-button.switch-user-button:hover, .app-folder-dialog .login-dialog-button.login-dialog-session-list-button:hover, .app-folder-dialog .calendar .calendar-month-header .pager-button:hover, .calendar .calendar-month-header .app-folder-dialog .pager-button:hover, .app-folder-dialog .message .message-header .message-expand-button:hover, .message .message-header .app-folder-dialog .message-expand-button:hover,
+    .app-folder-dialog .message .message-header .message-close-button:hover,
+    .message .message-header .app-folder-dialog .message-close-button:hover, .app-folder-dialog .screenshot-ui-show-pointer-button:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .app-folder-dialog .icon-button:active, .app-folder-dialog .login-dialog-button.cancel-button:active, .app-folder-dialog .login-dialog-button.switch-user-button:active, .app-folder-dialog .login-dialog-button.login-dialog-session-list-button:active, .app-folder-dialog .calendar .calendar-month-header .pager-button:active, .calendar .calendar-month-header .app-folder-dialog .pager-button:active, .app-folder-dialog .message .message-header .message-expand-button:active, .message .message-header .app-folder-dialog .message-expand-button:active,
+    .app-folder-dialog .message .message-header .message-close-button:active,
+    .message .message-header .app-folder-dialog .message-close-button:active, .app-folder-dialog .screenshot-ui-show-pointer-button:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .icon-button:active:hover, .app-folder-dialog .login-dialog-button.cancel-button:active:hover, .app-folder-dialog .login-dialog-button.switch-user-button:active:hover, .app-folder-dialog .login-dialog-button.login-dialog-session-list-button:active:hover, .app-folder-dialog .calendar .calendar-month-header .pager-button:active:hover, .calendar .calendar-month-header .app-folder-dialog .pager-button:active:hover, .app-folder-dialog .message .message-header .message-expand-button:active:hover, .message .message-header .app-folder-dialog .message-expand-button:active:hover,
+      .app-folder-dialog .message .message-header .message-close-button:active:hover,
+      .message .message-header .app-folder-dialog .message-close-button:active:hover, .app-folder-dialog .screenshot-ui-show-pointer-button:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .icon-button:active:focus, .app-folder-dialog .login-dialog-button.cancel-button:active:focus, .app-folder-dialog .login-dialog-button.switch-user-button:active:focus, .app-folder-dialog .login-dialog-button.login-dialog-session-list-button:active:focus, .app-folder-dialog .calendar .calendar-month-header .pager-button:active:focus, .calendar .calendar-month-header .app-folder-dialog .pager-button:active:focus, .app-folder-dialog .message .message-header .message-expand-button:active:focus, .message .message-header .app-folder-dialog .message-expand-button:active:focus,
+      .app-folder-dialog .message .message-header .message-close-button:active:focus,
+      .message .message-header .app-folder-dialog .message-close-button:active:focus, .app-folder-dialog .screenshot-ui-show-pointer-button:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .app-folder-dialog .page-indicators {
+    margin-bottom: 16px; }
+  .app-folder-dialog .page-navigation-arrow {
+    color: whitesmoke;
+    background-color: #3d3d3d;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05); }
+    .app-folder-dialog .page-navigation-arrow:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .app-folder-dialog .page-navigation-arrow:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .page-navigation-arrow:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .page-navigation-arrow:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .app-folder-dialog .overview-tile, .app-folder-dialog .grid-search-result {
+    color: whitesmoke;
+    background-color: #3d3d3d;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05); }
+    .app-folder-dialog .overview-tile:focus, .app-folder-dialog .grid-search-result:focus {
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #fff;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .app-folder-dialog .overview-tile:hover, .app-folder-dialog .grid-search-result:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .app-folder-dialog .overview-tile:active, .app-folder-dialog .grid-search-result:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .overview-tile:active:hover, .app-folder-dialog .grid-search-result:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .app-folder-dialog .overview-tile:active:focus, .app-folder-dialog .grid-search-result:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .app-folder-dialog .overview-tile:highlighted, .app-folder-dialog .grid-search-result:highlighted, .app-folder-dialog .overview-tile:selected, .app-folder-dialog .grid-search-result:selected, .app-folder-dialog .overview-tile:checked, .app-folder-dialog .grid-search-result:checked {
+      color: whitesmoke;
+      background-color: red; }
+      .app-folder-dialog .overview-tile:highlighted:hover, .app-folder-dialog .grid-search-result:highlighted:hover, .app-folder-dialog .overview-tile:selected:hover, .app-folder-dialog .grid-search-result:selected:hover, .app-folder-dialog .overview-tile:checked:hover, .app-folder-dialog .grid-search-result:checked:hover {
+        background-color: red; }
+      .app-folder-dialog .overview-tile:highlighted:active, .app-folder-dialog .grid-search-result:highlighted:active, .app-folder-dialog .overview-tile:selected:active, .app-folder-dialog .grid-search-result:selected:active, .app-folder-dialog .overview-tile:checked:active, .app-folder-dialog .grid-search-result:checked:active {
+        background-color: red; }
+    .app-folder-dialog .overview-tile:insensitive, .app-folder-dialog .grid-search-result:insensitive {
+      text-shadow: none;
+      box-shadow: none;
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #868686;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: #3d3d3d;
+      background-gradient-end: #3d3d3d; }
+    .app-folder-dialog .overview-tile:drop, .app-folder-dialog .grid-search-result:drop {
+      background-color: rgba(204, 55, 0, 0.2);
+      box-shadow: inset 0 0 0 2px rgba(204, 55, 0, 0.8); }
+
+.rename-folder-popup .rename-folder-popup-item {
+  spacing: 4px; }
+  .rename-folder-popup .rename-folder-popup-item:ltr, .rename-folder-popup .rename-folder-popup-item:rtl {
+    padding: 0 8px; }
+
+.page-indicator {
+  padding: 4px 8px 0;
+  transition-duration: 400ms; }
+  .page-indicator .page-indicator-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    transition-duration: 400ms; }
+
+.apps-scroll-view {
+  padding: 0; }
+
+.system-action-icon {
+  background-color: rgba(245, 245, 245, 0.1);
+  color: whitesmoke;
+  border-radius: 2px;
+  icon-size: 48px; }
+
+.page-navigation-hint.dnd {
+  background: rgba(255, 255, 255, 0.1); }
+
+.page-navigation-hint.next:ltr, .page-navigation-hint.previous:rtl {
+  background-gradient-start: rgba(255, 255, 255, 0.05);
+  background-gradient-end: transparent;
+  background-gradient-direction: horizontal;
+  border-radius: 3px 0px 0px 3px; }
+
+.page-navigation-hint.previous:ltr, .page-navigation-hint.next:rtl {
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(255, 255, 255, 0.05);
+  background-gradient-direction: horizontal;
+  border-radius: 0px 3px 3px 0px; }
+
+.page-navigation-arrow {
+  margin: 4px;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  transition-duration: 100ms;
+  color: whitesmoke;
+  background-color: #282828;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .page-navigation-arrow > StIcon {
+    color: whitesmoke; }
+  .page-navigation-arrow:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .page-navigation-arrow:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .page-navigation-arrow:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .page-navigation-arrow:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+
+/* Workspace pager */
+.workspace-thumbnails {
+  visible-width: 32px;
+  spacing: 10px;
+  padding: 4px; }
+  .workspace-thumbnails .workspace-thumbnail {
+    border-radius: 2px; }
+  .workspace-thumbnails .placeholder {
+    background-image: none;
+    background-size: contain;
+    width: 18px; }
+
+.workspace-thumbnail-indicator {
+  border: 1px solid rgba(232, 93, 26, 0.7);
+  border-radius: 2px;
+  padding: 5px; }
+
+.ripple-pointer-location {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(255, 143, 102, 0.3);
+  box-shadow: 0 0 2px 2px #ff6a33; }
+
+.pie-timer {
+  width: 60px;
+  height: 60px;
+  -pie-border-width: 3px;
+  -pie-border-color: #cc3700;
+  -pie-background-color: rgba(255, 181, 153, 0.3); }
+
+.magnifier-zoom-region {
+  border: 2px solid #cc3700; }
+  .magnifier-zoom-region.full-screen {
+    border-width: 0; }
+
+.select-area-rubberband {
+  background-color: rgba(204, 55, 0, 0.3);
+  border: 1px solid #cc3700; }
+
+.user-icon {
+  background-size: contain;
+  border-radius: 2px;
+  icon-size: 64px;
+  background-color: rgba(238, 238, 236, 0.05);
+  color: #eeeeec; }
+  .user-icon StIcon {
+    padding: 8px; }
+  .user-icon.user-avatar {
+    box-shadow: inset 0 0 0 1px rgba(238, 238, 236, 0.1); }
+
+.lightbox {
+  background-color: black; }
+
+.flashspot {
+  background-color: white; }
+
+.hidden {
+  color: transparent; }
+
+.caps-lock-warning-label {
+  text-align: center;
+  padding-bottom: 8px;
+  color: #f57900; }
+
+/* Workspace animation */
+.workspace-animation {
+  background-color: #282828; }
+
+/* Tiled window previews */
+.tile-preview {
+  background-color: rgba(204, 55, 0, 0.5);
+  border: 1px solid #cc3700; }
+
+/* On-screen Keyboard */
+#keyboard {
+  background-color: #181818;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.16); }
+  #keyboard .page-indicator {
+    padding: 4px; }
+    #keyboard .page-indicator .page-indicator-icon {
+      width: 8px;
+      height: 8px; }
+
+.key-container {
+  padding: 2px;
+  spacing: 2px; }
+
+.keyboard-key {
+  font-size: 1.546em;
+  font-weight: bold;
+  min-height: 1.2em;
+  min-width: 1.2em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2.5px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  color: #eeeeec;
+  background-color: #3e3e37;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05); }
+  .keyboard-key:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .keyboard-key:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .keyboard-key:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-key:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-key:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+  .keyboard-key:checked {
+    color: #eeeeec;
+    background-color: red; }
+    .keyboard-key:checked:hover {
+      background-color: red; }
+    .keyboard-key:checked:active {
+      background-color: red; }
+  .keyboard-key:grayed {
+    background-color: #101010;
+    color: #eeeeec;
+    border-color: rgba(0, 0, 0, 0.7); }
+  .keyboard-key.default-key {
+    color: #eeeeec;
+    background-color: #23231f;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05);
+    border-radius: 2.5px; }
+    .keyboard-key.default-key:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .keyboard-key.default-key:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-key.default-key:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-key.default-key:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-key.default-key:checked {
+      color: #eeeeec;
+      background-color: red; }
+      .keyboard-key.default-key:checked:hover {
+        background-color: red; }
+      .keyboard-key.default-key:checked:active {
+        background-color: red; }
+    .keyboard-key.default-key:latched {
+      border-color: #e63e00;
+      background-color: #cc3700; }
+  .keyboard-key.enter-key {
+    color: #fff;
+    background-color: #cc3700;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05);
+    border-radius: 2.5px;
+    color: #eeeeec; }
+    .keyboard-key.enter-key:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .keyboard-key.enter-key:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-key.enter-key:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-key.enter-key:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-key.enter-key:checked {
+      color: #fff;
+      background-color: red; }
+      .keyboard-key.enter-key:checked:hover {
+        background-color: red; }
+      .keyboard-key.enter-key:checked:active {
+        background-color: red; }
+  .keyboard-key.shift-key-uppercase {
+    background-color: #747467;
+    color: #181818; }
+    .keyboard-key.shift-key-uppercase:hover {
+      background-color: #818173;
+      color: #252525; }
+  .keyboard-key StIcon {
+    icon-size: 24px; }
+
+.keyboard-subkeys {
+  -arrow-border-radius: 4px;
+  -arrow-background-color: #181818;
+  -arrow-border-width: 1px;
+  -arrow-border-color: #2f2f2f;
+  -arrow-base: 20px;
+  -arrow-rise: 10px;
+  -boxpointer-gap: 4px;
+  padding: 4px; }
+  .keyboard-subkeys .keyboard-key {
+    color: #eeeeec;
+    background-color: #3e3e37;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: none;
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.15);
+    background-gradient-end: rgba(255, 255, 255, 0.05);
+    border-radius: 2.5px; }
+    .keyboard-subkeys .keyboard-key:focus {
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #fff;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .keyboard-subkeys .keyboard-key:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .keyboard-subkeys .keyboard-key:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-subkeys .keyboard-key:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .keyboard-subkeys .keyboard-key:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .keyboard-subkeys .keyboard-key:checked {
+      color: #eeeeec;
+      background-color: red; }
+      .keyboard-subkeys .keyboard-key:checked:hover {
+        background-color: red; }
+      .keyboard-subkeys .keyboard-key:checked:active {
+        background-color: red; }
+
+.emoji-page .keyboard-key {
+  background-color: transparent;
+  border: none;
+  color: initial; }
+
+.emoji-panel .keyboard-key:latched {
+  border-color: #e63e00;
+  background-color: #cc3700; }
+
+.word-suggestions {
+  spacing: 12px;
+  min-height: 17pt;
+  padding: 8px;
+  color: #eeeeec; }
+  .word-suggestions StButton {
+    margin: 0 3px;
+    min-width: 32px;
+    border-radius: 4px;
+    padding: 0px 12px;
+    color: #eeeeec;
+    background-color: #3e3e37;
+    border-color: transparent;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    font-weight: normal;
+    padding: 4px 8px;
+    border-radius: 2px; }
+    .word-suggestions StButton:insensitive {
+      background-color: transparent !important; }
+    .word-suggestions StButton:focus {
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition-duration: 200ms;
+      color: #fff;
+      border-color: transparent;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .word-suggestions StButton:hover {
+      color: #fff;
+      background: #181818;
+      text-shadow: none;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
+    .word-suggestions StButton:active {
+      font-weight: normal;
+      color: #fff;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .word-suggestions StButton:active:hover {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .word-suggestions StButton:active:focus {
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .word-suggestions StButton:checked {
+      color: #eeeeec;
+      background-color: red; }
+      .word-suggestions StButton:checked:hover {
+        background-color: red; }
+      .word-suggestions StButton:checked:active {
+        background-color: red; }
+
+/* Looking Glass */
+#LookingGlassDialog {
+  background-color: rgba(24, 24, 24, 0.98);
+  color: #eeeeec;
+  border-radius: 2px;
+  margin-top: 2px;
+  border: 2px solid transparent;
+  padding: 4px;
+  spacing: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+  #LookingGlassDialog > #Toolbar {
+    border: none;
+    padding: 4px;
+    border-radius: 0;
+    background-color: transparent;
+    spacing: 4px; }
+    #LookingGlassDialog > #Toolbar .lg-toolbar-button {
+      padding: 4px 8px; }
+      #LookingGlassDialog > #Toolbar .lg-toolbar-button > StIcon {
+        icon-size: 16px; }
+  #LookingGlassDialog .labels {
+    spacing: 4px; }
+  #LookingGlassDialog .notebook-tab {
+    -natural-hpadding: 8px;
+    -minimum-hpadding: 8px;
+    padding: 4px 8px; }
+  #LookingGlassDialog StBoxLayout#EvalBox {
+    padding: 4px;
+    spacing: 4px;
+    padding: 4px; }
+  #LookingGlassDialog StBoxLayout#ResultsArea {
+    spacing: 4px;
+    padding: 4px; }
+
+.lg-dialog StEntry {
+  min-height: 1.5em; }
+
+.lg-dialog .shell-link {
+  color: #ff6a33; }
+  .lg-dialog .shell-link:hover {
+    color: #ff8f66; }
+  .lg-dialog .shell-link:active {
+    color: orangered; }
+
+.lg-dialog .actor-link {
+  color: #868686; }
+  .lg-dialog .actor-link:hover {
+    color: #b9b9b9; }
+  .lg-dialog .actor-link:active {
+    color: #535353; }
+  .lg-dialog .actor-link StIcon {
+    icon-size: 12px; }
+
+.lg-completions-text {
+  font-style: italic; }
+
+.lg-obj-inspector-title {
+  spacing: 4px; }
+
+.lg-obj-inspector-button {
+  border: 1px solid #030303;
+  padding: 4px;
+  border-radius: 2px; }
+  .lg-obj-inspector-button:hover {
+    border: 1px solid #f5f5f5; }
+
+#lookingGlassExtensions {
+  padding: 4px; }
+
+.lg-extensions-list {
+  padding: 4px;
+  spacing: 4px; }
+
+.lg-extension-meta {
+  spacing: 4px; }
+
+#LookingGlassPropertyInspector {
+  background: #181818;
+  border: 1px solid #030303;
+  border-radius: 2px;
+  padding: 4px; }
+
+.lg-debug-flag-button {
+  color: #eeeeec; }
+  .lg-debug-flag-button StLabel {
+    padding: 4px, 8px; }
+  .lg-debug-flag-button:hover {
+    color: white; }
+  .lg-debug-flag-button:active {
+    color: #bebeb6; }
+
+.lg-debug-flags-header {
+  padding-top: 8px;
+  padding: 4px; }
+
+.login-dialog,
+.unlock-dialog {
+  color: whitesmoke; }
+  .login-dialog .caps-lock-warning-label,
+  .login-dialog .login-dialog-message-warning,
+  .unlock-dialog .caps-lock-warning-label,
+  .unlock-dialog .login-dialog-message-warning {
+    color: whitesmoke; }
+  .login-dialog .login-dialog-prompt-layout,
+  .unlock-dialog .login-dialog-prompt-layout {
+    width: 25em;
+    spacing: 6px; }
+
+.login-dialog-button.cancel-button {
+  padding: 6px; }
+
+.login-dialog-button-box {
+  spacing: 8px; }
+
+.conflicting-session-dialog-content {
+  spacing: 20px; }
+  .conflicting-session-dialog-content .conflicting-session-dialog-title {
+    text-align: center;
+    margin-bottom: 5px; }
+  .conflicting-session-dialog-content .conflicting-session-dialog-desc {
+    text-align: center; }
+  .conflicting-session-dialog-content .conflicting-session-dialog-desc-warning {
+    text-align: center;
+    color: #f57900; }
+
+.login-dialog-logo-bin {
+  margin: 3em 0; }
+
+.login-dialog-banner-view {
+  max-width: 25em; }
+  .login-dialog-banner-view .login-dialog-banner {
+    color: gainsboro; }
+
+.login-dialog-message {
+  text-align: center; }
+
+.login-dialog-user-selection-box {
+  padding-top: 4em;
+  padding-bottom: 8em; }
+
+.login-dialog-not-listed-label {
+  padding: 4px; }
+
+.login-dialog-not-listed-button {
+  color: whitesmoke;
+  background-color: #282828;
+  border-color: transparent;
+  text-shadow: none;
+  box-shadow: none;
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.15);
+  background-gradient-end: rgba(255, 255, 255, 0.05);
+  padding: 0 4px;
+  margin: 4px; }
+  .login-dialog-not-listed-button:focus {
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition-duration: 200ms;
+    color: #fff;
+    border-color: transparent;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .login-dialog-not-listed-button:hover {
+    color: #fff;
+    background: #181818;
+    text-shadow: none;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    background-gradient-start: rgba(255, 255, 255, 0.3);
+    background-gradient-end: rgba(255, 255, 255, 0.15); }
+  .login-dialog-not-listed-button:active {
+    font-weight: normal;
+    color: #fff;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(234, 109, 49, 0.7);
+    background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .login-dialog-not-listed-button:active:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+    .login-dialog-not-listed-button:active:focus {
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(234, 109, 49, 0.7);
+      background-gradient-end: rgba(188, 74, 19, 0.7); }
+
+.login-dialog-auth-list-view {
+  -st-vfade-offset: 3em; }
+
+.login-dialog-auth-list {
+  spacing: 4px;
+  margin-left: 2em; }
+
+.login-dialog-auth-list-title {
+  margin-left: 2em; }
+
+.login-dialog-auth-list-item {
+  border-radius: 4px;
+  padding: 2px;
+  color: darkgray; }
+  .login-dialog-auth-list-item:focus, .login-dialog-auth-list-item:selected {
+    background-color: #cc3700;
+    color: #fff; }
+
+.login-dialog-auth-list-label:ltr {
+  padding-left: 10px;
+  text-align: left; }
+
+.login-dialog-auth-list-label:rtl {
+  padding-right: 10px;
+  text-align: right; }
+
+.login-dialog-user-list-view {
+  width: 25em;
+  -st-vfade-offset: 3em; }
+  .login-dialog-user-list-view .login-dialog-user-list {
+    margin: 0 4px;
+    spacing: 8px; }
+    .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item {
+      color: whitesmoke;
+      background-color: #282828;
+      border-color: transparent;
+      text-shadow: none;
+      box-shadow: none;
+      icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+      font-weight: normal;
+      padding: 4px 8px;
+      border-radius: 2px;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.15);
+      background-gradient-end: rgba(255, 255, 255, 0.05);
+      border-radius: 2px;
+      padding: 6px; }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:selected, .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:focus {
+        text-shadow: none;
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        transition-duration: 200ms;
+        color: #fff;
+        border-color: transparent;
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(255, 255, 255, 0.3);
+        background-gradient-end: rgba(255, 255, 255, 0.15); }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:hover {
+        color: #fff;
+        background: #181818;
+        text-shadow: none;
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        border-color: transparent;
+        background-gradient-start: rgba(255, 255, 255, 0.3);
+        background-gradient-end: rgba(255, 255, 255, 0.15); }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:active {
+        font-weight: normal;
+        color: #fff;
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+        background-gradient-direction: vertical;
+        background-gradient-start: rgba(234, 109, 49, 0.7);
+        background-gradient-end: rgba(188, 74, 19, 0.7); }
+        .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:active:hover {
+          background-gradient-direction: vertical;
+          background-gradient-start: rgba(234, 109, 49, 0.7);
+          background-gradient-end: rgba(188, 74, 19, 0.7); }
+        .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:active:focus {
+          background-gradient-direction: vertical;
+          background-gradient-start: rgba(234, 109, 49, 0.7);
+          background-gradient-end: rgba(188, 74, 19, 0.7); }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item .user-icon {
+        border: 2px solid transparent; }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item .login-dialog-timed-login-indicator {
+        height: 2px;
+        margin-top: 4px;
+        background-color: rgba(245, 245, 245, 0.7); }
+      .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:logged-in .user-icon {
+        border-color: #cc3700; }
+        .login-dialog-user-list-view .login-dialog-user-list .login-dialog-user-list-item:logged-in .user-icon StIcon {
+          background-color: rgba(204, 55, 0, 0.3); }
+
+.unlock-dialog {
+  background-color: transparent; }
+
+.screen-shield-background {
+  background: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); }
+
+#lockDialogGroup {
+  background-color: #282828; }
+
+.unlock-dialog-clock {
+  color: whitesmoke;
+  spacing: 2em; }
+  .unlock-dialog-clock .unlock-dialog-clock-time {
+    font-size: 6.546em;
+    font-weight: 200; }
+  .unlock-dialog-clock .unlock-dialog-clock-date {
+    font-weight: 400; }
+  .unlock-dialog-clock .unlock-dialog-clock-hint {
+    margin-top: 2em;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold; }
+
+#unlockDialogNotifications StButton#vhandle, #unlockDialogNotifications StButton#hhandle {
+  background-color: rgba(24, 24, 24, 0.3); }
+  #unlockDialogNotifications StButton#vhandle:hover, #unlockDialogNotifications StButton#vhandle:focus, #unlockDialogNotifications StButton#hhandle:hover, #unlockDialogNotifications StButton#hhandle:focus {
+    background-color: rgba(24, 24, 24, 0.5); }
+  #unlockDialogNotifications StButton#vhandle:active, #unlockDialogNotifications StButton#hhandle:active {
+    background-color: rgba(204, 55, 0, 0.5); }
+
+.unlock-dialog-notifications-container {
+  margin: 6px;
+  spacing: 4px;
+  width: 25em;
+  background-color: transparent; }
+  .unlock-dialog-notifications-container .summary-notification-stack-scrollview {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .unlock-dialog-notifications-container .notification,
+  .unlock-dialog-notifications-container .unlock-dialog-notification-source {
+    padding: 6px 8px;
+    border: none;
+    background-color: rgba(245, 245, 245, 0.1);
+    color: whitesmoke;
+    border-radius: 2px; }
+    .unlock-dialog-notifications-container .notification.critical,
+    .unlock-dialog-notifications-container .unlock-dialog-notification-source.critical {
+      background-color: rgba(245, 245, 245, 0.2); }
+
+.unlock-dialog-notification-icon {
+  icon-size: 32px; }
+
+.unlock-dialog-notification-label {
+  padding-left: 8px;
+  padding-right: 0; }
+  .unlock-dialog-notification-label:rtl {
+    padding-right: 8px;
+    padding-left: 0; }
+
+.unlock-dialog-notification-count-text {
+  font-weight: bold;
+  padding: 0 8px;
+  color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.1);
+  border-radius: 2px; }
+
+.login-dialog .user-widget .user-widget-label,
+.unlock-dialog .user-widget .user-widget-label {
+  color: whitesmoke; }
+
+.login-dialog .user-widget .user-icon,
+.unlock-dialog .user-widget .user-icon {
+  background-color: rgba(245, 245, 245, 0.13);
+  color: whitesmoke; }
+
+.login-dialog .user-widget.horizontal,
+.unlock-dialog .user-widget.horizontal {
+  spacing: 12px; }
+
+.login-dialog .user-widget.vertical,
+.unlock-dialog .user-widget.vertical {
+  spacing: 16px; }
+  .login-dialog .user-widget.vertical .user-widget-label,
+  .unlock-dialog .user-widget.vertical .user-widget-label {
+    text-align: center;
+    margin-bottom: .75em; }
+  .login-dialog .user-widget.vertical .user-icon,
+  .unlock-dialog .user-widget.vertical .user-icon {
+    icon-size: 160px; }
+    .login-dialog .user-widget.vertical .user-icon StIcon,
+    .unlock-dialog .user-widget.vertical .user-icon StIcon {
+      padding: 16px; }
