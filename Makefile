@@ -3,7 +3,7 @@
 default: viva
 
 viva:
-	@sassc gnome-shell/gnome-shell.scss gnome-shell/gnome-shell.css
+	@sassc gnome-shell/gnome-shell-dark.scss gnome-shell/gnome-shell.css
 	@#sass --update ./gnome-shell/
 
 clean:
