@@ -22,7 +22,7 @@ $app_folder_size: 720px;
   @include tile_button($bg:$system_base_color);
 
   // override the %tile style
-  border-radius: $base_border_radius*3;
+  border-radius: $base_border_radius;
   padding: $base_padding * 2;
 
   // the icon itself

@@ -236,9 +236,7 @@ stage {
     background-gradient-start: rgba(234, 109, 49, 0.3);
     background-gradient-end: rgba(188, 74, 19, 0.3); }
 
-.calendar, .datemenu-today-button, .lg-extension, .message, .events-button,
-.world-clocks-button,
-.weather-button {
+.calendar, .datemenu-today-button, .lg-extension, .message, .events-button, .world-clocks-button, .weather-button {
   border-radius: 2px;
   padding: 0.818em;
   margin: 2px;
@@ -246,9 +244,7 @@ stage {
   box-shadow: 0 1px 2px 0 transparent;
   border: 1px solid transparent; }
 
-.lg-extension, .message, .events-button,
-.world-clocks-button,
-.weather-button {
+.lg-extension, .message, .events-button, .world-clocks-button, .weather-button {
   color: #f5f5f5;
   background-color: #181818;
   border-color: transparent;
@@ -261,9 +257,7 @@ stage {
   background-gradient-direction: vertical;
   background-gradient-start: #181818;
   background-gradient-end: #181818; }
-  .lg-extension:hover, .message:hover, .events-button:hover,
-  .world-clocks-button:hover,
-  .weather-button:hover {
+  .lg-extension:hover, .message:hover, .events-button:hover, .world-clocks-button:hover, .weather-button:hover {
     color: #fff;
     background: #181818;
     text-shadow: none;
@@ -272,9 +266,7 @@ stage {
     border-color: transparent;
     background-gradient-start: rgba(255, 255, 255, 0.3);
     background-gradient-end: rgba(255, 255, 255, 0.15); }
-  .lg-extension:active, .message:active, .events-button:active,
-  .world-clocks-button:active,
-  .weather-button:active {
+  .lg-extension:active, .message:active, .events-button:active, .world-clocks-button:active, .weather-button:active {
     font-weight: normal;
     color: #fff;
     box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
@@ -282,9 +274,7 @@ stage {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(234, 109, 49, 0.3);
     background-gradient-end: rgba(188, 74, 19, 0.3); }
-  .lg-extension:focus, .message:focus, .events-button:focus,
-  .world-clocks-button:focus,
-  .weather-button:focus {
+  .lg-extension:focus, .message:focus, .events-button:focus, .world-clocks-button:focus, .weather-button:focus {
     color: #f5f5f5;
     box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
     text-shadow: none;
@@ -296,9 +286,7 @@ stage {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 255, 255, 0.3);
     background-gradient-end: rgba(255, 255, 255, 0.15); }
-  .lg-extension:insensitive, .message:insensitive, .events-button:insensitive,
-  .world-clocks-button:insensitive,
-  .weather-button:insensitive {
+  .lg-extension:insensitive, .message:insensitive, .events-button:insensitive, .world-clocks-button:insensitive, .weather-button:insensitive {
     text-shadow: none;
     box-shadow: none;
     icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
@@ -377,7 +365,7 @@ StEntry {
   StEntry:focus {
     box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
     border-color: #030303;
-    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1) !important; }
   StEntry:insensitive {
     color: #868686;
     border-color: #171717;
@@ -537,7 +525,7 @@ StEntry {
   .lg-dialog StEntry:focus {
     box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
     border-color: #030303;
-    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1) !important; }
   .lg-dialog StEntry:insensitive {
     color: #868686;
     border-color: #171717;
@@ -681,7 +669,7 @@ StEntry {
   .login-dialog .login-dialog-prompt-entry:focus, .app-folder-dialog .folder-name-container .folder-name-entry:focus {
     box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
     border-color: #030303;
-    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1) !important; }
   .login-dialog .login-dialog-prompt-entry:insensitive, .app-folder-dialog .folder-name-container .folder-name-entry:insensitive {
     color: #868686;
     border-color: #171717;
@@ -867,7 +855,7 @@ StEntry {
   .unlock-dialog .login-dialog-prompt-entry:focus {
     box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
     border-color: #030303;
-    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1) !important;
     box-shadow: inset 0 0 0 2px rgba(245, 245, 245, 0.4) !important;
     background-color: rgba(245, 245, 245, 0.115); }
   .unlock-dialog .login-dialog-prompt-entry:insensitive {
@@ -1194,7 +1182,7 @@ StScrollBar {
   padding: 2px; }
 
 .datemenu-popover {
-  border-radius: 15px; }
+  border-radius: 2px; }
 
 .datemenu-calendar-column {
   spacing: 4px; }
@@ -1212,9 +1200,9 @@ StScrollBar {
 
 .calendar {
   margin-top: 0;
-  padding: 0; }
-  .calendar .calendar-month-header .calendar-change-month-back StIcon,
-  .calendar .calendar-month-header .calendar-change-month-forward StIcon {
+  padding: 0;
+  box-shadow: 0 1px 2px 0 transparent; }
+  .calendar .calendar-month-header .calendar-change-month-back StIcon, .calendar .calendar-month-header .calendar-change-month-forward StIcon {
     icon-size: 1.091em; }
   .calendar .calendar-month-header .calendar-month-label {
     color: #f5f5f5 !important;
@@ -1261,7 +1249,7 @@ StScrollBar {
     margin: 4px;
     padding: 0 4px;
     border-radius: 1px;
-    background-color: rgba(134, 134, 134, 0.2);
+    background-color: transparent;
     color: #868686; }
 
 .events-button .events-box .events-title {
@@ -1403,8 +1391,7 @@ StScrollBar {
       color: rgba(245, 245, 245, 0.5);
       font-size: 0.909em;
       /* HACK: the label should be baseline-aligned with a 1em label, fake this with some bottom padding */
-      padding-bottom: 0.13em;
-      border: 1px solid red; }
+      padding-bottom: 0.13em; }
       .message .message-secondary-bin > .event-time:ltr {
         text-align: right; }
       .message .message-secondary-bin > .event-time:rtl {
@@ -2008,9 +1995,11 @@ StScrollBar {
       border: 2px solid transparent;
       border-radius: 0; }
     #panel .panel-button:hover, #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-      background-color: rgba(0, 0, 0, 0.01);
       border-radius: 0;
-      box-shadow: inset 0 -2px 0 0 #bc4a13; }
+      box-shadow: none !important;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3);
+      background-gradient-end: rgba(255, 255, 255, 0.15); }
       #panel .panel-button:hover.clock-display, #panel .panel-button:active.clock-display, #panel .panel-button:overview.clock-display, #panel .panel-button:focus.clock-display, #panel .panel-button:checked.clock-display {
         border-radius: 0;
         box-shadow: none; }
@@ -2383,6 +2372,13 @@ StScrollBar {
   .clock-display-box .clock {
     padding-left: 0.818em;
     padding-right: 0.818em; }
+    .clock-display-box .clock:hover, .clock-display-box .clock:active, .clock-display-box .clock:overview, .clock-display-box .clock:focus, .clock-display-box .clock:checked {
+      background-color: none;
+      border-radius: 0;
+      box-shadow: none !important;
+      background-gradient-direction: vertical;
+      background-gradient-start: rgba(255, 255, 255, 0.3) !important;
+      background-gradient-end: rgba(255, 255, 255, 0.15) !important; }
 
 /* Activities Ripple */
 .ripple-box {
@@ -2975,7 +2971,7 @@ StScrollBar {
   background-gradient-direction: vertical;
   background-gradient-start: #282828;
   background-gradient-end: #282828;
-  border-radius: 6px;
+  border-radius: 2px;
   padding: 8px; }
   .overview-tile:focus, .grid-search-result:focus {
     color: whitesmoke;
@@ -4077,3 +4073,56 @@ StScrollBar {
     .login-dialog .user-widget.vertical .user-icon StIcon,
     .unlock-dialog .user-widget.vertical .user-icon StIcon {
       padding: 16px; }
+
+#dashtopanelScrollview .overview-tile, #dashtopanelScrollview .grid-search-result,
+.dashtopanelMainPanel .overview-tile,
+.dashtopanelMainPanel .grid-search-result {
+  background: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent; }
+  #dashtopanelScrollview .overview-tile:hover, #dashtopanelScrollview .grid-search-result:hover, #dashtopanelScrollview .overview-tile:active, #dashtopanelScrollview .grid-search-result:active, #dashtopanelScrollview .overview-tile:selected, #dashtopanelScrollview .grid-search-result:selected,
+  .dashtopanelMainPanel .overview-tile:hover,
+  .dashtopanelMainPanel .grid-search-result:hover,
+  .dashtopanelMainPanel .overview-tile:active,
+  .dashtopanelMainPanel .grid-search-result:active,
+  .dashtopanelMainPanel .overview-tile:selected,
+  .dashtopanelMainPanel .grid-search-result:selected {
+    background-gradient-start: transparent;
+    background-gradient-end: transparent;
+    border-color: transparent;
+    box-shadow: none; }
+
+#dashtopanelScrollview .overview-tile:hover .dtp-container, #dashtopanelScrollview .grid-search-result:hover .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:hover {
+  color: #fff;
+  background: #181818;
+  text-shadow: none;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  background-gradient-start: rgba(255, 255, 255, 0.3);
+  background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#dashtopanelScrollview .overview-tile:focus .dtp-container, #dashtopanelScrollview .grid-search-result:focus .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:focus {
+  color: whitesmoke;
+  box-shadow: inset 0 0 0 2px rgba(188, 74, 19, 0.5) !important;
+  text-shadow: none;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  icon-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition-duration: 200ms;
+  color: #fff;
+  border-color: transparent;
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0.3);
+  background-gradient-end: rgba(255, 255, 255, 0.15); }
+
+#dashtopanelScrollview .overview-tile:active .dtp-container, #dashtopanelScrollview .grid-search-result:active .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:active {
+  font-weight: normal;
+  color: #fff;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(234, 109, 49, 0.3);
+  background-gradient-end: rgba(188, 74, 19, 0.3); }

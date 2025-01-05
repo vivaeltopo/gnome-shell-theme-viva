@@ -48,9 +48,14 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
     }
 
     &:hover, &:active, &:overview, &:focus, &:checked {
-      background-color: rgba(0, 0, 0, 0.01);
+      //background-color: rgba(0, 0, 0, 0.01);
+      //background-color: none !important;
       border-radius: 0;
-      box-shadow: inset 0 -2px 0 0 $selected_bg_color;
+      box-shadow: none !important;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_gradient_2;
+      background-gradient-end: $viva_gradient_1;
 
       // The clock display needs to have the background on .clock because
       // we want to exclude the do-not-disturb indicator from the background
@@ -229,5 +234,15 @@ $panel_transition_duration: 250ms; // same as the overview transition duration
   .clock {
     padding-left: $scaled_padding * 2;
     padding-right: $scaled_padding * 2;
+
+    &:hover, &:active, &:overview, &:focus, &:checked {
+      background-color: none;
+      border-radius: 0;
+      box-shadow: none !important;
+
+      background-gradient-direction: vertical;
+      background-gradient-start: $viva_gradient_2 !important;
+      background-gradient-end: $viva_gradient_1 !important;
+    }
   }
 }

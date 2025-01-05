@@ -126,7 +126,7 @@
   @if $type == 'focus' {
     @include focus_ring();
     border-color: $borders_color;
-    box-shadow: $viva_box_shadow;
+    box-shadow: $viva_box_shadow !important;
     &:hover {}
 
     // lockscreen style

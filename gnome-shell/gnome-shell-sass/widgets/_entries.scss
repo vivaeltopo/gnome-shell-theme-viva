@@ -1,5 +1,4 @@
 /* Entries */
-
 StEntry {
   @extend %entry;
 
@@ -17,4 +16,5 @@ StEntry {
   StLabel.hint-text {
     margin-left: $base_margin * 0.5;
   }
+
 }

@@ -1,0 +1,34 @@
+
+#dashtopanelScrollview .overview-tile,
+.dashtopanelMainPanel .overview-tile {
+    background: none;
+    background-gradient-start: transparent;
+    background-gradient-end: transparent;
+
+    &:hover, &:active, &:selected {
+        background-gradient-start: transparent;
+        background-gradient-end: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+#dashtopanelScrollview .overview-tile:hover .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:hover {
+    @include button(hover, $tc:$system_fg_color, $c:$system_overlay_bg_color, $always_dark: true);
+}
+
+#dashtopanelScrollview .overview-tile:focus .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:focus {
+    @include button(focus, $tc:$system_fg_color, $c:$system_overlay_bg_color, $always_dark: true);
+}
+
+#dashtopanelScrollview .overview-tile:active .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:active {
+    @include button(active, $tc:$system_fg_color, $c:$system_overlay_bg_color, $always_dark: true);
+}
+
+#dashtopanelScrollview .overview-tile:selected .dtp-container,
+.dashtopanelMainPanel .dash-item-container .show-apps:selected {
+    @include button(selected, $tc:$system_fg_color, $c:$system_overlay_bg_color, $always_dark: true);
+}
